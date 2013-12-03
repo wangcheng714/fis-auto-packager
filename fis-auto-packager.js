@@ -188,46 +188,12 @@ function processLogData(data){
     return records;
 }
 
-//todo : 选择网络例如2G\3G\WIFI\PC等
-function package(dir){
-    resources = getResource(dir);
-    getLogData(function(error, records){
-        packageReport.printUrlPvs(records);
-        for(var i=0; i<records.length; i++){
-            var record = records[i],
-                syncStatics = record.get("sync"),
-                asyncStatics = record.get("async");
-
-            for(var j=0; j<syncStatics.length; j++){
-                var resource = resources[syncStatics[j]];
-                if(resource){
-                    resource.addPage(record.get("hash"), record.get("pv"));
-                    resource.addPv(record.get("pv"));
-                    resource.setLoadType("sync");
-                }
-            }
-            for(var k=0; j<asyncStatics.length; k++){
-                var resource = resources[asyncStatics[k]];
-                if(resource){
-                    resource.addPv(record.get("pv"));
-                    resource.setLoadType("async");
-                }
-            }
-        }
-        packageReport.createCsvFile(resources, records);
-
-        var packageResults = packager.package(resources);
-        createPackConf(packageResults);
-        packageReport.predictPackageResult(records, packageResults);
-    });
-}
-
 /**
  * @param resources
  *  数据结构 ：
  *      {"common_asnyc_js" : [pkg1,pkg2]}
  */
-function createPackConf(resources){
+function createPackConf(resources, outputDir, projectName){
     var packResults = {};
 
     util.map(resources, function(packageKeyPrefix, packages){
@@ -252,13 +218,56 @@ function createPackConf(resources){
 
     util.map(packResults, function(module, packResult){
         var packStr = JsonUtil.convertToString(packResult),
-            fileName = module + "/" + "fis-pack.json";
+            fileName = module + "/fis-pack.json";
         zip.addFile(fileName, new Buffer(packStr));
     });
-
-    //todo : 路径正式化
-    var zipFile = __dirname + "/test/pack/map.zip";
+    var zipFile = outputDir + "/" +  projectName + "/" + projectName + ".zip";
     zip.writeZip(zipFile);
+    return zipFile;
 }
 
-module.exports.build = build;
+//todo : 选择网络例如2G\3G\WIFI\PC等
+/**
+ * @param dir : 编译后的项目目录
+ * @param outputDir : 打包结果产出目录
+ * @param projectName : 项目名称
+ * @param callback
+ */
+module.exports.package = function(dir, outputDir, projectName, callback){
+    resources = getResource(dir);
+    getLogData(function(error, records){
+        var urlPvFile = packageReport.printUrlPvs(records, outputDir, projectName);
+        for(var i=0; i<records.length; i++){
+            var record = records[i],
+                syncStatics = record.get("sync"),
+                asyncStatics = record.get("async");
+
+            for(var j=0; j<syncStatics.length; j++){
+                var resource = resources[syncStatics[j]];
+                if(resource){
+                    resource.addPage(record.get("hash"), record.get("pv"));
+                    resource.addPv(record.get("pv"));
+                    resource.setLoadType("sync");
+                }
+            }
+            for(var k=0; j<asyncStatics.length; k++){
+                var resource = resources[asyncStatics[k]];
+                if(resource){
+                    resource.addPv(record.get("pv"));
+                    resource.setLoadType("async");
+                }
+            }
+        }
+        var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
+        var packageResults = packager.package(resources);
+        var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
+        var resultFile = createPackConf(packageResults, outputDir, projectName);
+        var resultFiles = {
+            "urlPv" : urlPvFile,
+            "staticUrlMap" : staticUrlMapFile,
+            "predictPackageResult" : predictPackageResultFile,
+            "packageConf" : resultFile
+        }
+        callback(null, resultFiles);
+    });
+}
