@@ -1,0 +1,51 @@
+{
+    "res": {
+        "feedback:page/show.tpl": {
+            "uri": "/template/feedback/page/show.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "e82e438"
+        },
+        "feedback:widget/show/show.inline.css": {
+            "uri": "/static/feedback/widget/show/show.inline_b5ed5e4.css",
+            "type": "css",
+            "hash": "73e8e09"
+        },
+        "feedback:widget/show/show.js": {
+            "uri": "/static/feedback/widget/show/show_e7ce380.js",
+            "type": "js",
+            "deps": [
+                "common:widget/popup/popup.js"
+            ],
+            "pkg": "feedback:p0",
+            "hash": "a7a13cc"
+        },
+        "feedback:widget/show/show.tpl": {
+            "uri": "feedback/widget/show/show.tpl",
+            "type": "tpl",
+            "extras": {
+                "async": [
+                    "feedback:widget/show/show.js"
+                ]
+            },
+            "deps": [
+                "feedback:widget/show/show.js"
+            ],
+            "hash": "3410d97"
+        }
+    },
+    "pkg": {
+        "feedback:p0": {
+            "uri": "/static/feedback/pkg/feedback_e7ce380.js",
+            "type": "js",
+            "has": [
+                "feedback:widget/show/show.js"
+            ],
+            "deps": [
+                "common:widget/popup/popup.js"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1 @@
+define("taxi:widget/common/nav/nav.js",function(a,n,t){var n={create:function(){var a=$(".taxi-widget-nav"),n=a.find(".btn-back");n.on("click",$.proxy(this.onBtnBackClick,this))},onBtnBackClick:function(a){var n=$(a.currentTarget),t=n.attr("data-back");t?LoadManager.loadPage(t):LoadManager.loadPage("home")},init:function(){this.create()}};t.exports=n});

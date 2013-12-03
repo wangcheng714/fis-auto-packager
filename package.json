@@ -1,0 +1,23 @@
+{
+  "name": "fis-auto-packager",
+  "version": "0.0.1",
+  "description": "fis-auto-packager",
+  "main": "fis-auto-packager.js",
+  "dependencies": {
+    "request" : "2.27.0",
+    "adm-zip" : "0.4.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis",
+    "fis-cloud",
+    "fis-auto-packager"
+  ],
+  "author": {
+    "name": "fis-team"
+  },
+  "license": "BSD",
+  "readme": "This file was created by JetBrains PhpStorm 6.0 for binding GitHub repository"
+}

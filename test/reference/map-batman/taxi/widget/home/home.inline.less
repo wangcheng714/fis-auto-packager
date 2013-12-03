@@ -1,0 +1,263 @@
+.taxi-widget-home {
+    width: 100%;
+    height: 100%;
+    background: url(/widget/home/images/bg.png) no-repeat center bottom;
+    background-size: contain;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .taxi-widget-addprice {
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0px 22px;
+        padding-bottom: 20px;
+    }
+
+    .logo {
+        position: relative;
+        margin: 17px auto 35px;
+        width: 120px;
+        height: 40px;
+        box-sizing: border-box;
+        padding-left: 45px;
+    }
+    .baidu-taxi {
+        font-size: 18px;
+        color: #666;
+    }
+    .slogan {
+        font-size: 14px;
+        color: #999;
+    }
+    .icon {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 0px;
+        top: 0px;
+        background: url(/widget/home/images/bg-logo.png) no-repeat 0 0;
+        background-size: 40px 40px;
+    }
+
+    .btn-back {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 0px;
+        width: 50px;
+        height: 50px;
+        background: url(/static/images/bg-btn-back.png) no-repeat center center;
+        background-size: 16px 16px;
+    }
+    .btn-settings {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        font-size: 0px;
+        width: 50px;
+        height: 50px;
+        background: url(/widget/home/images/bg-settings.png) no-repeat center center;
+        background-size: 19px 19px;
+    }
+    .result {
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 15px;
+        white-space: nowrap;
+        text-align: center;
+
+        .text:first-child {
+            padding-left: 20px;
+            background: url(/static/images/icon-car.png) no-repeat left center;
+            background-size: 15px 15px;
+        }
+    }
+    .input-wrapper {
+        position: relative;
+        box-sizing: border-box;
+        background: #fff;
+        margin-bottom: 8px;
+        height: 40px;
+    }
+    .form .input-wrapper::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        z-index: 9;
+    }
+    input[type=text] {
+        box-sizing: border-box;
+        border: 1px solid #999;
+        border-radius: 3px;
+        padding: 10px 10px 10px 35px;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+    }
+    .input-icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 10px;
+        top: 10px;
+        background: url(/widget/home/images/bg-input-icon.png) no-repeat 0 0;
+        background-size: 20px 40px;
+    }
+    .end .input-icon{
+        background-position-y: -20px;
+    }
+    .nearby-car-info {
+        text-align: center;
+        font-size: 14px;
+        color: #a3a3a3;
+        margin-bottom: 40px;
+    }
+    .nearby-car-info .result {
+        display: none;
+    }
+    .nearby-car-info.loaded .loading {
+        display: none;
+    }
+    .nearby-car-info.loaded .result {
+        display: block;
+    }
+    .nearby-car-info .count {
+        font-size: 21px;
+        color: #3399fe;
+    }
+    .btn-submit {
+        display: block;
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+        color: white;
+        background: url(/widget/home/images/bg-btn-submit.png) no-repeat 0 0;
+        background-size: cover;
+        padding: 0px;
+        border: none;
+        margin: 0 auto;
+    }
+
+    /* 输入面板样式 */
+    .input-panel {
+        position: relative;
+        box-sizing: border-box;
+        padding: 60px 8px 0px 8px;
+        height: 100%;
+
+        .input-wrapper {
+            height: 35px;
+            margin: 7px 0px
+        }
+
+        .input-icon {
+            width: 15px;
+            height: 15px;
+            background-size: 15px 30px;
+        }
+
+        .poi-input {
+            height: 100%;
+            line-height: 15px;
+        }
+
+        .btn-confirm {
+            position: absolute;
+            right: 8px;
+            top: 7px;
+            background: url(/widget/home/images/bg-btn-confirm.png) no-repeat center center;
+            background-size: 55px 35px;
+            color: white;
+            font-size: 14px;
+            width: 55px;
+            height: 35px;
+        }
+        .top-bar {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 50px;
+            padding: 0px 70px 0px 60px;
+            background: white;
+        }
+        .btn-back-to-form {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 50px;
+            height: 50px;
+            background: url(/static/images/bg-btn-back.png) no-repeat center center;
+            background-size: 16px 16px;
+            border: none;
+            padding: 0px;
+            margin: 0px;
+            font-size: 0px;
+        }
+
+        .ui-suggestion {
+            position: relative !important;
+            box-sizing: border-box;
+            font-size: 16px;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .ui-suggestion-content {
+            border-style: solid;
+            border-color: #ccc;
+            border-width: 1px 1px 0px 1px;
+            border-radius: 3px 3px 0px 0px;
+            background: white;
+            padding: 0px 12px;
+        }
+        .ui-suggestion-button {
+            border-style: solid;
+            border-color: #ccc;
+            border-width: 0px 1px 1px 1px;
+            border-radius: 0px 0px 3px 3px;
+            background: white;
+            padding: 0px 12px;
+            height: 50px;
+            line-height: 50px;
+            color: #ccc;
+
+            span {
+                float: left;
+            }
+            span:last-child {
+                float: right;
+            }
+        }
+        .ui-suggestion-result {
+            box-sizing: border-box;
+            height: 50px;
+            line-height: 50px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #333;
+            border-bottom: 1px solid #ccc;
+
+            span:last-child {
+                color: #ccc;
+                font-size: 12px;
+            }
+        }
+    }
+    .input-panel[data-type=route_end] {
+        .input-icon {
+            background-position-y: -15px;
+        }
+    }
+}

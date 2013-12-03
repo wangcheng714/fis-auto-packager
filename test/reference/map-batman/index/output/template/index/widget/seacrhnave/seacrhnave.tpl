@@ -1,0 +1,35 @@
+{%style id="/widget/seacrhnave/seacrhnave.inline.less"%}.place-widget-seacrhnave{}.place-widget-seacrhnave .pagebody{}.place-widget-seacrhnave .se-box{width:100%;background-color:#fff}.place-widget-seacrhnave .se-box .ipt-icon{position:absolute;top:6px;left:6px;width:19px;height:19px;color:#FFF;font-size:12px;border-radius:2px;line-height:19px}.place-widget-seacrhnave .se-box .ipt-icon.start{background-color:#62B211}.place-widget-seacrhnave .se-box .ipt-icon.end{background-color:#F50}.place-widget-seacrhnave .se-wrap{position:relative}.place-widget-seacrhnave .se-wrap .se-poi-form{height:36px;background-color:#fff;position:relative}.place-widget-seacrhnave .se-wrap .btn-clear{position:absolute;right:.286em;top:50%;margin-top:-.714em;width:1.464em;height:1.464em;display:none;background-position:0 -5.964em;z-index:100000}.place-widget-seacrhnave .se-wrap input{width:100%;height:100%;color:#333;border:0;background:0}.place-widget-seacrhnave .se-wrap input.geo{color:#4C78CE}.place-widget-seacrhnave #se_dir{padding:8px;box-shadow:0 1px 3px -1px rgba(0,0,0,.18);-webkit-box-shadow:0 1px 3px -1px rgba(0,0,0,.18);top:1px;position:relative;height:79px}.place-widget-seacrhnave .se-inner{height:32px;padding-left:26px;position:relative;background:#FFF;border:1px solid #D9D9D9;width:auto;left:0;top:2px}.place-widget-seacrhnave .se-poi-form input{padding:5px;height:27px}.place-widget-seacrhnave .se-poi table{border:1px solid #9a9a9a;background:#fff}.place-widget-seacrhnave #se_poi_submit{height:36px;width:49px;border-left:1px solid #9a9a9a;background:-webkit-gradient(linear,0 100%,0 0,from(#e7e7e7),to(#f5f5f5))}.place-widget-seacrhnave #se_poi .active{background:0;background-color:#e7e7e7}.place-widget-seacrhnave .se-btn b{display:inline-block;width:23px;height:23px;margin-top:6px;margin-left:14px;background:url(/static/index/images/search_ico_89dbc92.png) no-repeat;background-size:23px 23px}.place-widget-seacrhnave .se-city{height:36px;display:-webkit-box;width:68px;-webkit-box-align:center;z-index:10000;line-height:36px}.place-widget-seacrhnave .se-city span{display:inline-block;height:22px;line-height:22px;white-space:nowrap;max-width:45px;overflow:hidden;text-overflow:ellipsis;font-size:14px;color:#343434;-webkit-border-radius:3px;padding:0 20px 0 5px;position:relative}.place-widget-seacrhnave .se-city span:after{content:"";position:absolute;width:7px;height:4px;top:9px;right:8px;background:url("data:image/gif;base64,R0lGODlhDQAHAIABAJqamv///yH5BAEAAAEALAAAAAANAAcAAAIPhI8XyeGs3GtSpoojrmAXADs=") no-repeat;background-size:7px 4px}.place-widget-seacrhnave .route-pic{background:url(/static/index/images/2_d6406b2.png) no-repeat;background-size:20px 156px}.place-widget-seacrhnave .se-dir-form{position:relative}.place-widget-seacrhnave .se-dir-form input{height:2.071em}.place-widget-seacrhnave #se_dir_submit{width:35px;height:70px;border:1px solid #9a9a9a;background-image:-webkit-gradient(linear,0 0,0 100%,from(#f7f6f6),to(#dfdfdf),color-stop(0.5,#eee));margin-left:6px;vertical-align:middle}.place-widget-seacrhnave #se_dir_reverse{margin-right:15px;margin-left:6px}.place-widget-seacrhnave #se_dir_reverse.active{background:#e7e7e7;-webkit-box-shadow:inset 0 0 2px #e3e3e3}.place-widget-seacrhnave .se-rev-icon{border:1px solid #D9D9D9;width:34px;height:40px;margin-top:4px;background-image:url(http://s1.map.bdimg.com/mobile/static/common/ui/images/ui3/reverse_6baf6812.png);background-size:34px 40px}.place-widget-seacrhnave .tactics{display:-webkit-box;border-top:1px solid #E5E5E5;border-bottom:1px solid #B9B9B9;height:49px;font-size:15px;color:#636363;height:48px;line-height:48px;background-color:#F9F9F9;box-shadow:0 2px 3px -1px rgba(0,0,0,.18)}.place-widget-seacrhnave .se-bus-btn,.place-widget-seacrhnave .se-drive-btn,.place-widget-seacrhnave .se-walk-btn{color:#636363;display:block;width:32%;height:100%;text-align:center;-webkit-box-flex:1}.place-widget-seacrhnave .se-bus-btn{border-right:1px solid #E5E5E5}.place-widget-seacrhnave .se-drive-btn{border-right:1px solid #E5E5E5}.place-widget-seacrhnave .se-bus-btn.active{background:#f5f6f7}.place-widget-seacrhnave .se-drive-btn.active{background:#f5f6f7}.place-widget-seacrhnave .se-walk-btn.active{background:#f5f6f7}.place-widget-seacrhnave .se-bus-btn .se-bus-icon{display:inline-block;margin-right:9px;height:14px;width:14px;vertical-align:middle;margin-top:-5px;background-position:1px -81px}.place-widget-seacrhnave .se-drive-btn .se-drive-icon{display:inline-block;margin-right:9px;height:14px;width:14px;vertical-align:middle;margin-top:-5px;background-position:0 -98px}.place-widget-seacrhnave .se-walk-btn .se-walk-icon{display:inline-block;margin-right:7px;height:14px;width:14px;vertical-align:middle;margin-top:-5px;background-position:0 -137px}.place-widget-seacrhnave .se-tabgroup .active{background-color:#373b42}.place-widget-seacrhnave .route-wrapper{padding:10px 8px;color:#515a64}.place-widget-seacrhnave .route-wrapper .nb-station{font-size:13px}.place-widget-seacrhnave .route-wrapper .st{display:inline-block;height:28px;line-height:28px;padding:0 10px;border-radius:3px;border:1px solid #adadad;background:-webkit-gradient(linear,0 100%,0 0,from(#f5f6f8),to(#fbfbfb));margin-left:-4px}.place-widget-seacrhnave .route-wrapper .sw-btn{margin-top:14px;height:33px;line-height:33px;border:1px solid #adadad;font-size:14px;text-align:center;border-radius:2px;background:-webkit-gradient(linear,0 100%,0 0,from(#f1f1f1),to(#f8f8f8))}.place-widget-seacrhnave .route-wrapper .sw-btn.active{background:#F2F2F2}.place-widget-seacrhnave .route-wrapper .sw-btn em{display:inline-block;width:14px;height:16px;vertical-align:middle;margin-top:-2px;margin-right:7px;background-position:0 -117px}{%/style%}<div class="pagebody place-widget-seacrhnave">
+<div id="se_box" class="se-box">
+<div id="se_wrap" class="se-wrap">
+<div id="se_dir">
+<table>
+<tr>
+<td>
+<div id="se_dir_reverse" class="se-btn">
+<div class="route-pic se-rev-icon"></div>
+</div>
+</td>
+<td width="100%">
+<div class="se-inner" style="margin-bottom: 6px;">
+<em class="ipt-icon start">起</em>
+<form id="se_start_form" class="se-dir-form">
+<input type="text" key="start" id="se_txt_start" class="se_txt_start" style="position: absolute; top: 0px; left: 0px; width: auto; right: 40px;">
+</form>
+</div>
+<div class="se-inner">
+<em class="ipt-icon end">终</em>
+<form id="se_end_form" class="se-dir-form">
+<input type="text" key="end" id="se_txt_end" class="se_txt_end"/>
+</form>
+</div>
+</td>
+</tr>
+</table></div>
+<div class='tactics' style="text-align:center;"><span class="se-bus-btn se-btn-tr" data-value="1"><em class="route-pic se-bus-icon"></em>公交</span>
+<span class="se-drive-btn se-btn-tr" data-value="2"><em class="route-pic se-drive-icon"></em>驾车</span><span class="se-walk-btn se-btn-tr" data-value="3"><em class="route-pic se-walk-icon"></em>步行</span>
+</div></div>
+</div>
+</div>
+{%script%}
+    (require("index:widget/seacrhnave/seacrhnave.js")).init();
+{%/script%}

@@ -1,0 +1,1 @@
+define("index:widget/navebox/navebox.js",function(){});

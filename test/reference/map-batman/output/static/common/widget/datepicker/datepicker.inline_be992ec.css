@@ -1,0 +1,106 @@
+/* 日历控件 */
+.ui-datepicker {
+    width: 100%;
+    line-height: 25px;
+}
+
+.ui-datepicker-header {
+    color: #545454;
+    text-align: center;
+    padding: 3px 0;
+}
+
+.ui-datepicker-header a {
+    color: #545454;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 1.0;
+    position: relative;
+    bottom: 3px;
+}
+
+.ui-datepicker-header a.ui-state-hover {
+    background-color: #ccc;
+}
+
+.ui-datepicker-header .ui-datepicker-title {
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ui-datepicker-calendar {
+    width: 100%;
+}
+
+.ui-datepicker-calendar tbody {
+    background: #c9c9c9;
+}
+
+.ui-datepicker-calendar td {
+    text-align: center;
+    color: #000;
+    background: #fafafa;
+    border: 1px solid #c9c9c9;
+    font-weight: bold;
+}
+
+.ui-datepicker-calendar thead tr {
+    border: 1px solid #c9c9c9;
+}
+
+.ui-datepicker-calendar thead th {
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.ui-datepicker-calendar a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+
+.ui-datepicker-calendar tr.ui-datepicker-gap td {
+    display: none;
+    padding: 0;
+    border: none transparent;
+}
+
+.ui-datepicker-calendar tbody td {
+    padding: 10px 0;
+}
+
+.ui-datepicker-calendar tbody td:first-child {
+    border-left: none 0;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-unselectable {
+    background: #f6f6f6;
+    color: #b8b8b8;
+    font-weight: normal;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-today {
+    background: #FBF9EE;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-current-day {
+    background: #e3f1ff;
+    font-weight: bold;
+    border-color: #fff;
+}
+
+.ui-datepicker-calendar td.ui-state-hover {
+    background: #ccc;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    float: left;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    float: right;
+}

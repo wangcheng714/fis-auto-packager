@@ -1,0 +1,82 @@
+.container {
+  width: 300px;
+  height: 70px;
+  margin: 0 auto;
+}
+#unlock-bottom {
+  display: block;
+  -webkit-transform: translate3d(0, 0, 0);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 71px;
+  z-index: 1000;
+  line-height: 44px;
+  background-color: #36393c;
+  background: -webkit-gradient(linear, 0 100%, 0 0, from(#36393c), to(#585c63));
+  border-bottom: 1px solid #222;
+  text-align: center;
+}
+.openApp {
+  background-size: 100% 100%;
+  background-image: url(/static/third/images/icon1_051dad8.png);
+}
+.loadDown {
+  background-size: 100% 100%;
+  background-image: url(/static/third/images/icon_b1faa11.png);
+}
+#slide-to-unlock {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+  top: 12px;
+  width: 241px;
+  height: 45px;
+  background-image: url(/static/third/images/slideWin_2bd6552.png);
+  background-size: 241px 45px;
+}
+#unlock-slider-wrapper {
+  padding-left: 22px;
+  padding-top: 23px;
+}
+#unlock-slider {
+  width: 230px;
+  height: 50px;
+}
+.ui-slider {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#unlock-handle {
+  position: relative;
+  z-index: 10;
+  height: 35px;
+  width: 48px;
+  top: -48px;
+  margin-left: 3px;
+  background-size: 48px 35px;
+  background-image: url(/static/third/images/lock-slider_3b2a400.png);
+}
+.text {
+  position: relative;
+  width: 150px;
+  height: 20px;
+  top: -32px;
+  color: #ffffff;
+  z-index: 100000;
+  font-size: 15px;
+  left: 31%;
+  font-family: "微软雅黑,宋体";
+}
+.MapIcon {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  background-size: 46px 46px;
+  background-image: url(/static/third/images/mapIcon_38ceba0.png);
+  border-radius: 3px;
+  top: -83px;
+  left: 83%;
+}

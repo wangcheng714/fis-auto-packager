@@ -1,0 +1,180 @@
+{
+    "res": {
+        "transit:page/crossdetail.tpl": {
+            "uri": "/template/transit/page/crossdetail.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "transit:widget/crossdetail/crossdetail.js"
+            ],
+            "hash": "faf9a9f"
+        },
+        "transit:page/crosslist.tpl": {
+            "uri": "/template/transit/page/crosslist.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "transit:widget/crosslist/crosslist.js"
+            ],
+            "hash": "ba8df34"
+        },
+        "transit:page/detail.tpl": {
+            "uri": "/template/transit/page/detail.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "common:widget/sharefriends/sharefriends.js"
+            ],
+            "hash": "a4f6f7c"
+        },
+        "transit:page/list.tpl": {
+            "uri": "/template/transit/page/list.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "3ffca74"
+        },
+        "transit:page/trainstation.tpl": {
+            "uri": "/template/transit/page/trainstation.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "e707b89"
+        },
+        "transit:widget/crossdetail/crossdetail.inline.less": {
+            "uri": "/static/transit/widget/crossdetail/crossdetail.inline_62d828b.css",
+            "type": "css",
+            "hash": "15507a2"
+        },
+        "transit:widget/crossdetail/crossdetail.js": {
+            "uri": "/static/transit/widget/crossdetail/crossdetail_de1e6e5.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js"
+            ],
+            "pkg": "transit:p0",
+            "hash": "e7768ea"
+        },
+        "transit:widget/crossdetail/crossdetail.tpl": {
+            "uri": "transit/widget/crossdetail/crossdetail.tpl",
+            "type": "tpl",
+            "deps": [
+                "transit:widget/crossdetail/crossdetail.js"
+            ],
+            "hash": "501b433"
+        },
+        "transit:widget/crosslist/crosslist.inline.less": {
+            "uri": "/static/transit/widget/crosslist/crosslist.inline_bf84e4d.css",
+            "type": "css",
+            "hash": "03fd13c"
+        },
+        "transit:widget/crosslist/crosslist.js": {
+            "uri": "/static/transit/widget/crosslist/crosslist_50a81d8.js",
+            "type": "js",
+            "deps": [
+                "common:widget/url/url.js",
+                "common:widget/datepicker/datepicker.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "transit:p0",
+            "hash": "2f688a7"
+        },
+        "transit:widget/crosslist/crosslist.tpl": {
+            "uri": "transit/widget/crosslist/crosslist.tpl",
+            "type": "tpl",
+            "deps": [
+                "transit:widget/crosslist/crosslist.js"
+            ],
+            "hash": "cee9228"
+        },
+        "transit:widget/detail/detail.inline.less": {
+            "uri": "/static/transit/widget/detail/detail.inline_4163730.css",
+            "type": "css",
+            "hash": "4073999"
+        },
+        "transit:widget/detail/detail.tpl": {
+            "uri": "transit/widget/detail/detail.tpl",
+            "type": "tpl",
+            "hash": "aa9aeeb"
+        },
+        "transit:widget/list/list.inline.less": {
+            "uri": "/static/transit/widget/list/list.inline_4f353da.css",
+            "type": "css",
+            "hash": "68b4edf"
+        },
+        "transit:widget/list/list.js": {
+            "uri": "/static/transit/widget/list/list_489ee71.js",
+            "type": "js",
+            "deps": [
+                "common:widget/datescrollpick/datescrollpicker.js",
+                "common:widget/url/url.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/popup/popup.js",
+                "common:widget/stat/stat.js",
+                "common:widget/geolocation/location.js",
+                "common:static/js/util.js"
+            ],
+            "pkg": "transit:p0",
+            "hash": "7320248"
+        },
+        "transit:widget/list/list.tpl": {
+            "uri": "transit/widget/list/list.tpl",
+            "type": "tpl",
+            "deps": [
+                "transit:widget/list/list.js"
+            ],
+            "hash": "debb858"
+        },
+        "transit:widget/title/title.inline.less": {
+            "uri": "/static/transit/widget/title/title.inline_c0292df.css",
+            "type": "css",
+            "hash": "f02ca90"
+        },
+        "transit:widget/title/title.tpl": {
+            "uri": "transit/widget/title/title.tpl",
+            "type": "tpl",
+            "hash": "4733376"
+        },
+        "transit:widget/trainstation/trainstation.inline.less": {
+            "uri": "/static/transit/widget/trainstation/trainstation.inline_256aeb1.css",
+            "type": "css",
+            "hash": "1507eea"
+        },
+        "transit:widget/trainstation/trainstation.tpl": {
+            "uri": "transit/widget/trainstation/trainstation.tpl",
+            "type": "tpl",
+            "hash": "23207c6"
+        }
+    },
+    "pkg": {
+        "transit:p0": {
+            "uri": "/static/transit/pkg/transit_a5a01cc.js",
+            "type": "js",
+            "has": [
+                "transit:widget/crossdetail/crossdetail.js",
+                "transit:widget/crosslist/crosslist.js",
+                "transit:widget/list/list.js"
+            ],
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/url/url.js",
+                "common:widget/datepicker/datepicker.js",
+                "common:widget/datescrollpick/datescrollpicker.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/popup/popup.js",
+                "common:widget/geolocation/location.js"
+            ]
+        }
+    }
+}

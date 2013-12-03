@@ -1,0 +1,1 @@
+define("place:static/js/broadcastname.js",function(e,t,a){a.exports={DATEPICKER_DATE_CHANGE:"datepickerdatechange",HOTELBOOK_OR_THIRDSRCOTA_SHOW:"hotelbookorthirdsrcotashow"}});

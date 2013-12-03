@@ -1,0 +1,166 @@
+{
+    "res": {
+        "user:page/exchange.tpl": {
+            "uri": "/template/user/page/exchange.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "052f468"
+        },
+        "user:page/mycenter.tpl": {
+            "uri": "/template/user/page/mycenter.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "fa7a99e"
+        },
+        "user:page/rule.tpl": {
+            "uri": "/template/user/page/rule.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "user:widget/rule/rule.js"
+            ],
+            "hash": "edcba4c"
+        },
+        "user:page/score.tpl": {
+            "uri": "/template/user/page/score.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "3622873"
+        },
+        "user:widget/exchange/exchange.js": {
+            "uri": "/static/user/widget/exchange/exchange_ff82cc2.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/login/login.js",
+                "user:widget/exchange/exchange.less"
+            ],
+            "pkg": "user:p0",
+            "hash": "16df65b"
+        },
+        "user:widget/exchange/exchange.less": {
+            "uri": "/static/user/widget/exchange/exchange_1be500f.css",
+            "type": "css",
+            "hash": "ec18ef4"
+        },
+        "user:widget/exchange/exchange.tpl": {
+            "uri": "user/widget/exchange/exchange.tpl",
+            "type": "tpl",
+            "deps": [
+                "user:widget/exchange/exchange.js",
+                "user:widget/exchange/exchange.less"
+            ],
+            "hash": "032eaae"
+        },
+        "user:widget/mycenter/mycenter.js": {
+            "uri": "/static/user/widget/mycenter/mycenter_e9a327b.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/login/login.js",
+                "common:widget/cookie/cookie.js",
+                "user:widget/mycenter/mycenter.less"
+            ],
+            "pkg": "user:p0",
+            "hash": "8e607ce"
+        },
+        "user:widget/mycenter/mycenter.less": {
+            "uri": "/static/user/widget/mycenter/mycenter_bacb4a9.css",
+            "type": "css",
+            "hash": "cadd232"
+        },
+        "user:widget/mycenter/mycenter.tpl": {
+            "uri": "user/widget/mycenter/mycenter.tpl",
+            "type": "tpl",
+            "deps": [
+                "user:widget/mycenter/mycenter.js",
+                "user:widget/mycenter/mycenter.less"
+            ],
+            "hash": "236425f"
+        },
+        "user:widget/rule/rule.js": {
+            "uri": "/static/user/widget/rule/rule_591ce00.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/login/login.js",
+                "user:widget/rule/rule.less"
+            ],
+            "pkg": "user:p0",
+            "hash": "327bba5"
+        },
+        "user:widget/rule/rule.less": {
+            "uri": "/static/user/widget/rule/rule_d9fdfca.css",
+            "type": "css",
+            "hash": "69caccb"
+        },
+        "user:widget/rule/rule.tpl": {
+            "uri": "user/widget/rule/rule.tpl",
+            "type": "tpl",
+            "deps": [
+                "user:widget/rule/rule.js",
+                "user:widget/rule/rule.less"
+            ],
+            "hash": "e694d42"
+        },
+        "user:widget/score/score.js": {
+            "uri": "/static/user/widget/score/score_aa529bb.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/login/login.js",
+                "user:widget/score/score.less"
+            ],
+            "pkg": "user:p0",
+            "hash": "2872c03"
+        },
+        "user:widget/score/score.less": {
+            "uri": "/static/user/widget/score/score_8d802ec.css",
+            "type": "css",
+            "hash": "4f925f4"
+        },
+        "user:widget/score/score.tpl": {
+            "uri": "user/widget/score/score.tpl",
+            "type": "tpl",
+            "deps": [
+                "user:widget/score/score.js",
+                "user:widget/score/score.less"
+            ],
+            "hash": "845ac04"
+        }
+    },
+    "pkg": {
+        "user:p0": {
+            "uri": "/static/user/pkg/user_1448ca1.js",
+            "type": "js",
+            "has": [
+                "user:widget/exchange/exchange.js",
+                "user:widget/mycenter/mycenter.js",
+                "user:widget/rule/rule.js",
+                "user:widget/score/score.js"
+            ],
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/login/login.js",
+                "user:widget/exchange/exchange.less",
+                "common:widget/cookie/cookie.js",
+                "user:widget/mycenter/mycenter.less",
+                "user:widget/rule/rule.less",
+                "user:widget/score/score.less"
+            ]
+        }
+    }
+}

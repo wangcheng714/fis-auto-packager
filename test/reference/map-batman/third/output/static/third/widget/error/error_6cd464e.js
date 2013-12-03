@@ -1,0 +1,1 @@
+define("third:widget/error/error.js",function(o,t,e){var r="_lastPageUrl",i=function(){$(".back-last-page").on("click",function(){n()})},n=function(){var o=window.localStorage.getItem(r);"string"==typeof o?(window.localStorage.removeItem(r),window.location.replace(o)):history.back()};e.exports.init=i});

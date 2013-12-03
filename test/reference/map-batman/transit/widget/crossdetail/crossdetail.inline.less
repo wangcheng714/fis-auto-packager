@@ -1,0 +1,256 @@
+.transit-widget-crossdetail{
+	color: #606060;
+	.city-bound{
+		height:33.5px;
+		padding-top:19.5px;
+		padding-left:8px;
+		border: 1px solid #fff;
+		border-bottom-color: #d9d9d9;		
+		em{
+		    width: 29px; 
+		    height: 18px;
+		    float:left;	
+		    background: #5198cf;
+		    border-radius: 2px;	
+		    color: white;
+		    font-size: 12px;
+		    line-height: 18px;
+		}
+		.start, .end{
+			margin-top:4px;	
+			margin-left: -3px;
+		}
+		.start{
+			margin-left:8px; 
+			margin-right: -3px;
+		}
+	}
+	/** 跨城公交的详情页 **/
+	.detail-title{
+		.air-icon, .train-icon{
+			background:url('/static/images/icons.png') no-repeat;
+		    background-size:74px 220px;
+		    width: 28.5px; 
+		    height: 25.5px;
+		    margin-left: 18px;
+		}
+		.air-icon{
+			background-position: 0 -63px;
+		}
+		.train-icon{
+			background-position: 0 -88px;
+		}
+
+		span{
+			vertical-align: top;
+			line-height: 29px;
+			font-size: 16px;
+		}
+		span.train-type{
+			font-size: 12px;
+			margin-top: 3px;
+			display: inline-block;
+		}
+	}
+
+	.detail-wrapsin{
+		margin-left: 18px;
+		margin-bottom: -11px;
+		.detail-info{
+			margin-left: 0;
+		}
+		.start-location,.end-location,.airdetail-processed,.detail-lowest,.air-booking{
+			margin-top: 4px;
+		}
+		a.train-station{
+			color: #333333;
+			font-size: 14px;
+			margin-left: -18px;
+			display: block;
+			span{
+				margin-left: 17px;
+			}
+			em{
+				color: #c9c9c9;
+			}
+		}
+	}
+
+	.detail-wrapmul{
+		margin-left: 30px;
+		position: relative;
+		.flow{
+			height: 100%;
+			position: absolute;
+			width: 2px;
+			background: #e4e4e4;
+			top: 0;
+			left: -5px;
+		}
+		.start-circle::before, .end-circle::after{
+			width: 8px;
+			height: 8px;
+			border-radius: 5px;
+			background: #e4e4e4;
+			position: absolute;
+			bottom: 0;
+			left: -3px;
+			content: '';
+		}
+		.start-circle::before{
+			top: 0;
+		}
+	}
+
+	.detail{
+		padding-top: 15px;
+		font-size: 13px;
+		.train-station{
+			height: 48px;
+			line-height: 48px;
+			border-top: 1px solid #e4e4e4;
+			border-bottom: 1px solid #e4e4e4;
+			margin-left: 17px;
+			em{
+				position: absolute;
+				right: 20px;
+			}
+		}
+		.train-booking, .air-booking{
+			position: absolute;
+			top: 57px;
+			right: 0;
+		}
+		.train-booking{
+			background: url('/static/images/icons.png') no-repeat 0 0;
+			width: 74px;
+			height: 31px;
+			background-size: 74px 220px;
+		}
+		.air-booking{
+			background:url('/static/images/icons.png') no-repeat 0 -31px;
+			width: 56px;
+			height: 32px;
+			background-size: 74px 220px;
+		}
+	}
+
+	.detail-info{
+		height: 115px;
+		position: relative;
+		color: #3b3b3b;
+		margin: 0 20px 0 18px;
+		.detail-start{
+			position: absolute;
+			left: 0;
+			top: 0;
+			p{
+				max-width: 100px;
+			}
+		}
+		.arrow{
+			background:url('../../images/icons.png') no-repeat 0 -147px;
+		    background-size:15px 16px;
+		    width: 15px; 
+		    height: 16px;
+			position: absolute;
+			left: 50%;
+		}
+		.detail-end{
+			position: absolute;
+			right: 0;
+			top: 0;
+			p{
+				text-align: right;
+				max-width: 100px;
+			}
+		}
+		.airdetail-processed{
+			position: absolute;
+			top: 57px;
+			color: #2f2e2e;
+		}
+		.detail-lowest{
+			position: absolute;
+			top: 82px;
+			color: #2f2e2e;
+			.icon{
+				margin: 0 3px;
+			}
+		}
+		.stress{
+			color: #CC3333;
+		}
+		.start-location, .end-location{
+			color: #676767;
+		}
+		.start-location::after, .end-location::after{
+		    width: 12px; 
+		    height: 12px;
+		    content: '始';
+		    background: #73a761;
+		    border-radius: 2px;
+		    color: white;
+		    font-size: 10px;
+		    padding: 1px 2px;
+		}
+		.end-location::after{
+		    content: '终';
+		    background: #cb6363;
+		}
+	}
+
+	/** 室内公交 **/
+	.crossbus-list{
+		border-top: 1px solid #b2b5b9;
+		margin-top: 10px;
+		.start-icon,.transfer-icon,.end-icon{
+			width: 29px; 
+		    height: 18px;
+		    margin-left: 8px;
+		    border-radius: 3px;
+		    color: white;
+		    font-size: 12px;
+		    line-height: 18px;
+		}
+		.start-icon{
+		    background: #73a761;
+		}
+		.transfer-icon{
+			background: #fdb039;
+		}
+		.end-icon{
+		    background: #cb6363;
+		}
+		.start-point{
+			margin-left: 13px;
+		}
+		.start-point,.start-transit{
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			display: inline-block;
+			max-width: 100px;
+		}
+		li{
+			border-bottom:1px solid #d9d9d9;
+			position: relative;
+			color: #3b3b3b;
+			a{
+				padding: 13px 0;
+				display: block;
+			}
+			em:last-child{
+				position: absolute;
+				right: 20px;
+				color: #c9c9c9;
+			}
+		}
+        .incity-plan {
+            color: #3b3b3b;
+            padding: 13px 0px;
+            display: block;
+        }
+	}
+}
+

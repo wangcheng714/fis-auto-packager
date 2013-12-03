@@ -1,0 +1,14 @@
+.ui-quickdelete-button{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 1px; 
+    right: 1px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAqCAYAAAAqAaJlAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAALzSURBVHjaxJlpb9NAEIZ9pEmcpCWhpUiQqoJK8P9/DggooPYLLQ1J1SN1bDNTvRstrr23y0gjR44dP56daydx5Ccj0inpgHRImuDIsiYtcGRdkV77PCx2BNwnnZHuWN67IV2S/nYBjy0h35LuRWHkhvTcBjo2vIYhDx1XQids5Z+kpS8sL/M70t2oW7kj/QrfbpVU8V1G+gHL37WwUV6S3pI+2MIy6EeHAPKRBMBs5XtT2B4s+pygsltOEXR509vULz5B3vxfwkzvYTQlLEf9RPNjeQCgjeb7PumRyg04kI41GWJB+hlVKnME5aLwCauXaQL8Rs4QMuyxVCrbQE9JK9I/jsBLpKgKn02AL+uwbNW54qY1LFpJ52yBZVAh3C8cKLLSDtLZWoZ9o8mnPfj3qnbeFLgJNEYgjQ0CbiFgE7hAorlpguttgVWgU4MVYVe54HKc4s0ODZfSFtgXVFzPheIuhc/Y1H5T4FUA0H9ay55jCnqN45l0rkK2EO71JRCoSACPgTN0zJc64FCgwm8fYXselagNOAoIKjjjRNMmmgLPFcHhC7qtCUkURjJFma5CdjiF52+sGoKp7sOLAKxFYtAB2YLGHQAzY5W0deWGoG15dB4YeNsbZA4bQgFatgSTa2lW9RbLFG99EBDUt5dokl+i3LI/vDJoZGxAQwJXYq4gLDs02HLbgoYCFuOmrTUvDPZdLqCqwsFG+m6wp3uyU8hhgYFivtDHW7pWprqFY0x7xppJzVnTHuwegRYrOp8+HuZaQgXwNUBnmut/yBvGOtiRQSOeBxiArA1mE5yTv6kmMvzGe7Cgy3zMpotSyUNDjDxJVxXKZ4hBhquUsOjGxEolLLwfdTOP1eXU06hlwJwq/FK4RPpMoBtYdOnifzmcfKLx4RAihii3kUewsEtc4bpRR25xhWDSxonNwweYMs4CQXK+PtdZ0xVWyBjF44VDvi3gk5dRx38tNckugnCE3NmXcmiJqljAeuJPO+c92V8BBgA85NXw63SPuAAAAABJRU5ErkJggg%3D%3D") no-repeat;
+    background-position: 0px 0px;
+    background-size: 20px 20px;
+    -webkit-background-size: 100%;
+    -webkit-background-origin: content-box;
+    cursor: pointer;
+    visibility: hidden;
+}

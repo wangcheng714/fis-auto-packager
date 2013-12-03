@@ -1,0 +1,1 @@
+define("place:widget/thirdcomment/thirdcomment.js",function(t,e,o){var n=t("common:static/js/util.js");o.exports={init:function(){$("#J_commentSelect")&&$("#J_commentSelect").on("change",this.loadMore)},loadMore:function(){var t=$(this),e=n.jsonToUrl({uid:t.data("uid"),startIndex:0,maxResults:5,orderBy:t.val()});BigPipe.asyncLoad({id:"place-pagelet-bdcomment"},e)}}});

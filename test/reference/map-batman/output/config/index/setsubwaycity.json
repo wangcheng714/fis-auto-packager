@@ -1,0 +1,60 @@
+{	
+        "hotCityData": [
+                {"name":"北京","city_id":"131","eng":"beijing"},
+                {"name":"上海","city_id":"289","eng":"shanghai"},
+                {"name":"广州","city_id":"257","eng":"guangzhou"},
+                {"name":"深圳","city_id":"340","eng":"shenzhen"},
+                {"name":"成都","city_id":"75","eng":"chengdu"},
+                {"name":"天津","city_id":"332","eng":"tianjin"},
+                {"name":"南京","city_id":"315","eng":"nanjing"},
+                {"name":"杭州","city_id":"179","eng":"hangzhou"},
+                {"name":"武汉","city_id":"218","eng":"wuhan"}
+        ],
+        "letter": ["B","C","D","F","G","H","K","N","S","T","W","X"],
+
+        "cityData":{
+
+                "B" : [
+                        {"name":"北京","city_id":"131","eng":"beijing"}
+                ],
+                "C" : [
+                        {"name":"长春","city_id":"53","eng":"changchun"},
+                        {"name":"成都","city_id":"75","eng":"chengdu"},
+                        {"name":"重庆","city_id":"132","eng":"chongqing"}
+                ],
+                "D" : [
+                        {"name":"大连","city_id":"167","eng":"dalian"}
+                ],
+                "F" : [
+                        {"name":"佛山","city_id":"138","eng":"foshan"}
+                ],
+                "G" : [
+                        {"name":"广州","city_id":"257","eng":"guangzhou"}
+                ],
+                "H" : [
+                        {"name":"杭州","city_id":"179","eng":"hangzhou"}
+                ],
+                "K" : [
+                        {"name":"昆明","city_id":"104","eng":"kunming"}
+                ],
+                "N" : [
+                        {"name":"南京","city_id":"315","eng":"nanjing"}
+                ],
+                "S" : [
+                        {"name":"深圳","city_id":"340","eng":"shenzhen"},
+                        {"name":"苏州","city_id":"224","eng":"suzhou"},
+                        {"name":"沈阳","city_id":"58","eng":"shenyang"},
+                        {"name":"上海","city_id":"289","eng":"shanghai"}
+                ],
+                "T" : [
+                        {"name":"天津","city_id":"332","eng":"tianjin"}
+                ],
+                "W" : [
+                        {"name":"武汉","city_id":"218","eng":"wuhan"}
+                ],
+                "X" : [
+                        {"name":"西安","city_id":"233","eng":"xian"},
+                        {"name":"香港","city_id":"2912","eng":"hongkong"}
+                ]
+        }
+}

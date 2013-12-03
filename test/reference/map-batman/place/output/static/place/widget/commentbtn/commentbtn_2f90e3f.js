@@ -1,0 +1,1 @@
+define("place:widget/commentbtn/commentbtn.js",function(t,n,o){var c=t("common:widget/login/login.js");t("common:widget/stat/stat.js"),o.exports={init:function(){$("#J_commentBtn").on("click",$.proxy(this.commentAction,this))},commentAction:function(t){t.preventDefault(),c.checkLogin(function(n){n.status?location.href=$(t.target).closest("a").prop("href"):c.loginAction()})}}});

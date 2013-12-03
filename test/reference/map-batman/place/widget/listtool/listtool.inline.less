@@ -1,0 +1,82 @@
+/* @fileOverview 列表工具view */
+
+
+.place-widget-listtool{
+    background-color: #f0f0f0;
+	line-height: 24px;
+	padding:10px 8px;
+	position: relative;
+}
+.place-widget-listtool {
+	.toolbar-place-name{
+	 	font-weight: normal;
+		color: #276adc;
+		border: 1px solid #b4b4b5;
+		padding: 3px 5px;
+		-webkit-border-radius:2px;
+		max-width: 170px;
+	}
+	.ellipsis{
+		overflow: hidden;
+		display: inline-block;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.toolbar-btn-wrap{
+		position: absolute;
+		height: 44px;
+		top:3px;
+		right: 8px;
+		line-height: 40px;
+	}
+	.base-btn{
+		display: inline-block;
+		height: 30px;
+		border: 1px solid #b4b4b5;
+		width: 30px;
+		line-height: 28px;
+		border-radius: 2px;
+		margin-left:5px;
+		color: #535353;
+		font-size: 12px;
+		background: none;
+	}
+	.toolbar-word-wrap {
+		padding-right: 50px;
+	}
+	.toolbar-word{
+		max-width: 100px;
+	}
+	.select-btn {
+		position: relative;
+		top:7px;
+	}
+	.select-btn b{
+		position: absolute;
+		z-index: 2;
+		left: 9px;
+		top: 12px;
+		border-color: #808080 transparent transparent;
+		border-width: 6px 6px 0;
+		border-style: solid;
+		width: 0;
+		font-size: 0;
+		height: 0;
+		-webkit-transform :rotate(180deg);
+		display: inline-block;
+	}
+
+	.toolbar-extend {
+		margin-top: 10px;
+	}
+}
+
+
+.place-widget-listtool.hide-extend .toolbar-extend{
+    display: none;
+}
+.place-widget-listtool.hide-extend .select-btn b{
+	-webkit-transform :rotate(0);
+}
+

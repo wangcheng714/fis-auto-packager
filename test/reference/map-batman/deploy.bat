@@ -1,0 +1,11 @@
+fisp release -Domupd static,template,config,plugin --no-color -r common
+fisp release -Domupd static,template,config --no-color -r transit
+fisp release -Domupd static,template,config --no-color -r place
+fisp release -Domupd static,template,config --no-color -r index
+fisp release -Domupd static,template,config --no-color -r addr
+fisp release -Domupd static,template,config --no-color -r feedback
+fisp release -Domupd static,template,config --no-color -r drive
+fisp release -Domupd static,template,config --no-color -r walk
+fisp release -Domupd static,template,config --no-color -r third
+fisp release -Domupd static,template,config --no-color -r user
+fisp release -Domupd static,template,config --no-color -r taxi

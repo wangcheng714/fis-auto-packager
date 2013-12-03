@@ -1,0 +1,702 @@
+{
+    "res": {
+        "common:page/base.tpl": {
+            "uri": "/template/common/page/base.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "17df40b"
+        },
+        "common:page/layout.tpl": {
+            "uri": "/template/common/page/layout.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "jican",
+                "common:widget/monitor/monitor.js",
+                "common:widget/geolocation/initgeo.js",
+                "common:widget/appresize/appresize.js",
+                "common:widget/fastclick/fastclick.js",
+                "common:widget/stat/stat.js",
+                "common:widget/statistics/statistics.js"
+            ],
+            "hash": "0e132eb"
+        },
+        "common:static/css/base.inline.css": {
+            "uri": "/static/common/css/base.inline_9858c15.css",
+            "type": "css",
+            "hash": "ede45d9"
+        },
+        "common:static/css/layout.inline.css": {
+            "uri": "/static/common/css/layout.inline_2bb2be5.css",
+            "type": "css",
+            "hash": "56e9cf1"
+        },
+        "common:static/css/reset.inline.css": {
+            "uri": "/static/common/css/reset.inline_b8cbd7b.css",
+            "type": "css",
+            "hash": "a963b2b"
+        },
+        "common:static/js/BigPipe.js": {
+            "uri": "/static/common/js/BigPipe_7368d5c.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "e731cd9"
+        },
+        "common:static/js/iscroll.js": {
+            "uri": "/static/common/js/iscroll_230138e.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "8c078a5"
+        },
+        "common:static/js/lazyload.js": {
+            "uri": "/static/common/js/lazyload_e300b19.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "a1c4482"
+        },
+        "common:static/js/localstorage.js": {
+            "uri": "/static/common/js/localstorage_5d011b6.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "1aa6cda"
+        },
+        "common:static/js/map/api.js": {
+            "uri": "/static/common/js/map/api_9030415.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "ff2f41c"
+        },
+        "common:static/js/map/custommarker.js": {
+            "uri": "/static/common/js/map/custommarker_e17ff87.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/map/api.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "776fef6"
+        },
+        "common:static/js/mod.js": {
+            "uri": "/static/common/js/mod_b1c0a38.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "7269891"
+        },
+        "common:static/js/pdc/pda.js": {
+            "uri": "/static/common/js/pdc/pda_5f4a102.js",
+            "type": "js",
+            "deps": [
+                "jican"
+            ],
+            "hash": "8c3f4a8"
+        },
+        "common:static/js/pdc/pdc.js": {
+            "uri": "/static/common/js/pdc/pdc_d5be817.js",
+            "type": "js",
+            "deps": [
+                "jican"
+            ],
+            "hash": "6ea97fa"
+        },
+        "common:static/js/pdc/vt.js": {
+            "uri": "/static/common/js/pdc/vt_fa55020.js",
+            "type": "js",
+            "hash": "a75ab0b"
+        },
+        "common:static/js/searchdata.js": {
+            "uri": "/static/common/js/searchdata_530ceac.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/geolocation/location.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "aaf31c7"
+        },
+        "common:static/js/util.js": {
+            "uri": "/static/common/js/util_934b4cc.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "94da614"
+        },
+        "common:static/js/widget.js": {
+            "uri": "/static/common/js/widget_c3d54cc.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "2151126"
+        },
+        "common:static/js/zepto.js": {
+            "uri": "/static/common/js/zepto_7380ba0.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "c39bc7a"
+        },
+        "common:widget/apphistory/apphistory.js": {
+            "uri": "/static/common/widget/apphistory/apphistory_ecb5599.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "a7c8eb9"
+        },
+        "common:widget/appresize/appresize.js": {
+            "uri": "/static/common/widget/appresize/appresize_bdc77e5.js",
+            "type": "js",
+            "deps": [
+                "jican",
+                "common:static/js/util.js",
+                "common:widget/broadcaster/broadcaster.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "d941f2b"
+        },
+        "common:widget/backtop/backtop.inline.less": {
+            "uri": "/static/common/widget/backtop/backtop.inline_bc461e1.css",
+            "type": "css",
+            "hash": "73502b0"
+        },
+        "common:widget/backtop/backtop.js": {
+            "uri": "/static/common/widget/backtop/backtop_a3155cc.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "9648054"
+        },
+        "common:widget/backtop/backtop.tpl": {
+            "uri": "common/widget/backtop/backtop.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/backtop/backtop.js"
+            ],
+            "hash": "68e599f"
+        },
+        "common:widget/bottombanner/bottombanner.inline.less": {
+            "uri": "/static/common/widget/bottombanner/bottombanner.inline_8c6126c.css",
+            "type": "css",
+            "hash": "6999ecb"
+        },
+        "common:widget/bottombanner/bottombanner.js": {
+            "uri": "/static/common/widget/bottombanner/bottombanner_1529700.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/broadcaster/broadcaster.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "c7f324c"
+        },
+        "common:widget/bottombanner/bottombanner.tpl": {
+            "uri": "common/widget/bottombanner/bottombanner.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/bottombanner/bottombanner.js"
+            ],
+            "hash": "7c0520c"
+        },
+        "common:widget/broadcaster/broadcaster.js": {
+            "uri": "/static/common/widget/broadcaster/broadcaster_0e6bed3.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "4bb5f8c"
+        },
+        "common:widget/cookie/cookie.js": {
+            "uri": "/static/common/widget/cookie/cookie_3af0669.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "54f36b2"
+        },
+        "common:widget/cover/cover.inline.less": {
+            "uri": "/static/common/widget/cover/cover.inline_124cc0a.css",
+            "type": "css",
+            "hash": "dbe1359"
+        },
+        "common:widget/cover/cover.js": {
+            "uri": "/static/common/widget/cover/cover_3bd23fe.js",
+            "type": "js",
+            "deps": [
+                "common:widget/cookie/cookie.js",
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "b2fc9f2"
+        },
+        "common:widget/cover/cover.tpl": {
+            "uri": "common/widget/cover/cover.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/cover/cover.js"
+            ],
+            "hash": "31c6450"
+        },
+        "common:widget/datepicker/datepicker.inline.css": {
+            "uri": "/static/common/widget/datepicker/datepicker.inline_be992ec.css",
+            "type": "css",
+            "hash": "8cbd6ec"
+        },
+        "common:widget/datepicker/datepicker.js": {
+            "uri": "/static/common/widget/datepicker/datepicker_1000b0b.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "8a3baf2"
+        },
+        "common:widget/datescrollpick/datescrollpicker.js": {
+            "uri": "/static/common/widget/datescrollpick/datescrollpicker_2418a25.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/iscroll.js",
+                "common:widget/broadcaster/broadcaster.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "b5395e9"
+        },
+        "common:widget/fastclick/fastclick.js": {
+            "uri": "/static/common/widget/fastclick/fastclick_e63106a.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "a31ff7c"
+        },
+        "common:widget/footer/footer.inline.less": {
+            "uri": "/static/common/widget/footer/footer.inline_90c6334.css",
+            "type": "css",
+            "hash": "c7057b1"
+        },
+        "common:widget/footer/footer.js": {
+            "uri": "/static/common/widget/footer/footer_be3f8dd.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/login/login.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "1ec950e"
+        },
+        "common:widget/footer/footer.tpl": {
+            "uri": "common/widget/footer/footer.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/footer/footer.js"
+            ],
+            "hash": "c3028bf"
+        },
+        "common:widget/geolocation/geolocation.js": {
+            "uri": "/static/common/widget/geolocation/geolocation_15ae23b.js",
+            "type": "js",
+            "deps": [
+                "common:widget/geolocation/html5geolocation.js",
+                "common:widget/geolocation/nativegeolocation.js",
+                "common:widget/geolocation/sharegeolocation.js",
+                "common:widget/geolocation/preciseipgeolocation.js",
+                "common:widget/geolocation/urlgeolocation.js",
+                "common:widget/geolocation/myposition.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/stat/metrics-stat.js",
+                "common:static/js/util.js",
+                "common:static/js/localstorage.js",
+                "common:widget/url/url.js",
+                "common:widget/geolocation/location.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "2725c54"
+        },
+        "common:widget/geolocation/html5geolocation.js": {
+            "uri": "/static/common/widget/geolocation/html5geolocation_326067e.js",
+            "type": "js",
+            "deps": [
+                "common:widget/geolocation/location.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/stat/metrics-stat.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "de4a7c0"
+        },
+        "common:widget/geolocation/initgeo.js": {
+            "uri": "/static/common/widget/geolocation/initgeo_7b368b2.js",
+            "type": "js",
+            "extras": {
+                "async": [
+                    "common:widget/geolocation/geolocation.js"
+                ]
+            },
+            "deps": [
+                "common:widget/geolocation/location.js",
+                "common:widget/cookie/cookie.js",
+                "common:static/js/localstorage.js",
+                "common:widget/stat/stat.js",
+                "common:widget/url/url.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "3a6017a"
+        },
+        "common:widget/geolocation/location.js": {
+            "uri": "/static/common/widget/geolocation/location_b9611bd.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/geolocation/geolocation.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "2f09b91"
+        },
+        "common:widget/geolocation/myposition.js": {
+            "uri": "/static/common/widget/geolocation/myposition_7fa5ed4.js",
+            "type": "js",
+            "deps": [
+                "common:widget/cookie/cookie.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "81f6c7f"
+        },
+        "common:widget/geolocation/nativegeolocation.js": {
+            "uri": "/static/common/widget/geolocation/nativegeolocation_eba5f62.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/stat/metrics-stat.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "d5bcc1c"
+        },
+        "common:widget/geolocation/preciseipgeolocation.js": {
+            "uri": "/static/common/widget/geolocation/preciseipgeolocation_883160a.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "60acd8c"
+        },
+        "common:widget/geolocation/sharegeolocation.js": {
+            "uri": "/static/common/widget/geolocation/sharegeolocation_be2d1d6.js",
+            "type": "js",
+            "deps": [
+                "common:widget/geolocation/myposition.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:static/js/localstorage.js",
+                "common:widget/stat/metrics-stat.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "3f2edea"
+        },
+        "common:widget/geolocation/urlgeolocation.js": {
+            "uri": "/static/common/widget/geolocation/urlgeolocation_8bdba3c.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/stat/metrics-stat.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "132906b"
+        },
+        "common:widget/header/header.inline.less": {
+            "uri": "/static/common/widget/header/header.inline_160c6dd.css",
+            "type": "css",
+            "hash": "c136260"
+        },
+        "common:widget/header/header.js": {
+            "uri": "/static/common/widget/header/header_a87a42e.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/broadcaster/broadcaster.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "4d53a24"
+        },
+        "common:widget/header/header.tpl": {
+            "uri": "common/widget/header/header.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/header/header.js"
+            ],
+            "hash": "6519f18"
+        },
+        "common:widget/login/login.js": {
+            "uri": "/static/common/widget/login/login_b3c1692.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/stat/stat.js",
+                "common:widget/md5/md5.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "182fe38"
+        },
+        "common:widget/md5/md5.js": {
+            "uri": "/static/common/widget/md5/md5_58acff0.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "5b4d2f9"
+        },
+        "common:widget/monitor/monitor.js": {
+            "uri": "/static/common/widget/monitor/monitor_e310f73.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "7ef6785"
+        },
+        "common:widget/nav/nav.inline.less": {
+            "uri": "/static/common/widget/nav/nav.inline_84d7bb3.css",
+            "type": "css",
+            "hash": "a559dbe"
+        },
+        "common:widget/nav/nav.js": {
+            "uri": "/static/common/widget/nav/nav_a8077e1.js",
+            "type": "js",
+            "deps": [
+                "common:widget/apphistory/apphistory.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "fa69dd9"
+        },
+        "common:widget/nav/nav.tpl": {
+            "uri": "common/widget/nav/nav.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/nav/nav.js"
+            ],
+            "hash": "77da00b"
+        },
+        "common:widget/popup/popup.inline.css": {
+            "uri": "/static/common/widget/popup/popup.inline_8cc03cc.css",
+            "type": "css",
+            "hash": "120acdb"
+        },
+        "common:widget/popup/popup.js": {
+            "uri": "/static/common/widget/popup/popup_0eb0573.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "d5390dc"
+        },
+        "common:widget/quickdelete/quickdelete.inline.css": {
+            "uri": "/static/common/widget/quickdelete/quickdelete.inline_a39412f.css",
+            "type": "css",
+            "hash": "5147068"
+        },
+        "common:widget/quickdelete/quickdelete.js": {
+            "uri": "/static/common/widget/quickdelete/quickdelete_18b9dc1.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/widget.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "04e6284"
+        },
+        "common:widget/search/poisearch.js": {
+            "uri": "/static/common/widget/search/poisearch_a115ef7.js",
+            "type": "js",
+            "deps": [
+                "common:widget/geolocation/location.js",
+                "common:widget/url/url.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "3fa7513"
+        },
+        "common:widget/setcity/setcity.js": {
+            "uri": "/static/common/widget/setcity/setcity_a236395.js",
+            "type": "js",
+            "deps": [
+                "common:widget/cookie/cookie.js",
+                "common:widget/url/url.js",
+                "common:static/js/util.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "24d6dc4"
+        },
+        "common:widget/sharefriends/sharefriends.js": {
+            "uri": "/static/common/widget/sharefriends/sharefriends_e97a851.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/url/url.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "319fb46"
+        },
+        "common:widget/stat/metrics-stat.js": {
+            "uri": "/static/common/widget/stat/metrics-stat_81e9c04.js",
+            "type": "js",
+            "pkg": "common:p0",
+            "hash": "c961845"
+        },
+        "common:widget/stat/stat.js": {
+            "uri": "/static/common/widget/stat/stat_5ffae85.js",
+            "type": "js",
+            "deps": [
+                "common:widget/cookie/cookie.js",
+                "common:static/js/util.js",
+                "common:widget/geolocation/location.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "024d874"
+        },
+        "common:widget/statistics/statistics.js": {
+            "uri": "/static/common/widget/statistics/statistics_38d4e3a.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "20e9c73"
+        },
+        "common:widget/streetview/streetview.inline.less": {
+            "uri": "/static/common/widget/streetview/streetview.inline_14152a3.css",
+            "type": "css",
+            "hash": "7e78e0c"
+        },
+        "common:widget/streetview/streetview.js": {
+            "uri": "/static/common/widget/streetview/streetview_163a2a8.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:static/js/map/api.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/popup/popup.js",
+                "common:static/js/map/custommarker.js",
+                "common:widget/url/url.js",
+                "common:widget/cookie/cookie.js",
+                "common:static/js/localstorage.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "d24f3c1"
+        },
+        "common:widget/streetview/streetview.tpl": {
+            "uri": "common/widget/streetview/streetview.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/streetview/streetview.js"
+            ],
+            "hash": "230e652"
+        },
+        "common:widget/suggestion/suggestion.inline.css": {
+            "uri": "/static/common/widget/suggestion/suggestion.inline_1ed2dc3.css",
+            "type": "css",
+            "hash": "09251aa"
+        },
+        "common:widget/suggestion/suggestion.js": {
+            "uri": "/static/common/widget/suggestion/suggestion_883eb70.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/widget.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js",
+                "common:widget/geolocation/location.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "3166cbc"
+        },
+        "common:widget/topbanner/topbanner.inline.less": {
+            "uri": "/static/common/widget/topbanner/topbanner.inline_a6636dc.css",
+            "type": "css",
+            "hash": "55151f0"
+        },
+        "common:widget/topbanner/topbanner.js": {
+            "uri": "/static/common/widget/topbanner/topbanner_64be3f6.js",
+            "type": "js",
+            "deps": [
+                "common:widget/cookie/cookie.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js",
+                "common:widget/url/url.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "b5d7784"
+        },
+        "common:widget/topbanner/topbanner.tpl": {
+            "uri": "common/widget/topbanner/topbanner.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/topbanner/topbanner.js"
+            ],
+            "hash": "f1b453a"
+        },
+        "common:widget/traffictitle/traffictitle.inline.less": {
+            "uri": "/static/common/widget/traffictitle/traffictitle.inline_b93eb77.css",
+            "type": "css",
+            "hash": "e016856"
+        },
+        "common:widget/traffictitle/traffictitle.tpl": {
+            "uri": "common/widget/traffictitle/traffictitle.tpl",
+            "type": "tpl",
+            "hash": "4f71f22"
+        },
+        "common:widget/url/url.js": {
+            "uri": "/static/common/widget/url/url_f721c41.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "pkg": "common:p0",
+            "hash": "756e9f1"
+        }
+    },
+    "pkg": {
+        "common:p0": {
+            "uri": "/static/common/pkg/base_6e2071e.js",
+            "type": "js",
+            "has": [
+                "common:static/js/mod.js",
+                "common:static/js/zepto.js",
+                "common:static/js/BigPipe.js",
+                "common:static/js/iscroll.js",
+                "common:static/js/lazyload.js",
+                "common:static/js/util.js",
+                "common:static/js/localstorage.js",
+                "common:static/js/map/api.js",
+                "common:static/js/map/custommarker.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/stat/metrics-stat.js",
+                "common:widget/geolocation/html5geolocation.js",
+                "common:widget/geolocation/nativegeolocation.js",
+                "common:widget/geolocation/myposition.js",
+                "common:widget/geolocation/sharegeolocation.js",
+                "common:widget/geolocation/preciseipgeolocation.js",
+                "common:widget/geolocation/urlgeolocation.js",
+                "common:widget/url/url.js",
+                "common:widget/geolocation/geolocation.js",
+                "common:widget/geolocation/location.js",
+                "common:static/js/searchdata.js",
+                "common:static/js/widget.js",
+                "common:widget/apphistory/apphistory.js",
+                "common:widget/appresize/appresize.js",
+                "common:widget/backtop/backtop.js",
+                "common:widget/bottombanner/bottombanner.js",
+                "common:widget/stat/stat.js",
+                "common:widget/cover/cover.js",
+                "common:widget/datepicker/datepicker.js",
+                "common:widget/datescrollpick/datescrollpicker.js",
+                "common:widget/fastclick/fastclick.js",
+                "common:widget/md5/md5.js",
+                "common:widget/login/login.js",
+                "common:widget/footer/footer.js",
+                "common:widget/geolocation/initgeo.js",
+                "common:widget/header/header.js",
+                "common:widget/monitor/monitor.js",
+                "common:widget/nav/nav.js",
+                "common:widget/popup/popup.js",
+                "common:widget/quickdelete/quickdelete.js",
+                "common:widget/search/poisearch.js",
+                "common:widget/setcity/setcity.js",
+                "common:widget/sharefriends/sharefriends.js",
+                "common:widget/statistics/statistics.js",
+                "common:widget/streetview/streetview.js",
+                "common:widget/suggestion/suggestion.js",
+                "common:widget/topbanner/topbanner.js"
+            ],
+            "deps": [
+                "jican"
+            ]
+        }
+    }
+}

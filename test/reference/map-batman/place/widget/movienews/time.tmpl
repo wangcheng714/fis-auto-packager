@@ -1,0 +1,16 @@
+<ul>
+	<#for(var j = 0, len = schedules.length; j < len ; j++){#>
+	<li>
+		<span class="meta"><em class="time"><#=schedules[j].time#></em><#=schedules[j].type#></span>
+		<span class="meta-extend">
+			<#if(schedules[j].url){#>
+			<a class="btn-exchange" href="<#=schedules[j].url#>">兑换码</a>
+			<#}#>
+			<#if(schedules[j].seatL){#>
+				<a class="btn-book <#=schedules[j].style#>" data-day="<#=schedules[j].day#>" data-num="<#=schedules[j].num#>" data-cinema="<#=schedules[j].cinema#>" data-movie="<#=schedules[j].movie#>" data-info="<#=schedules[j].info#>" data-orign="<#=schedules[j].orign#>">选座订票</a>
+			<#}#>
+			<#=schedules[j].price#>
+		</span>
+	</li>
+	<#}#>
+</ul>

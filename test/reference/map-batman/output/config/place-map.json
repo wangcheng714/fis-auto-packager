@@ -1,0 +1,1264 @@
+{
+    "res": {
+        "place:page/clarify.tpl": {
+            "uri": "/template/place/page/clarify.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "e366e18"
+        },
+        "place:page/detail/base.tpl": {
+            "uri": "/template/place/page/detail/base.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js"
+            ],
+            "hash": "0130f48"
+        },
+        "place:page/detail/bdcommentlist.tpl": {
+            "uri": "/template/place/page/detail/bdcommentlist.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "hash": "a42a3e9"
+        },
+        "place:page/detail/beauty.tpl": {
+            "uri": "/template/place/page/detail/beauty.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "7b9184c"
+        },
+        "place:page/detail/cater.tpl": {
+            "uri": "/template/place/page/detail/cater.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "69ec13e"
+        },
+        "place:page/detail/detailmore.tpl": {
+            "uri": "/template/place/page/detail/detailmore.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "f19eb0d"
+        },
+        "place:page/detail/education.tpl": {
+            "uri": "/template/place/page/detail/education.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "cea4e9a"
+        },
+        "place:page/detail/enterprise.tpl": {
+            "uri": "/template/place/page/detail/enterprise.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "c0af19d"
+        },
+        "place:page/detail/guarantee.tpl": {
+            "uri": "/template/place/page/detail/guarantee.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "b41797e"
+        },
+        "place:page/detail/hospital.tpl": {
+            "uri": "/template/place/page/detail/hospital.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "5f42f2a"
+        },
+        "place:page/detail/hotel.tpl": {
+            "uri": "/template/place/page/detail/hotel.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "hash": "56d9bed"
+        },
+        "place:page/detail/hotelbook.tpl": {
+            "uri": "/template/place/page/detail/hotelbook.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "hash": "6e8326d"
+        },
+        "place:page/detail/house.tpl": {
+            "uri": "/template/place/page/detail/house.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "a89eb41"
+        },
+        "place:page/detail/icomment.tpl": {
+            "uri": "/template/place/page/detail/icomment.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "be0c959"
+        },
+        "place:page/detail/life.tpl": {
+            "uri": "/template/place/page/detail/life.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "f269887"
+        },
+        "place:page/detail/line.tpl": {
+            "uri": "/template/place/page/detail/line.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "024df83"
+        },
+        "place:page/detail/lineway.tpl": {
+            "uri": "/template/place/page/detail/lineway.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "10ff087"
+        },
+        "place:page/detail/morecomment.tpl": {
+            "uri": "/template/place/page/detail/morecomment.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "hash": "3d923b0"
+        },
+        "place:page/detail/moreoverview.tpl": {
+            "uri": "/template/place/page/detail/moreoverview.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "e4c386e"
+        },
+        "place:page/detail/scope.tpl": {
+            "uri": "/template/place/page/detail/scope.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "9f2c118"
+        },
+        "place:page/detail/shopping.tpl": {
+            "uri": "/template/place/page/detail/shopping.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "4a033e5"
+        },
+        "place:page/detail/subway.tpl": {
+            "uri": "/template/place/page/detail/subway.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "5ee65e9"
+        },
+        "place:page/detail/subwaystop.tpl": {
+            "uri": "/template/place/page/detail/subwaystop.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "bd0125e"
+        },
+        "place:page/detail/takeout.tpl": {
+            "uri": "/template/place/page/detail/takeout.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "76061df"
+        },
+        "place:page/detail/traffic.tpl": {
+            "uri": "/template/place/page/detail/traffic.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "25b91ec"
+        },
+        "place:page/list/list.tpl": {
+            "uri": "/template/place/page/list/list.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "a20b211"
+        },
+        "place:page/list/takeout.tpl": {
+            "uri": "/template/place/page/list/takeout.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "aea67cd"
+        },
+        "place:page/order/error.tpl": {
+            "uri": "/template/place/page/order/error.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "ef23c1d"
+        },
+        "place:page/order/order.tpl": {
+            "uri": "/template/place/page/order/order.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "81342f1"
+        },
+        "place:page/order/success.tpl": {
+            "uri": "/template/place/page/order/success.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "1f3d83f"
+        },
+        "place:page/selectpoint.tpl": {
+            "uri": "/template/place/page/selectpoint.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "56c545e"
+        },
+        "place:static/css/detail.inline.less": {
+            "uri": "/static/place/css/detail.inline_54618c7.css",
+            "type": "css",
+            "hash": "564e67b"
+        },
+        "place:static/css/marker.inline.css": {
+            "uri": "/static/place/css/marker.inline_387b7a2.css",
+            "type": "css",
+            "hash": "05ca340"
+        },
+        "place:static/js/broadcastname.js": {
+            "uri": "/static/place/js/broadcastname_786ab02.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "5e7f3d1"
+        },
+        "place:static/js/vcode.js": {
+            "uri": "/static/place/js/vcode_27bacad.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "66be3f5"
+        },
+        "place:static/lib/mapresize.js": {
+            "uri": "/static/place/lib/mapresize_0d43c55.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "fee6d1b"
+        },
+        "place:static/lib/template.js": {
+            "uri": "/static/place/lib/template_8015509.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "2309373"
+        },
+        "place:static/lib/underscore.js": {
+            "uri": "/static/place/lib/underscore_079d753.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "627d739"
+        },
+        "place:widget/basicinfo/basicinfo.inline.less": {
+            "uri": "/static/place/widget/basicinfo/basicinfo.inline_f71c049.css",
+            "type": "css",
+            "hash": "6bf6811"
+        },
+        "place:widget/basicinfo/basicinfo.tpl": {
+            "uri": "place/widget/basicinfo/basicinfo.tpl",
+            "type": "tpl",
+            "hash": "0c12c86"
+        },
+        "place:widget/basicmovieinfo/basicmovieinfo.inline.less": {
+            "uri": "/static/place/widget/basicmovieinfo/basicmovieinfo.inline_2123cb7.css",
+            "type": "css",
+            "hash": "f164912"
+        },
+        "place:widget/basicmovieinfo/basicmovieinfo.tpl": {
+            "uri": "place/widget/basicmovieinfo/basicmovieinfo.tpl",
+            "type": "tpl",
+            "hash": "203f5ec"
+        },
+        "place:widget/bdcomment/bdcomment.inline.less": {
+            "uri": "/static/place/widget/bdcomment/bdcomment.inline_b1e4031.css",
+            "type": "css",
+            "hash": "6670a11"
+        },
+        "place:widget/bdcomment/bdcomment.js": {
+            "uri": "/static/place/widget/bdcomment/bdcomment_d49c5ff.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "614d050"
+        },
+        "place:widget/bdcomment/bdcomment.tpl": {
+            "uri": "place/widget/bdcomment/bdcomment.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/bdcomment/bdcomment.js"
+            ],
+            "hash": "506252c"
+        },
+        "place:widget/bookphone/bookphone.inline.less": {
+            "uri": "/static/place/widget/bookphone/bookphone.inline_65c80ab.css",
+            "type": "css",
+            "hash": "e1d3814"
+        },
+        "place:widget/bookphone/bookphone.js": {
+            "uri": "/static/place/widget/bookphone/bookphone_bc87be2.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "433b2ab"
+        },
+        "place:widget/bookphone/bookphone.tpl": {
+            "uri": "place/widget/bookphone/bookphone.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/bookphone/bookphone.js"
+            ],
+            "hash": "212940c"
+        },
+        "place:widget/captain/captain.inline.less": {
+            "uri": "/static/place/widget/captain/captain.inline_8a4bc15.css",
+            "type": "css",
+            "hash": "39db739"
+        },
+        "place:widget/captain/captain.js": {
+            "uri": "/static/place/widget/captain/captain_8f72095.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "6ac0a4a"
+        },
+        "place:widget/captain/captain.tpl": {
+            "uri": "place/widget/captain/captain.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/captain/captain.js"
+            ],
+            "hash": "85ff242"
+        },
+        "place:widget/clarify/clarify.inline.less": {
+            "uri": "/static/place/widget/clarify/clarify.inline_c28fd2f.css",
+            "type": "css",
+            "hash": "b91ee92"
+        },
+        "place:widget/clarify/clarify.tpl": {
+            "uri": "place/widget/clarify/clarify.tpl",
+            "type": "tpl",
+            "hash": "6379e81"
+        },
+        "place:widget/comment/comment.inline.less": {
+            "uri": "/static/place/widget/comment/comment.inline_cf9b3e1.css",
+            "type": "css",
+            "hash": "fc15b0a"
+        },
+        "place:widget/comment/comment.tpl": {
+            "uri": "place/widget/comment/comment.tpl",
+            "type": "tpl",
+            "hash": "1274ef5"
+        },
+        "place:widget/commentbtn/commentbtn.inline.less": {
+            "uri": "/static/place/widget/commentbtn/commentbtn.inline_14d96ad.css",
+            "type": "css",
+            "hash": "1d31bea"
+        },
+        "place:widget/commentbtn/commentbtn.js": {
+            "uri": "/static/place/widget/commentbtn/commentbtn_aef421c.js",
+            "type": "js",
+            "deps": [
+                "common:widget/login/login.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "c5bce3b"
+        },
+        "place:widget/commentbtn/commentbtn.tpl": {
+            "uri": "place/widget/commentbtn/commentbtn.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/commentbtn/commentbtn.js"
+            ],
+            "hash": "eee18da"
+        },
+        "place:widget/datepicker/datepicker.inline.less": {
+            "uri": "/static/place/widget/datepicker/datepicker.inline_5c3e05b.css",
+            "type": "css",
+            "hash": "ca46e61"
+        },
+        "place:widget/datepicker/datepicker.js": {
+            "uri": "/static/place/widget/datepicker/datepicker_05eae56.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js",
+                "place:static/js/broadcastname.js",
+                "common:widget/datepicker/datepicker.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "a24c1a5"
+        },
+        "place:widget/datepicker/datepicker.tpl": {
+            "uri": "place/widget/datepicker/datepicker.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/datepicker/datepicker.js"
+            ],
+            "hash": "2fff4ea"
+        },
+        "place:widget/dishcategory/dishcategory.inline.less": {
+            "uri": "/static/place/widget/dishcategory/dishcategory.inline_6045d42.css",
+            "type": "css",
+            "hash": "7457bf7"
+        },
+        "place:widget/dishcategory/dishcategory.js": {
+            "uri": "/static/place/widget/dishcategory/dishcategory_ef9269a.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "place:static/lib/mapresize.js",
+                "common:static/js/iscroll.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "82f04f8"
+        },
+        "place:widget/dishcategory/dishcategory.tpl": {
+            "uri": "place/widget/dishcategory/dishcategory.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/dishcategory/dishcategory.js"
+            ],
+            "hash": "959d756"
+        },
+        "place:widget/goto/goto.inline.less": {
+            "uri": "/static/place/widget/goto/goto.inline_1d97577.css",
+            "type": "css",
+            "hash": "e886cd9"
+        },
+        "place:widget/goto/goto.tpl": {
+            "uri": "place/widget/goto/goto.tpl",
+            "type": "tpl",
+            "hash": "85c62fc"
+        },
+        "place:widget/gotomovie/gotomovie.inline.less": {
+            "uri": "/static/place/widget/gotomovie/gotomovie.inline_17e8fab.css",
+            "type": "css",
+            "hash": "44675d9"
+        },
+        "place:widget/gotomovie/gotomovie.js": {
+            "uri": "/static/place/widget/gotomovie/gotomovie_83bbbd3.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "5996d97"
+        },
+        "place:widget/gotomovie/gotomovie.tpl": {
+            "uri": "place/widget/gotomovie/gotomovie.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/gotomovie/gotomovie.js"
+            ],
+            "hash": "3644197"
+        },
+        "place:widget/groupon/groupon.inline.less": {
+            "uri": "/static/place/widget/groupon/groupon.inline_c805ff4.css",
+            "type": "css",
+            "deps": [
+                "place:static/css/detail.less"
+            ],
+            "hash": "e488212"
+        },
+        "place:widget/groupon/groupon.js": {
+            "uri": "/static/place/widget/groupon/groupon_e2a9c42.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "6c71bef"
+        },
+        "place:widget/groupon/groupon.tpl": {
+            "uri": "place/widget/groupon/groupon.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:static/css/detail.less",
+                "place:widget/groupon/groupon.js"
+            ],
+            "hash": "523e7bc"
+        },
+        "place:widget/guarantee/guarantee.inline.less": {
+            "uri": "/static/place/widget/guarantee/guarantee.inline_c2f667a.css",
+            "type": "css",
+            "hash": "933c889"
+        },
+        "place:widget/guarantee/guarantee.tpl": {
+            "uri": "place/widget/guarantee/guarantee.tpl",
+            "type": "tpl",
+            "hash": "dd3da43"
+        },
+        "place:widget/hotelbook/hotelbook.inline.less": {
+            "uri": "/static/place/widget/hotelbook/hotelbook.inline_02a9265.css",
+            "type": "css",
+            "deps": [
+                "place:static/css/detail.less",
+                "place:static/css/hotelbook.less"
+            ],
+            "hash": "6e7e7ea"
+        },
+        "place:widget/hotelbook/hotelbook.js": {
+            "uri": "/static/place/widget/hotelbook/hotelbook_4e0b058.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js",
+                "place:static/js/broadcastname.js",
+                "common:static/js/util.js",
+                "common:widget/geolocation/location.js",
+                "common:widget/popup/popup.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "8007200"
+        },
+        "place:widget/hotelbook/hotelbook.tpl": {
+            "uri": "place/widget/hotelbook/hotelbook.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:static/css/detail.less",
+                "place:static/css/hotelbook.less",
+                "place:widget/hotelbook/hotelbook.js"
+            ],
+            "hash": "4330b41"
+        },
+        "place:widget/hotelbook/otalist.tpl": {
+            "uri": "place/widget/hotelbook/otalist.tpl",
+            "type": "tpl",
+            "hash": "dc18d77"
+        },
+        "place:widget/hotelbook/otalistfailed.tpl": {
+            "uri": "place/widget/hotelbook/otalistfailed.tpl",
+            "type": "tpl",
+            "hash": "8a1d57f"
+        },
+        "place:widget/hotelbook/roomlist.tpl": {
+            "uri": "place/widget/hotelbook/roomlist.tpl",
+            "type": "tpl",
+            "hash": "39f11e7"
+        },
+        "place:widget/hotelbook/roomlistfailed.tpl": {
+            "uri": "place/widget/hotelbook/roomlistfailed.tpl",
+            "type": "tpl",
+            "hash": "05a23e4"
+        },
+        "place:widget/icomment/icomment.inline.less": {
+            "uri": "/static/place/widget/icomment/icomment.inline_e7f90ed.css",
+            "type": "css",
+            "hash": "e5b9384"
+        },
+        "place:widget/icomment/icomment.js": {
+            "uri": "/static/place/widget/icomment/icomment_72f789e.js",
+            "type": "js",
+            "deps": [
+                "common:widget/login/login.js",
+                "common:widget/popup/popup.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "6e3094b"
+        },
+        "place:widget/icomment/icomment.tpl": {
+            "uri": "place/widget/icomment/icomment.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/icomment/icomment.js"
+            ],
+            "hash": "bdc74a4"
+        },
+        "place:widget/impression/impression.inline.less": {
+            "uri": "/static/place/widget/impression/impression.inline_df471be.css",
+            "type": "css",
+            "hash": "e213a23"
+        },
+        "place:widget/impression/impression.tpl": {
+            "uri": "place/widget/impression/impression.tpl",
+            "type": "tpl",
+            "hash": "8b63e7a"
+        },
+        "place:widget/linedetail/linedetail.inline.less": {
+            "uri": "/static/place/widget/linedetail/linedetail.inline_e20f922.css",
+            "type": "css",
+            "hash": "b873204"
+        },
+        "place:widget/linedetail/linedetail.tpl": {
+            "uri": "place/widget/linedetail/linedetail.tpl",
+            "type": "tpl",
+            "hash": "75cd45b"
+        },
+        "place:widget/lineway/lineway.inline.less": {
+            "uri": "/static/place/widget/lineway/lineway.inline_7ccd8d4.css",
+            "type": "css",
+            "hash": "2dd4cd4"
+        },
+        "place:widget/lineway/lineway.tpl": {
+            "uri": "place/widget/lineway/lineway.tpl",
+            "type": "tpl",
+            "hash": "b53907d"
+        },
+        "place:widget/listtool/listtool.inline.less": {
+            "uri": "/static/place/widget/listtool/listtool.inline_c5f64e6.css",
+            "type": "css",
+            "hash": "696879d"
+        },
+        "place:widget/listtool/listtool.js": {
+            "uri": "/static/place/widget/listtool/listtool_3b752b6.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "1f9836e"
+        },
+        "place:widget/listtool/listtool.tpl": {
+            "uri": "place/widget/listtool/listtool.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/listtool/listtool.js"
+            ],
+            "hash": "a08c166"
+        },
+        "place:widget/movielist/movielist.inline.less": {
+            "uri": "/static/place/widget/movielist/movielist.inline_d9bc7a7.css",
+            "type": "css",
+            "hash": "9f4dd34"
+        },
+        "place:widget/movielist/movielist.js": {
+            "uri": "/static/place/widget/movielist/movielist_0ec8dc2.js",
+            "type": "js",
+            "deps": [
+                "common:widget/url/url.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "372b0bd"
+        },
+        "place:widget/movielist/movielist.tpl": {
+            "uri": "place/widget/movielist/movielist.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/movielist/movielist.js",
+                "common:widget/stat/stat.js",
+                "common:widget/geolocation/location.js"
+            ],
+            "hash": "27075c2"
+        },
+        "place:widget/movienews/movienews.inline.css": {
+            "uri": "/static/place/widget/movienews/movienews.inline_19d9ce9.css",
+            "type": "css",
+            "hash": "bcb17df"
+        },
+        "place:widget/movienews/movienews.js": {
+            "uri": "/static/place/widget/movienews/movienews_c848711.js",
+            "type": "js",
+            "deps": [
+                "place:static/lib/template.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js",
+                "common:static/js/iscroll.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "056209b"
+        },
+        "place:widget/movienews/movienews.tpl": {
+            "uri": "place/widget/movienews/movienews.tpl",
+            "type": "tpl",
+            "extras": {
+                "async": [
+                    "place:widget/movienews/movienews.js"
+                ]
+            },
+            "deps": [
+                "place:widget/movienews/movienews.js"
+            ],
+            "hash": "94059cf"
+        },
+        "place:widget/order/order.inline.less": {
+            "uri": "/static/place/widget/order/order.inline_db56a5b.css",
+            "type": "css",
+            "hash": "d4ca532"
+        },
+        "place:widget/order/order.js": {
+            "uri": "/static/place/widget/order/order_0f3d7dd.js",
+            "type": "js",
+            "deps": [
+                "common:widget/popup/popup.js",
+                "place:static/js/vcode.js",
+                "common:static/js/util.js"
+            ],
+            "pkg": "place:p0",
+            "hash": "9a7637f"
+        },
+        "place:widget/order/order.tpl": {
+            "uri": "place/widget/order/order.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/order/order.js"
+            ],
+            "hash": "bdcdfc0"
+        },
+        "place:widget/ordererror/error.inline.less": {
+            "uri": "/static/place/widget/ordererror/error.inline_e430ff4.css",
+            "type": "css",
+            "hash": "9485e0d"
+        },
+        "place:widget/ordererror/error.tpl": {
+            "uri": "place/widget/ordererror/error.tpl",
+            "type": "tpl",
+            "hash": "25dbe55"
+        },
+        "place:widget/overview/overview.inline.less": {
+            "uri": "/static/place/widget/overview/overview.inline_f47a221.css",
+            "type": "css",
+            "hash": "f5e9307"
+        },
+        "place:widget/overview/overview.tpl": {
+            "uri": "place/widget/overview/overview.tpl",
+            "type": "tpl",
+            "hash": "1e3fde0"
+        },
+        "place:widget/pagenav/pagenav.inline.less": {
+            "uri": "/static/place/widget/pagenav/pagenav.inline_acdfcad.css",
+            "type": "css",
+            "hash": "e1f7264"
+        },
+        "place:widget/pagenav/pagenav.tpl": {
+            "uri": "place/widget/pagenav/pagenav.tpl",
+            "type": "tpl",
+            "hash": "289d92c"
+        },
+        "place:widget/petroprice/petroprice.inline.less": {
+            "uri": "/static/place/widget/petroprice/petroprice.inline_5ab2f04.css",
+            "type": "css",
+            "hash": "6dea54d"
+        },
+        "place:widget/petroprice/petroprice.tpl": {
+            "uri": "place/widget/petroprice/petroprice.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "hash": "a382ed6"
+        },
+        "place:widget/placelist/placelist.inline.less": {
+            "uri": "/static/place/widget/placelist/placelist.inline_1e77f97.css",
+            "type": "css",
+            "hash": "4018087"
+        },
+        "place:widget/placelist/placelist.js": {
+            "uri": "/static/place/widget/placelist/placelist_cc4c624.js",
+            "type": "js",
+            "deps": [
+                "common:widget/url/url.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js",
+                "common:widget/geolocation/location.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "f0b6869"
+        },
+        "place:widget/placelist/placelist.tpl": {
+            "uri": "place/widget/placelist/placelist.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/placelist/placelist.js"
+            ],
+            "hash": "1b103ec"
+        },
+        "place:widget/premium/premium.inline.less": {
+            "uri": "/static/place/widget/premium/premium.inline_171a327.css",
+            "type": "css",
+            "hash": "64bcb98"
+        },
+        "place:widget/premium/premium.js": {
+            "uri": "/static/place/widget/premium/premium_2c098f0.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "common:widget/cookie/cookie.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "626c211"
+        },
+        "place:widget/premium/premium.tpl": {
+            "uri": "place/widget/premium/premium.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/premium/premium.js"
+            ],
+            "hash": "ae58c14"
+        },
+        "place:widget/promotion/promotion.inline.less": {
+            "uri": "/static/place/widget/promotion/promotion.inline_0be01a5.css",
+            "type": "css",
+            "deps": [
+                "place:static/css/detail.less"
+            ],
+            "hash": "443ac64"
+        },
+        "place:widget/promotion/promotion.tpl": {
+            "uri": "place/widget/promotion/promotion.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:static/css/detail.less",
+                "common:widget/stat/stat.js"
+            ],
+            "hash": "ac271e3"
+        },
+        "place:widget/promotionm/promotionm.inline.less": {
+            "uri": "/static/place/widget/promotionm/promotionm.inline_1a13be1.css",
+            "type": "css",
+            "deps": [
+                "place:static/css/detail.less"
+            ],
+            "hash": "d4a44d6"
+        },
+        "place:widget/promotionm/promotionm.tpl": {
+            "uri": "place/widget/promotionm/promotionm.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:static/css/detail.less",
+                "common:widget/stat/stat.js"
+            ],
+            "hash": "061a942"
+        },
+        "place:widget/recommend/recommend.inline.less": {
+            "uri": "/static/place/widget/recommend/recommend.inline_ada7699.css",
+            "type": "css",
+            "hash": "c3df439"
+        },
+        "place:widget/recommend/recommend.js": {
+            "uri": "/static/place/widget/recommend/recommend_9b80d7e.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "f5f5922"
+        },
+        "place:widget/recommend/recommend.tpl": {
+            "uri": "place/widget/recommend/recommend.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/recommend/recommend.js"
+            ],
+            "hash": "cf4e2a3"
+        },
+        "place:widget/scopebook/scopebook.inline.less": {
+            "uri": "/static/place/widget/scopebook/scopebook.inline_f95ac02.css",
+            "type": "css",
+            "hash": "fd95e61"
+        },
+        "place:widget/scopebook/scopebook.js": {
+            "uri": "/static/place/widget/scopebook/scopebook_17b1edf.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "f3815a8"
+        },
+        "place:widget/scopebook/scopebook.tpl": {
+            "uri": "place/widget/scopebook/scopebook.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/scopebook/scopebook.js",
+                "common:widget/stat/stat.js"
+            ],
+            "hash": "2caa1e3"
+        },
+        "place:widget/selectbox/selectbox.inline.less": {
+            "uri": "/static/place/widget/selectbox/selectbox.inline_c5f051d.css",
+            "type": "css",
+            "hash": "bcd4db3"
+        },
+        "place:widget/selectbox/selectbox.js": {
+            "uri": "/static/place/widget/selectbox/selectbox_e546be8.js",
+            "type": "js",
+            "deps": [
+                "common:widget/url/url.js",
+                "common:widget/geolocation/location.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "fd24f38"
+        },
+        "place:widget/selectbox/selectbox.tpl": {
+            "uri": "place/widget/selectbox/selectbox.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/selectbox/selectbox.js"
+            ],
+            "hash": "52b4336"
+        },
+        "place:widget/selectlist/selectlist.inline.less": {
+            "uri": "/static/place/widget/selectlist/selectlist.inline_0b0358b.css",
+            "type": "css",
+            "hash": "e126224"
+        },
+        "place:widget/selectlist/selectlist.js": {
+            "uri": "/static/place/widget/selectlist/selectlist_c616407.js",
+            "type": "js",
+            "deps": [
+                "common:widget/geolocation/location.js",
+                "common:widget/url/url.js",
+                "common:static/js/util.js",
+                "common:widget/setcity/setcity.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "30d2e15"
+        },
+        "place:widget/selectlist/selectlist.tpl": {
+            "uri": "place/widget/selectlist/selectlist.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/selectlist/selectlist.js"
+            ],
+            "hash": "1eb729e"
+        },
+        "place:widget/sitelink/sitelink.inline.less": {
+            "uri": "/static/place/widget/sitelink/sitelink.inline_85d0fac.css",
+            "type": "css",
+            "hash": "8159ec8"
+        },
+        "place:widget/sitelink/sitelink.tpl": {
+            "uri": "place/widget/sitelink/sitelink.tpl",
+            "type": "tpl",
+            "hash": "21e2950"
+        },
+        "place:widget/streetview/streetview.inline.less": {
+            "uri": "/static/place/widget/streetview/streetview.inline_1d7b2d4.css",
+            "type": "css",
+            "hash": "1c8d76f"
+        },
+        "place:widget/streetview/streetview.tpl": {
+            "uri": "place/widget/streetview/streetview.tpl",
+            "type": "tpl",
+            "hash": "31c6ade"
+        },
+        "place:widget/subwaydetail/subwaydetail.inline.less": {
+            "uri": "/static/place/widget/subwaydetail/subwaydetail.inline_e630976.css",
+            "type": "css",
+            "hash": "3d4ace8"
+        },
+        "place:widget/subwaydetail/subwaydetail.tpl": {
+            "uri": "place/widget/subwaydetail/subwaydetail.tpl",
+            "type": "tpl",
+            "hash": "1cc3f69"
+        },
+        "place:widget/subwaystopdetail/subwaystopdetail.inline.less": {
+            "uri": "/static/place/widget/subwaystopdetail/subwaystopdetail.inline_52db0ef.css",
+            "type": "css",
+            "hash": "723cbd3"
+        },
+        "place:widget/subwaystopdetail/subwaystopdetail.tpl": {
+            "uri": "place/widget/subwaystopdetail/subwaystopdetail.tpl",
+            "type": "tpl",
+            "hash": "b427b4d"
+        },
+        "place:widget/success/success.inline.less": {
+            "uri": "/static/place/widget/success/success.inline_6ad7987.css",
+            "type": "css",
+            "hash": "f1cf791"
+        },
+        "place:widget/success/success.tpl": {
+            "uri": "place/widget/success/success.tpl",
+            "type": "tpl",
+            "hash": "5ad32fd"
+        },
+        "place:widget/takeoutdetail/takeoutdetail.inline.less": {
+            "uri": "/static/place/widget/takeoutdetail/takeoutdetail.inline_2588c01.css",
+            "type": "css",
+            "hash": "9bf305b"
+        },
+        "place:widget/takeoutdetail/takeoutdetail.tpl": {
+            "uri": "place/widget/takeoutdetail/takeoutdetail.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js"
+            ],
+            "hash": "875dab2"
+        },
+        "place:widget/takeoutdetailnav/takeoutdetailnav.inline.less": {
+            "uri": "/static/place/widget/takeoutdetailnav/takeoutdetailnav.inline_e5107d6.css",
+            "type": "css",
+            "hash": "cd8afe5"
+        },
+        "place:widget/takeoutdetailnav/takeoutdetailnav.js": {
+            "uri": "/static/place/widget/takeoutdetailnav/takeoutdetailnav_785e2f5.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "67eeb77"
+        },
+        "place:widget/takeoutdetailnav/takeoutdetailnav.tpl": {
+            "uri": "place/widget/takeoutdetailnav/takeoutdetailnav.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/takeoutdetailnav/takeoutdetailnav.js"
+            ],
+            "hash": "2b0a7f3"
+        },
+        "place:widget/takeoutlist/takeoutlist.inline.less": {
+            "uri": "/static/place/widget/takeoutlist/takeoutlist.inline_50c36f6.css",
+            "type": "css",
+            "hash": "f9226cf"
+        },
+        "place:widget/takeoutlist/takeoutlist.js": {
+            "uri": "/static/place/widget/takeoutlist/takeoutlist_e752bcd.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "4b66969"
+        },
+        "place:widget/takeoutlist/takeoutlist.tpl": {
+            "uri": "place/widget/takeoutlist/takeoutlist.tpl",
+            "type": "tpl",
+            "deps": [
+                "common:widget/stat/stat.js",
+                "common:static/js/util.js",
+                "place:widget/takeoutlist/takeoutlist.js"
+            ],
+            "hash": "e5a1db1"
+        },
+        "place:widget/telephone/telephone.inline.less": {
+            "uri": "/static/place/widget/telephone/telephone.inline_d1ee7fa.css",
+            "type": "css",
+            "hash": "2beb355"
+        },
+        "place:widget/telephone/telephone.js": {
+            "uri": "/static/place/widget/telephone/telephone_148b7e9.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "4f7a33c"
+        },
+        "place:widget/telephone/telephone.tpl": {
+            "uri": "place/widget/telephone/telephone.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/telephone/telephone.js"
+            ],
+            "hash": "b3c4b74"
+        },
+        "place:widget/thirdcomment/thirdcomment.inline.less": {
+            "uri": "/static/place/widget/thirdcomment/thirdcomment.inline_194465f.css",
+            "type": "css",
+            "hash": "e8607a1"
+        },
+        "place:widget/thirdcomment/thirdcomment.js": {
+            "uri": "/static/place/widget/thirdcomment/thirdcomment_c8fe90c.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "ee8a4ed"
+        },
+        "place:widget/thirdcomment/thirdcomment.tpl": {
+            "uri": "place/widget/thirdcomment/thirdcomment.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/thirdcomment/thirdcomment.js"
+            ],
+            "hash": "7f057e8"
+        },
+        "place:widget/thirdsrcota/thirdsrcota.inline.less": {
+            "uri": "/static/place/widget/thirdsrcota/thirdsrcota.inline_08db968.css",
+            "type": "css",
+            "hash": "3f0ad60"
+        },
+        "place:widget/thirdsrcota/thirdsrcota.js": {
+            "uri": "/static/place/widget/thirdsrcota/thirdsrcota_d6f885f.js",
+            "type": "js",
+            "deps": [
+                "common:widget/broadcaster/broadcaster.js",
+                "place:static/js/broadcastname.js",
+                "common:widget/geolocation/location.js",
+                "common:static/js/util.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "76c4ab0"
+        },
+        "place:widget/thirdsrcota/thirdsrcota.tpl": {
+            "uri": "place/widget/thirdsrcota/thirdsrcota.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/thirdsrcota/thirdsrcota.js"
+            ],
+            "hash": "4eb9f60"
+        },
+        "place:widget/toplist/toplist.inline.less": {
+            "uri": "/static/place/widget/toplist/toplist.inline_4cda6fd.css",
+            "type": "css",
+            "hash": "aeb1d49"
+        },
+        "place:widget/toplist/toplist.js": {
+            "uri": "/static/place/widget/toplist/toplist_c7c8cb1.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "place:p1",
+            "hash": "a5abe68"
+        },
+        "place:widget/toplist/toplist.tpl": {
+            "uri": "place/widget/toplist/toplist.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/toplist/toplist.js"
+            ],
+            "hash": "a0b35dd"
+        },
+        "place:widget/tosearch/tosearch.inline.less": {
+            "uri": "/static/place/widget/tosearch/tosearch.inline_aff840a.css",
+            "type": "css",
+            "hash": "d55033f"
+        },
+        "place:widget/tosearch/tosearch.js": {
+            "uri": "/static/place/widget/tosearch/tosearch_3abd05f.js",
+            "type": "js",
+            "pkg": "place:p1",
+            "hash": "4ed7539"
+        },
+        "place:widget/tosearch/tosearch.tpl": {
+            "uri": "place/widget/tosearch/tosearch.tpl",
+            "type": "tpl",
+            "deps": [
+                "place:widget/tosearch/tosearch.js"
+            ],
+            "hash": "a8cdc58"
+        }
+    },
+    "pkg": {
+        "place:p0": {
+            "uri": "/static/place/pkg/order_0f3d7dd.js",
+            "type": "js",
+            "has": [
+                "place:widget/order/order.js"
+            ],
+            "deps": [
+                "common:widget/popup/popup.js",
+                "place:static/js/vcode.js",
+                "common:static/js/util.js"
+            ]
+        },
+        "place:p1": {
+            "uri": "/static/place/pkg/place_c63c95f.js",
+            "type": "js",
+            "has": [
+                "place:static/js/broadcastname.js",
+                "place:static/js/vcode.js",
+                "place:static/lib/mapresize.js",
+                "place:static/lib/template.js",
+                "place:static/lib/underscore.js",
+                "place:widget/bdcomment/bdcomment.js",
+                "place:widget/bookphone/bookphone.js",
+                "place:widget/captain/captain.js",
+                "place:widget/commentbtn/commentbtn.js",
+                "place:widget/datepicker/datepicker.js",
+                "place:widget/dishcategory/dishcategory.js",
+                "place:widget/gotomovie/gotomovie.js",
+                "place:widget/groupon/groupon.js",
+                "place:widget/hotelbook/hotelbook.js",
+                "place:widget/icomment/icomment.js",
+                "place:widget/listtool/listtool.js",
+                "place:widget/movielist/movielist.js",
+                "place:widget/movienews/movienews.js",
+                "place:widget/placelist/placelist.js",
+                "place:widget/premium/premium.js",
+                "place:widget/recommend/recommend.js",
+                "place:widget/scopebook/scopebook.js",
+                "place:widget/selectbox/selectbox.js",
+                "place:widget/selectlist/selectlist.js",
+                "place:widget/takeoutdetailnav/takeoutdetailnav.js",
+                "place:widget/takeoutlist/takeoutlist.js",
+                "place:widget/telephone/telephone.js",
+                "place:widget/thirdcomment/thirdcomment.js",
+                "place:widget/thirdsrcota/thirdsrcota.js",
+                "place:widget/toplist/toplist.js",
+                "place:widget/tosearch/tosearch.js"
+            ],
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/login/login.js",
+                "common:widget/stat/stat.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/datepicker/datepicker.js",
+                "common:static/js/iscroll.js",
+                "common:widget/geolocation/location.js",
+                "common:widget/popup/popup.js",
+                "common:widget/url/url.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/setcity/setcity.js"
+            ]
+        }
+    }
+}

@@ -1,0 +1,1 @@
+define("place:widget/takeoutlist/takeoutlist.js",function(t,a,e){e.exports.bind=function(){$pageNav=$(".place-widget-taskoutlist .page_btn"),$.each($pageNav,function(t,a){var e=$(a);e.on("click",function(t){var a=$(t.target),e=(a.data("type"),a.data("href"));a.hasClass("unclick")||(e="http://"+location.host+e,window.location.replace(e))})})}});

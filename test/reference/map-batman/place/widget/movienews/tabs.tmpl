@@ -1,0 +1,11 @@
+<div class="tab">
+	<div id="tab_wrapper" class="tab_wrapper">	
+		<ul class="calendar_tab">
+		    <#for(var i = 0, len = days.length; i < len ; i++){#>
+		    <li data-date="<#=days[i].date#>" data-text="<#=days[i].text#>" <#if(i == 0){#>class="current"<#}#>><#=days[i].text#></li>
+		    <#}#>
+		</ul>
+	</div>
+</div>
+
+

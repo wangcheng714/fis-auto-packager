@@ -1,0 +1,138 @@
+/*
+ * @fileoverview 公交方案详情 选择器以bus-detail开头
+ * author: jican
+ * date: 2013/01/22
+ */
+.transit-widget-detail{
+    .route-hd-wd p{
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow:hidden; 
+        display: inline-block;
+        width: 48%;
+    }
+    .route-hd-wd p.sta {
+        text-align: right;
+    }
+    .route-hd-wd p.end {
+        text-align: left;
+    }
+
+    .bus-table-box{
+        margin: 0 6px 20px 6px;
+    }
+
+    .bus-detail-inner {
+        height:100%; overflow:hidden;
+    }
+
+    .bus-detail{
+        width: 100%;
+        thead td{
+            padding: 14px 0;
+        }
+    }
+    .bus-detail a.link{
+        color: #676767;
+    }
+    .bus-detail a a{
+        color: #00c;
+        text-decoration: underline;
+    }
+
+    .bus-detail .sum{
+        font-size: 0.86em;
+        color: #676767;
+    }
+
+    .bus-detail .bus-nav{
+        font-size: 13px;
+        color: #2f2e2e;
+    }
+
+    .send-phone{
+        font-size: 3;
+        background: -webkit-gradient(linear,0 0,0 63%,from(#8cbddc), to(#8cbddc));
+        -webkit-border-radius: 6px;
+        background-size: 14px 35px;
+        background-position: 0 -17px;
+        height: 43px;
+        line-height: 46px;
+        text-align: center;
+        border: 1px solid #96b2d9;
+        margin: 24px 22% 5px 22%; 
+        a{
+            color: #ffffff;
+            position: relative;
+            left: -5px;
+        }
+    }
+
+    .send-phone-icon {
+        background: url('/static/images/sendicon.png') no-repeat;
+        background-size: 38px 49px;
+        background-position: 0px -3px;
+        width: 38px;
+        height: 49px;
+        margin: 0 6px 0 0;
+        margin-bottom: -21px;
+    }
+
+    .bus-detail th{
+        width: 38px;  
+        font-size: 13px; 
+        font-weight: normal;
+        color: #5c5c5c;
+    }
+
+    .bus-detail tbody{
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+    }
+
+    .bus-detail tbody th{
+        background-color: #f6f9fb;
+    }
+
+    .bus-icon,.bus-list-inner .hd .start em,.bus-list-inner .hd .end em{
+        width: 17px; height: 16px;
+        display: inline-block;
+        background: url(/static/images/line.png) no-repeat;
+        background-size:15px 123px;
+        margin-top: 8px;
+    }
+
+    .bus-icon.type-0{
+        background-position: 0 -33px;
+    }
+
+    .bus-icon.type-1{
+        background-position: 0 -16px;
+    }
+
+    .bus-detail tbody tr{
+        border-bottom: 1px solid #DBDBDB;
+        line-height: 25px;
+    }
+    .bus-detail tbody td{
+        color: #676767;
+        padding: 12px 5px 12px 15px;
+    }
+    .bus-detail b{
+        color: #404040;
+    }
+    .bus-other-line{
+        color: blue;
+        text-decoration: underline;
+    }
+    .bus-detail .mb,
+    .bus-detail .sb{
+    padding: 0 4px;
+    color: #ffba31;
+    background-image: url('/static/images/alert.png');
+    background-repeat: no-repeat;
+    background-size: 16px 12px;
+    padding-left: 20px;
+    background-position: 0 6px;
+}
+}

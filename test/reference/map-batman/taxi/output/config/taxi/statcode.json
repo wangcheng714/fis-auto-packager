@@ -1,0 +1,12 @@
+{
+    "TAXI_VIEW": "taxi_1",
+    "TAXI_USERREQ": "TAXI_2",
+    "TAXI_DRIVERREPLY": "TAXI_3",
+    "TAXI_VERIFYCODE": "TAXI_4",
+    "TAXI_ON_CAR": "TAXI_5",
+    "TAXI_NOT_COME": "TAXI_6",
+    "TAXI_AGREEMENT": "TAXI_7",
+    "TAXI_HELP": "TAXI_8",
+    "TAXI_TERMS": "TAXI_9",
+    "TAXI_ADDPRICEREQ": "TAXI_10"
+}

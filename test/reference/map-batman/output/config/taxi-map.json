@@ -1,0 +1,333 @@
+{
+    "res": {
+        "taxi:page/index.tpl": {
+            "uri": "/template/taxi/page/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "deps": [
+                "common:widget/geolocation/initgeo.js",
+                "common:widget/fastclick/fastclick.js",
+                "common:widget/stat/stat.js",
+                "common:widget/statistics/statistics.js"
+            ],
+            "hash": "3a96a2e"
+        },
+        "taxi:static/css/base.inline.less": {
+            "uri": "/static/taxi/css/base.inline_1b4c5f9.css",
+            "type": "css",
+            "hash": "d38cea8"
+        },
+        "taxi:static/css/popup.inline.less": {
+            "uri": "/static/taxi/css/popup.inline_ec0b113.css",
+            "type": "css",
+            "hash": "ce17d60"
+        },
+        "taxi:static/css/reset.inline.less": {
+            "uri": "/static/taxi/css/reset.inline_471bbf3.css",
+            "type": "css",
+            "hash": "0976449"
+        },
+        "taxi:static/js/BigPipe.js": {
+            "uri": "/static/taxi/js/BigPipe_13f92fc.js",
+            "type": "js",
+            "pkg": "taxi:p0",
+            "hash": "4c580b1"
+        },
+        "taxi:static/js/loadmanager.js": {
+            "uri": "/static/taxi/js/loadmanager_bd8b1dd.js",
+            "type": "js",
+            "deps": [
+                "common:widget/popup/popup.js",
+                "common:widget/cookie/cookie.js",
+                "common:static/js/util.js",
+                "taxi:widget/home/home.js",
+                "taxi:widget/waiting/waiting.js",
+                "taxi:widget/resubmit/resubmit.js",
+                "taxi:widget/response/response.js",
+                "taxi:widget/verify/verify.js",
+                "taxi:widget/settings/settings.js",
+                "taxi:widget/about/about.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "7b50df6"
+        },
+        "taxi:static/js/taxi.js": {
+            "uri": "/static/taxi/js/taxi_660b12a.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/popup/popup.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "24bdd50"
+        },
+        "taxi:widget/about/about.inline.less": {
+            "uri": "/static/taxi/widget/about/about.inline_0bc2734.css",
+            "type": "css",
+            "hash": "2eaa94b"
+        },
+        "taxi:widget/about/about.js": {
+            "uri": "/static/taxi/widget/about/about_b7096fa.js",
+            "type": "js",
+            "deps": [
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "c56d8ec"
+        },
+        "taxi:widget/about/about.tpl": {
+            "uri": "taxi/widget/about/about.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/about/about.js"
+            ],
+            "hash": "838e4d3"
+        },
+        "taxi:widget/common/addprice/addprice.inline.less": {
+            "uri": "/static/taxi/widget/common/addprice/addprice.inline_84dfa3b.css",
+            "type": "css",
+            "hash": "db48425"
+        },
+        "taxi:widget/common/addprice/addprice.js": {
+            "uri": "/static/taxi/widget/common/addprice/addprice_e16c890.js",
+            "type": "js",
+            "pkg": "taxi:p0",
+            "hash": "5daf924"
+        },
+        "taxi:widget/common/addprice/addprice.tpl": {
+            "uri": "taxi/widget/common/addprice/addprice.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/common/addprice/addprice.js"
+            ],
+            "hash": "c5a71d4"
+        },
+        "taxi:widget/common/nav/nav.inline.less": {
+            "uri": "/static/taxi/widget/common/nav/nav.inline_1d4cd6e.css",
+            "type": "css",
+            "hash": "bf83f59"
+        },
+        "taxi:widget/common/nav/nav.js": {
+            "uri": "/static/taxi/widget/common/nav/nav_832582f.js",
+            "type": "js",
+            "pkg": "taxi:p0",
+            "hash": "a076790"
+        },
+        "taxi:widget/common/nav/nav.tpl": {
+            "uri": "taxi/widget/common/nav/nav.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/common/nav/nav.js"
+            ],
+            "hash": "dda8502"
+        },
+        "taxi:widget/common/radar/radar.inline.less": {
+            "uri": "/static/taxi/widget/common/radar/radar.inline_0cd53c9.css",
+            "type": "css",
+            "hash": "798c6d9"
+        },
+        "taxi:widget/common/radar/radar.js": {
+            "uri": "/static/taxi/widget/common/radar/radar_798c0ae.js",
+            "type": "js",
+            "pkg": "taxi:p0",
+            "hash": "26c860f"
+        },
+        "taxi:widget/common/radar/radar.tpl": {
+            "uri": "taxi/widget/common/radar/radar.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/common/radar/radar.js"
+            ],
+            "hash": "36145a8"
+        },
+        "taxi:widget/home/home.inline.less": {
+            "uri": "/static/taxi/widget/home/home.inline_14983aa.css",
+            "type": "css",
+            "hash": "5815cf7"
+        },
+        "taxi:widget/home/home.js": {
+            "uri": "/static/taxi/widget/home/home_1cde5c3.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/stat/stat.js",
+                "common:widget/geolocation/geolocation.js",
+                "common:widget/geolocation/location.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/suggestion/suggestion.js",
+                "common:widget/quickdelete/quickdelete.js",
+                "common:widget/popup/popup.js",
+                "taxi:widget/common/addprice/addprice.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "f627fab"
+        },
+        "taxi:widget/home/home.tpl": {
+            "uri": "taxi/widget/home/home.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/home/home.js"
+            ],
+            "hash": "558c341"
+        },
+        "taxi:widget/response/response.inline.less": {
+            "uri": "/static/taxi/widget/response/response.inline_c73cfce.css",
+            "type": "css",
+            "hash": "7e36fd9"
+        },
+        "taxi:widget/response/response.js": {
+            "uri": "/static/taxi/widget/response/response_2acead0.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "0832473"
+        },
+        "taxi:widget/response/response.tpl": {
+            "uri": "taxi/widget/response/response.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/response/response.js"
+            ],
+            "hash": "a36bf4a"
+        },
+        "taxi:widget/resubmit/resubmit.inline.less": {
+            "uri": "/static/taxi/widget/resubmit/resubmit.inline_18254d9.css",
+            "type": "css",
+            "hash": "2b52c0c"
+        },
+        "taxi:widget/resubmit/resubmit.js": {
+            "uri": "/static/taxi/widget/resubmit/resubmit_fa338da.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/popup/popup.js",
+                "common:widget/stat/stat.js",
+                "common:widget/cookie/cookie.js",
+                "taxi:widget/common/addprice/addprice.js",
+                "taxi:widget/common/radar/radar.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "44d8672"
+        },
+        "taxi:widget/resubmit/resubmit.tpl": {
+            "uri": "taxi/widget/resubmit/resubmit.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/resubmit/resubmit.js"
+            ],
+            "hash": "4d7cea7"
+        },
+        "taxi:widget/settings/settings.inline.less": {
+            "uri": "/static/taxi/widget/settings/settings.inline_d773a1e.css",
+            "type": "css",
+            "hash": "8cef541"
+        },
+        "taxi:widget/settings/settings.js": {
+            "uri": "/static/taxi/widget/settings/settings_f0474c4.js",
+            "type": "js",
+            "deps": [
+                "common:widget/cookie/cookie.js",
+                "common:widget/popup/popup.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "c5f9004"
+        },
+        "taxi:widget/settings/settings.tpl": {
+            "uri": "taxi/widget/settings/settings.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/settings/settings.js"
+            ],
+            "hash": "7277968"
+        },
+        "taxi:widget/verify/verify.inline.less": {
+            "uri": "/static/taxi/widget/verify/verify.inline_48c3a8a.css",
+            "type": "css",
+            "hash": "ac45b87"
+        },
+        "taxi:widget/verify/verify.js": {
+            "uri": "/static/taxi/widget/verify/verify_c1f6dde.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/popup/popup.js",
+                "common:widget/stat/stat.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "d36404d"
+        },
+        "taxi:widget/verify/verify.tpl": {
+            "uri": "taxi/widget/verify/verify.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/verify/verify.js"
+            ],
+            "hash": "23d81a3"
+        },
+        "taxi:widget/waiting/waiting.inline.less": {
+            "uri": "/static/taxi/widget/waiting/waiting.inline_53972cb.css",
+            "type": "css",
+            "hash": "cec7952"
+        },
+        "taxi:widget/waiting/waiting.js": {
+            "uri": "/static/taxi/widget/waiting/waiting_67da743.js",
+            "type": "js",
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/stat/stat.js",
+                "taxi:widget/common/radar/radar.js"
+            ],
+            "pkg": "taxi:p0",
+            "hash": "377c184"
+        },
+        "taxi:widget/waiting/waiting.tpl": {
+            "uri": "taxi/widget/waiting/waiting.tpl",
+            "type": "tpl",
+            "deps": [
+                "taxi:widget/waiting/waiting.js"
+            ],
+            "hash": "2c0bc42"
+        }
+    },
+    "pkg": {
+        "taxi:p0": {
+            "uri": "/static/taxi/pkg/taxi_52a6ada.js",
+            "type": "js",
+            "has": [
+                "taxi:static/js/BigPipe.js",
+                "taxi:widget/common/addprice/addprice.js",
+                "taxi:widget/home/home.js",
+                "taxi:widget/common/radar/radar.js",
+                "taxi:widget/waiting/waiting.js",
+                "taxi:widget/resubmit/resubmit.js",
+                "taxi:widget/response/response.js",
+                "taxi:widget/verify/verify.js",
+                "taxi:widget/settings/settings.js",
+                "taxi:widget/about/about.js",
+                "taxi:static/js/loadmanager.js",
+                "taxi:static/js/taxi.js",
+                "taxi:widget/common/nav/nav.js"
+            ],
+            "deps": [
+                "common:static/js/util.js",
+                "common:widget/cookie/cookie.js",
+                "common:widget/stat/stat.js",
+                "common:widget/geolocation/geolocation.js",
+                "common:widget/geolocation/location.js",
+                "common:widget/broadcaster/broadcaster.js",
+                "common:widget/suggestion/suggestion.js",
+                "common:widget/quickdelete/quickdelete.js",
+                "common:widget/popup/popup.js"
+            ]
+        }
+    }
+}
