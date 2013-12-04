@@ -1,0 +1,9 @@
+{
+	"CROSS_CITY_TRAFFIC_PLAN_CLICK" : "transit_1",
+	"CROSS_CITY_DATE_CLICK"         : "transit_2",
+	"CROSS_CITY_STRAGETY_CLICK"     : "transit_3",
+	"CROSS_CITY_TRAIN_ORDER_CLICK"  : "transit_4",
+	"CROSS_CITY_AIR_ORDER_CLICK"    : "transit_5",
+	"CROSS_CITY_INCITY_PLAN_CLICK"  : "transit_6",
+	"BUS_STRATEGY_CLICK"            : "transit_7"
+}

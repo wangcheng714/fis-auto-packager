@@ -1,0 +1,1 @@
+define("place:widget/tosearch/tosearch.js",function(t,e,i){i.exports={init:function(){"use strict";var t=$(".place-widget-tosearch .name");t.css("max-width",$("body").offset().width-200+"px"),$(window).on("resize",function(){t.css("max-width",$("body").offset().width-200+"px")})}}});

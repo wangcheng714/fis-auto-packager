@@ -1,0 +1,190 @@
+{
+    "res": {
+        "common:page/layout.tpl": {
+            "uri": "/template/common/page/layout.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true,
+                "async": [
+                    "common:widget/ui/b.js"
+                ]
+            },
+            "deps": [
+                "common:widget/ui/a.js"
+            ],
+            "hash": "0e132eb"
+        },
+        "common:static/css/layout.css": {
+            "uri": "/static/common/css/layout.css",
+            "type": "css",
+            "hash": "bf4dfdf"
+        },
+        "common:static/lib/css/base.css": {
+            "uri": "/static/common/lib/css/base.css",
+            "type": "css",
+            "deps": [
+                "common:static/lib/css/grids/css/grids-core.css",
+                "common:static/lib/css/grids/css/grids-units.css",
+                "common:static/lib/css/grids/css/grids-r.css",
+                "common:static/lib/css/menus/css/menus-core.css",
+                "common:static/lib/css/buttons/css/buttons-core.css",
+                "common:static/lib/css/buttons/css/buttons.css",
+                "common:static/lib/css/tables/css/tables.css"
+            ],
+            "hash": "26df8a1"
+        },
+        "common:static/lib/css/buttons/css/buttons-core.css": {
+            "uri": "/static/common/lib/css/buttons/css/buttons-core.css",
+            "type": "css",
+            "hash": "e1dd937"
+        },
+        "common:static/lib/css/buttons/css/buttons.css": {
+            "uri": "/static/common/lib/css/buttons/css/buttons.css",
+            "type": "css",
+            "hash": "afae41d"
+        },
+        "common:static/lib/css/forms/css/forms-r.css": {
+            "uri": "/static/common/lib/css/forms/css/forms-r.css",
+            "type": "css",
+            "hash": "085366d"
+        },
+        "common:static/lib/css/forms/css/forms.css": {
+            "uri": "/static/common/lib/css/forms/css/forms.css",
+            "type": "css",
+            "hash": "32abc79"
+        },
+        "common:static/lib/css/grids/css/grids-core.css": {
+            "uri": "/static/common/lib/css/grids/css/grids-core.css",
+            "type": "css",
+            "hash": "2b5cb21"
+        },
+        "common:static/lib/css/grids/css/grids-r.css": {
+            "uri": "/static/common/lib/css/grids/css/grids-r.css",
+            "type": "css",
+            "hash": "8bb8d07"
+        },
+        "common:static/lib/css/grids/css/grids-units.css": {
+            "uri": "/static/common/lib/css/grids/css/grids-units.css",
+            "type": "css",
+            "hash": "3ab4eea"
+        },
+        "common:static/lib/css/menus/css/menus-core.css": {
+            "uri": "/static/common/lib/css/menus/css/menus-core.css",
+            "type": "css",
+            "hash": "0464698"
+        },
+        "common:static/lib/css/menus/css/menus-paginator.css": {
+            "uri": "/static/common/lib/css/menus/css/menus-paginator.css",
+            "type": "css",
+            "hash": "3b1a509"
+        },
+        "common:static/lib/css/menus/css/menus-r.css": {
+            "uri": "/static/common/lib/css/menus/css/menus-r.css",
+            "type": "css",
+            "hash": "4d1db4e"
+        },
+        "common:static/lib/css/menus/css/menus.css": {
+            "uri": "/static/common/lib/css/menus/css/menus.css",
+            "type": "css",
+            "hash": "745dfba"
+        },
+        "common:static/lib/css/tables/css/tables.css": {
+            "uri": "/static/common/lib/css/tables/css/tables.css",
+            "type": "css",
+            "hash": "ac83355"
+        },
+        "common:static/lib/js/BigPipe.js": {
+            "uri": "/static/common/lib/js/BigPipe.js",
+            "type": "js",
+            "hash": "46a8b69"
+        },
+        "common:static/lib/js/jquery-1.10.2.js": {
+            "uri": "/static/common/lib/js/jquery-1.10.2.js",
+            "type": "js",
+            "hash": "d9347b5"
+        },
+        "common:static/lib/js/lazyload.js": {
+            "uri": "/static/common/lib/js/lazyload.js",
+            "type": "js",
+            "hash": "f854c89"
+        },
+        "common:static/lib/js/lib.js": {
+            "uri": "/static/common/lib/js/lib.js",
+            "type": "js",
+            "hash": "de6ff03"
+        },
+        "common:static/lib/js/mod.js": {
+            "uri": "/static/common/lib/js/mod.js",
+            "type": "js",
+            "hash": "9e3ae04"
+        },
+        "common:static/lib/js/spljs/base.js": {
+            "uri": "/static/common/lib/js/spljs/base.js",
+            "type": "js",
+            "hash": "456bb8a"
+        },
+        "common:static/lib/js/spljs/page.js": {
+            "uri": "/static/common/lib/js/spljs/page.js",
+            "type": "js",
+            "hash": "7bb444d"
+        },
+        "common:static/lib/js/spljs/path.js": {
+            "uri": "/static/common/lib/js/spljs/path.js",
+            "type": "js",
+            "hash": "fbafe46"
+        },
+        "common:static/lib/js/spljs/rules.js": {
+            "uri": "/static/common/lib/js/spljs/rules.js",
+            "type": "js",
+            "hash": "77b132d"
+        },
+        "common:static/lib/js/spljs/spljs.js": {
+            "uri": "/static/common/lib/js/spljs/spljs.js",
+            "type": "js",
+            "hash": "ce15d5d"
+        },
+        "common:widget/ui/a.js": {
+            "uri": "/static/common/widget/ui/a.js",
+            "type": "js",
+            "extras": {
+                "async": [
+                    "common:widget/ui/c.js"
+                ]
+            },
+            "deps": [
+                "common:widget/ui/e.js"
+            ],
+            "hash": "b2f8bd6"
+        },
+        "common:widget/ui/b.js": {
+            "uri": "/static/common/widget/ui/b.js",
+            "type": "js",
+            "deps": [
+                "common:widget/ui/d.js",
+                "common:widget/ui/f.js"
+            ],
+            "hash": "817ce7e"
+        },
+        "common:widget/ui/c.js": {
+            "uri": "/static/common/widget/ui/c.js",
+            "type": "js",
+            "hash": "5239967"
+        },
+        "common:widget/ui/d.js": {
+            "uri": "/static/common/widget/ui/d.js",
+            "type": "js",
+            "hash": "e261366"
+        },
+        "common:widget/ui/e.js": {
+            "uri": "/static/common/widget/ui/e.js",
+            "type": "js",
+            "hash": "945c4a9"
+        },
+        "common:widget/ui/f.js": {
+            "uri": "/static/common/widget/ui/f.js",
+            "type": "js",
+            "hash": "80e160d"
+        }
+    },
+    "pkg": {}
+}

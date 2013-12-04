@@ -1,0 +1,152 @@
+.index-widget-thumbnail{
+
+    .thumb {
+        padding:0px 8px 8px 8px;
+        border-bottom:1px solid #cecece;
+    }
+    .thumb-icon {
+        background: url(/static/images/index_loc.png) no-repeat 0 0;
+        background-size: 28px 151px;
+    }
+    .thumb-wrap{
+        border:1px solid #dadada;
+        position:relative;
+        height:101px;
+        background-color:#ffffff;
+        padding:2px;
+    }
+    .thumb-link{
+        display: block;
+        height: 100%;
+    }
+    .thumb-img{
+        width: 100%;
+        height: 100%;
+    }
+    .map-btn {
+        position:absolute;
+        right:0px;
+        bottom:0px;
+        height:31px;
+        width:31px;
+        background-color:white;
+    }
+    .map-btn b{
+        display:inline-block;
+        margin:7px 0 0 7px;
+        height:17px;
+        width:17px;
+        background-position: 0px -52px;
+    }
+    .geo-btn {
+        position:absolute;
+        left:6px;
+        bottom:6px;
+        height:36px;
+        width:36px;
+        background-color:#f4f4f4;
+        border:1px solid #83837c;
+        border-radius: 5px;
+        -webkit-box-shadow: 1px 1px 1px #dddddd;
+        display: none;
+    }
+    .geo-btn b{
+        display:inline-block;
+        margin:6px 0 0 7px;
+        height:23px;
+        width:23px;
+        background-position: 0px 0px;
+    }
+    .geo-fail{
+        background-color: #f4f4f4;
+    }
+    .geo-fail b{
+        background-position: 0px 0px;
+    }
+    .geo-btn.active {
+        background-color: #eeeeee;
+    }
+    .geo-btn.active b{
+        background-position: 0px 0px;
+    }
+    .view-map-btn{
+        padding-top:41px;
+        color:#4197d3;
+        font-size:14px;
+        margin:0 auto;
+    }
+
+    /*定位条*/
+    .locbar {
+        position:relative;
+        padding:5px 13px 0px;
+        top: -8px;
+    }
+    .locbar-area {
+        border: 1px solid #D4D4D4;
+        background-color: #F9F9F9;
+        height: 33px;
+        line-height: 33px;
+        padding-right: 48px;
+        display: -webkit-box;
+
+        .thumb-left {
+            display: inline-block;
+            width: 43px;
+            height: 33px;
+            border-right: 1px solid #D4D4D4;
+        }
+
+        .thumb-icon {
+            position: absolute;
+            top: 11px;
+            left: 20px;
+            display: inline-block;
+            width: 30px;
+            height: 22px;
+            background-position: 0 0;
+        }
+    }
+    a {
+        color:#6A97C3;
+    }
+    .locbar .in-btn {
+        position: absolute;
+        top: 6px;
+        right: 22px;
+        display:inline-block;
+        width:45px;
+        height:33px;
+        line-height:33px;
+        text-align:center;
+        font-size: 13px;
+    }
+    .locbar .active {
+        background-color: #efeeee
+    }
+    .locbar-txt{
+        color: #A9A9A9;
+        font-size: 14px;
+        display: -webkit-flex;
+        padding-left: 17px;
+        position: absolute;
+        line-height: 33px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -webkit-box-flex: 1;
+        width: 54%;
+        top: 7px;
+        left: 55px;
+    }
+    .error-cnt {
+        width:100%;
+        height:100%;
+        background-color: #f2f2f2;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display:none;
+    }
+}

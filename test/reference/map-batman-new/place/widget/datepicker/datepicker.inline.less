@@ -1,0 +1,190 @@
+
+/*入住退房日历 begin*/
+.hotel-calendar{
+  background-color: #ffffff;
+  border: #e4e4e4 solid 1px;
+  border-top: none;
+  padding: 10px 8px 0 8px;
+  display: none;
+
+  .hotel-cal-content{
+    display: -webkit-box;
+
+    .hotel-cal-date{
+      -webkit-box-flex: 1;
+      display: -webkit-box;
+      -webkit-box-align: center;
+
+      .hotel-date-text{
+        color: #6c6c6c;
+      }
+      .hotel-date-ipt{
+        padding: 8px 3px;
+        border: solid 1px #ccc;
+        border-radius: 3px;
+        -webkit-box-sizing: border-box;
+        margin: 0 5px;
+        -webkit-box-flex: 1;
+        position: relative;
+        background-color: #ffffff;
+
+        .tit-text{
+          font-size: 14px;
+        }
+        div.hotel-ipt-start,
+        div.hotel-ipt-end{
+          font-family: arial,helvetica,sans-serif;
+        }
+        span.hotel-ipt-arrow{
+          content: '';
+          position: absolute;
+          top: 15px;
+          right: 6px;
+          width: 0;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 6px solid #818181;
+          z-index: 9;
+        }
+      }
+      .active{
+        border: 1px solid #94BCDF;
+      }
+    }
+  }
+  .hotel-cal-wrap{
+    -webkit-box-sizing: border-box;
+    margin-top: 10px;
+    .hotel-calwrap-start, .hotel-calwrap-end{
+      background: #fafafa;
+      border: solid 1px #94bcdf;
+      padding: 5px;
+      display: none;
+      margin-bottom: 10px;
+    }
+  }
+}
+/*入住退房日历 end*/
+
+/* datepicker begin */
+/*!Css widget/datepicker/datepicker.default.css*/
+.ui-datepicker {
+  width: 100%;
+  line-height: 25px;
+}
+
+.ui-datepicker-header {
+  color: #545454;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.ui-datepicker-header a {
+  color: #545454;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 10px;
+  margin: 0 5px;
+  text-align: center;
+  line-height: 1.0;
+  position: relative;
+  bottom: 3px;
+}
+
+.ui-datepicker-header a.ui-state-hover {
+  background-color: #ccc;
+}
+
+.ui-datepicker-header .ui-datepicker-title {
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+  border: 1px solid #C9C9C9;
+}
+
+.ui-datepicker-calendar tbody {
+  background: #c9c9c9;
+}
+
+.ui-datepicker-calendar td {
+  text-align: center;
+  color: #000;
+  background: #fafafa;
+  border: 1px solid #c9c9c9;
+  font-weight: bold;
+}
+
+.ui-datepicker-calendar thead tr {
+  border: 1px solid #c9c9c9;
+}
+
+.ui-datepicker-calendar thead th {
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.ui-datepicker-calendar a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+.ui-datepicker-calendar tr.ui-datepicker-gap td {
+  display: none;
+  padding: 0;
+  border: none transparent;
+}
+
+.ui-datepicker-calendar tbody td {
+  padding: 10px 0;
+}
+
+.ui-datepicker-calendar tbody td:first-child {
+  border-left: none 0;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-unselectable {
+  background: #f6f6f6;
+  color: #b8b8b8;
+  font-weight: normal;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-today {
+  background: #FBF9EE;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-current-day {
+  background: #e3f1ff;
+  font-weight: bold;
+  border: none;
+}
+
+.ui-datepicker-calendar td.ui-state-hover {
+  background: #ccc;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  float: left;
+}
+
+.ui-datepicker .ui-datepicker-next {
+  float: right;
+}
+/*place重置的datepicker样式 begin*/
+.ui-datepicker-header{
+  background-color: #f1f1f1;
+  padding: 5px 10px;
+  border-bottom: dashed 1px #ccc;
+}
+.hotel-calwrap-start > p, .hotel-calwrap-end > p{
+  padding: 5px 10px;
+  font-weight: bold;
+}
+/*place重置的datepicker样式 end*/
+
+/* datepicker end */

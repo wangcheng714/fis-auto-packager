@@ -1,0 +1,1 @@
+{%extends file="common/page/layout.tpl"%} 

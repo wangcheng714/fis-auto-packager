@@ -1,0 +1,1 @@
+define("common:static/js/gmu/src/core/gmu.js",function(){window.gmu=window.gmu||{version:"2.1.2",$:window.Zepto,staticCall:function(n){var t=n.fn,o=[].slice,e=n();return e.length=1,function(n,i){return e[0]=n,t[i].apply(e,o.call(arguments,2))}}(Zepto)}});

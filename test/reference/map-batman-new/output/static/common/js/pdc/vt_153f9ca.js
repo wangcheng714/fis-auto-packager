@@ -1,0 +1,1 @@
+!function(){PDC&&PDC.mark("drt");try{var t=_APP_HASH.module,e=_APP_HASH.action,m=_APP_HASH.page;document.getElementById("statImg").src="/mobile/img/t.gif?newmap=1&t="+Date.now()+"&code=common_43&module="+t+"&action="+e+"&page="+m}catch(o){}}();

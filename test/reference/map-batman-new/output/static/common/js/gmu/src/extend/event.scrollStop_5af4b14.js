@@ -1,0 +1,1 @@
+define("common:static/js/gmu/src/extend/event.scrollStop.js",function(o){o("common:static/js/gmu/src/extend/throttle.js"),function(o,t){function n(){o(t).on("scroll",o.debounce(80,function(){o(t).trigger("scrollStop")},!1))}function c(){o(t).off("scroll"),n()}n(),o(t).on("pageshow",function(n){n.persisted&&o(t).off("touchstart",c).one("touchstart",c)})}(Zepto,window)});

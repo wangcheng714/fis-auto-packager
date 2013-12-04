@@ -1,0 +1,32 @@
+<div id="sw_pw">
+    <#if(data.notification){#>
+        <div class="sw-pw-notification">这是离您最近的地铁站</div>
+    <#}else{#>
+        <ul class="sw-pw-title">
+            <li class="sw-pw-tl"></li>
+            <li class="sw-pw-tc"><#:=data.station.lb#></li>
+            <li class="sw-pw-tr"></li>
+        </ul>
+        <div class="sw-pw-content">
+            <#for(var i=0; i<data.lines.length; i++){#>
+                <div class="sw-pw-line">
+                    <div class="sw-pw-line-title" style="border-color:<#:=data.lines[i].color#>">
+                        <span class="line_title_content" style="background-color:<#:=data.lines[i].color#>"><#:=data.lines[i].name#></span>
+                    </div>
+                    <#for(var j=0; j<data.lines[i].dirs.length; j++){#>
+                        <#if(data.lines[i].dirs[j].startTime && data.lines[i].dirs[j].endTime) {#>
+                        <ul class="sw-pw-line-list">
+                            <li class="sw-pw-line-dir">
+                                <span class="sw-pw-line-dir-name"><#:=data.lines[i].dirs[j].name#></span><span class="sw-pw-text-gray">方向</span>
+                            </li>
+                            <li class="sw-pw-line-time">
+                                <span class="sw-pw-text-gray-bkg">始</span><span class="sw-pw-text-inline-block"><#:=data.lines[i].dirs[j].startTime || '00:00'#></span><span class="sw-pw-text-gray-bkg">末</span><span class="sw-pw-text-inline-block"><#:=data.lines[i].dirs[j].endTime || '00:00'#></span>
+                            </li>
+                        </ul>
+                        <#}#>
+                    <#}#>
+                </div>
+            <#}#>
+        </div>
+    <#}#>
+</div>

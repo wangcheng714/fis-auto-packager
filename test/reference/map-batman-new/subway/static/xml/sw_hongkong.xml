@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw cid="香港特別行政区" n="5" c="香港特別行政区" src="fla/resource.swf" bg="bg_hongkong" icon="icon_hongkong" width="1500" height="1400" v="1.0">
+	<l lid="荃湾线" lb="荃湾线" slb="荃湾线" n="16" loop="false" lbx="-468.9" lby="-45.1" lbr="0.0" lc="0xd7422e" uid="a62e5b067cf66173901fc98d">
+		<p sid="荃湾" lb="荃湾" uid="d8b33d5503a5bc5cbd48428d" px="12704881.01" py="2540513.17" x="-545" y="-55" rx="-16" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="1" /> 
+		<p sid="大窝口" lb="大窝口" uid="d5dc3c6df35285eb8415418d" px="12705881.93" py="2540147.87" x="-480" y="-55" rx="-19" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="2" /> 
+		<p sid="葵兴" lb="葵兴" uid="51e83002f26a751cbda2408d" px="12706465.03" py="2539278.29" x="-417" y="-55" rx="-16" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="2" /> 
+		<p sid="葵芳" lb="葵芳" uid="876bb336fe0574244d55478d" px="12706117.26" py="2538506.79" x="-357" y="-55" rx="-16" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="2" /> 
+		<p sid="荔景" lb="荔景" uid="db1264b57d31784b4c6d468d" px="12705937.88" py="2537388.43" x="-300" y="-55" dy="5" rx="-16" ry="-26"  trs_x="0" trs_y="4" st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线,香港特別行政区|东涌线" int="3" /> 
+		<p sid="美孚" lb="美孚" uid="21923bccaab2fb7f4002458d" px="12707464.11" py="2535986.29" x="-255" y="-55" rx="6" ry="-26"  trs_x="0" trs_y="4" st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线,香港特別行政区|西铁线" int="1" /> 
+		<p sid="荔枝角" lb="荔枝角" uid="a422c04cf5cb2cfcc336448d" px="12708413.06" py="2536084.39" x="-168" y="-55" rx="-20" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="1" /> 
+		<p sid="长沙湾" lb="长沙湾" uid="8ef75afc0e4b738514b54b8d" px="12709341.97" py="2535688.21" x="-101" y="-55" rx="-20" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-80" y="-55" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="深水埗" lb="深水埗" uid="5a69712994fb88054bcc4a8d" px="12709969.31" py="2535196.42" x="-50" y="-25" rx="-40" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-16" y="9" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="太子" lb="" uid="9029a6b7bf2e12b5b04c498d" px="12710585.43" py="2534576.46" x="-16" y="51" dx="3" rx="20" ry="-10" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|荃湾线,香港特別行政区|观塘线" int="1" /> 
+		<p sid="旺角" lb="旺角" uid="19cf6df768b039602afc488d" px="12710654.64" py="2533995.75" x="-16" y="96" dx="3" rx="20" ry="-10"  trs_x="3" trs_y="0" st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线,香港特別行政区|观塘线" int="2" /> 
+		<p sid="油麻地" lb="" uid="6126e311a3f0eefe01294f8d" px="12710792.90" py="2533228.21" x="-16" y="145" dx="3" rx="20" ry="-10" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|荃湾线,香港特別行政区|观塘线" int="1" /> 
+		<p sid="佐敦" lb="佐敦" uid="54c09af82d1625bed6b74e8d" px="12710909.24" py="2532219.52" x="-16" y="190" rx="10" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="2" /> 
+		<p sid="尖沙咀" lb="尖沙咀" uid="4cc0ac1e54ffab581df74d8d" px="12710977.29" py="2531368.44" x="-16" y="268" rx="-50" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|荃湾线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-16" y="315" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln="" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-94" y="396" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="金钟" lb="" uid="1cdeb51e6219d2b193114c8d" px="12710234.09" py="2529120.79" x="-144" y="396" dy="3" rx="-12" ry="17" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|荃湾线,香港特別行政区|港岛线" int="2" /> 
+		<p sid="中环" lb="" uid="29daea007b19e457eaf8538d" px="12709417.27" py="2529534.43" x="-216" y="396" dy="3" rx="-12" ry="17" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|荃湾线,香港特別行政区|港岛线" /> 
+</l>
+	<l lid="观塘线" lb="观塘线" slb="观塘线" n="15" loop="false" lbx="318.9" lby="-45.1" lbr="0.0" lc="0x4db055" uid="0b7668116f2a781d250bd08d">
+		<p sid="调景岭" lb="调景岭" uid="b06752f04a2425543362128d" px="12719984.81" py="2532175.62" x="554" y="210" dy="3" rx="-20" ry="14" trs_x="0" trs_y="3"  st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="油塘" lb="油塘" uid="652e8423a31a0b2bfb22138d" px="12718285.49" py="2531290.95" x="478" y="210" dy="3" rx="-12" ry="14" trs_x="0" trs_y="3"  st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="444" y="210" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="蓝田" lb="蓝田" uid="b2fd6d1d8d65c36b83a00c8d" px="12717933.83" py="2532601.84" x="444" y="159" rx="-40" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="2" /> 
+		<p sid="观塘" lb="观塘" uid="54c343624525bbe9c4f50d8d" px="12716934.30" py="2533180.29" x="444" y="104" rx="-40" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="1" /> 
+		<p sid="牛头角" lb="牛头角" uid="7bbc8b223da7fcbc86420e8d" px="12716236.19" py="2533490.34" x="444" y="51" rx="-50" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="2" /> 
+		<p sid="九龙湾" lb="九龙湾" uid="b0fcf3a07af2be0bae080f8d" px="12715663.31" py="2534291.98" x="444" y="-2" rx="-50" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="444" y="-19" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="彩虹" lb="彩虹" uid="c97eb4f5384596412fb9088d" px="12715157.60" py="2535691.56" x="408" y="-55" rx="-16" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="2" /> 
+		<p sid="钻石山" lb="钻石山" uid="892bf642100f17f06018098d" px="12714188.49" py="2536499.21" x="333" y="-55" rx="-24" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="1" /> 
+		<p sid="黄大仙" lb="黄大仙" uid="ca9cde0891be585132870a8d" px="12713483.85" py="2536600.23" x="260" y="-55" rx="-24" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="2" /> 
+		<p sid="乐富" lb="乐富" uid="e1d65fb9de1f0ace71210b8d" px="12712724.74" py="2536138.54" x="188" y="-55" rx="-16" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="1" /> 
+		<p sid="九龙塘" lb="九龙塘" uid="616710188c8049688733048d" px="12711628.43" py="2535998.84" x="132" y="-55" rx="-56" ry="-26" st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线,香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="54" y="-55" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="石硖尾" lb="石硖尾" uid="31c64287cf26bf7a15c9058d" px="12710598.09" py="2535373.39" x="24" y="-25" rx="8" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|观塘线" int="1" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-10" y="9" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="太子" lb="太子" uid="6259012139342d808bfc068d" px="12710608.39" py="2534579.04" x="-10" y="51" dx="-3" rx="15" ry="-10"  trs_x="-3" trs_y="0" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|荃湾线,香港特別行政区|观塘线" int="2"/> 
+		<p sid="旺角" lb="" uid="22fff733abceb3b596ca078d" px="12710670.03" py="2533998.54" x="-10" y="96" dx="-3" rx="20" ry="-10" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|荃湾线,香港特別行政区|观塘线" int="2" /> 
+		<p sid="油麻地" lb="油麻地" uid="d5ed65c935fbae831d58008d" px="12710807.05" py="2533230.96" x="-10" y="145" dx="-3" rx="15" ry="-10"  trs_x="-3" trs_y="0" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|荃湾线,香港特別行政区|观塘线" /> 
+</l>
+	<l lid="港岛线" lb="港岛线" slb="港岛线" n="14" loop="false" lbx="68.9" lby="372.1" lbr="0.0" lc="0x4979c3" uid="ca1d79a8a616e9644054d78d">
+		<p sid="柴湾" lb="柴湾" uid="baa9510223e487e1d0ff238d" px="12718202.73" py="2527287.00" x="635" y="498" rx="-34" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="2" /> 
+		<p sid="杏花邨" lb="杏花邨" uid="7189fd779f05a5aabfa8228d" px="12718538.97" py="2528851.95" x="587" y="450" rx="-42" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="539" y="402" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="筲箕湾" lb="筲箕湾" uid="f12e35573370194b9de3218d" px="12717276.03" py="2529118.40" x="506" y="402" rx="-20" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="2" /> 
+		<p sid="西湾河" lb="西湾河" uid="2356b4f0fb50b53e2102208d" px="12716579.20" py="2529514.86" x="422" y="402" rx="-20" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="1" /> 
+		<p sid="太古" lb="太古" uid="ac3261887af77d1e8d77278d" px="12715777.00" py="2529840.40" x="367" y="402" rx="-14" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="2" /> 
+		<p sid="鰂鱼涌" lb="鰂鱼涌" uid="9e6cefecaf8ffcb94557268d" px="12715183.69" py="2530153.46" x="297" y="402" dy="-3" rx="-20" ry="11" trs_x="0" trs_y="-3" st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="北角" lb="" uid="9a29deb221eb29c1c4f0258d" px="12714131.27" py="2530666.42" x="213" y="402" dy="-3" rx="-14" ry="11" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|港岛线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="炮台山" lb="炮台山" uid="f4f1dbf710b5a7a51188248d" px="12713375.32" py="2530153.45" x="144" y="402" rx="-18" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="1" /> 
+		<p sid="天后" lb="天后" uid="992aaa2f15f096fb9fec2b8d" px="12713206.04" py="2529527.70" x="69" y="402" rx="-12" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="2" /> 
+		<p sid="铜锣湾" lb="铜锣湾" uid="ae7fc6f4642893beaeb22a8d" px="12712152.06" py="2529009.13" x="-2" y="402" rx="-18" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="2" /> 
+		<p sid="湾仔" lb="湾仔" uid="2e21f2a108f3e266abf7298d" px="12711126.01" py="2528950.52" x="-66" y="402" rx="-12" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线" int="1" /> 
+		<p sid="金钟" lb="金钟" uid="461e73ff3ca68ebdda2f288d" px="12710234.09" py="2529120.79" x="-144" y="402" dy="-3" rx="-12" ry="11"  trs_x="0" trs_y="-3" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|荃湾线,香港特別行政区|港岛线" int="2" /> 
+		<p sid="中环" lb="中环" uid="05991cc0bdf8bae8b6f42f8d" px="12709417.27" py="2529534.43" x="-216" y="402" dy="-3" rx="-12" ry="11"  trs_x="0" trs_y="-3" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|荃湾线,香港特別行政区|港岛线" int="2" /> 
+		<p sid="上环" lb="上环" uid="6fc45e47d2c73bb682a12e8d" px="12708789.49" py="2529972.39" x="-286" y="402" rx="-12" ry="11" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|港岛线"/> 
+</l>
+	<l lid="东涌线" lb="东涌线" slb="东涌线" n="8" loop="false" lbx="-458.9" lby="10.1" lbr="0.0" lc="0xea9914" uid="56d07869b33af18a09a8d48d">
+		<p sid="东涌" lb="东涌" uid="1c5c2d1774e4f36841d63e8d" px="12685253.58" py="2530192.29" x="-532" y="157" rx="-12" ry="8" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东涌线" int="2" /> 
+		<p sid="欣澳" lb="" uid="46c9bae37526799f49fd3f8d" px="12694974.92" py="2535444.41" x="-472" y="97" dx="10" rx="20" ry="8" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|东涌线,香港特別行政区|迪士尼线" int="6" /> 
+		<p sid="青衣" lb="青衣" uid="d03dbb21ffd171b4e507388d" px="12703720.14" py="2538864.45" x="-387" y="12" dx="10" rx="15" ry="12"  trs_x="0" trs_y="9" st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|东涌线,香港特別行政区|机场快线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-330" y="-45" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="荔景" lb="" uid="d6ff31d6f7fadd4ea5da398d" px="12705937.88" py="2537388.43" x="-300" y="-45" dy="-5" rx="-16" ry="-26" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|荃湾线,香港特別行政区|东涌线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-270" y="-45" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="南昌" lb="" uid="5d0839fd5b009d930ab93a8d" px="12708933.36" py="2534972.29" x="-215" y="10" dx="10" rx="30" ry="-12" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|东涌线,香港特別行政区|西铁线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-160" y="65" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="奥运" lb="奥运" uid="562395071bdd32f0f7e73b8d" px="12709555.29" py="2533777.25" x="-160" y="128" rx="30" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东涌线" int="2" /> 
+		<p sid="九龙" lb="" uid="fbd9d5dab4becfaea2a9348d" px="12709928.55" py="2532202.98" x="-160" y="189" dx="-5" rx="-48" ry="-12" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|东涌线,香港特別行政区|机场快线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-160" y="215" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-207" y="267" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="香港" lb="香港" uid="84047ab949e09ae01329358d" px="12709465.40" py="2529717.64" x="-207" y="375" dx="-5" rx="-48" ry="-12"  trs_x="-5" trs_y="0" st="true" ex="true" iu="true" rc="false" slb="true" ln="香港特別行政区|东涌线,香港特別行政区|机场快线" /> 
+</l>
+	<l lid="将军澳线(北角-宝琳)" lb="将军澳线(北角-宝琳)" slb="将军澳线(北角-宝琳)" n="2" loop="false" lbx="548" lby="16" lbr="0.0" lc="0x916cb1" uid="21cf09dbcd6e54eaabf0cd8d">
+		<p sid="宝琳" lb="宝琳" uid="7fd0d10458ee9582601c678d" px="12720451.45" py="2534370.56" x="608" y="52" dy="-3" rx="-36" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|将军澳线(北角-宝琳)" int="2" /> 
+		<p sid="坑口" lb="坑口" uid="c0827c0e1f03dea0adcb668d" px="12721193.44" py="2533502.23" x="608" y="107" dy="-3" rx="-36" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|将军澳线(北角-宝琳)" int="2" /> 
+		<p sid="将军澳" lb="将军澳" uid="06dcc05cb209994de6e9658d" uid3="b5241168f13d905e72455b8d" uid4="28c902450b488f6fa7c7568d" px="12720864.58" py="2532535.79" x="608" y="160" dy="-3" rx="-48" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="608" y="216" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="调景岭" lb="" uid="f04307020e5b3447a104648d" uid3="4344bafadf6f7773a8175a8d" uid4="f19bc54f09219f8eae04578d" px="12719994.43" py="2532161.25" x="554" y="216" dy="-3" rx="-20" ry="24" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|观塘线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="3" /> 
+		<p sid="油塘" lb="" uid="68dcee9dc90588150c0e6b8d" uid3="f62f4f9a74fd59214f3a598d" uid4="3791c72619c0964d9a00508d" px="12718269.46" py="2531287.71" x="478" y="216" dy="-3" rx="12" ry="24" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|观塘线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="444" y="216" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="鰂鱼涌" lb="" uid="21a97702209a4f4bb05c6a8d" uid3="006bfbf1819df2b36168588d" uid4="32f8d7c71003a249c51e518d" px="12715183.69" py="2530153.46" x="297" y="396" dy="3" rx="-20" ry="11" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|港岛线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="北角" lb="北角" uid="42673d77b905a6d47702698d" uid3="c3630ab535f607d3cafa5f8d" uid4="2319de042407fd57dc1e528d" px="12714131.27" py="2530666.42" x="213" y="396" dy="3" rx="-14" ry="17" trs_x="0" trs_y="3" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|港岛线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)"/> 
+</l>
+	<l lid="将军澳线(北角-康城)" lb="将军澳线(北角-康城)" slb="将军澳线(北角-康城)" n="2" loop="false" lbx="703" lby="196" lbr="0.0" lc="0x916cb1" uid="78b71ca315f7134fc2f1cf8d">
+		<p sid="康城" lb="康城" uid="1fb63f3a16104a0cb54f548d" px="12721658.44" py="2530993.83" x="683" y="226" dy="-3" rx="7" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|将军澳线(北角-康城)" int="6" /> 
+		<p sid="" lb="" uid="" px="" py="" x="683" y="160" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="将军澳" lb="将军澳" uid="06dcc05cb209994de6e9658d" uid3="b5241168f13d905e72455b8d" uid4="28c902450b488f6fa7c7568d" px="12720864.58" py="2532535.79" x="608" y="160" dy="-3" rx="-48" ry="-12" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="608" y="216" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="调景岭" lb="" uid="f04307020e5b3447a104648d" uid3="4344bafadf6f7773a8175a8d" uid4="f19bc54f09219f8eae04578d" px="12719994.43" py="2532161.25" x="554" y="216" dy="-3" rx="-20" ry="24" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|观塘线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="3" /> 
+		<p sid="油塘" lb="" uid="68dcee9dc90588150c0e6b8d" uid3="f62f4f9a74fd59214f3a598d" uid4="3791c72619c0964d9a00508d" px="12718269.46" py="2531287.71" x="478" y="216" dy="-3" rx="12" ry="24"  st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|观塘线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="4" /> 
+		<p sid="" lb="" uid="" px="" py="" x="444" y="216" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="鰂鱼涌" lb="" uid="21a97702209a4f4bb05c6a8d" uid3="006bfbf1819df2b36168588d" uid4="32f8d7c71003a249c51e518d" px="12715183.69" py="2530153.46" x="297" y="396" dy="3" rx="-20" ry="11" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|港岛线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)" int="2" /> 
+		<p sid="北角" lb="" uid="42673d77b905a6d47702698d" uid3="c3630ab535f607d3cafa5f8d" uid4="2319de042407fd57dc1e528d" px="12714131.27" py="2530666.42" x="213" y="396" dy="3" rx="-14" ry="11" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|港岛线,香港特別行政区|将军澳线(北角-宝琳),香港特別行政区|将军澳线(北角-康城)"/> 
+</l>
+	<l lid="迪士尼线" lb="迪士尼线" slb="迪士尼线" n="2" loop="false" lbx="-468.9" lby="139.1" lbr="0.0" lc="0xcf84bc" uid="62483e2f160a30200d3dda8d">
+		<p sid="欣澳" lb="欣澳" uid="0f4a7b1cfc56794e0482c28d" px="12694974.92" py="2535444.41" x="-462" y="97" dx="-1" rx="0" ry="5"  trs_x="0" trs_y="-6" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|东涌线,香港特別行政区|迪士尼线" int="5" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-442" y="77" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="迪士尼" lb="迪士尼" uid="1cc23251ff003ccb5d17c38d" px="12696924.43" py="2533420.86" x="-387" y="132" rx="-20" ry="9" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|迪士尼线" /> 
+</l>
+	<l lid="东铁线(红磡-罗湖)" lb="东铁线(红磡-罗湖)" slb="东铁线(红磡-罗湖)" n="2" loop="false" lbx="-484.9" lby="-587.1" lbr="0.0" lc="0x7ab8e9" uid="57e4e01f50d8c0b9a0acc48d">
+		<p sid="罗湖" lb="罗湖" uid="97e4576ea1ee78e233169b92" px="12704488.75" py="2559036.14" x="-391" y="-560" rx="-12" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖)" int="5" /> 
+		<p sid="上水" lb="上水" uid="d09e600d95d0f74feee4a592" uid3="99b06fe9feac0b5f1c389492" uid4="2e022fbece4c4917b13c8192" px="12706019.23" py="2555721.91" x="-283" y="-560" rx="-4" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="2" /> 
+		<p sid="粉岭" lb="粉岭" uid="1efe1140ae0a139ecf06a492" uid3="de3730ab8d112471ca1b9592" uid4="45328bdce1b94802715e8092" px="12707322.73" py="2554620.58" x="-156" y="-560" rx="-12" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="5" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-83" y="-560" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="太和" lb="太和" uid="9ccec020df4728442bd7ab92" uid3="80754316a23ff2527bf79692" uid4="0e30e7ec45db67f7704b8792" px="12709712.63" py="2549635.58" x="-33" y="-510" rx="-28" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="大埔墟" lb="大埔墟" uid="9a9443100e275909100daa92" uid3="f0c86c38741c43beeb1e9792" uid4="51f6adee29ebc3955fbe8692" px="12710820.95" py="2548824.41" x="34" y="-443" rx="-38" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="6" /> 
+		<p sid="大学" lb="大学" uid="54d2464a8d1788696140a992" uid3="dee6ba1bc5f0d35716a19092" uid4="5dc4f12863e9afa5fbdc8592" px="12715174.95" py="2545236.29" x="104" y="-373" rx="-28" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-345" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-311" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="169" y="-311" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="169" y="-244" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-244" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-311" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="火炭" lb="火炭" uid="6988890c884d0b59b020a892" uid3="0fc50bf755192ee8dbd89192" uid4="4667fc1a3f2fe5a797ec8492" px="12713885.32" py="2542957.94" x="132" y="-278" rx="-44" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="沙田" lb="沙田" uid="a182b356470b0e033310af92" uid3="bf299b1ea8a6e39140e19292" uid4="7501f8b9321db961ddee8b92" px="12712682.54" py="2541411.46" x="132" y="-199" rx="-44" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="2" /> 
+		<p sid="大围" lb="" uid="529c7a5c7d51c145364aae92" uid3="2cc066a165df78a85b109392" uid4="db4acadf36beb45381288a92" px="12711746.02" py="2540379.25" x="132" y="-112" dx="3" rx="-44" ry="-12" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲),香港特別行政区|马鞍山线" int="4" /> 
+		<p sid="九龙塘" lb="九龙塘" uid="90da8a42b45bfb1ff90cad92" uid3="d07fabd8fee6635996f08c92" uid4="8422679404d8b0f08c1a8992" px="12711628.43" py="2535998.84" x="132" y="-55" rx="-56" ry="-26" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|观塘线,香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="旺角东" lb="旺角东" uid="58d0490444453215c356ac92" uid3="120630e1e517aeb949fc8d92" uid4="5c2e39fca993829688b98892" px="12711034.28" py="2534171.81" x="132" y="87" rx="8" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="259" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="红磡" lb="红磡" uid="71c68e0e8703c20b0a5cb392" uid3="883f2b1028f771b517948e92" uid4="90cee6f0f7fb2fddbadf8f92" px="12712006.27" py="2531987.46" x="97" y="259" rx="-12" ry="-30" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲),香港特別行政区|西铁线" /> 
+</l>
+	<l lid="东铁线(红磡-落马洲)" lb="东铁线(红磡-落马洲)" slb="东铁线(红磡-落马洲)" n="2" loop="false" lbx="-544.9" lby="-487.1" lbr="0.0" lc="0x7ab8e9" uid="cd2f293a2e18d696f8f0cb8d">
+		<p sid="落马洲" lb="落马洲" uid="a0d35bd77101d6ad38e4a692" px="12699197.15" py="2557352.86" x="-444" y="-512" rx="-22" ry="6" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-落马洲)" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-331" y="-512" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="上水" lb="上水" uid="d09e600d95d0f74feee4a592" uid3="99b06fe9feac0b5f1c389492" uid4="2e022fbece4c4917b13c8192" px="12706019.23" py="2555721.91" x="-283" y="-560" rx="-4" ry="6" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="粉岭" lb="粉岭" uid="1efe1140ae0a139ecf06a492" uid3="de3730ab8d112471ca1b9592" uid4="45328bdce1b94802715e8092" px="12707322.73" py="2554620.58" x="-156" y="-560" rx="-12" ry="6" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="5" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-83" y="-560" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="太和" lb="太和" uid="9ccec020df4728442bd7ab92" uid3="80754316a23ff2527bf79692" uid4="0e30e7ec45db67f7704b8792" px="12709712.63" py="2549635.58" x="-33" y="-510" rx="-28" ry="6" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="2" /> 
+		<p sid="大埔墟" lb="大埔墟" uid="9a9443100e275909100daa92" uid3="f0c86c38741c43beeb1e9792" uid4="51f6adee29ebc3955fbe8692" px="12710820.95" py="2548824.41" x="34" y="-443" rx="-38" ry="6" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="大学" lb="大学" uid="54d2464a8d1788696140a992" uid3="dee6ba1bc5f0d35716a19092" uid4="5dc4f12863e9afa5fbdc8592" px="12715174.95" py="2545236.29" x="104" y="-373" rx="-28" ry="6" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="4" /> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-345" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-311" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="169" y="-311" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="169" y="-244" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-244" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="-311" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="火炭" lb="火炭" uid="6988890c884d0b59b020a892" uid3="0fc50bf755192ee8dbd89192" uid4="4667fc1a3f2fe5a797ec8492" px="12713885.32" py="2542957.94" x="132" y="-278" rx="-44" ry="-12" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="沙田" lb="沙田" uid="a182b356470b0e033310af92" uid3="bf299b1ea8a6e39140e19292" uid4="7501f8b9321db961ddee8b92" px="12712682.54" py="2541411.46" x="132" y="-199" rx="-44" ry="-12" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="2" /> 
+		<p sid="大围" lb="大围" uid="529c7a5c7d51c145364aae92" uid3="2cc066a165df78a85b109392" uid4="db4acadf36beb45381288a92" px="12711746.02" py="2540379.25" x="132" y="-112" dx="3" rx="-44" ry="-12"  trs_x="3" trs_y="" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲),香港特別行政区|马鞍山线" int="4" /> 
+		<p sid="九龙塘" lb="九龙塘" uid="90da8a42b45bfb1ff90cad92" uid3="d07fabd8fee6635996f08c92" uid4="8422679404d8b0f08c1a8992" px="12711628.43" py="2535998.84" x="132" y="-55" rx="-56" ry="-26" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|观塘线,香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="旺角东" lb="旺角东" uid="58d0490444453215c356ac92" uid3="120630e1e517aeb949fc8d92" uid4="5c2e39fca993829688b98892" px="12711034.28" py="2534171.81" x="132" y="87" rx="8" ry="-10" st="true" ex="false" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲)" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="132" y="259" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="红磡" lb="红磡" uid="71c68e0e8703c20b0a5cb392" uid3="883f2b1028f771b517948e92" uid4="90cee6f0f7fb2fddbadf8f92" px="12712006.27" py="2531987.46" x="97" y="259" rx="-12" ry="-30" st="true" ex="true" iu="" rc="false" slb="true" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲),香港特別行政区|西铁线" /> 
+</l>
+	<l lid="机场快线" lb="机场快线" slb="机场快线" n="2" loop="false" lbx="-268.9" lby="79.1" lbr="0.0" lc="0x017d87" uid="478a550b961641927369d38d">
+		<p sid="博览馆" lb="博览馆" uid="91d07f0a8a3d3ac08bdb738d" px="12685637.06" py="2534000.25" x="-502" y="66" rx="-20" ry="-26" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|机场快线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-558" y="66" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="机场" lb="机场" uid="1a16860eb10d0c730289728d" px="12684729.71" py="2533276.81" x="-558" y="96" rx="-36" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|机场快线" int="5" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-558" y="139" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-542" y="139" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-465" y="62" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-417" y="62" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="青衣" lb="" uid="a3c50ec848093743343a718d" px="12703720.14" py="2538883.66" x="-367" y="12" dx="-10" rx="30" ry="12" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|东涌线,香港特別行政区|机场快线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-322" y="-33" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-272" y="-33" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-170" y="69" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="九龙" lb="九龙" uid="273cb61bc0cfce470f0a708d" px="12709945.67" py="2532200.83" x="-170" y="189" dx="5" rx="-48" ry="-12"  trs_x="5" trs_y="0" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|东涌线,香港特別行政区|机场快线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-170" y="210" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-217" y="262" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="香港" lb="" uid="4f3835e2781c4681f60e778d" px="12709478.35" py="2529733.50" x="-217" y="375" dx="5" rx="-48" ry="-12" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|东涌线,香港特別行政区|机场快线" /> 
+</l>
+	<l lid="西铁线" lb="西铁线" slb="西铁线" n="2" loop="false" lbx="-468.9" lby="-139.1" lbr="0.0" lc="0xa12a8e" uid="443b6b94b51b7a184107c18d">
+		<p sid="屯门" lb="屯门" uid="19ccdd31fda8805e9122e092" px="12688754.29" py="2542911.18" x="-683" y="-147" rx="-38" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="2" /> 
+		<p sid="兆康" lb="兆康" uid="fb2b9b1213367be6b817e792" px="12689451.80" py="2544882.64" x="-683" y="-248" rx="-38" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="4" /> 
+		<p sid="天水围" lb="天水围" uid="6d5c78f55515957843afe692" px="12692233.88" py="2549160.06" x="-683" y="-341" rx="-46" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-653" y="-371" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-605" y="-371" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="朗屏" lb="朗屏" uid="53c3ed82b6f2d35bad31e592" px="12694583.26" py="2549312.96" x="-605" y="-336" rx="7" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="2" /> 
+		<p sid="元朗" lb="元朗" uid="eaa2d21d238530bceb12e492" px="12695637.85" py="2549098.48" x="-605" y="-281" rx="7" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="3" /> 
+		<p sid="锦上路" lb="锦上路" uid="22da747c1c1aa5cb08f5eb92" px="12698840.80" py="2547785.99" x="-605" y="-235" rx="7" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="6" /> 
+		<p sid="荃湾西" lb="荃湾西" uid="66e8bd04ba7b9a549d82ea92" px="12704114.37" py="2539878.19" x="-605" y="-134" rx="7" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="4" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-605" y="-112" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-255" y="-112" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="美孚" lb="" uid="3632fa3673033c35a21de992" px="12707469.88" py="2536003.71" x="-255" y="-55" rx="-16" ry="-26" st="true" ex="true" iu="" rc="false" slb="false" ln="香港特別行政区|荃湾线,香港特別行政区|西铁线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-255" y="-45" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="南昌" lb="南昌" uid="668babec3431f54d047ce892" px="12708922.30" py="2534957.67" x="-200" y="10" dx="-5" rx="-3" ry="-26"  trs_x="-6" trs_y="0" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|东涌线,香港特別行政区|西铁线" int="3" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-150" y="60" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="-150" y="187" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="柯士甸" lb="柯士甸" uid="8397fc5565ebb27fcd04ef92" px="12710391.87" py="2532274.93" x="-126" y="187" rx="-20" ry="12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="-60" y="187" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="尖东" lb="尖东" uid="c9e518493252e3a58a36ee92" px="12711194.78" py="2530966.56" x="26" y="259" rx="-12" ry="4" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|西铁线" int="1" /> 
+		<p sid="红磡" lb="红磡" uid="9d91513bd64eb41cdbeced92" px="12712006.27" py="2531987.46" x="97" y="259" rx="-12" ry="-30" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲),香港特別行政区|西铁线" /> 
+</l>
+	<l lid="马鞍山线" lb="马鞍山线" slb="马鞍山线" n="2" loop="false" lbx="468.9" lby="-339.1" lbr="0.0" lc="0x995322" uid="fe0188f01eab69ac1b94c68d">
+		<p sid="大围" lb="" uid="a795015e0f3bd0acf02d8392" px="12711746.02" py="2540379.25" x="138" y="-112" dx="-3" rx="-44" ry="-12" st="true" ex="true" iu="true" rc="false" slb="false" ln="香港特別行政区|东铁线(红磡-罗湖),香港特別行政区|东铁线(红磡-落马洲),香港特別行政区|马鞍山线" int="1" /> 
+		<p sid="" lb="" uid="" px="" py="" x="138" y="-160" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="车公庙" lb="车公庙" uid="a780c13c56e2c864f4eafc92" px="12712528.33" py="2540557.61" x="200" y="-160" rx="-20" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="248" y="-160" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="" lb="" uid="" px="" py="" x="287" y="-199" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="沙田围" lb="沙田围" uid="68e298e54e2acca33913fd92" px="12713517.23" py="2540794.23" x="287" y="-220" rx="6" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" int="2" /> 
+		<p sid="第一城" lb="第一城" uid="303b802d4aed015a5fd4fe92" px="12714446.14" py="2541480.00" x="287" y="-298" rx="6" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" int="2" /> 
+		<p sid="" lb="" uid="" px="" py="" x="287" y="-366" rx="612.8" ry="-134.5" st="false" ex="" iu="" rc="false" slb="" ln=""/> 
+		<p sid="石门" lb="石门" uid="2bf384ea8714679d54bfff92" px="12714994.13" py="2542070.52" x="323" y="-366" rx="-12" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" int="3" /> 
+		<p sid="大水坑" lb="大水坑" uid="2e344913e1d36cf6ee74f892" px="12716558.32" py="2544496.14" x="392" y="-366" rx="-20" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" int="2" /> 
+		<p sid="恒安" lb="恒安" uid="e4cd2fd4eab8d63de215f992" px="12716922.04" py="2545742.54" x="474" y="-366" rx="-12" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" int="2" /> 
+		<p sid="马鞍山" lb="马鞍山" uid="830a24bf5073da5ceb56fa92" px="12717532.99" py="2546598.68" x="552" y="-366" rx="-20" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" int="2" /> 
+		<p sid="乌溪沙" lb="乌溪沙" uid="8b619e745c12d31fc6effb92" px="12718925.77" py="2547084.93" x="643" y="-366" rx="-20" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" ln="香港特別行政区|马鞍山线" /> 
+</l>
+</sw>

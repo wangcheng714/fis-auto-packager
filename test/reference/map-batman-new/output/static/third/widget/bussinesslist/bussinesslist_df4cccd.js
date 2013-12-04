@@ -1,0 +1,1 @@
+define("third:widget/bussinesslist/bussinesslist.js",function(){});

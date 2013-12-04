@@ -1,0 +1,1 @@
+{%style id="/widget/subway/subway.inline.css"%}#subway-holder{width:100%;height:100%;background-color:#fff;overflow:hidden;-webkit-tap-highlight-color:rgba(0,0,0,0)}{%/style%}<div id="subway-holder"></div>

@@ -1,0 +1,1 @@
+define("subway:static/js/base/coords.js",function(t,o,i){function n(t,o){this.x=t,this.y=o}n.prototype.toString=function(){return[this.x,this.y].join(",")},n.prototype.floor=function(){return new n(this.x>>0,this.y>>0)},i.exports=n});

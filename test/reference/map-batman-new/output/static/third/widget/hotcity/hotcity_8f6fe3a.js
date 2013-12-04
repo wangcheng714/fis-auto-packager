@@ -1,0 +1,1 @@
+define("third:widget/hotcity/hotcity.js",function(t,i,c){var e=t("third:widget/setcity/setcity.js");c.exports.init=function(){d()};var d=function(){var t=$(".third-widget-hotcity");t.on("click",".city-item",a)},a=function(t){var i=$(t.target),c={},d=i.text(),a=i.data("cityid"),n=i.data("x"),y=i.data("y");c.cityName=d,c.cityId=a,n&&y&&(c.x=n,c.y=y),e.setAndRedirect(c)}});

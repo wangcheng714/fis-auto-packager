@@ -1,0 +1,1 @@
+define("common:widget/apphistory/apphistory.js",function(n,o,r){var t=function(){var n=i();return window.location.host===n},i=function(){var n,o=document.referrer,r=/^.*?\/\/(.*?)(\/|\?|\#|$)/i,t=o.match(r);return t&&(n=t[1]),n},a=function(){var n=i();return window.location.host!==n};r.exports={isLanding:a,isAppNavigator:t}});

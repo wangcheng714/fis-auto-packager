@@ -1,0 +1,1 @@
+define("common:static/js/gmu/src/extend/event.ortchange.js",function(e){e("common:static/js/gmu/src/extend/matchMedia.js"),$(function(){$.mediaQuery={ortchange:"screen and (width: "+window.innerWidth+"px)"},$.matchMedia($.mediaQuery.ortchange).addListener(function(){$(window).trigger("ortchange")})})});

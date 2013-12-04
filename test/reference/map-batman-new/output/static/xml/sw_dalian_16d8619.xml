@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw cid="大连市" n="2" c="大连" src="fla/resource.swf" bg="" icon="" width="1400" height="1400">
+	<l lid="快轨3号线金石滩线" lb="快轨3号线金石滩线" slb="快轨3号线金石滩线" n="12" loop="false" lbx="338" lby="-228" lbr="0.0" lc="0x0066cc" uid="02131c1a9040548903ff2de0">
+		<p sid="金石滩" lb="金石滩" x="650.55" y="-223.65" rx="-18.55" ry="-29.9" st="true" ex="false" iu="true" rc="false" slb="true" px="13582574.94" py="4707740.7" uid="800e60228cf08f16d4851fe0" />
+		<p sid="小窑湾" lb="小窑湾" x="314.55" y="-170.65" rx="-15" ry="-30" st="true" ex="false" iu="true" rc="false" slb="true" px="13570536.48" py="4706334.8" uid="ee598bff85250abeb75f1ee0" />
+		<p sid="双d港" lb="双d港" x="218.55" y="-92.65" rx="-27" ry="-30" st="true" ex="false" iu="true" rc="false" slb="true" px="13567507.66" py="4704369.5" uid="d312e4a86ef8036b32f71de0" />
+		<p sid="保税区" lb="保税区" x="89.55" y="-92.65" rx="-20.55" ry="-30.9" st="true" ex="false" iu="true" rc="false" slb="true" px="13559820.62" py="4704050.5" uid="06e96987cf26bf7a15c905e0" />
+		<p sid="" lb="" x="-1.8" y="-92.2"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-38.15" y="-81.2"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="开发区" lb="开发区" x="-82.6" y="-65.75" rx="-30.9" ry="-30.45" st="true" ex="true" iu="true" rc="false" slb="true" px="13556641.6" py="4702946.3" uid="5b762a2139342d808bfc06e0" />
+		<p sid="金马路" lb="金马路" x="-193.95" y="-33.15" rx="-26" ry="-28" st="true" ex="false" iu="true" rc="false" slb="true" px="13553306.48" py="4702343.8" uid="19d0dc33abceb3b596ca07e0" />
+		<p sid="" lb="" x="-222.8" y="-22"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-273.3" y="3.75"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="大连湾" lb="大连湾" x="-337.95" y="3.75" rx="-33.3" ry="-28.3" st="true" ex="false" iu="true" rc="false" slb="true" px="13549460.36" py="4700455.0" uid="ecc24ec935fbae831d5800e0" />
+		<p sid="后盐" lb="后盐" x="-467.95" y="60.25" rx="-35.9" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" px="13541568.3" py="4698420.9" uid="7f38d0fc28cd251103ec01e0" />
+		<p sid="" lb="" x="-541.8" y="95"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="泉水" lb="泉水" x="-542.5" y="148.75" rx="-40.95" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" px="13539211.74" py="4695473.8" uid="e60dcdcaa35f3ba55d0d02e0" />
+		<p sid="" lb="" x="-542.5" y="187.5"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-615" y="276"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="金家街" lb="金家街" x="-615" y="356.25" rx="-54.3" ry="-9" st="true" ex="false" iu="true" rc="false" slb="true" px="13537529.01" py="4690807.3" uid="fa3b4658bdeb6544e01103e0" />
+		<p sid="香炉礁" lb="香炉礁" x="-615" y="480.75" rx="-54.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13537693.24" py="4685160.0" uid="72a958ece30ad8582bb97ce0" />
+		<p sid="大连火车站" lb="大连火车站" x="-450.7" y="553.25" rx="-71.55" ry="-1" st="true" ex="false" iu="true" rc="false" slb="true" px="13540712.21" py="4684386.7" uid="6d1d060d5e1613f0b2077de0" />
+	</l>
+	<l lid="快轨3号线保税区线" lb="快轨3号线保税区线" slb="快轨3号线保税区线" n="12" loop="false" lbx="60" lby="-80" lbr="0.0" lc="0x0066cc" uid="f205812f15f096fb9fec2be0">
+		<p sid="保税区" lb="保税区" x="89.55" y="-92.65" rx="-20.55" ry="-30.9" st="true" ex="false" iu="true" rc="false" slb="true" px="13559820.62" py="4704050.5" uid="06e96987cf26bf7a15c905e0" />
+		<p sid="" lb="" x="-1.8" y="-92.2"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-38.15" y="-81.2"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="开发区" lb="开发区" x="-82.6" y="-65.75" rx="-30.9" ry="-30.45" st="true" ex="true" iu="true" rc="false" slb="true" px="13556641.6" py="4702946.3" uid="5b762a2139342d808bfc06e0" />
+		<p sid="金马路" lb="金马路" x="-193.95" y="-33.15" rx="-26" ry="-28" st="true" ex="false" iu="true" rc="false" slb="true" px="13553306.48" py="4702343.8" uid="19d0dc33abceb3b596ca07e0" />
+		<p sid="" lb="" x="-222.8" y="-22"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-273.3" y="3.75"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="大连湾" lb="大连湾" x="-337.95" y="3.75" rx="-33.3" ry="-28.3" st="true" ex="false" iu="true" rc="false" slb="true" px="13549460.36" py="4700455.0" uid="ecc24ec935fbae831d5800e0" />
+		<p sid="后盐" lb="后盐" x="-467.95" y="60.25" rx="-35.9" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" px="13541568.3" py="4698420.9" uid="7f38d0fc28cd251103ec01e0" />
+		<p sid="" lb="" x="-541.8" y="95"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="泉水" lb="泉水" x="-542.5" y="148.75" rx="-40.95" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" px="13539211.74" py="4695473.8" uid="e60dcdcaa35f3ba55d0d02e0" />
+		<p sid="" lb="" x="-542.5" y="187.5"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-615" y="276"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="金家街" lb="金家街" x="-615" y="356.25" rx="-54.3" ry="-9" st="true" ex="false" iu="true" rc="false" slb="true" px="13537529.01" py="4690807.3" uid="fa3b4658bdeb6544e01103e0" />
+		<p sid="香炉礁" lb="香炉礁" x="-615" y="480.75" rx="-54.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13537693.24" py="4685160.0" uid="72a958ece30ad8582bb97ce0" />
+		<p sid="大连火车站" lb="大连火车站" x="-450.7" y="553.25" rx="-71.55" ry="-1" st="true" ex="false" iu="true" rc="false" slb="true" px="13540712.21" py="4684386.7" uid="6d1d060d5e1613f0b2077de0" />
+	</l>
+	<l lid="快轨3号线九里线" lb="快轨3号线九里线" slb="快轨3号线九里线" n="14" loop="false" lbx="-380" lby="-50" lbr="0.0" lc="0x0066cc" uid="410ed9a108f3e266abf729e0">
+		<p sid="九里" lb="九里" x="-135.15" y="-577.3" rx="13.75" ry="-4.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13553250.37" py="4717007.3" uid="8aff540a8a3d3ac08bdb73e0" />
+		<p sid="十九局" lb="十九局" x="-171.3" y="-487.8" rx="16.4" ry="-5.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13551842.16" py="4713498.2" uid="0339ad0eb10d0c73028972e0" />
+		<p sid="和平路" lb="和平路" x="-206" y="-406.8" rx="16.35" ry="-5.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13551268.64" py="4710654.3" uid="bcea25c848093743343a71e0" />
+		<p sid="东山路" lb="东山路" x="-241.95" y="-318.65" rx="18.4" ry="-12.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13552688.43" py="4708408.0" uid="3e139d1bc0cfce470f0a70e0" />
+		<p sid="鸿玮澜山" lb="鸿玮澜山" x="-175.95" y="-241.65" rx="12" ry="-16.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13554228.89" py="4707037.8" uid="54171ee2781c4681f60e77e0" />
+		<p sid="通世泰" lb="通世泰" x="-111.45" y="-167.65" rx="13.4" ry="-16.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13555896.35" py="4705134.7" uid="d51f77e6fbe5fe527ec876e0" />
+		<p sid="" lb="" x="-38.15" y="-81.2"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="开发区" lb="开发区" x="-82.6" y="-65.75" rx="-30.9" ry="-30.45" st="true" ex="true" iu="true" rc="false" slb="true" px="13556641.6" py="4702946.3" uid="5b762a2139342d808bfc06e0" />
+		<p sid="金马路" lb="金马路" x="-193.95" y="-33.15" rx="-26" ry="-28" st="true" ex="false" iu="true" rc="false" slb="true" px="13553306.48" py="4702343.8" uid="19d0dc33abceb3b596ca07e0" />
+		<p sid="" lb="" x="-222.8" y="-22"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-273.3" y="3.75"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="大连湾" lb="大连湾" x="-337.95" y="3.75" rx="-33.3" ry="-28.3" st="true" ex="false" iu="true" rc="false" slb="true" px="13549460.36" py="4700455.0" uid="ecc24ec935fbae831d5800e0" />
+		<p sid="后盐" lb="后盐" x="-467.95" y="60.25" rx="-35.9" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" px="13541568.3" py="4698420.9" uid="7f38d0fc28cd251103ec01e0" />
+		<p sid="" lb="" x="-541.8" y="95"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="泉水" lb="泉水" x="-542.5" y="148.75" rx="-40.95" ry="-12" st="true" ex="false" iu="true" rc="false" slb="true" px="13539211.74" py="4695473.8" uid="e60dcdcaa35f3ba55d0d02e0" />
+		<p sid="" lb="" x="-542.5" y="187.5"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="" lb="" x="-615" y="276"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="金家街" lb="金家街" x="-615" y="356.25" rx="-54.3" ry="-9" st="true" ex="false" iu="true" rc="false" slb="true" px="13537529.01" py="4690807.3" uid="fa3b4658bdeb6544e01103e0" />
+		<p sid="香炉礁" lb="香炉礁" x="-615" y="480.75" rx="-54.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13537693.24" py="4685160.0" uid="72a958ece30ad8582bb97ce0" />
+		<p sid="大连火车站" lb="大连火车站" x="-450.7" y="553.25" rx="-71.55" ry="-1" st="true" ex="false" iu="true" rc="false" slb="true" px="13540712.21" py="4684386.7" uid="6d1d060d5e1613f0b2077de0" />
+	</l>
+	<l lid="快轨3号线九里支线" lb="快轨3号线九里支线" slb="快轨3号线九里支线" n="7" loop="false" lbx="-370" lby="-380" lbr="0.0" lc="0x0066cc" uid="c750edf4642893beaeb22ae0">
+		<p sid="九里" lb="九里" x="-135.15" y="-577.3" rx="13.75" ry="-4.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13553250.37" py="4717007.3" uid="8aff540a8a3d3ac08bdb73e0" />
+		<p sid="十九局" lb="十九局" x="-171.3" y="-487.8" rx="16.4" ry="-5.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13551842.16" py="4713498.2" uid="0339ad0eb10d0c73028972e0" />
+		<p sid="和平路" lb="和平路" x="-206" y="-406.8" rx="16.35" ry="-5.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13551268.64" py="4710654.3" uid="bcea25c848093743343a71e0" />
+		<p sid="东山路" lb="东山路" x="-241.95" y="-318.65" rx="18.4" ry="-12.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13552688.43" py="4708408.0" uid="3e139d1bc0cfce470f0a70e0" />
+		<p sid="鸿玮澜山" lb="鸿玮澜山" x="-175.95" y="-241.65" rx="12" ry="-16.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13554228.89" py="4707037.8" uid="54171ee2781c4681f60e77e0" />
+		<p sid="通世泰" lb="通世泰" x="-111.45" y="-167.65" rx="13.4" ry="-16.2" st="true" ex="false" iu="true" rc="false" slb="true" px="13555896.35" py="4705134.7" uid="d51f77e6fbe5fe527ec876e0" />
+		<p sid="" lb="" x="-38.15" y="-81.2"  rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+		<p sid="开发区" lb="开发区" x="-82.6" y="-65.75" rx="-30.9" ry="-30.45" st="true" ex="true" iu="true" rc="false" slb="true" px="13556641.6" py="4702946.3" uid="5b762a2139342d808bfc06e0" />
+	</l>
+</sw>

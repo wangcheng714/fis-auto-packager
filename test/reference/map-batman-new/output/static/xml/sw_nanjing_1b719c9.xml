@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sw cid="南京市" n="3" c="南京" src="fla/resource.swf" bg="bg_nanjing" icon="" width="1200" height="1200">
+    <l lid="地铁1号线" lb="1号线" slb="1" n="16" loop="false" lbx="-280.2" lby="80.85" lbr="0.0" lc="0x5CB8E5" uid="fa01c1caa35f3ba55d0d02ec">
+        <p sid="迈皋桥" lb="迈皋桥" x="-16.85" y="-518.2" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13226686.45" py="3754704.5" uid="0f2662b091be753e07026fec" />
+        <p sid="红山动物园" lb="红山动物园" x="-41.5" y="-471.55" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13225857.69" py="3753855.2" uid="8774dcdb8bb717f04d776eec" />
+        <p sid="南京站" lb="南京站" x="-73.85" y="-410.65" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13225166.39" py="3752581.3" uid="b6c7558935dc0df92fb96dec" />
+        <p sid="新模范马路" lb="新模范马路" x="-137.1" y="-374.05" rx="12.3" ry="-5" st="true" ex="false" iu="true" rc="false" slb="true" px="13223840.53" py="3751718.3" uid="8cf7633abc8eb39235b06cec" />
+        <p sid="玄武门" lb="玄武门" x="-137.1" y="-312.65" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223854.92" py="3750435.1" uid="76f3580a8a3d3ac08bdb73ec" />
+        <p sid="鼓楼" lb="鼓楼" x="-137.1" y="-250.2" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223816.4" py="3748970.7" uid="ff35a10eb10d0c73028972ec" />
+        <p sid="珠江路" lb="珠江路" x="-137.1" y="-187.8" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223859.93" py="3747950.3" uid="b8e629c848093743343a71ec" />
+        <p sid="新街口" lb="新街口" x="-133.1" y="-138.2" rx="8.3" ry="10" st="true" ex="true" iu="true" rc="false" slb="true" px="13223852.87" py="3746633.2" uid="3a1f911bc0cfce470f0a70ec" />
+        <p sid="张府园" lb="张府园" x="-137.1" y="-62.95" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223833.72" py="3745322.3" uid="501b12e2781c4681f60e77ec" />
+        <p sid="三山街" lb="三山街" x="-164.7" y="-5.95" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223578.56" py="3744256.5" uid="d1137be6fbe5fe527ec876ec" />
+        <p sid="中华门" lb="中华门" x="-197.7" y="62.55" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13222809.27" py="3742157.1" uid="e50afbee92e17dabc61b75ec" />
+        <p sid="安德门" lb="安德门" x="-223.7" y="133.7" rx="20.3" ry="-10" st="true" ex="true" iu="true" rc="false" slb="true" px="13221370.96" py="3740190.5" uid="855ac8f712e914af45e274ec" />
+        <p sid="小行" lb="小行" x="-326.5" y="200.95" rx="-20.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13219440.81" py="3738899.9" uid="cee9a9a721f094a72ce67bec" />
+        <p sid="中胜" lb="中胜" x="-424.95" y="171.1" rx="-20.5" ry="-26.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13218228.88" py="3739657.8" uid="554ce11440a0a7beacee7aec" />
+        <p sid="元通" lb="元通" x="-512" y="146" rx="-23.5" ry="-26.5" st="true" ex="true" iu="true" rc="false" slb="true" px="13216886.44" py="3740673.1" uid="c4fa7bb10813c6ee9ff779ec" />
+        <p sid="" lb="" x="-567.25" y="127.25" rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+        <p sid="奥体中心" lb="奥体中心" x="-522" y="31.95" rx="-60" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13216511.21" py="3742372.0" uid="5c44e50792b68e5dfea778ec" />
+    </l>
+    <l lid="地铁1号线南延线" lb="南延线" slb="1" n="27" loop="false" lbx="127.2" lby="200.85" lbr="0.0" lc="0x5CB8E5" uid="6ea554ece30ad8582bb97cec">
+        <p sid="迈皋桥" lb="迈皋桥" x="-16.85" y="-518.2" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13226686.45" py="3754704.5" uid="0f2662b091be753e07026fec" />
+        <p sid="红山动物园" lb="红山动物园" x="-41.5" y="-471.55" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13225857.69" py="3753855.2" uid="8774dcdb8bb717f04d776eec" />
+        <p sid="南京站" lb="南京站" x="-73.85" y="-410.65" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13225166.39" py="3752581.3" uid="b6c7558935dc0df92fb96dec" />
+        <p sid="新模范马路" lb="新模范马路" x="-137.1" y="-374.05" rx="12.3" ry="-5" st="true" ex="false" iu="true" rc="false" slb="true" px="13223840.53" py="3751718.3" uid="8cf7633abc8eb39235b06cec" />
+        <p sid="玄武门" lb="玄武门" x="-137.1" y="-312.65" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223854.92" py="3750435.1" uid="76f3580a8a3d3ac08bdb73ec" />
+        <p sid="鼓楼" lb="鼓楼" x="-137.1" y="-250.2" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223816.4" py="3748970.7" uid="ff35a10eb10d0c73028972ec" />
+        <p sid="珠江路" lb="珠江路" x="-137.1" y="-187.8" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223859.93" py="3747950.3" uid="b8e629c848093743343a71ec" />
+        <p sid="新街口" lb="新街口" x="-133.1" y="-138.2" rx="8.3" ry="10" st="true" ex="true" iu="true" rc="false" slb="true" px="13223852.87" py="3746633.2" uid="3a1f911bc0cfce470f0a70ec" />
+        <p sid="张府园" lb="张府园" x="-137.1" y="-62.95" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223833.72" py="3745322.3" uid="501b12e2781c4681f60e77ec" />
+        <p sid="三山街" lb="三山街" x="-164.7" y="-5.95" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13223578.56" py="3744256.5" uid="d1137be6fbe5fe527ec876ec" />
+        <p sid="中华门" lb="中华门" x="-197.7" y="62.55" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13222809.27" py="3742157.1" uid="e50afbee92e17dabc61b75ec" />
+        <p sid="安德门" lb="安德门" x="-223.7" y="133.7" rx="20.3" ry="-10" st="true" ex="true" iu="true" rc="false" slb="true" px="13221370.96" py="3740190.5" uid="855ac8f712e914af45e274ec" />
+        <p sid="天隆寺" lb="天隆寺" x="-193.5" y="234.2" rx="-25" ry="10" st="true" ex="false" iu="true" rc="false" slb="true" px="13221498.4" py="3738513.6" uid="39fd921e6219d2b193114cec" />
+        <p sid="软件大道" lb="软件大道" x="-127.2" y="234.05" rx="-25" ry="-25" st="true" ex="false" iu="true" rc="false" slb="true" px="13222791.64" py="3738307.3" uid="67e38b1e54ffab581df74dec" />
+        <p sid="花神庙" lb="花神庙" x="-56.15" y="234" rx="-20.5" ry="-25" st="true" ex="false" iu="true" rc="false" slb="true" px="13224011.33" py="3738388.3" uid="79e3bdf82d1625bed6b74eec" />
+        <p sid="南京南站" lb="南京南站" x="-29.85" y="264.3" rx="17" ry="-7" st="true" ex="false" iu="true" rc="false" slb="true" px="13225558.89" py="3737276.8" uid="4e05c411a3f0eefe01294fec" />
+        <p sid="双龙大道" lb="双龙大道" x="-0.6" y="297.95" rx="10" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13227527.87" py="3736567.9" uid="34ec4af768b039602afc48ec" />
+        <p sid="河定桥" lb="河定桥" x="27.65" y="331.1" rx="10" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13227861.74" py="3735028.2" uid="bb0a81b7bf2e12b5b04c49ec" />
+        <p sid="胜太路" lb="胜太路" x="57.85" y="364.45" rx="10" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13228023.33" py="3733925.9" uid="7f4a562994fb88054bcc4aec" />
+        <p sid="百家湖" lb="百家湖" x="90" y="401.85" rx="5" ry="-25" st="true" ex="false" iu="true" rc="false" slb="true" px="13227985.33" py="3732371.9" uid="a9d47dfc0e4b738514b54bec" />
+        <p sid="" lb="" x="102.15" y="415.3" rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+        <p sid="小龙湾" lb="小龙湾" x="159.2" y="392.5" rx="-20.5" ry="-25" st="true" ex="false" iu="true" rc="false" slb="true" px="13229283.42" py="3732057.0" uid="8101e74cf5cb2cfcc33644ec" />
+        <p sid="竹山路" lb="竹山路" x="211.5" y="371.1" rx="-20.5" ry="-25" st="true" ex="false" iu="true" rc="false" slb="true" px="13230625.38" py="3732342.0" uid="1ab11cccaab2fb7f400245ec" />
+        <p sid="天印大道" lb="天印大道" x="263.2" y="349.75" rx="-25" ry="-25" st="true" ex="false" iu="true" rc="false" slb="true" px="13232698.73" py="3733065.8" uid="e63143b57d31784b4c6d46ec" />
+        <p sid="龙眠大道" lb="龙眠大道" x="318.5" y="327.4" rx="-29.5" ry="-26.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13234203.12" py="3733372.9" uid="b8489436fe0574244d5547ec" />
+        <p sid="江苏经贸学院" lb="江苏经贸学院" x="347.5" y="363.15" rx="10" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13235652.77" py="3732585.0" uid="6ccb1702f26a751cbda240ec" />
+        <p sid="南京交院" lb="南京交院" x="391.5" y="418.55" rx="10" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13237264.52" py="3729917.1" uid="eeff1b6df35285eb841541ec" />
+        <p sid="中国药科大学" lb="中国药科大学" x="451.85" y="493.9" rx="10" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13238312.54" py="3727936.8" uid="fd901a5503a5bc5cbd4842ec" />
+    </l>
+
+    <l lid="地铁2号线" lb="2号线" slb="2" n="26" loop="false" lbx="127.2" lby="-200.85" lbr="0.0" lc="0xD63542" uid="71110a0d5e1613f0b2077dec">
+        <p sid="经天路" lb="经天路" x="565.55" y="-327.1" rx="-50" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13245299.53" py="3756368.5" uid="ddf07cd77101d6ad38e4a6ed" />
+        <p sid="南大仙林校区" lb="南大仙林校区" x="529.75" y="-306.75" rx="-90" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13243355.07" py="3755445.4" uid="e72a980650e300ad2dfaa7ed" />
+        <p sid="羊山公园" lb="羊山公园" x="496.1" y="-287.5" rx="-66" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13241211.48" py="3754845.3" uid="00fbb9e486e315b325e0a0ed" />
+        <p sid="仙林中心" lb="仙林中心" x="465.25" y="-271.1" rx="-62" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13240134.09" py="3754197.2" uid="20196fe493fd1da9c72ba1ed" />
+        <p sid="学则路" lb="学则路" x="436.95" y="-253.6" rx="-51" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13238622.84" py="3753230.1" uid="e9197afa9be7ff62c17da2ed" />
+        <p sid="仙鹤门" lb="仙鹤门" x="407.65" y="-236.95" rx="-51" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13237292.86" py="3752371.8" uid="fd0772e0792cf934902ca3ed" />
+        <p sid="金马路" lb="金马路" x="376.55" y="-218.8" rx="-51" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13237433.76" py="3750641.2" uid="f61d902b7f7aa865f6c59ced" />
+        <p sid="马群" lb="马群" x="376.55" y="-155.3" rx="-36" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13236148.74" py="3747742.1" uid="15d6967d2e2bce8cab059ded" />
+        <p sid="钟灵街" lb="钟灵街" x="324.2" y="-122.6" rx="-46" ry="-20" st="true" ex="false" iu="true" rc="false" slb="true" px="13233357.53" py="3746322.4" uid="1480c72c48c2934cd2f49eed" />
+        <p sid="孝陵卫" lb="孝陵卫" x="265.85" y="-88.35"  rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13232127.37" py="3745832.5" uid="44d1a1c51502eabd283a9fed" />
+        <p sid="下马坊" lb="下马坊" x="208.85" y="-112.3"  rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13231027.46" py="3746104.8" uid="2138fc056cf31073276e98ed" />
+        <p sid="苜蓿园" lb="苜蓿园" x="146.2" y="-138.2" rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13229533.17" py="3746463.4" uid="7df885f4963d1f271fe999ed" />
+        <p sid="明故宫" lb="明故宫" x="69.5" y="-138.2" rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13227780.67" py="3746388" uid="0b097f3a996927a040ab9aed" />
+        <p sid="西安门" lb="西安门" x="-4.5" y="-138.2" rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13226249.55" py="3746540.0" uid="f0c7706ea1ee78e233169bed" />
+        <p sid="大行宫" lb="大行宫" x="-69.8" y="-138.2" rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13225027.48" py="3746645.3" uid="fc9348e9feac0b5f1c3894ed" />
+        <p sid="新街口" lb="新街口" x="-133.1" y="-138.2" rx="-51" ry="-10" st="true" ex="true" iu="false" rc="false" slb="false" px="13223852.87" py="3746633.2" uid="3a1f911bc0cfce470f0a70ec" />
+        <p sid="上海路" lb="上海路" x="-199.4" y="-138.2" rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13222953.66" py="3746772.4" uid="9d566416a23ff2527bf796ed" />
+        <p sid="汉中门" lb="汉中门" x="-267.9" y="-138.2" rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13221955.02" py="3746818.8" uid="efeb4b38741c43beeb1e97ed" />
+        <p sid="莫愁湖" lb="莫愁湖" x="-291.9" y="-80.75" rx="-50" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13221021.5" py="3746123.1" uid="c3c59d1bc5f0d35716a190ed" />
+        <p sid="" lb="" x="-303" y="-53" rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+        <p sid="云锦路" lb="云锦路" x="-372.75" y="-68.6" rx="-19.5" ry="-28.5" st="true" ex="false" iu="true" rc="false" slb="true" px="13219777.88" py="3745779.7" uid="14e62cf755192ee8dbd891ed" />
+        <p sid="" lb="" x="-414.5" y="-76.95" rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+        <p sid="集庆门大街" lb="集庆门大街" x="-428.4" y="-49.25" rx="-80.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13218903.03" py="3744923.2" uid="9a0abc1ea8a6e39140e192ed" />
+        <p sid="兴隆大街" lb="兴隆大街" x="-456.85" y="15.65" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13218570.17" py="3743212" uid="0be341a165df78a85b1093ed" />
+        <p sid="奥体东" lb="奥体东" x="-483.8" y="78.3" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13217747.86" py="3741823.1" uid="f55c8cd8fee6635996f08ced" />
+        <p sid="元通" lb="元通" x="-512" y="146" rx="-23.5" ry="-26.5" st="true" ex="true" iu="true" rc="false" slb="false" px="13216886.44" py="3740673.1" uid="c4fa7bb10813c6ee9ff779ec" />
+        <p sid="" lb="" x="-538.95" y="205.45" rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+        <p sid="雨润大街" lb="雨润大街" x="-466.35" y="230.5" rx="12.3" ry="-24" st="true" ex="false" iu="true" rc="false" slb="true" px="13217018.93" py="3739075.6" uid="a51c0c1028f771b517948eed" />
+        <p sid="" lb="" x="-398.8" y="253.25" rx="" ry="" st="false" ex="" iu="" rc="false" slb="" px="" py="" uid="" />
+        <p sid="油坊桥" lb="油坊桥" x="-434.25" y="344.7" rx="12.3" ry="-10" st="true" ex="false" iu="true" rc="false" slb="true" px="13216873.33" py="3736831.7" uid="bfedc1f0f7fb2fddbadf8fed" />
+    </l>
+
+</sw>

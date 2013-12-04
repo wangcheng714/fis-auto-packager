@@ -1,0 +1,1 @@
+define("taxi:widget/common/banner/banner.js",function(n,i,t){"use strict";var i={create:function(){var n=this.$el=$(".taxi-widget-banner"),i=n.find(".btn-close");i.on("click",$.proxy(this.onBtnCloseClick,this))},onBtnCloseClick:function(){this.$el.hide()},init:function(){this.create()}};t.exports=i});

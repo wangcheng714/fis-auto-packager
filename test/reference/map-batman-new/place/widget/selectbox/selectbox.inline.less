@@ -1,0 +1,84 @@
+/**
+ * @fileOverview 筛选框的样式
+ */
+
+
+.place-widget-selectbox{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: #f0f0f0;
+    display: block;
+    /* 下拉菜单 */
+    .select-box{
+        display:inline-block;
+        height:28px;
+        width:28.7%;
+        line-height:28px;
+        padding:0 0 0 0.357em;
+        -webkit-border-radius: 3px;
+        background:#fff;
+        position:relative;
+        border:1px solid #c9c9c9;
+        text-align:left;
+        -webkit-tap-highlight-color : rgba(0,0,0,0);
+    }
+
+    .select-box:first-child{
+        float: left;
+    }
+    .select-box:last-child{
+        float: right;
+    }
+
+    .select-box .select_title{
+        font-size:0.857em;
+        color:#333333;
+        vertical-align: top;
+        font-style: normal;
+    }
+    .select-box select{
+        opacity:0;
+        position:absolute;
+        height:100%;
+        width:100%;
+        left:0;
+    /*    z-index:1;*/
+    }
+    .select-box .select_icon{
+        position:absolute;
+        height:28px;
+        width:9px;
+        right:4px;
+        top:11px;
+    }
+    .select-disable select{
+        display:none;
+    }
+    .select-disable .select_title{
+        color:#aaa;
+    }
+
+    /* 筛选条件容器 */
+    .select-box .select_icon{
+        background:url(/static/images/select_area.png) 0 0 no-repeat;
+        background-size:9px 5px;
+    }
+
+
+    #slct_d_dist .select_title{
+    	margin-left:4px;
+    }
+
+    #slct_d_sort_type .select_title{
+    	margin-left:8px;
+    }
+
+    #slct_d_sub_type .select_title{
+    	margin-left:12px;
+    }
+    /* 禁用下来菜单，但是可点样式 */
+    .city-select select{
+        display: none;
+    }
+}

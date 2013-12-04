@@ -1,0 +1,334 @@
+.place-widget-taskoutlist {
+
+    background-color: #F2F2F2;
+    padding-bottom: 10px;
+
+    .tk_rl_list {
+        border-top: none;
+       /* padding-bottom: 100px;*/
+    }
+
+    .tk_rl_list ul {
+        border-top: none;
+    }
+
+    .tk_rl_list ul li {
+        padding-left: 48px;
+        padding-right: 40px;
+        white-space: nowrap;
+        min-height: 45px;
+        font-size: 12px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0); // 消除点击框；
+    }
+    .tk_rl_list ul li a{
+        color: #3b3b3b;
+    }   
+
+    .rl_li_distanceXY {
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .rl_li_startPrice, .rl_li_serviceFee {
+        display: inline-block;
+        width: 45%;
+    }
+    .pad .rl_li_startPrice, .rl_li_serviceFee {
+        width: 250px;
+    }
+
+    .rl_li_perFee {
+        display: inline-block;
+    }
+
+    .rl_li_tel {
+        display: inline-block;
+        width: 50%;
+        height: 25px;
+        line-height: 25px;
+        border: #D5D5D5 solid 1px;
+        border-radius: .25em;
+        text-align: center;
+        overflow: hidden;
+        word-wrap: normal;
+        background: -webkit-gradient(linear,0 100%,0 0,from(#F1F1F1),to(#F2F2F2));
+        margin-top: 10px;
+    }
+
+    .rl_li_nodish {
+        font-size: 12px;
+        color: #ff3100;
+    }
+
+    a.rl_li_tel {
+        display: inline-block;
+        width: 50%;
+        border-radius: .25em;
+        color: #518D3B;
+        word-wrap: normal;
+        overflow: hidden;
+        padding: 0;
+        font-size: 13px;
+        text-decoration: none;
+        outline: 0;
+        text-overflow: ellipsis;
+    }
+    .pad a.rl_li_tel {
+        width: 468px;
+    }
+    a.rl_li_tel em {
+        background: url(/static/images/tel_icon2.png) 0 0 no-repeat;
+        background-size: 11px 16px;
+        width: 16px;
+        height: 16px;
+        margin-top: -4px;
+        margin-right: 6px;
+        vertical-align: middle;
+    }
+
+    .rl_list li .rl_li_opt {
+        right: 0;
+    }
+
+    /* 结果列表页 result list */
+    .rl_wrapper{
+        padding-bottom: 8px;
+        background: #F2F2F2;
+    }
+
+    .poi-list{
+        color:#3b3b3b;
+        font-size:1em;
+        background-color:#fff;
+        border-top:1px solid #ddd;
+        border-bottom:1px solid #fff;
+    }
+
+    .poi-list em {
+        font-style: normal;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .rl_list_ps{border-top:none;}
+    .rl_list_ps li:first-child{
+        border-top:none;
+    }
+    .poi-list h4, .poi-list p{
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+    }
+    .poi-list li{
+        min-height:3.2em;
+        padding:0 0.79em 0.357em;
+        /*border-top:1px solid #fff;*/
+        border-bottom:1px solid #ddd;
+        background-color:#f9f9f9;
+        position:relative;
+        padding-bottom:11px;
+    }
+    .poi-list li.active{
+        background-color: #f4f4f4;
+    }
+    .poi-list li:first-child{
+
+    }
+    .poi-list li.rl_li_on{
+        background-color:#D9D8D8;
+    }
+    .poi-list h4{
+        padding-top:9px;
+        font-size:15px;
+        color:#3b3b3b;
+        /*height:1.43em;*/
+    }
+    .poi-list li .rl_opt{
+        position:absolute;
+        height:1.32em;
+        right:20px;
+        top:57%;
+        margin-top:-0.714em;
+        padding-right:1.43em;
+        text-align:right;
+    }
+    .poi-list li .rl_opt2{
+        position:absolute;
+        height:1.32em;
+        right:25px;
+        top:22px;
+        margin-top:-0.714em;
+        padding-right:8px;
+        text-align:right;
+        font-size:14px;
+    }
+    .poi-list li .fixforempty{
+        /*margin-top:0px;*/
+    }
+    .poi-list li .fixformargin_addr {
+        margin-top:2px;
+    }
+    .poi-list li .fixformargin_star {
+        margin-top:5px;
+    }
+    .poi-list li .fixformargin_price {
+        margin-top:3px;
+    }
+    .poi-list li .fixforempty .sm, .poi-list li .fixforempty .sm2{
+        /*margin-top: 0.36em;*/
+    }
+    .poi-list li .fixforempty .comment:after{
+        /*    content: "";
+            margin-top: 0.36em;
+            display: inline-block;
+            height: 14px;*/
+    }
+
+    .poi-list li p, .poi-list li h4{
+        text-overflow : ellipsis;
+        white-space:nowrap;
+        overflow:hidden;
+    }
+
+    .rl_list li p .rl_li_score {
+        width: 45%;
+    }
+    .poi-list li p .sm{
+        display:inline-block;
+        width:108px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+    .poi-list li p .sm2{
+        margin-left:0px;
+    }
+    .poi-list li .rl_opt em{
+        position: absolute;
+    }
+    .poi-list li .rl_opt .rl_go_dtl{
+        top:0.143em;
+        right:17px;
+    }
+    .poi-list .rl_t_icon{
+        height:31px;
+        width:25px;
+        position:absolute;
+        top:10px;
+        left:15px;
+    }
+
+
+    .rl_li_title{
+        font-weight:normal;
+        font-size: 1.07em;
+        max-width:80%;
+        display:inline-block;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+
+
+    .rl_go_dtl{
+        height:11px;
+        width:7px;
+    }
+
+
+    .rl_title_icon{display:inline-block;width:20px;height:20px;vertical-align:middle; background:url(/static/images/setmyplace_icon.png) no-repeat 0 -39px; background-size:76px 59px;}
+
+    .rl_select_poi .rl_t_spoi{background-position:1px -18px;}
+
+
+
+    /* 二级列表页 */
+    .poi-list li .rl_opt_btn{
+        height:11px;
+        width:16px;
+        background:url(/static/images/setmyplace_icon.png) -85px 0 no-repeat;
+        -webkit-background-size: 76px 59px;
+    }
+    .poi-list li em.rl_opt_close{
+        top: 4px;
+        right: -4px;
+        background-position:-42px 0;
+    }
+    .poi-list li .rl_opt_open{
+        background-position:-58px 0;
+        top: 4px;
+        right: -4px;
+    }
+    .poi-list li.rl_sub_list{
+        height:auto;
+        padding: 0;
+        overflow: hidden;
+    }
+    .poi-list ul.rl_sub_wrapper li{
+        padding-left:44px;
+    }
+    .poi-list ul.rl_sub_wrapper .rl_opt{
+        display:none;
+    }
+
+
+    /******* marker icon ********/
+    .poi-list .rl_mk{background:url(/static/images/markers_searchlist.png) no-repeat 0 0; background-size:25px 371px;}
+    .poi-list .rl_tri_right{position:absolute;right:0;height:1.17em;width:0.821em;background:url(/static/images/setmyplace_icon.png) no-repeat -2.214em 0; background-size:76px 59px;}
+
+    /* 星级评分 */
+    .star_box{
+        display:inline-block;
+        height: 15px;
+        width:75px;
+        background:url(/static/images/star.png) repeat-x 0 0;
+        background-size:15px 33px;
+        font-size:14px;
+        vertical-align:middle;
+    }
+    .star_box .star_scroe{
+        display:inline-block;
+        height: 15px;
+        background:url(/static/images/star.png) repeat-x 0 -19px;
+        background-size: 15px 33px;
+    }
+
+    .rl_go_dtl{
+        background:url(/static/images/areo.png) no-repeat 0 0;
+        background-size:7px 12px;
+    }
+
+    /* 翻页样式 */
+    .change_page{
+        padding:0.857em;
+        text-align: center;
+        background-color:#F2F2F2;
+
+        .page_btn{
+            display: inline-block;
+			height: 27px;
+			line-height: 27px;
+			padding: 0 11px;
+			border: 1px solid #CACACA;
+			margin: 0 6px;
+			color: #000;
+			font-size: 13px;
+			background-color: #fff;
+        }
+        .unclick{
+            color: #CCC;
+            border: 1px solid #CACACA;
+        }
+    }
+
+
+    .tel_num_ios{
+        display:inline-block;
+        width:100%;
+        text-decoration: none;
+        color:#4471DC;
+        font-size:1.143em;
+    }
+
+}

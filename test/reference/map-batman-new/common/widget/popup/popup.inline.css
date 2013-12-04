@@ -1,0 +1,14 @@
+.common-widget-popup {
+    position: fixed;
+	max-width: 196px;
+    display: block;
+    padding: 11px 27px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #000000;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 999;
+    border: 1px #afafaf solid;
+}

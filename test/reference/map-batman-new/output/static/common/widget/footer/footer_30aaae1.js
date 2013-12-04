@@ -1,0 +1,1 @@
+define("common:widget/footer/footer.js",function(o,n,t){var i=(o("common:widget/stat/stat.js"),o("common:static/js/util.js"),o("common:widget/login/login.js")),c=function(){e()},e=function(){$(".user").on("click",function(){s()})},s=function(){i.checkLogin(function(o){o.status?i.goMycenter():i.loginAction()})};t.exports.init=c});

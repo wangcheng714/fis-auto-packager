@@ -1,0 +1,322 @@
+.place-widget-seacrhnave{
+    /*
+     * @fileoverview 搜索框样式 选择器命名均以se开头
+     * author: jican
+     * date: 2013/01/22
+     */
+     .pagebody{
+        /*min-height: 563px;*/
+     }
+    .se-box{
+        width:100%;
+        background-color: #fff;
+    }
+    .se-box .ipt-icon{
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 19px;
+        height: 19px;
+        color: #FFF;
+        font-size: 12px;
+        border-radius: 2px;
+        line-height: 19px;
+    }
+    .se-box .ipt-icon.start{
+        background-color: #62B211;
+    }
+    .se-box .ipt-icon.end{
+        background-color: #F50;
+    }
+
+
+
+    /* 搜索框Tab切换 end */
+
+
+    /* 搜索框外框 start */
+    .se-wrap{
+        /*border-bottom: 1px solid #cecece;background-color: #ededed;*/
+        
+        position: relative;
+    }
+    .se-wrap .se-poi-form{
+        height: 36px;
+        background-color: #ffffff;
+        position: relative;
+    }
+    .se-wrap .btn-clear{
+        position:absolute;
+        right:0.286em;
+        top:50%;
+        margin-top:-0.714em;
+        width:1.464em;
+        height:1.464em;
+        display:none;
+        background-position:0 -5.964em;
+        z-index: 100000;
+    }
+    .se-wrap input{
+        width:100%;
+        height:100%;
+        /*padding-left:0.25em;*/
+        color:#333333;
+        border:none;
+        background:none;
+    }
+    .se-wrap input.geo{
+        color:#4C78CE;
+    }
+    /* 搜索框外框 end */
+    #se_dir {
+        padding: 8px;
+        /*box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.18);
+        -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.18);*/
+        top: 1px;
+        position: relative;
+        height: 79px;
+    }
+    /* 搜索框内框 start */
+    .se-inner {
+        height: 32px;
+        padding-left: 26px;
+        position: relative;
+        background: #FFF;
+        border: 1px solid #D9D9D9;
+        width: auto;
+        left: 0px;
+        top: 2px;
+    }
+
+    .se-poi-form input{
+        padding: 5px;
+        height: 27px;
+        /*line-height: 27px;*/
+    }
+    .se-poi table{
+        border: 1px solid #9a9a9a;
+        background: #fff;
+    }
+    #se_poi_submit{
+        height: 36px;
+        width: 49px;
+        border-left: 1px solid #9a9a9a;
+        background:-webkit-gradient(linear, 0 100%, 0 0, from(#E7E7E7), to(#F5F5F5));
+    }
+    #se_poi .active {
+        background: none;
+        background-color: #e7e7e7;
+    }
+    .se-btn b {
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+        margin-top: 6px;
+        margin-left: 14px; 
+        background :url(/static/images/search_ico.png) no-repeat;
+    /*    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAADdklEQVR42tWZD2hNcRTH790wGLRGhEx7BSEWVVoLQAjAbEsQVaOiNQClDAWKUImNDLZFGSoWYKmUFrIFwZRYM2+8F0bzPe2o9fJ+f+793bfr1Kfi/O719bvnd37nnGfPzV5ptaVdLD7u6Lk46z+1dg6f6whGg6FgAOgObBAEteAZeAB++kF4AsgEWWA8/1lkjeAGuAJKQcikcJVQaQ/WgTfgFJimIJqsG5gPCsE7sBl0ipVwCocqcAD0dvHvJIECDqFxXgvPBZUcx6YsBVSATV4J3wmOgA4enKt4sIvfb5sUvhFsiUFGy+UQNCJ8Bu9GrGztvJxVS9wK7wmKFD/fd3AWZIMA6MLP9QJTeCc/KWo4CvED3QjfC5IVniniSycHnAOvQJh9dZy78wCJ2aZwCSWCg06FDwGyT/YDUGGzXHE3w3zIJ4CPkrWzsetjnQjPk6TG32AROOEgHCs5dwcl69brCu/MokS2A1x2cQhrOLSaBWumY9eTdYRPBl0Fa56DPQYyyFVQIikt5ugIl13BlCGaDKW/Aol/oo7wUQL/L3DBYN5+Ap4K/MN0hAcE/sfgi+FL557AF9ARniTw13pwW74XNSg4oImqwkU1coMHwj+baG7iWt160epo0yZ7Z5Oq8HqBv78HwkXvDKPrD6kKfyHwjwA9DAvPEPhe6hzOh5KiP9Og6DRJR/VIR/htyZp8xeZYxTZI/Ld0hN+UnPRUEz0iX+eimojK33Id4fRAsWTdVjDLhejhPNoQWRkOZoOOcLL9fL2LYr2UKzxdGwOu85wlmjVzI6Ndj7/lrltk1PGf4a4nVeHdlI12g/sKM5nT2O0qp63bdsl1/NcWg2r6tGAp/ycS+Kv0pboaHAKveWKgMuIo1P2MdsSYOYMPa7wVW/tALR52vcbpeOIuWCbpVLywPrRhKLAGuxkIURyv5j7Tt+KjNcjHwEKrZVTsS/Gizv4SX9F3DAr7Zkq8bMxMwx4a4mdJWi6ZUfG0AvTj9OhavMpgnw7qea4UJ4GTnAVkVsfnZSYYxCkvyOnStXjbxa9ulL/ppSlWyxiNLMR3QTWPNaJlJxqHXAPpTlOl3YY/F+qIp80YCfH1OqHilX3VCBs6G2t0Y9wv4tP8JJx+WVYV3+gr4RriS3wnPEJ8xT/c++Av96XwVuKnggXgMDcX6fj7/Mi1fwB+qdLHhB0tNQAAAABJRU5ErkJggg==") no-repeat;*/
+        background-size: 23px 23px;  
+    }
+
+
+    /* 搜索框内框 start */
+
+    /* 搜索框选择城市 start */
+    .se-city {
+        height: 36px;
+        display: -webkit-box;
+        width: 68px;
+        -webkit-box-align: center;
+        z-index: 10000;
+        line-height: 36px;
+    }
+    .se-city span {
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        white-space: nowrap;
+        /*background-color: #efefef;*/
+        max-width: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        color: #343434;
+        -webkit-border-radius: 3px;
+        padding: 0 20px 0 5px;
+        position: relative;
+    }
+    .se-city span:after {
+        content: "";
+        position: absolute;
+        width: 7px; height: 4px;
+        top: 9px; right: 8px;
+        background: url("data:image/gif;base64,R0lGODlhDQAHAIABAJqamv///yH5BAEAAAEALAAAAAANAAcAAAIPhI8XyeGs3GtSpoojrmAXADs=") no-repeat;
+        background-size: 7px 4px;
+    }
+    /* 搜索框选择城市 end */
+
+    /**
+     * @fileOverview 搜索框线路部分样式
+     */
+
+    .route-pic {
+        background :url(/static/images/tactics.png) no-repeat;
+        background-size: 17px 54px;
+    }
+
+    .se-dir-form{
+        position: relative;
+    }
+    .se-dir-form input{
+        height:2.071em;
+    }
+    #se_dir_submit{
+        width: 35px;
+        height: 70px;
+        border: 1px solid #9a9a9a;
+        background-image: -webkit-gradient(
+            linear,0% 0%, 0% 100%,
+            from(#F7F6F6), to(#DFDFDF),
+            color-stop(0.5,#eeeeee)
+        );
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+    #se_dir_reverse{
+        margin-right: 15px;
+        margin-left: 6px;
+
+    }
+    #se_dir_reverse.active {
+        background: #e7e7e7;
+        -webkit-box-shadow: inset 0px 0px 2px #e3e3e3;
+    }
+    /*
+    #se_dir_reverse .btn-icon{
+        background-position: 0 -268px;
+        height: 25px;
+        margin: 3px 4px;
+    }
+    */
+
+    .se-rev-icon{
+        border: 1px solid #D9D9D9;
+        width: 34px;
+        height: 40px;
+        margin-top: 4px;
+        background-image: url("http://s1.map.bdimg.com/mobile/static/common/ui/images/ui3/reverse_6baf6812.png");
+        background-size: 34px 40px;
+    }
+
+    .tactics {
+        display: -webkit-box;
+        border-top: 1px solid #E5E5E5;
+        border-bottom: 1px solid #B9B9B9;
+        height: 49px;
+        font-size: 15px;
+        color: #7386A3;
+        height: 48px;
+        line-height: 48px;
+        background-color: #F9F9F9;
+        box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.18);
+    }
+
+    .se-bus-btn, .se-drive-btn, .se-walk-btn {
+        color: #7386A3;
+        display: block;
+        width: 32%;
+        height: 100%;
+        text-align: center;
+        -webkit-box-flex: 1;
+    }
+    .se-bus-btn{
+        border-right: 1px solid #E5E5E5;
+    }
+    .se-drive-btn{
+        border-right: 1px solid #E5E5E5;
+    }
+    .se-bus-btn.active {
+        background: #f5f6f7;
+    }
+    .se-drive-btn.active {
+        background: #f5f6f7;
+    }
+    .se-walk-btn.active{
+        background: #f5f6f7;
+    }
+    .se-bus-btn {
+    }
+    .se-bus-btn .se-bus-icon {
+        display: inline-block;
+        margin-right: 9px;
+        height: 18px;
+        width: 17px;
+        vertical-align: middle;
+        margin-top: -5px;
+        background-position: 0px 0px;
+        }
+    .se-drive-btn .se-drive-icon {
+        display: inline-block;
+        margin-right: 9px;
+        height: 17px;
+        width: 17px;
+        vertical-align: middle;
+        margin-top: -5px;
+        background-position: 0 -20px;
+    }
+    .se-walk-btn .se-walk-icon {
+    display: inline-block;
+    margin-right: 7px;
+    height: 18px;
+    width: 17px;
+    vertical-align: middle;
+    margin-top: -5px;
+    background-position: 0 -37px;
+    }
+    .se-tabgroup  .active {
+        background-color: #373b42;
+    }
+    .se-walk-btn {
+    }
+
+    .route-wrapper {
+        padding:10px 8px;
+        color:#515a64;
+    }
+    .route-wrapper .nb-station {
+        font-size:13px;
+    }
+    .route-wrapper .st {
+        display:inline-block;
+        height:28px;
+        line-height:28px;
+        padding:0 10px;
+        border-radius: 3px;
+        border:1px solid #adadad;
+        background: -webkit-gradient(linear, 0 100%, 0 0, from(#F5F6F8) , to(#FBFBFB) );
+        margin-left:-4px; /*弥补缺了一小块*/
+    }
+    .route-wrapper .sw-btn {
+        margin-top:14px;
+        height:33px;
+        line-height:33px;
+        border:1px solid #adadad;
+        font-size:14px;
+        text-align:center;
+        border-radius: 2px;
+        background: -webkit-gradient(linear, 0 100%, 0 0, from(#F1F1F1) , to(#F8F8F8) );
+    }
+    .route-wrapper .sw-btn.active {
+        background: #F2F2F2;
+    }
+    .route-wrapper .sw-btn em{
+        display: inline-block;
+        width: 14px;
+        height: 16px;
+        vertical-align: middle;
+        margin-top: -2px;
+        margin-right: 7px;
+        background-position: 0px -117px;
+    }
+
+}

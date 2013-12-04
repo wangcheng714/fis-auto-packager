@@ -1,0 +1,170 @@
+{
+    "res": {
+        "index:page/about.tpl": {
+            "uri": "/template/index/page/about.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "hash": "abc8b18"
+        },
+        "index:page/index.css": {
+            "uri": "/static/index/page/index.css",
+            "type": "css",
+            "hash": "547af83"
+        },
+        "index:page/index.tpl": {
+            "uri": "/template/index/page/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true,
+                "async": [
+                    "index:widget/ui/bindex.js"
+                ]
+            },
+            "deps": [
+                "index:widget/ui/aindex.js",
+                "index:page/index.css"
+            ],
+            "hash": "de3593f"
+        },
+        "index:widget/about/about.tpl": {
+            "uri": "index/widget/about/about.tpl",
+            "type": "tpl",
+            "hash": "31dc21d"
+        },
+        "index:widget/asyncload/asyncload.css": {
+            "uri": "/static/index/widget/asyncload/asyncload.css",
+            "type": "css",
+            "hash": "c8c8771"
+        },
+        "index:widget/asyncload/asyncload.js": {
+            "uri": "/static/index/widget/asyncload/asyncload.js",
+            "type": "js",
+            "deps": [
+                "index:widget/asyncload/asyncload.css"
+            ],
+            "hash": "53d6e4a"
+        },
+        "index:widget/asyncload/asyncload.tpl": {
+            "uri": "index/widget/asyncload/asyncload.tpl",
+            "type": "tpl",
+            "extras": {
+                "async": [
+                    "index:widget/ui/bquickling.js"
+                ]
+            },
+            "deps": [
+                "index:widget/ui/aquickling.js",
+                "index:widget/asyncload/asyncload.js",
+                "index:widget/asyncload/asyncload.css"
+            ],
+            "hash": "1a82183"
+        },
+        "index:widget/index/index.css": {
+            "uri": "/static/index/widget/index/index.css",
+            "type": "css",
+            "hash": "06f0b21"
+        },
+        "index:widget/index/index.js": {
+            "uri": "/static/index/widget/index/index.js",
+            "type": "js",
+            "deps": [
+                "index:widget/index/index.css"
+            ],
+            "hash": "3a9b66b"
+        },
+        "index:widget/index/index.tpl": {
+            "uri": "index/widget/index/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "async": [
+                    "index:widget/ui/bwidget.js"
+                ]
+            },
+            "deps": [
+                "index:widget/ui/awidget.js",
+                "index:widget/index/index.js",
+                "index:widget/index/index.css"
+            ],
+            "hash": "4a1849d"
+        },
+        "index:widget/list/list.tpl": {
+            "uri": "index/widget/list/list.tpl",
+            "type": "tpl",
+            "hash": "8783f47"
+        },
+        "index:widget/ui/aindex.js": {
+            "uri": "/static/index/widget/ui/aindex.js",
+            "type": "js",
+            "extras": {
+                "async": [
+                    "index:widget/ui/findex.js"
+                ]
+            },
+            "deps": [
+                "index:widget/ui/gindex.js"
+            ],
+            "hash": "225e130"
+        },
+        "index:widget/ui/aquickling.js": {
+            "uri": "/static/index/widget/ui/aquickling.js",
+            "type": "js",
+            "hash": "c37389e"
+        },
+        "index:widget/ui/awidget.js": {
+            "uri": "/static/index/widget/ui/awidget.js",
+            "type": "js",
+            "hash": "a218728"
+        },
+        "index:widget/ui/bindex.js": {
+            "uri": "/static/index/widget/ui/bindex.js",
+            "type": "js",
+            "extras": {
+                "async": [
+                    "index:widget/ui/cindex.js"
+                ]
+            },
+            "deps": [
+                "index:widget/ui/dindex.js"
+            ],
+            "hash": "847cff5"
+        },
+        "index:widget/ui/bquickling.js": {
+            "uri": "/static/index/widget/ui/bquickling.js",
+            "type": "js",
+            "hash": "1e62818"
+        },
+        "index:widget/ui/bwidget.js": {
+            "uri": "/static/index/widget/ui/bwidget.js",
+            "type": "js",
+            "hash": "8d37669"
+        },
+        "index:widget/ui/cindex.js": {
+            "uri": "/static/index/widget/ui/cindex.js",
+            "type": "js",
+            "hash": "081a3f5"
+        },
+        "index:widget/ui/dindex.js": {
+            "uri": "/static/index/widget/ui/dindex.js",
+            "type": "js",
+            "hash": "9a3c1fa"
+        },
+        "index:widget/ui/findex.js": {
+            "uri": "/static/index/widget/ui/findex.js",
+            "type": "js",
+            "hash": "12c7ce3"
+        },
+        "index:widget/ui/gindex.js": {
+            "uri": "/static/index/widget/ui/gindex.js",
+            "type": "js",
+            "hash": "8a34903"
+        },
+        "index:widget/ui/widget.css": {
+            "uri": "/static/index/widget/ui/widget.css",
+            "type": "css",
+            "hash": "b8e39cd"
+        }
+    },
+    "pkg": {}
+}
