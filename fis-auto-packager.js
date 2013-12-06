@@ -58,7 +58,7 @@ function createPackConf(resources, outputDir, projectName){
  * @param outputDir : 打包结果产出目录
  * @param projectName : 项目名称
  * @param logUrl : 获取log日志的url
- * @param callback
+ * @param callback :  callback(error, result)
  */
 module.exports.package = function(dir, outputDir, projectName, logUrl, callback){
     resources = codeAnalyzer.getResource(dir, hashTable);
@@ -93,7 +93,7 @@ module.exports.package = function(dir, outputDir, projectName, logUrl, callback)
         var resultFiles = {
             "urlPv" : urlPvFile,
             "staticUrlMap" : staticUrlMapFile,
-            "predictPackageResult" : predictPackageResultFile,
+            "packagePredict" : predictPackageResultFile,
             "packageConf" : resultFile
         }
         callback(null, resultFiles);
