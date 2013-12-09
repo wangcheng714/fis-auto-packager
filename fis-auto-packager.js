@@ -1,5 +1,4 @@
 
-//todo : download shell copy old version
 var codeAnalyzer = require("./core/codeAnalyzer.js"),
     logAnalyzer = require("./core/logAnalyzer.js"),
     packager = require("./packager/profitPackager.js"),
