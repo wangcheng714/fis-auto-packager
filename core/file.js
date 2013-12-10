@@ -24,6 +24,8 @@ var File = function(id, type, hash, url, size, deps){
     this.module = parseModule(id);
     this.mergedStatic = [id];
     this.benefit = 0;
+    //packageType 有两种类型 ： 手动和自动，手动的为产品线自定义的不需要产出管理， 默认为auto
+    this.packageType = "auto";
 };
 
 function parseModule(id){

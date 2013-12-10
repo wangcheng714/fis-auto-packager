@@ -9,7 +9,11 @@ var codeAnalyzer = require("./core/codeAnalyzer.js"),
     AdmZip = require('adm-zip'),
     zip = new AdmZip();
 
+/**
+ * hashTable :
+ */
 var resources = {},
+    defaultPackages = {},
     hashTable = {};
 
 
@@ -60,7 +64,7 @@ function createPackConf(resources, outputDir, projectName){
  * @param callback :  callback(error, result)
  */
 module.exports.package = function(dir, outputDir, projectName, logUrl, callback){
-    resources = codeAnalyzer.getResource(dir, hashTable);
+    resources = codeAnalyzer.getResource(dir, hashTable, defaultPackages);
     logAnalyzer.analyzeLog(function(error, records){
         var urlPvFile = packageReport.printUrlPvs(records, outputDir, projectName);
         for(var i=0; i<records.length; i++){
@@ -86,7 +90,7 @@ module.exports.package = function(dir, outputDir, projectName, logUrl, callback)
             }
         }
         var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
-        var packageResults = packager.package(resources);
+        var packageResults = packager.package(resources, defaultPackages);
         var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
         var resultFile = createPackConf(packageResults, outputDir, projectName);
         var resultFiles = {

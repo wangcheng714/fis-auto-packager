@@ -1,3 +1,5 @@
+//todo ： 后续升级为每天定义下载分析数据
+
 var Record = require("./record.js"),
     util = require("../lib/util.js"),
     request = require("request"),

@@ -78,11 +78,21 @@ function _getDeps(file, filetype, files, save){
     }
 }
 
-module.exports.getResource = function(dir, hashTable){
+/**
+ * 获取所有的静态资源
+ *     1. 需要整站编译：因为需要静态分析依赖关系，分析common模块依赖关系时需要整站的map.json文件
+ *     2. 返回所有的静态资源，不排除默认打包里的，后续预测打包结果需要使用所有的静态资源
+ * @param dir : 编译后目录
+ * @param hashTable :
+ * @param defaultPackages : 产品线默认打包配置
+ * @returns {{}}
+ */
+module.exports.getResource = function(dir, hashTable, defaultPackages){
     var configDir = dir + "/config";
 
     var configReg = /\w+\-map\.json$/,
         configFiles = util.find(configDir, configReg),
+        autopackJson = dir + "/fis-autopack.json";
         configRes = {},
         files = {};
 
@@ -92,6 +102,9 @@ module.exports.getResource = function(dir, hashTable){
                 tmpRes = config["res"];
             configRes = util.merge(configRes, tmpRes);
         }
+
+        createPackageMap(autopackJson, defaultPackages);
+
         for(fileId in configRes){
             if(configRes.hasOwnProperty(fileId)){
                 var fileProperty = configRes[fileId],
@@ -123,5 +136,28 @@ module.exports.getResource = function(dir, hashTable){
         }
     }
     return files;
+}
+
+function createPackageMap(autopackJson, defaultPackages){
+    if(util.exists(autopackJson)){
+        var packConf = util.readJSON(autopackJson)["pack"];
+
+        //construct package table
+        util.map(packConf, function(path, patterns, index){
+            var pid = "p" + index;
+            if(typeof patterns === 'string' || patterns instanceof RegExp){
+                patterns = [ patterns ];
+            }
+            if(util.is(patterns, 'Array') && patterns.length){
+                defaultPackages[pid] = {
+                    file : path,
+                    regs : patterns
+                };
+            }else{
+                //fis.log.warning('invalid pack config [' + path + ']');
+                //todo : error 处理
+            }
+        });
+    }
 }
 

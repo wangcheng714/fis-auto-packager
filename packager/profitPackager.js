@@ -6,13 +6,17 @@
 
 //todo : modjs需要做特殊处理
 var benefitMap = {},
+    File = require("../core/file.js"),
     util = require("../lib/util.js");
 
 var RTT = 2,  //round trip time 不能包含建立tcp链接的时间，因为http 1.1都是用了 keep-alive 没有tcp建立的开销
     SPEED = 20,
     benefitMap = {};
 
-module.exports.package = function(resources){
+module.exports.package = function(resources, defaultPackages){
+
+    //mergeDefaultPackage(resources, defaultPackages);
+
     var newResources = partResources(resources),
         mergedResult = {};
 
@@ -29,6 +33,60 @@ module.exports.package = function(resources){
     return mergedResult;
 }
 
+function hit(resource, defaultPackages){
+    var type = resource.get("type"),
+        subpath = resource.get("id");
+    if(type == "js" || type == "css"){
+        for(var i = 0, len = defaultPackages.length; i < len; i++){
+            var pack = defaultPackages[i],
+                reg = pack["regs"];
+            if(reg && util.filter(subpath, reg)){
+                return pack["file"];
+            }
+        }
+    }
+    return false;
+};
+
+function mergeResources(resources){
+    var originResource = resources.shift();
+    util.map(resources, function(index, resource){
+        originResource.mergeStatic(resource, 0);
+    });
+    return originResource;
+}
+
+
+function mergeDefaultPackage(resources, defaultPackages){
+    var manualPackages = {},
+        deleteResource = [],
+        manualResult = [];
+    util.map(resources, function(index, resource){
+        var key = hit(resource, defaultPackages);
+        if(key){
+            if(!manualPackages[key]){
+                manualPackages[key] = [];
+            }
+            manualPackages[key].push(resource);
+            deleteResource.push(index);
+        }
+    });
+    util.map(manualPackages, function(file, mergeFiles){
+        if(mergeFiles.length >= 2){
+            var mergedFile = mergeResources(mergeFiles);
+            mergedFile.set("id", file);
+            manualResult.push(mergedFile);
+        }else{
+            var mergedFile = mergeFiles[0];
+            mergedFile.set("id", file);
+            manualResult.push(mergedFile);
+        }
+    });
+    for(var i=deleteResource.length; i>=0; i--){
+        util.removeByIndex(resources, deleteResource[i]);
+    }
+    return manualResult;
+}
 
 function partResources(resources){
     var newResources = {};
