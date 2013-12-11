@@ -88,11 +88,13 @@ function _getDeps(file, filetype, files, save){
  * @returns {{}}
  */
 module.exports.getResource = function(dir, hashTable, defaultPackages){
-    var configDir = dir + "/config";
+    var configDir = dir + "/config",
+        autopackDir = dir + "/auto-pack";
 
     var configReg = /\w+\-map\.json$/,
+        autopackReg = /\w+\-autopack\.json$/,
         configFiles = util.find(configDir, configReg),
-        autopackJson = dir + "/fis-autopack.json";
+        autopackJsons = util.find(autopackDir, autopackReg),
         configRes = {},
         files = {};
 
@@ -103,7 +105,7 @@ module.exports.getResource = function(dir, hashTable, defaultPackages){
             configRes = util.merge(configRes, tmpRes);
         }
 
-        createPackageMap(autopackJson, defaultPackages);
+        createPackageMap(autopackJsons, defaultPackages);
 
         for(fileId in configRes){
             if(configRes.hasOwnProperty(fileId)){
@@ -138,26 +140,33 @@ module.exports.getResource = function(dir, hashTable, defaultPackages){
     return files;
 }
 
-function createPackageMap(autopackJson, defaultPackages){
-    if(util.exists(autopackJson)){
-        var packConf = util.readJSON(autopackJson)["pack"];
+function createPackageMap(autopackJsons, defaultPackages){
+    var index = 0;
+    util.map(autopackJsons, function(index, autopackJson){
+        var filename = autopackJson.split("/").pop();
+            module = filename.split("-").shift();
+        if(util.exists(autopackJson)){
+            var packConf = util.readJSON(autopackJson)["pack"];
 
-        //construct package table
-        util.map(packConf, function(path, patterns, index){
-            var pid = "p" + index;
-            if(typeof patterns === 'string' || patterns instanceof RegExp){
-                patterns = [ patterns ];
-            }
-            if(util.is(patterns, 'Array') && patterns.length){
-                defaultPackages[pid] = {
-                    file : path,
-                    regs : patterns
-                };
-            }else{
-                //fis.log.warning('invalid pack config [' + path + ']');
-                //todo : error 处理
-            }
-        });
-    }
+            //construct package table
+            util.map(packConf, function(path, patterns){
+                var pid = "p" + index;
+                index++;
+                if(typeof patterns === 'string' || patterns instanceof RegExp){
+                    patterns = [ patterns ];
+                }
+                if(util.is(patterns, 'Array') && patterns.length){
+                    defaultPackages[pid] = {
+                        file : path,
+                        regs : patterns,
+                        module : module
+                    };
+                }else{
+                    //fis.log.warning('invalid pack config [' + path + ']');
+                    //todo : error 处理
+                }
+            });
+        }
+    });
 }
 

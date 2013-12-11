@@ -15,33 +15,39 @@ var RTT = 2,  //round trip time 不能包含建立tcp链接的时间，因为htt
 
 module.exports.package = function(resources, defaultPackages){
 
-    //mergeDefaultPackage(resources, defaultPackages);
-
+    var manualResult = mergeDefaultPackage(resources, defaultPackages);
     var newResources = partResources(resources),
-        mergedResult = {};
+        autoResult = {};
 
     newResources = sortByPv(newResources);
 
     util.map(newResources, function(packageKey, partResource){
         var packageResult = [];
         if(partResource.length >= 2){
-            mergedResult[packageKey] = mergePackage(partResource.shift(), partResource, packageResult);
+            autoResult[packageKey] = mergePackage(partResource.shift(), partResource, packageResult);
         }else{
-            mergedResult[packageKey] = [partResource.pop()];
+            autoResult[packageKey] = [partResource.pop()];
         }
     });
-    return mergedResult;
+    util.merge(autoResult, manualResult);
+    return autoResult;
 }
 
 function hit(resource, defaultPackages){
     var type = resource.get("type"),
-        subpath = resource.get("id");
+        subpath = resource.get("subpath"),
+        module = resource.get("module");
     if(type == "js" || type == "css"){
-        for(var i = 0, len = defaultPackages.length; i < len; i++){
-            var pack = defaultPackages[i],
-                reg = pack["regs"];
-            if(reg && util.filter(subpath, reg)){
-                return pack["file"];
+        for(var key in defaultPackages){
+            var conf = defaultPackages[key];
+            if(conf["module"] == module){
+                var regs = conf["regs"];
+                for(var i = 0, len = regs.length; i < len; i++){
+                    var reg = regs[i];
+                    if(reg && util.filter(subpath, reg)){
+                        return conf["file"];
+                    }
+                }
             }
         }
     }
@@ -60,7 +66,7 @@ function mergeResources(resources){
 function mergeDefaultPackage(resources, defaultPackages){
     var manualPackages = {},
         deleteResource = [],
-        manualResult = [];
+        manualResult = {};
     util.map(resources, function(index, resource){
         var key = hit(resource, defaultPackages);
         if(key){
@@ -72,18 +78,20 @@ function mergeDefaultPackage(resources, defaultPackages){
         }
     });
     util.map(manualPackages, function(file, mergeFiles){
+        var mergedFile = {};
         if(mergeFiles.length >= 2){
-            var mergedFile = mergeResources(mergeFiles);
-            mergedFile.set("id", file);
-            manualResult.push(mergedFile);
+            mergedFile = mergeResources(mergeFiles);
         }else{
-            var mergedFile = mergeFiles[0];
-            mergedFile.set("id", file);
-            manualResult.push(mergedFile);
+            mergedFile = mergeFiles[0];
         }
+        var packageKey = mergedFile.get("module") + "_" + file.replace(".", "_");
+        mergedFile.set("id", file);
+        mergedFile.set("packageType", "manual");
+        manualResult[packageKey] = [];
+        manualResult[packageKey].push(mergedFile);
     });
-    for(var i=deleteResource.length; i>=0; i--){
-        util.removeByIndex(resources, deleteResource[i]);
+    for(var i=0; i<deleteResource.length; i++){
+        delete(resources[deleteResource[i]]);
     }
     return manualResult;
 }

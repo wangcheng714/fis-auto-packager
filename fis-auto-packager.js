@@ -66,39 +66,43 @@ function createPackConf(resources, outputDir, projectName){
 module.exports.package = function(dir, outputDir, projectName, logUrl, callback){
     resources = codeAnalyzer.getResource(dir, hashTable, defaultPackages);
     logAnalyzer.analyzeLog(function(error, records){
-        var urlPvFile = packageReport.printUrlPvs(records, outputDir, projectName);
-        for(var i=0; i<records.length; i++){
-            var record = records[i],
-                syncStatics = record.get("sync"),
-                asyncStatics = record.get("async");
+        if(error){
+            callback(error, null);
+        }else{
+            var urlPvFile = packageReport.printUrlPvs(records, outputDir, projectName);
+            for(var i=0; i<records.length; i++){
+                var record = records[i],
+                    syncStatics = record.get("sync"),
+                    asyncStatics = record.get("async");
 
-            for(var j=0; j<syncStatics.length; j++){
-                var resource = resources[syncStatics[j]];
-                if(resource){
-                    resource.addPage(record.get("hash"), record.get("pv"));
-                    resource.addPv(record.get("pv"));
-                    //todo : 目前策略是优先考虑sync，是否需要改成根据sync和async的pv判断应该为哪一种类型？
-                    resource.setLoadType("sync");
+                for(var j=0; j<syncStatics.length; j++){
+                    var resource = resources[syncStatics[j]];
+                    if(resource){
+                        resource.addPage(record.get("hash"), record.get("pv"));
+                        resource.addPv(record.get("pv"));
+                        //todo : 目前策略是优先考虑sync，是否需要改成根据sync和async的pv判断应该为哪一种类型？
+                        resource.setLoadType("sync");
+                    }
+                }
+                for(var k=0; j<asyncStatics.length; k++){
+                    var resource = resources[asyncStatics[k]];
+                    if(resource){
+                        resource.addPv(record.get("pv"));
+                        resource.setLoadType("async");
+                    }
                 }
             }
-            for(var k=0; j<asyncStatics.length; k++){
-                var resource = resources[asyncStatics[k]];
-                if(resource){
-                    resource.addPv(record.get("pv"));
-                    resource.setLoadType("async");
-                }
+            var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
+            var packageResults = packager.package(resources, defaultPackages);
+            var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
+            var resultFile = createPackConf(packageResults, outputDir, projectName);
+            var resultFiles = {
+                "urlPv" : urlPvFile,
+                "staticUrlMap" : staticUrlMapFile,
+                "packagePredict" : predictPackageResultFile,
+                "packageConf" : resultFile
             }
+            callback(null, resultFiles);
         }
-        var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
-        var packageResults = packager.package(resources, defaultPackages);
-        var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
-        var resultFile = createPackConf(packageResults, outputDir, projectName);
-        var resultFiles = {
-            "urlPv" : urlPvFile,
-            "staticUrlMap" : staticUrlMapFile,
-            "packagePredict" : predictPackageResultFile,
-            "packageConf" : resultFile
-        }
-        callback(null, resultFiles);
     }, logUrl, hashTable);
 }

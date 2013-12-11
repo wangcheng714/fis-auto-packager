@@ -21,18 +21,25 @@ var File = function(id, type, hash, url, size, deps){
     this.pages = {};
     this.loadType = "";
     this.pv = 0; //pv 表示为资源理论应该被被下载的次数
-    this.module = parseModule(id);
+    var result = parseId(id);
+    if(result){
+        this.module =result["module"];
+        this.subpath =result["subpath"];
+    }
     this.mergedStatic = [id];
     this.benefit = 0;
     //packageType 有两种类型 ： 手动和自动，手动的为产品线自定义的不需要产出管理， 默认为auto
     this.packageType = "auto";
 };
 
-function parseModule(id){
-    var modulePreg = /(\w+):[^:]*/,
+function parseId(id){
+    var modulePreg = /(\w+):([^:]*)/,
         matchResult = id.match(modulePreg);
     if(matchResult){
-        return matchResult[1];
+        return {
+            module : matchResult[1],
+            subpath : "/" + matchResult[2]
+        };
     }
     return null;
 }
@@ -86,6 +93,10 @@ File.prototype.mergeStatic = function(fileB, benefit){
 
 File.prototype.get = function(key){
     return this[key];
+}
+
+File.prototype.set = function(key, value){
+    this[key] = value;
 }
 
 module.exports = File;

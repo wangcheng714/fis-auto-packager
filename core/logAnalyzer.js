@@ -44,9 +44,9 @@ function processLogData(data, hashTable){
                     }
                 }
             }
-//tmp
-//urlTokens[5] = urlTokens[4];
-//urlTokens[4] = "index/page/index.tpl";
+//todo : 新版数据结构需要重新整理
+urlTokens[5] = urlTokens[4];
+urlTokens[4] = "index/page/index.tpl";
             records.push(new Record(urlTokens[1], util.array_unique(syncDepsRes), util.array_unique(asyncDepsRes), urlTokens[3], urlTokens[4], urlTokens[5]));
         }
     }
