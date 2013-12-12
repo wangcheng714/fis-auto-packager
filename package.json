@@ -1,11 +1,11 @@
 {
   "name": "fis-auto-packager",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "fis-auto-packager",
   "main": "fis-auto-packager.js",
   "dependencies": {
-    "request" : "2.27.0",
-    "adm-zip" : "0.4.3"
+    "request" : "*",
+    "adm-zip" : "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

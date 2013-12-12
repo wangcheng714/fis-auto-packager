@@ -1,0 +1,50 @@
+{
+	"pack" : {
+        "pkg_test/manual.css" :
+            [
+                "/widget/morecategory/morecategory.inline.less",
+                "/widget/waitforloc/waitforloc.inline.less",
+                "/widget/thumbnail/thumbnail.inline.less",
+                "/widget/switchproduct/switchproduct.inline.less",
+                "/widget/sventry/sventry.inline.less",
+                "/widget/surface/surface.inline.less",
+                "/widget/searchbox/searchbox.inline.less",
+                "/widget/seacrhnave/seacrhnave.inline.less",
+                "/widget/nearpush/hotel.inline.less",
+                "/widget/nearpush/hao123hd.inline.less",
+                "/widget/nearpush/cater.inline.less",
+                "/widget/nearpush/bank.inline.less",
+                "/widget/nearby/nearby.inline.less",
+                "/widget/nbserachbox/nbserachbox.inline.less",
+                "/widget/navethumbnail/navethumbnail.inline.less",
+                "/widget/navebox/navebox.inline.less",
+                "/static/css/index.inline.less",
+                "/widget/locsearch/locsearch.inline.less",
+                "/widget/hotcity/hotcity.inline.less",
+                "/widget/error/error.inline.less",
+                "/widget/curloc/curloc.inline.less",
+                "/widget/cateinfo/cateinfo.inline.less",
+                "/widget/bussinesslist/bussinesslist.inline.less",
+                "/widget/businesslist/businesslist.inline.less",
+                "/widget/bizarea/bizarea.inline.less",
+                "/widget/allcity/allcity.inline.less",
+                "/widget/addestop/addestop.inline.less",
+                "/static/css/sventry.inline.less",
+                "/static/css/setsubwaycity.inline.less",
+                "/static/css/setmylocation.inline.less",
+                "/static/css/mylocation.inline.less",
+                "/static/css/hao123.inline.less"
+            ],
+        "pkg_test/manual.js" :
+            [
+                "/widget/helper/helper.js",
+                "/widget/nearby/nearby.js",
+                "/widget/thumbnail/userheading.js",
+                "/widget/thumbnail/thumbnail.js",
+                "/widget/surface/surface.js",
+                "/widget/searchbox/searchbox.js",
+                "/widget/helper/revert.js",
+                "/widget/addestop/addestop.js"
+            ]
+    }
+}

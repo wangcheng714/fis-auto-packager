@@ -26,9 +26,10 @@ function createPackConf(resources, outputDir, projectName){
     var packResults = {};
 
     util.map(resources, function(packageKeyPrefix, packages){
+        //这里注意对于生成的packageKeyPrefix是是有格式要求的：第一个是module，最后一个是type
         var tokens = packageKeyPrefix.split("_"),
             module = tokens[0],
-            type = tokens[2];
+            type = tokens[tokens.length-1];
         if(!packResults[module]){
             packResults[module] = {};
         }

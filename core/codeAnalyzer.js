@@ -141,7 +141,7 @@ module.exports.getResource = function(dir, hashTable, defaultPackages){
 }
 
 function createPackageMap(autopackJsons, defaultPackages){
-    var index = 0;
+    var keyIndex = 0;
     util.map(autopackJsons, function(index, autopackJson){
         var filename = autopackJson.split("/").pop();
             module = filename.split("-").shift();
@@ -150,14 +150,15 @@ function createPackageMap(autopackJsons, defaultPackages){
 
             //construct package table
             util.map(packConf, function(path, patterns){
-                var pid = "p" + index;
-                index++;
+                var pid = "p" + keyIndex;
+                keyIndex++;
                 if(typeof patterns === 'string' || patterns instanceof RegExp){
                     patterns = [ patterns ];
                 }
+                var packageKey = fixManualPkgkey(path, module);
                 if(util.is(patterns, 'Array') && patterns.length){
                     defaultPackages[pid] = {
-                        file : path,
+                        file : packageKey,
                         regs : patterns,
                         module : module
                     };
@@ -170,3 +171,8 @@ function createPackageMap(autopackJsons, defaultPackages){
     });
 }
 
+//添加模块名前缀，防止不同模块出现相同的filename
+function fixManualPkgkey(filename, module){
+    filename = filename.replace(/\/|\./g, "_");
+    return module + "_" + filename;
+}

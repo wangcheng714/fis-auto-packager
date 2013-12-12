@@ -84,7 +84,7 @@ function mergeDefaultPackage(resources, defaultPackages){
         }else{
             mergedFile = mergeFiles[0];
         }
-        var packageKey = mergedFile.get("module") + "_" + file.replace(".", "_");
+        var packageKey = file;
         mergedFile.set("id", file);
         mergedFile.set("packageType", "manual");
         manualResult[packageKey] = [];

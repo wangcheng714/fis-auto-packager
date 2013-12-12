@@ -1,0 +1,19 @@
+{
+	"pack" : {
+        "pkg/manual.css" :
+            [
+                "/widget/ordererror/error.inline.less"
+            ],
+        "pkg/manual.js" :
+            [
+                "/widget/placelist/placelist.js",
+                "/widget/captain/captain.js",
+                "/widget/gotomovie/gotomovie.js",
+                "/widget/bookphone/bookphone.js",
+                "/widget/scopebook/scopebook.js",
+                "/widget/groupon/groupon.js",
+                "/widget/dishcategory/dishcategory.js",
+                "/static/js/vcode.js"
+            ]
+    }
+}
