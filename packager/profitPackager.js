@@ -4,7 +4,6 @@
  *      模型采用动态规划算法，正常计算依赖一定会和资源本身合并到一起，因为收益必然是最大的
  */
 
-//todo : modjs需要做特殊处理
 var benefitMap = {},
     File = require("../core/file.js"),
     util = require("../lib/util.js");
@@ -24,23 +23,6 @@ module.exports.package = function(resources, defaultPackages){
 
     util.map(newResources, function(packageKey, partResource){
         var packageResult = [];
-        if(packageKey == "common_sync_js"){
-
-//            apphistory : 57  poisearch :  56  highlight : 53   quickdelete : 54  renderlist :  50  sendrequest :  51  suggestion :  52
-//            searchdata :  55    cover :   66   header :   59   setcity :  58
-//            partResource[50].mergeStatic(partResource[51]);
-//            partResource[50].mergeStatic(partResource[52]);
-//            partResource[50].mergeStatic(partResource[53]);
-//            partResource[50].mergeStatic(partResource[54]);
-//            partResource[50].mergeStatic(partResource[55]);
-//            partResource[50].mergeStatic(partResource[57]);
-//
-//            partResource[55].mergeStatic(partResource[56]);
-//            partResource[55].mergeStatic(partResource[58]);
-//            partResource[55].mergeStatic(partResource[59]);
-//
-//            var benefitOne = getBenefit(partResource[50], partResource[55]);
-        }
         if(partResource.length >= 2){
             autoResult[packageKey] = mergePackage(partResource.shift(), partResource, packageResult);
         }else{

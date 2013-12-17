@@ -6,7 +6,9 @@ var autopack = require("../../fis-auto-packager.js"),
     logUrl = "http://wangcheng.fe.baidu.com/Fis_Static_Count.201312130000",
     outputDir = __dirname + "/pack/";
 
-autopack.package(dir, outputDir, "batman", logUrl, function(error, result){
+var modules = ["common","place","index","taxi","drive"];
+
+autopack.package(dir, outputDir, "batman", modules, logUrl, function(error, result){
     console.log(result);
 });
 

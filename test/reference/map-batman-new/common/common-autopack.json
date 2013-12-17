@@ -1,0 +1,25 @@
+{
+	"pack" : {
+        "pkg/manual.js" : [
+            "/widget/geolocation/*.js",
+            "/widget/url/url.js",
+            "/widget/fastclick/fastclick.js",
+            "/widget/cookie/cookie.js",
+            "/widget/broadcaster/broadcaster.js",
+            "/widget/backtop/backtop.js",
+            "/widget/appresize/appresize.js",
+            "/static/js/zepto.js"
+        ],
+        "pkg/manual.css" : [
+            "/widget/header/header.inline.less",
+            "/widget/traffictitle/traffictitle.inline.less",
+            "/widget/topbanner/topbanner.inline.less",
+            "/widget/suggestion/suggestion.inline.css",
+            "/widget/streetview/streetview.inline.less",
+            "/widget/quickdelete/quickdelete.inline.css",
+            "/widget/popup/popup.inline.css",
+            "/widget/nav/nav.inline.less",
+            "/static/css/layout.inline.css"
+        ]
+    }
+}

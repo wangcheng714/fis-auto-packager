@@ -22,7 +22,7 @@ var resources = {},
  *  数据结构 ：
  *      {"common_asnyc_js" : [pkg1,pkg2]}
  */
-function createPackConf(resources, outputDir, projectName){
+function createPackConf(resources, outputDir, moduels, projectName){
     var packResults = {};
 
     util.map(resources, function(packageKeyPrefix, packages){
@@ -30,20 +30,23 @@ function createPackConf(resources, outputDir, projectName){
         var tokens = packageKeyPrefix.split("_"),
             module = tokens[0],
             type = tokens[tokens.length-1];
-        if(!packResults[module]){
-            packResults[module] = {};
-        }
-        util.map(packages, function(index, pkgFile){
-            var files = pkgFile.get("mergedStatic"),
-                packageKey = "pkg/" + packageKeyPrefix + "_" + index + "." + type;
+        //只产出指定的模块
+        if(util.in_array(module, moduels)){
+            if(!packResults[module]){
+                packResults[module] = {};
+            }
+            util.map(packages, function(index, pkgFile){
+                var files = pkgFile.get("mergedStatic"),
+                    packageKey = "pkg/" + packageKeyPrefix + "_" + index + "." + type;
 
-            packResults[module][packageKey] = [];
+                packResults[module][packageKey] = [];
 
-            util.map(files, function(index, file){
-                packResults[module][packageKey].push(file.replace(/\w+:/, "/"));
+                util.map(files, function(index, file){
+                    packResults[module][packageKey].push(file.replace(/\w+:/, "/"));
+                });
+
             });
-
-        })
+        }
     });
 
     util.map(packResults, function(module, packResult){
@@ -61,10 +64,11 @@ function createPackConf(resources, outputDir, projectName){
  * @param dir : 编译后的项目目录
  * @param outputDir : 打包结果产出目录
  * @param projectName : 项目名称
+ * @param modules : 所有需要计算打包的模块名
  * @param logUrl : 获取log日志的url
  * @param callback :  callback(error, result)
  */
-module.exports.package = function(dir, outputDir, projectName, logUrl, callback){
+module.exports.package = function(dir, outputDir, projectName, modules, logUrl, callback){
     resources = codeAnalyzer.getResource(dir, hashTable, defaultPackages);
     logAnalyzer.analyzeLog(function(error, records){
         if(error){
@@ -96,7 +100,7 @@ module.exports.package = function(dir, outputDir, projectName, logUrl, callback)
             var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
             var packageResults = packager.package(resources, defaultPackages);
             var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
-            var resultFile = createPackConf(packageResults, outputDir, projectName);
+            var resultFile = createPackConf(packageResults, outputDir, modules, projectName);
             var resultFiles = {
                 "urlPv" : urlPvFile,
                 "staticUrlMap" : staticUrlMapFile,
