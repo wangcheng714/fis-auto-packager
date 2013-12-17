@@ -4,6 +4,7 @@ var codeAnalyzer = require("./core/codeAnalyzer.js"),
     packager = require("./packager/profitPackager.js"),
     packageReport = require("./lib/report.js"),
     util = require("./lib/util.js"),
+    log = require("./lib/log.js"),
     JsonUtil = require("./lib/jsonUtil.js"),
     fs = require("fs"),
     AdmZip = require('adm-zip'),
@@ -74,38 +75,42 @@ module.exports.package = function(dir, outputDir, projectName, modules, logUrl, 
         if(error){
             callback(error, null);
         }else{
-            var urlPvFile = packageReport.printUrlPvs(records, outputDir, projectName);
-            for(var i=0; i<records.length; i++){
-                var record = records[i],
-                    syncStatics = record.get("sync"),
-                    asyncStatics = record.get("async");
-
-                for(var j=0; j<syncStatics.length; j++){
-                    var resource = resources[syncStatics[j]];
-                    if(resource){
-                        resource.addPage(record.get("hash"), record.get("pv"));
-                        resource.addPv(record.get("pv"));
-                        //todo : 目前策略是优先考虑sync，是否需要改成根据sync和async的pv判断应该为哪一种类型？
-                        resource.setLoadType("sync");
+            var resultFiles = null;
+            try{
+                var urlPvFile = packageReport.printUrlPvs(records, outputDir, projectName);
+                for(var i=0; i<records.length; i++){
+                    var record = records[i],
+                        syncStatics = record.get("sync"),
+                        asyncStatics = record.get("async");
+                    for(var j=0; j<syncStatics.length; j++){
+                        var resource = resources[syncStatics[j]];
+                        if(resource){
+                            resource.addPage(record.get("hash"), record.get("pv"));
+                            resource.addPv(record.get("pv"));
+                            //todo : 目前策略是优先考虑sync，是否需要改成根据sync和async的pv判断应该为哪一种类型？
+                            resource.setLoadType("sync");
+                        }
+                    }
+                    for(var k=0; j<asyncStatics.length; k++){
+                        var resource = resources[asyncStatics[k]];
+                        if(resource){
+                            resource.addPv(record.get("pv"));
+                            resource.setLoadType("async");
+                        }
                     }
                 }
-                for(var k=0; j<asyncStatics.length; k++){
-                    var resource = resources[asyncStatics[k]];
-                    if(resource){
-                        resource.addPv(record.get("pv"));
-                        resource.setLoadType("async");
-                    }
+                var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
+                var packageResults = packager.package(resources, defaultPackages);
+                var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
+                var resultFile = createPackConf(packageResults, outputDir, modules, projectName);
+                resultFiles = {
+                    "urlPv" : urlPvFile,
+                    "staticUrlMap" : staticUrlMapFile,
+                    "packagePredict" : predictPackageResultFile,
+                    "packageConf" : resultFile
                 }
-            }
-            var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
-            var packageResults = packager.package(resources, defaultPackages);
-            var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
-            var resultFile = createPackConf(packageResults, outputDir, modules, projectName);
-            var resultFiles = {
-                "urlPv" : urlPvFile,
-                "staticUrlMap" : staticUrlMapFile,
-                "packagePredict" : predictPackageResultFile,
-                "packageConf" : resultFile
+            }catch(error){
+                callback(error, null);
             }
             callback(null, resultFiles);
         }

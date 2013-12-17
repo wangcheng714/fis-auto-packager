@@ -1,5 +1,6 @@
 var File = require("./file.js"),
     util = require("../lib/util.js"),
+    log = require("../lib/log.js"),
     gzip = require('gzip-js'),
     fs = require("fs");
 
@@ -89,6 +90,7 @@ function _getDeps(file, filetype, files, save){
  * @returns {{}}
  */
 module.exports.getResource = function(dir, hashTable, defaultPackages){
+    log.debug(" start [getResource] " + dir);
     var configDir = dir + "/config",
         autopackDir = dir + "/auto-pack";
 
@@ -148,6 +150,7 @@ module.exports.getResource = function(dir, hashTable, defaultPackages){
             }
         }
     }
+    log.debug(" end [getResource] " + dir);
     return files;
 }
 
@@ -174,8 +177,7 @@ function createPackageMap(autopackJsons, defaultPackages){
                         module : module
                     };
                 }else{
-                    //fis.log.warning('invalid pack config [' + path + ']');
-                    //todo : error 处理
+                    log.error('invalid pack config [' + path + ']');
                 }
             });
         }

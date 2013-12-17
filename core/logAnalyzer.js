@@ -2,6 +2,7 @@
 
 var Record = require("./record.js"),
     util = require("../lib/util.js"),
+    log = require("../lib/log.js"),
     request = require("request"),
     fs = require("fs");
 
@@ -94,6 +95,7 @@ function processLogData(data, hashTable){
  * @param hashTable
  */
 module.exports.analyzeLog = function(callback, url, hashTable){
+    log.debug(" start [analyzeLog] " + url);
     var logUrlPrefix = "http://logdata.baidu.com/?m=Data&a=GetData&token=ns_j0vmor9lig2czsfdk78ueqbh3yapw&product=ns&item=Fis_Static_Count&date=",
         logTime = miniteDate(7),
         logUrl = logUrlPrefix + logTime;
@@ -105,6 +107,7 @@ module.exports.analyzeLog = function(callback, url, hashTable){
             callback(error);
         }else{
             var records = processLogData(body, hashTable);
+            log.debug(" end [analyzeLog] " + url);
             callback(null, records);
         }
     });

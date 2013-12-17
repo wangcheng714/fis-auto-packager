@@ -6,7 +6,8 @@
   "dependencies": {
     "request" : "*",
     "adm-zip" : "*",
-    "gzip-js" : "*"
+    "gzip-js" : "*",
+    "iconv-lite" : "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

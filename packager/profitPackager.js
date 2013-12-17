@@ -6,14 +6,15 @@
 
 var benefitMap = {},
     File = require("../core/file.js"),
-    util = require("../lib/util.js");
+    util = require("../lib/util.js"),
+    log = require("../lib/log.js");
 
 var RTT = 2,  //round trip time 不能包含建立tcp链接的时间，因为http 1.1都是用了 keep-alive 没有tcp建立的开销
     SPEED = 20,
     benefitMap = {};
 
 module.exports.package = function(resources, defaultPackages){
-
+    log.debug(" start [package]");
     var manualResult = mergeDefaultPackage(resources, defaultPackages);
     var newResources = partResources(resources),
         autoResult = {};
@@ -22,14 +23,17 @@ module.exports.package = function(resources, defaultPackages){
     fixModjs(newResources);
 
     util.map(newResources, function(packageKey, partResource){
+        log.debug(" start package key [" + packageKey + "]", 1);
         var packageResult = [];
         if(partResource.length >= 2){
             autoResult[packageKey] = mergePackage(partResource.shift(), partResource, packageResult);
         }else{
             autoResult[packageKey] = [partResource.pop()];
         }
+        log.debug(" end package key [" + packageKey + "]", 1);
     });
     util.merge(autoResult, manualResult);
+    log.debug(" end [package]");
     return autoResult;
 }
 
@@ -208,10 +212,9 @@ function getLargestBenefit(staticA, resources){
             }
         }
     });
-//todo : 记录打包的过程
-if(staticA.get("module") == "common" && staticA.get("type") == "js" && largestResource != null){
-    console.log(staticA.get("id") + " and " + largestResource.get("id") + " merged benefit is = " + largestBenefit);
-}
+    if(largestResource != null){
+        log.debug(" [largestBenefit] " + staticA.get("id") + " and " + largestResource.get("id") + " merged benefit is = " + largestBenefit, 2);
+    }
     return {
         "benefit" : largestBenefit,
         "resource" : largestResource,
