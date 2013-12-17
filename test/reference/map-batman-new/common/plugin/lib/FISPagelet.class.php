@@ -1,5 +1,71 @@
 <?php
 if (!class_exists('FISResource')) require_once(dirname(__FILE__) . '/FISResource.class.php');
+
+
+
+/**
+ * Checks a string for UTF-8 encoding.
+ *
+ * @param  string $string
+ * @return boolean
+ */
+function isUtf8($string) {
+    $length = strlen($string);
+
+    for ($i = 0; $i < $length; $i++) {
+        if (ord($string[$i]) < 0x80) {
+            $n = 0;
+        }
+
+        else if ((ord($string[$i]) & 0xE0) == 0xC0) {
+            $n = 1;
+        }
+
+        else if ((ord($string[$i]) & 0xF0) == 0xE0) {
+            $n = 2;
+        }
+
+        else if ((ord($string[$i]) & 0xF0) == 0xF0) {
+            $n = 3;
+        }
+
+        else {
+            return FALSE;
+        }
+
+        for ($j = 0; $j < $n; $j++) {
+            if ((++$i == $length) || ((ord($string[$i]) & 0xC0) != 0x80)) {
+                return FALSE;
+            }
+        }
+    }
+
+    return TRUE;
+}
+
+/**
+ * Converts a string to UTF-8 encoding.
+ *
+ * @param  string $string
+ * @return string
+ */
+function convertToUtf8($string) {
+
+    if (!is_string($string)) {
+        return '';
+    }
+
+    if (!isUtf8($string)) {
+        if (function_exists('mb_convert_encoding')) {
+            $string = mb_convert_encoding($string, 'UTF-8', 'GBK');
+        } else {
+            $string = iconv('GBK','UTF-8//IGNORE', $string);
+        }
+    }
+
+    return $string;
+}
+
 /**
  * Class FISPagelet
  * DISC:
@@ -26,6 +92,13 @@ class FISPagelet {
         array(),
         array()
     );
+
+    /**
+     * 记录pagelet_id
+     * @var string
+     */
+    static private $_pagelet_id = null;
+
     static private $_session_id = 0;
     static private $_context = array();
     static private $_contextMap = array();
@@ -51,9 +124,11 @@ class FISPagelet {
     static public $cp;
     static public $arrEmbeded = array();
 
-    //auto package
-    static private $sampleRate = 1;
+    static public $cdn;
+	//auto package
+	static private $sampleRate = 1;
     static private $fid;
+    static private $pageName = "";
     static private $usedStatics = array();
 
     static public function addHashTable($strId, $smarty){
@@ -76,10 +151,10 @@ class FISPagelet {
                 array(self::MODE_BIGPIPE, self::MODE_NOSCRIPT))
         ) {
             self::$default_mode = self::_parseMode($default_mode);
-
         } else {
             self::$default_mode = self::MODE_NOSCRIPT;
         }
+
         $is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH'])
             && (strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest');
         if ($is_ajax) {
@@ -165,6 +240,8 @@ class FISPagelet {
      */
     static public function start($id, $mode = null, $group = null) {
         $has_parent = !empty(self::$_context);
+
+        //这个是用来判断是否widget是async加载的。
         $special_flag = false;
         if ($mode !== null) {
             $special_flag = true;
@@ -175,7 +252,7 @@ class FISPagelet {
         } else {
             self::$widget_mode = self::$mode;
         }
-
+        self::$_pagelet_id = $id;
         $parent_id = $has_parent ? self::$_context['id'] : '';
         $qk_flag = self::$mode == self::MODE_QUICKLING ? '_qk_' : '';
         $id = empty($id) ? '__elm_' . $parent_id . '_' . $qk_flag . self::$_session_id ++ : $id;
@@ -276,8 +353,24 @@ class FISPagelet {
             }
             self::$widget_mode = self::$mode;
         }
+
         echo '</div>';
+
         return $ret;
+    }
+
+
+    /**
+     * 设置cdn
+     */
+    static public function setCdn($syncCdn, $asyncCdn) {
+        $syncCdn = trim($syncCdn);
+        $asyncCdn = trim($asyncCdn);
+        FISResource::setCdn(array($syncCdn, $asyncCdn));
+    }
+
+    static public function getCdn($type = 'sync') {
+        return FISResource::getCdn($type);
     }
 
 	static private function isSample($sample){
@@ -290,13 +383,14 @@ class FISPagelet {
     	$sampleRate = self::getSampleRate();
     	if(self::isSample($sampleRate)){
     		$fid = self::getFid();
+    		$pageName = self::getPageName();
 	    	if (!empty(self::$usedStatics)) {
 	            $timeStamp = time();
 	            $hashStr = '';
 	            self::$usedStatics= array_filter(array_unique(self::$usedStatics));
 	            $tmpStr = implode(',', self::$usedStatics);
 				$hashStr .= $tmpStr;
-				$code .= '(new Image()).src="http://nsclick.baidu.com/u.gif?pid=242&v=1&data=' . $tmpStr . '&sid=' . $timeStamp . '&hash=<STATIC_HASH>' . '&fid=' . $fid . '";';
+				$code .= '(new Image()).src="http://nsclick.baidu.com/u.gif?pid=242&v=1&data=' . $tmpStr . "&page=" . $pageName . '&sid=' . $timeStamp . '&hash=<STATIC_HASH>' . '&fid=' . $fid . '";';
 	            $code = str_replace("<STATIC_HASH>", substr(md5($hashStr), 0, 10), $code);
 	        }
     	}
@@ -319,6 +413,15 @@ class FISPagelet {
     	return self::$sampleRate;
     }
 
+    static public function getPageName(){
+     	return self::$pageName;
+    }
+
+    static public function setPageName($page){
+        self::$pageName = $page;
+    }
+
+
     /**
      * 渲染静态资源
      * @param $html
@@ -333,7 +436,7 @@ class FISPagelet {
             $loadModJs = (FISResource::getFramework() && ($arr['js'] || $resource_map));
             if ($loadModJs) {
                 foreach ($arr['js'] as $js) {
-                    $code .= '<script type="text/javascript" src="' . $js . '"></script>';
+                    $code .= '<script type="text/javascript" src="' . self::getCdn() . $js . '"></script>';
                     if ($js == FISResource::getFramework()) {
                         if ($resource_map) {
                             $code .= '<script type="text/javascript">';
@@ -364,8 +467,8 @@ class FISPagelet {
             $html = str_replace(self::JS_SCRIPT_HOOK, $code . self::JS_SCRIPT_HOOK, $html);
             $code = '';
             if (!empty($arr['css'])) {
-                $code = '<link rel="stylesheet" type="text/css" href="'
-                    . implode('" /><link rel="stylesheet" type="text/css" href="', $arr['css'])
+                $code = '<link rel="stylesheet" type="text/css" href="' . self::getCdn()
+                    . implode('" /><link rel="stylesheet" type="text/css" href="' . self::getCdn(), $arr['css'])
                     . '" />';
             }
             if (!empty($arr['style'])) {
@@ -417,6 +520,7 @@ class FISPagelet {
                 'pkg' => array()
             )
         );
+
         //{{{
         foreach (self::$inner_widget[$mode] as $item) {
             foreach ($res as $key => $val) {
@@ -442,6 +546,16 @@ class FISPagelet {
             }
         }
         //}}}
+
+        //add cdn
+        foreach ((array)$res['js'] as $key => $js) {
+            $res['js'][$key] = self::getCdn() . $js;
+        }
+
+        foreach ((array)$res['css'] as $key => $css) {
+            $res['css'][$key] = self::getCdn() . $css;
+        }
+
         //tpl信息没有必要打到页面
         switch($mode) {
             case self::MODE_NOSCRIPT:
@@ -454,24 +568,25 @@ class FISPagelet {
                 );
                 break;
             case self::MODE_QUICKLING:
-                header('Content-Type: text/json;');
+                header('Content-Type: text/json;charset: utf-8');
                 if ($res['script']) {
-                    $res['script'] = implode("\n", $res['script']);
+                    $res['script'] = convertToUtf8(implode("\n", $res['script']));
                 }
                 if ($res['style']) {
-                    $res['style'] = implode("\n", $res['style']);
+                    $res['style'] = convertToUtf8(implode("\n", $res['style']));
                 }
                 foreach ($pagelets as &$pagelet) {
-                    $pagelet['html'] = self::insertPageletGroup($pagelet['html']);
+                    $pagelet['html'] = convertToUtf8(self::insertPageletGroup($pagelet['html']));
                 }
                 unset($pagelet);
-                //auto pack
+				//auto pack
 				$jsCode = self::getCountUrl();
                 if($jsCode != "" && !$_GET['fis_widget']){
                 	$res['script'] = $res['script'] ? $res['script'] . $jsCode : $jsCode;
                 }
+                $title = convertToUtf8(self::$_title);
                 $html = json_encode(array(
-                    'title' => self::$_title,
+                    'title' => $title,
                     'pagelets' => $pagelets,
                     'resource_map' => $res
                 ));
@@ -494,10 +609,10 @@ class FISPagelet {
                 $html .= "\n";
 
                 if ($res['script']) {
-                    $res['script'] = implode("\n", $res['script']);
+                    $res['script'] = convertToUtf8(implode("\n", $res['script']));
                 }
                 if ($res['style']) {
-                    $res['style'] = implode("\n", $res['style']);
+                    $res['style'] = convertToUtf8(implode("\n", $res['style']));
                 }
                 $html .= "\n";
                 foreach($pagelets as $index => $pagelet){

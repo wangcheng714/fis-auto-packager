@@ -11,6 +11,8 @@ var Record = function(hash, sync, async, pv, tpl, url){
     this.async = remove_intersect(this.sync, this.async);
     //记录这个record需要使用哪些资源包
     this.packages = {};
+    //记录静态资源的请求个数
+    this.requestNum = 0;
 }
 
 Record.prototype.get = function(key){

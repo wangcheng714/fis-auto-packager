@@ -21,7 +21,7 @@
                 {%$srcname = $list_item.ext.src_name%}
             {%else%}
                 {%$srcname = ""%}
-            {%/if%}                    
+            {%/if%}
 
             {%*模板已经拆分,此处保留为其它行业的电影相关点用*%}
             {%if ($isMovie)%}
@@ -49,6 +49,11 @@
                     {%else%}
                         <p class="addr text-ellipsis">{%htmlspecialchars_decode($list_item.addr)%}</p>
                     {%/if%}
+                    {%if $list_item.ext && $list_item.ext.detail_info && $list_item.ext.detail_info.is_gwj%}
+                        {%if $list_item.ext.detail_info.activity_gwj && $list_item.ext.detail_info.activity_gwj.is_book%}
+                            <p class="list-tip-gwj">观影减10元,万达5折优惠<p>
+                        {%/if%}
+                    {%/if%}
 
                     {%* 路线类的点 不显示路线搜索按钮*%}
                     {%if $list_item.poiType != 2 && $list_item.poiType != 4%}
@@ -75,6 +80,9 @@
                             <span class="list-tit text-ellipsis tit-len{%$count%}">
                                 {%htmlspecialchars_decode($list_item.name)%}
                             </span>
+                            {%if $srcname == 'cater' && $extd.wap_bookable == 1%}
+                                <em class="list-icon icon-book"></em>
+                            {%/if%}
                             {%if $list_item._hasGroupon %}
                                 <em class="list-icon icon-groupon"></em>
                             {%/if%}
@@ -165,6 +173,20 @@
                         </p>
                         <em class="list-arrow"></em>
                     </div>
+                    {%*双旦活动文案*%}
+                    {%if  $list_item.ext.src_name == "hotel" && $list_item.ext && $list_item.ext.detail_info && $list_item.ext.detail_info.is_gwj%}
+                        {%if $list_item.ext.detail_info.activity_gwj%}
+                            {%if $list_item.ext.detail_info.activity_gwj.is_book%}
+                                <p class="list-actbook">
+                                    为人民服务酒店，入住立返<span>30元</span>代金券
+                                </p>
+                            {%elseif count($list_item.ext.detail_info.activity_gwj.groupon)%}
+                                <p class="list-acttuan">
+                                    为人民服务商户，团购全场<span>9折</span>，满<span>100</span>再返<span>200</span>
+                                </p>
+                            {%/if%}
+                        {%/if%}
+                    {%/if%}
 
                     {%* 路线类的点 不显示路线搜索按钮*%}
                     {%if $list_item.poiType != 2 && $list_item.poiType != 4%}
@@ -179,6 +201,9 @@
                                    data-log="{code:{%$STAT_CODE.PLACE_LIST_TELEPHONE_CLICK%}, wd:'{%$wd%}', name: '{%htmlspecialchars_decode($list_item.name)%}'}">
                                     <span class="btn-inner"><b class="btn-tel-icon"></b>{%$tel_data[0]%}</span>
                                 </a>
+                            {%/if%}
+                            {%if $srcname == 'cater' && $extd.wap_bookable == 1%}
+                                <a href="/mobile/webapp/place/cater/force=superman&qt=bookinfo?uid={%$list_item.uid%}&thirdId={%$extd.ori_info.shop_id%}" class="btn-book" data-log="{code:{%$STAT_CODE.PLACE_CATER_LIST_BOOK_SEAT_CLICK%}, wd:'{%$wd%}', name: '{%htmlspecialchars_decode($list_item.name)%}', srcname: 'cater'}">订座</a>
                             {%/if%}
                             {%if $list_item._isHotelBookable%}
                                 <a href="{%$list_item._hotelBookUrl%}" class="btn-book" content="place/hotelbook/qt=otaroom"
@@ -232,11 +257,7 @@
     }
     require("placelist.js").init(listData);
 
-    //添加POI结果页的展现量
     var stat = require('common:widget/stat/stat.js');
-    var wd = $('.common-widget-nav .title span').text();
-    stat.addStat(STAT_CODE.PLACE_LIST_VIEW, {'wd': wd});
-
     var loc = require('common:widget/geolocation/location.js');
     if(loc.hasExactPoi()){
     stat.addStat(STAT_CODE.PLACE_LIST_GEO_SUC);

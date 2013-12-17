@@ -31,7 +31,7 @@ var util = require('common:static/js/util.js'),
                 $btnConfirm = $el.find('.btn-confirm'),
                 $formInputWrapper = $el.find('.home .input-wrapper');
 
-            if (document.referrer) {
+            if (document.referrer && document.referrer.indexOf('taxi.map.baidu.com') < 0) {
                 $btnBack.show();
                 $btnBack.on('click', $.proxy(this.onBtnBackClick, this));
             }
@@ -158,6 +158,8 @@ var util = require('common:static/js/util.js'),
                 address = data.addr;
                 address = address.address || (address.city + address.district + address.street);
                 this.$routeStart.val(address);
+
+                storage.set('cityCode', cityCode);
             } else {
                 popup.open({
                     text: '当前城市不支持打车！',

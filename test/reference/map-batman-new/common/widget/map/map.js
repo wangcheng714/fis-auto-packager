@@ -36,68 +36,59 @@ module.exports = {
      */
     destPois: [],
     /**
-     * 地图组件初始化入口，可以被模块多次调用，内部保证只初始化一次 
+     * 地图组件初始化入口
      * @param {Function} cbk 回调
      */
     init: function (cbk) {
-        var _this = this;
-
-        if(!_this._initialized) {
-
-            // 底图监控初始化
-            (require('common:widget/monitor/maplog.js')).init();
-
-            // 派发底图开始事件
-            listener.trigger('common.map', 'start');
-            
-            _this.getAsyncWidget(function(){
-
-                var BMap = _this._BMap = arguments[0];
-
-                // 派发JS加载完成事件
-                listener.trigger('common.map', 'jsloaded');
-
-                // 遍历异步组件 保存到当前对象
-                $.each(arguments, function (index, item) {
-                    if(item._className_) {
-                        if(/InfoWindow/.test(item._className_)) {
-                            iwController[item._className_] = item;
-                        } else {
-                            _this[item._className_] = item;
-                        }
-                    }
-                });
-
-                // 初始化地图
-                _this._initMap();
-
-                // 业务模块回调
-                cbk && cbk(BMap);
-
-                _this._initialized = true;
-            });
+        if(!this._initialized) {
+            this._init(cbk);
         } else {
-            // 非初始化状态需要先将地图show出来
-            _this.show();
-
-            cbk && cbk(_this._BMap);
-
-            _this.trafficControl.update();
+            this.show(); // 非初始化状态需要先将地图show出来
+            cbk && cbk(this._BMap);
+            this.trafficControl.update();
         }
     },
     /**
-     * 设置矢量图
+     * 地图组件真正初始化函数 
+     * @param {Function} cbk 回调
      */
-    setVector: function () {
-        this.map.config.vectorMapLevel = 12;
+    _init: function (cbk) {
+        var _this = this;
+        // 底图性能监控初始化
+        (require('common:widget/monitor/maplog.js')).init();
+        // 派发底图开始事件
+        listener.trigger('common.map', 'start');
+        // 获取异步组件 保存引用到当前对象
+        this._getAsyncWidget(function(){
+            var BMap = _this._BMap = arguments[0];
+            listener.trigger('common.map', 'jsloaded'); // 派发JS加载完成事件
+            $.each(arguments, function (index, item) {
+                if(item._className_) {
+                    if(/InfoWindow/.test(item._className_)) {
+                        iwController[item._className_] = item;
+                    } else {
+                        _this[item._className_] = item;
+                    }
+                }
+            });
+            _this._initMap();
+            _this._initialized = true;
+            cbk && cbk(BMap);
+        });
     },
     /**
-     * 设置栅格图
+     * 设置底图为矢量图
      */
-    setTiles: function () {
-        this.config.vectorMapLevel = 99;
+    setVector: function () {
+        this._map.config.vectorMapLevel = 12;
+    },
+    /**
+     * 设置底图为栅格图
+     */
+    setRaster: function () {
+        this._map.config.vectorMapLevel = 99;
         if(window._WISE_INFO && window._WISE_INFO.netspeed <= 300){
-            this.map.enableHighResolution();
+            this._map.enableHighResolution();
         }
     },
     /**
@@ -142,7 +133,7 @@ module.exports = {
         // 显示地图容器
         this.show();
 
-        // 地图对象
+        // 创建地图实例
         var map = this._map = new this._BMap.Map('map-holder', {
             maxZoom: 18,
             minZoom: 3,
@@ -157,12 +148,9 @@ module.exports = {
         map.enableInertialDragging();
 
         // 绑定事件
-        this._bind();
+        this._bindEvent();
         // 初始化地图控件
         this._initControl();
-        // 添加底图可点
-        this._mapClick();
-
         // 派发JS加载完成事件
         listener.trigger('common.map', 'init', map);
     },
@@ -182,14 +170,18 @@ module.exports = {
         this._fixCenterPos();
     },
     /**
-     * 绑定图区相关事件
+     * 监听事件
      */
-    _bind: function () {
+    _bindEvent: function () {
 
         var _this = this,
             map = this._map,
             BMap = this._BMap;
 
+        // 绑定图区事件 增加底图可点功能 
+        this._bindMapClick();
+
+        // 监听定位成功
         listener.on('common.geolocation', 'success', function (event, data) {
 
             var href = url.get(),
@@ -206,8 +198,7 @@ module.exports = {
                     data.isInitGeo === false ||
                     pageState.showmygeo == 1 ||
                     (module == 'index' && action == 'index' && isLanding)
-                ) &&
-                !locator.isUserInput()
+                ) && !locator.isUserInput()
             ) {
 
                 _this.addGLCenter(center);
@@ -220,7 +211,7 @@ module.exports = {
                 _this._map.removeOverlay(_this.geolocationMarker);
                 _this.geolocationMarker = undefined;
             }
-            var radius = data.addr.accuracy;
+            var radius = data.addr.﻿accuracy;
             if (radius !== null) {
                 _this.addGLCircle(center, radius);
             }
@@ -271,24 +262,19 @@ module.exports = {
             _this._addLazyControl();
         }, 3000);
 
-        // 监听页面切换 隐藏地图组件
-        listener.on('common.page', 'switchend', function () {
-
-        });
-
+        // 监听页面切换完成 目前只能通过pagename判断是否需要隐藏地图
         listener.on('common.page', 'pageloaded', function () {
             if(!/map/.test(window._APP_HASH.page)) {
                 _this.hide();
             }
         });
-
     },
     /**
      * 绑定地图点击事件
      * 事件派发顺序: 
      * iw.touchstart -> map.click -> iw.click -> hotstop.click -> vector.click
      */
-    _mapClick: function () {
+    _bindMapClick: function () {
         var _this = this,
             map = this._map;
 
@@ -312,29 +298,34 @@ module.exports = {
         });
 
         // 矢量底图可点
-        map.addEventListener("onvectorclick", function (e) {
+        map.addEventListener("onvectorclick", function(e) {
+            if (e.form == "madian") {
+                //麻点和底图派发的是同一事件 此处阻止继续进行事件调度 by zhijia
+                return;
+            };
             var iwOverlay = _this.iwController.get();
 
             // 这里有两个地方会跳过，shengxuanwei@baidu.com
             // 1. 麻点可点的情况下，不出底图可点
             // 2. 弹框下面的底图可点
             if (iwOverlay && iwOverlay.skipClickHandler) return;
+            if (e.from == "base") {
+                var iconInfo = e.iconInfo;
+                if (iconInfo.uid && iconInfo.name && iconInfo.point) {
+                    // 矢量地图可点统计
+                    stat.addStat(COM_STAT_CODE.MAP_VECTOR_MARKER_CLICK);
 
-            var iconInfo = e.iconInfo;
-            if (iconInfo.uid && iconInfo.name && iconInfo.point) {
-                // 矢量地图可点统计
-                stat.addStat(COM_STAT_CODE.MAP_VECTOR_MARKER_CLICK);
-
-                var pt = map.pixelToPoint(iconInfo.point);
-                iwOverlay = _this.iwController.get(mapConst.IW_VCT);
-                iwOverlay.setData(mapConst.IW_VCT, {
-                    json: [{
-                        uid: iconInfo.uid,
-                        name: iconInfo.name,
-                        geo: "1|" + pt.lng + ',' + pt.lat
-                    }]
-                }).switchTo(0);
-            }
+                    var pt = map.pixelToPoint(iconInfo.point);
+                    iwOverlay = _this.iwController.get(mapConst.IW_VCT);
+                    iwOverlay.setData(mapConst.IW_VCT, {
+                        json: [{
+                            uid: iconInfo.uid,
+                            name: iconInfo.name,
+                            geo: "1|" + pt.lng + ',' + pt.lat
+                        }]
+                    }).switchTo(0);
+                }
+            };
         });
         map.addEventListener("click", function (e) {
             var iwOverlay = _this.iwController.get();
@@ -389,9 +380,7 @@ module.exports = {
             return;
         }
         this._isAddControl = true;
-
         var map = this._map;
-
         // 添加交通流量控件
         map.addControl(this.trafficControl);
         // 添加缩放控件
@@ -402,7 +391,6 @@ module.exports = {
         map.addControl(this.geoControl);
         // 添加比例尺控件
         map.addControl(this.scaleControl);
-
         listener.trigger('common.map', 'addlazycontrol');
     },
     /**
@@ -413,8 +401,8 @@ module.exports = {
             map = this._map,
             BMap = this._BMap;
 
+        // 初始化路况控件
         this.trafficControl = new this.TrafficControl();
-
         this.trafficControl.addEventListener('click', function (e) {
             // 交通路况marker点击量
             stat.addStat(COM_STAT_CODE.MAP_TRAFFIC_MARKER_CLICK);
@@ -433,14 +421,18 @@ module.exports = {
             _this.iwController.get(mapConst.IW_TFC).hide();
         });
 
+        // 初始化缩放控件
         this.zoomControl = new this.ZoomControl();
 
+        // 初始化菜单控件
         if(!util.isIPad()){
             this.menuControl = new this.MenuControl();
         }
         
+        // 初始化定位控件
         this.geoControl = new this.GeoControl();
 
+        // 初始化比例尺控件
         var scaleAnchor = BMAP_ANCHOR_BOTTOM_LEFT;
         var scaleOffset = new BMap.Size(52, 22);
         if (util.isIPad()) {
@@ -452,17 +444,17 @@ module.exports = {
             offset: scaleOffset
         });
 
-        // 需要添加同步控件
+        // 添加同步控件
         this._addSyncControl();
     },
     /**
      * 获取异步组件
+     * @param {function} cbk 回调函数
      */
-    getAsyncWidget : function (cbk) {
+    _getAsyncWidget : function (cbk) {
         require.async([
             'common:widget/api/api.js',
             'common:widget/api/ext/circleoverlay.js',
-            'common:widget/api/ext/basecontrol.js',
             'common:widget/api/ext/custommarker.js',
             'common:widget/api/ext/geocontrol.js',
             'common:widget/api/ext/linestepcontrol.js',
@@ -482,8 +474,7 @@ module.exports = {
         var nowCenter = locator.getCenterPoi(),
             locCenter = locator.getMyCenterPoi();
         if (
-            locator.hasExactPoi() &&
-            !locator.isUserInput() && 
+            locator.hasExactPoi() && !locator.isUserInput() &&
             locCenter &&
             locCenter.x == nowCenter.x && 
             locCenter.y == nowCenter.y
@@ -492,6 +483,13 @@ module.exports = {
         } else {
             return false;
         }
+    },
+    /**
+     * 自定义覆盖物Marker类
+     * @return CustomMarker
+     */
+    getCustomMarker: function () {
+        return this.CustomMarker;
     },
     /**
      * 获取地图API类
@@ -505,7 +503,7 @@ module.exports = {
      * @return Map
      */
     getMap: function(){
-        return this._map;
+        return this._map || {};
     },
     /**
      * 获取InfoWindow实例
@@ -522,7 +520,6 @@ module.exports = {
     getLineStepControl: function(){
         return this.lineStepControl;
     },
-
     /**
      * 打开定位点的气泡
      */
@@ -567,7 +564,9 @@ module.exports = {
             }
         });
     },
-
+    /**
+     * 修订定位点的位置
+     */
     _fixCenterPos: function () {
         var _this = this;
         setTimeout(function () {

@@ -74,9 +74,11 @@ UserHeading.prototype.start = function(dom){
  * @return {boolean} 是否支持
  */
 UserHeading.prototype.isSupport = function(){
-    var ua = navigator.userAgent;
-    if (ua.indexOf('Android') > -1 || // android暂时不开放该功能，不够准确
-        !window.DeviceOrientationEvent) {   // 没有事件，不支持
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('android') > -1 || // android暂时不开放该功能，不够准确
+        !window.DeviceOrientationEvent
+        || (ua.indexOf('ucweb') > -1 
+            && ua.indexOf('linux') > -1)) {   // 没有事件，不支持
         return false;
     }
     return true;

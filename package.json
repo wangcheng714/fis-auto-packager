@@ -5,7 +5,8 @@
   "main": "fis-auto-packager.js",
   "dependencies": {
     "request" : "*",
-    "adm-zip" : "*"
+    "adm-zip" : "*",
+    "gzip-js" : "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

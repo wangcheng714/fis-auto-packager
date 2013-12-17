@@ -16,7 +16,8 @@
                 "data"=>[
                     "other_info"=>$data.content.ext.other_info,
                     "uid"=>$data.uid,
-                    "name"=>$data.content.name
+                    "name"=>$data.content.name,
+                    "info"=>$data.content.ext.detail_info
                 ]
             ],
             [

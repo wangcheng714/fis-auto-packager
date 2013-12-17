@@ -60,6 +60,7 @@ var bindList = function () {
 			href = $item.data("href"),
             name = $item.find('.rl_li_title').text(),
             isGen = _cacheData && _cacheData["isGenRequest"],
+            isGwj = _cacheData && _cacheData["activity"],
             target = evt.target;
             
         // 过滤路线按钮，防止重复触发
@@ -67,7 +68,7 @@ var bindList = function () {
         	return;
         }
         isGen = isGen == 1 ? 1 : 0;
-        stat.addCookieStat(STAT_CODE.PLACE_LIST_CLICK, {'wd': wd, 'name': name, 'is_gen' : isGen}, function(){
+        stat.addCookieStat(STAT_CODE.PLACE_LIST_CLICK, {'wd': wd, 'name': name, 'is_gen' : isGen, 'is_gwj': isGwj}, function(){
         	url.navigate(href);
         });
     });

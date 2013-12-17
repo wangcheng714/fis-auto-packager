@@ -1,1 +1,0 @@
-define("common:widget/map/preloader.js",function(i,o,n){n.exports={init:function(){i.async(["common:widget/api/api.js","common:widget/api/ext/tfcinfowindow.js"]),i("common:widget/map/plugin.js").getVectorMdl()}}});

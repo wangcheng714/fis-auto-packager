@@ -77,11 +77,20 @@
            <a>发起导航</a>
            <p class="nav-tip"></p>
         </div>
-        {%if ($result._platform == 'android')%}
-            <div class="send-phone">
-                <em class="send-phone-icon"></em>
-                <a href='' id="share-to-friends">分享给好友</a>
-            </div>
+        {%* android 才支持传内容的短信掉起接口*%}
+        {%if ($result._browser_info.platform == 'android' )%}
+            {%* qq浏览器不支持传内容，这里过滤掉 *%}
+            {%if ($result._browser_info.browser != 'mqqbrowser' )%}
+                {%* android 2.3 及以下的不支持传内容 *%}
+                {%if ($result._browser_info.browser != 'android' || 
+                ($result._browser_info.browser == 'android' && $result._browser_info.version > 2.3) )%}
+                    <div class="send-phone">
+                        <em class="send-phone-icon"></em>
+                        <a href='javascript:void(0)' id="share-to-friends">分享给好友</a>
+                    </div>
+
+                {%/if%}
+            {%/if%}
         {%/if%}
         <div id="drive-footer-ad" class="ad_area"></div>
     {%else%}

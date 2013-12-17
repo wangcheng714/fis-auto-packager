@@ -47,7 +47,7 @@
 <p class="mbg"></p>
 </section>
 <div id="banner" class="banner">
-<img src="/mobile/simple/static/place/widget/mcodeskey/banner_cf56912.jpg"/>
+<img src="/static/place/widget/mcodeskey/banner_cf56912.jpg"/>
 </div>
 {%script type="text/javascript"%}
         require('place:widget/mcodeskey/mcodeskey.js').initialize();

@@ -85,7 +85,7 @@
         {%if ($result._platform == 'android')%}
             <div class="send-phone">
                 <em class="send-phone-icon"></em>
-                <a href='' id="share-to-friends">分享给好友</a>
+                <a href='javascript:void(0)' id="share-to-friends">分享给好友</a>
             </div>
         {%/if%}
     </div>

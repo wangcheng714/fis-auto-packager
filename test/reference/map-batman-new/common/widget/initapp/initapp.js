@@ -2,16 +2,13 @@
  * @fileOverview 初始化地图需要用到的组件
  */
 
-var initGeo = require('common:widget/geolocation/initgeo.js'),
-	appResize = require('common:widget/appresize/appresize.js'),
+var appResize = require('common:widget/appresize/appresize.js'),
 	popup = require('common:widget/popup/popup.js'),
 	pagemgr = require('common:widget/pagemgr/pagemgr.js'),
 	FastClick =require('common:widget/fastclick/fastclick.js');
 
 
 var init = function () {
-	// 初始化定位
-	initGeo.init();
 
 	// 初始化高度
 	appResize.init();

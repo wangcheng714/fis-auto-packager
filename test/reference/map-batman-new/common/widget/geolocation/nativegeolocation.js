@@ -145,7 +145,7 @@ var NativeGeoLocation = {
 	geobyLocsdk : function(){
 		var me = this;
 		$.ajax({
-			'url': locSdkUrl,
+			'url': me.locSdkUrl,
 			'dataType': 'jsonp',
 			'success' : function(data){
 				if(data.error === 0 && me._isLocsdkTimeout === false){

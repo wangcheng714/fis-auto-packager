@@ -1,0 +1,44 @@
+.taxi-widget-vip-finish .logo {
+  position: relative;
+  margin: 20px auto;
+  width: 120px;
+  height: 40px;
+  box-sizing: border-box;
+  padding-left: 45px;
+}
+.taxi-widget-vip-finish .baidu-taxi {
+  font-size: 18px;
+  color: #666;
+}
+.taxi-widget-vip-finish .slogan {
+  font-size: 14px;
+  color: #999;
+}
+.taxi-widget-vip-finish .icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  background: url(/static/taxi/widget/home/images/bg-logo_ca9abcd.png) no-repeat 0 0;
+  background-size: 40px 40px;
+}
+.taxi-widget-vip-finish .content {
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 23px;
+  color: #333;
+  padding: 12px 18px;
+  margin: 10px;
+}
+.taxi-widget-vip-finish .count-down {
+  margin-top: 10px;
+  word-wrap: break-word;
+  font-size: 12px;
+  line-height: 21px;
+}
+.taxi-widget-vip-finish .count-down a {
+  word-wrap: break-word;
+}

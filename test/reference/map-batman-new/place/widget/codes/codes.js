@@ -53,21 +53,20 @@ function changeSelect(__city_id) {
 }
 
 
-function CodesHTML(__listData){
-    var str = ""
-    $.each(__listData.list,function(index,item){
-        str += '<dl class="list list_boder" id="'+item.uid+'">';
-        str += '<dt><span class="sn">'+(index+1)+'</span><span class="movie_name">'+item.name+'</span></dt>';
-        str += '<dd><span class="addr">'+item.address+'</span></dd><dd class="trad"></dd></dl>';
+function CodesHTML(__listData) {
+    var str = "";
+    $.each(__listData.list, function(index, item) {
+        str += '<dl class="list list_boder" id="' + item.uid + '">';
+        str += '<dt><span class="sn">' + (index + 1) + '</span><span class="movie_name">' + item.name + '</span></dt>';
+        str += '<dd><span class="addr">' + item.address + '</span></dd><dd class="trad"></dd></dl>';
     });
-    
+
     $("#list_info").html(str);
 
-    if(flag == true){
+    if (flag === true) {
         changeSelect(__listData.city_id);
         flag = false;
     }
-    selectCity();
     listHref(__listData);
 }
 //获取url参数
@@ -84,8 +83,8 @@ function GetQueryString(name) {
 function locator() {
     var bound = {};
 
-    bound.point_x = GetQueryString("point_x"),
-    bound.point_y = GetQueryString("point_y"),
+    bound.point_x = GetQueryString("point_x");
+    bound.point_y = GetQueryString("point_y");
     bound.city_id = GetQueryString("city_id");
 
     if (bound.city_id) {
@@ -99,12 +98,12 @@ function locator() {
 //异步请求城市信息
 
 function request(__msg) {
-    if(__msg.city_id){
-        var curReqUrl = HTTP + "/mobile/webapp/place/codes/force=simple&qt=cinemas&code="+__msg.code+"&sign="+__msg.sign + "&city_id="+__msg.city_id;
-    }else{
-       var curReqUrl = HTTP + "/mobile/webapp/place/codes/force=simple&qt=cinemas&code="+__msg.code+"&sign="+__msg.sign +"&"+__msg.bound;
+    var curReqUrl;
+    if (__msg.city_id) {
+        curReqUrl = HTTP + "/mobile/webapp/place/codes/force=simple&qt=cinemas&code=" + __msg.code + "&sign=" + __msg.sign + "&city_id=" + __msg.city_id;
+    } else {
+        curReqUrl = HTTP + "/mobile/webapp/place/codes/force=simple&qt=cinemas&code=" + __msg.code + "&sign=" + __msg.sign + "&" + __msg.bound;
     }
-    
     $.ajax({
         url: curReqUrl, //请求地址
         type: "get", //请求方式
@@ -116,7 +115,8 @@ function request(__msg) {
 
         success: function(__listData) {
 
-            if(__listData.errorNo == 0){
+            if(__listData.errorNo === 0){
+
                 CodesHTML(__listData);
                 $("#codes_box").removeClass("hide");
                 $("#over").addClass("hide");
@@ -130,9 +130,10 @@ function request(__msg) {
 
 function initialize(__code,__sign) {
     autoWidth();
-    msg.code = __code,
+    msg.code = __code;
     msg.sign = __sign;
     msg.bound = locator();
+    selectCity();
     request(msg);
 }
 

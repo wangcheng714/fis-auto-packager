@@ -1,0 +1,78 @@
+/**
+* @fileoverview 本城无结果css
+**/
+.place-widget-clarify .cl_d1 {
+  min-width: 3em;
+  -webkit-transform: translate(-0.357em, 0.214em);
+  text-align: left;
+}
+.place-widget-clarify #cl_o0 li,
+.place-widget-clarify #cl_o1 li {
+  position: relative;
+  background-color: transparent;
+}
+.place-widget-clarify .cl_opt {
+  position: absolute;
+  top: 0;
+  right: 0.714em;
+  vertical-align: middle;
+}
+.place-widget-clarify .cl_opt .gt {
+  vertical-align: middle;
+}
+.place-widget-clarify div.result .res dt.hd.search_result {
+  margin-top: 0px;
+  min-height: 0;
+}
+.place-widget-clarify .bd .list li {
+  color: #606060;
+}
+.place-widget-clarify .res .list {
+  text-shadow: none;
+}
+.place-widget-clarify .bd .list li {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  padding: 0 1.2em;
+  height: 3.3em;
+  min-height: 3.3em;
+  border: 1px solid #fff;
+  border-bottom-color: #d9d9d9;
+  color: #606060;
+  position: relative;
+  background-color: transparent;
+}
+.place-widget-clarify .bd .list li a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: #606060;
+  line-height: 46px;
+}
+.place-widget-clarify .list .gt {
+  width: 10px;
+  height: 10px;
+  background: url(/static/place/images/linelist_714843f.png) no-repeat 0 -71px;
+  background-size: 15px 81px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.place-widget-clarify .res .s4-tip {
+  background-color: #F2F2F2;
+  padding: 14px 40px 11px 40px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.place-widget-clarify .bd div.cl_tip {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  padding: 0.5em 0 1em;
+}
+.place-widget-clarify .res ol.s4 {
+  background-color: #eeeeee;
+}
+.place-widget-clarify .res dd.bd,
+.place-widget-clarify .res dd.mk {
+  margin: 4px auto 0;
+  width: 100%;
+}

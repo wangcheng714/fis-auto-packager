@@ -216,8 +216,8 @@ var _onClickCity = function (evt) {
 		cityCode = loc.getUpCityCode() || cityCode;
 	}
 
-	refer_query = util.jsonToUrl(urlParam.query || {});
-	refer_pagestate =  util.jsonToUrl(urlParam.pageState || {});
+	refer_query = JSON.stringify(urlParam.query || {});
+	refer_pagestate =  JSON.stringify(urlParam.pageState || {});
 
 	// 添加城市检索统计
 	stat.addCookieStat(STAT_CODE.PLACE_SELECT_CLICK_CITY, {'wd': wd, 'srcname': srcname});

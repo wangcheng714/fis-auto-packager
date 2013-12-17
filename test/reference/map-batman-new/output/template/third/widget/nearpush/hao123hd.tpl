@@ -21,7 +21,7 @@
 </nav>
 <div class="head">
 <a class="logo" href="http://m.hao123.com/">
-<img width="97px" height="40px" src="/mobile/simple/static/third/images/hao123_logo_bd87613.png">
+<img width="97px" height="40px" src="/static/third/images/hao123_logo_bd87613.png">
 </a>
 <h1 class="title">附近</h1>
 </div>

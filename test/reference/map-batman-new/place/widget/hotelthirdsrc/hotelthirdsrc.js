@@ -40,6 +40,7 @@ module.exports = {
     init: function(options) {
         this.firstShowNum = 4;
         this.options = options || {};
+        this.is_gwj = $('.head-act').length
         this.$el = $('#place-pagelet-hotelthirdsrc');
 
         // 第三方连锁酒店预订区展现量
@@ -71,6 +72,7 @@ module.exports = {
             tomorrow = new Date((new Date()).getTime() + 24 * 60 * 60 * 1000).format('yyyy-MM-dd'),
             options = this.options,
             href = $target.data('url'),
+            href = href + (this.is_gwj ? '&is_gwj=1' : ''),
             price = parseInt($target.data('price'), 10),
             bonus = parseInt($target.data('bonus'), 10) || 0,
             extraParams,

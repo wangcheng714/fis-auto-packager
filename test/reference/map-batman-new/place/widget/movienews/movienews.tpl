@@ -8,8 +8,12 @@
     </div>
 </div>
 {%script%}
-    require.async(['place:widget/movienews/movienews.js'], function(m) {    	
-        m.init("{%$widget_data.uid%}", "{%$widget_data.other_info.webview_style%}", "{%$smarty.now|date_format:"%Y-%m-%d"%}", "{%$widget_data.name%}");
+    require.async(['place:widget/movienews/movienews.js'], function(m) {
+        {%if $widget_data.info.is_gwj && $widget_data.info.activity_gwj.is_book%}
+            m.init("{%$widget_data.uid%}", "{%$widget_data.other_info.webview_style%}", "{%$smarty.now|date_format:"%Y-%m-%d"%}", "{%$widget_data.name%}", 1);
+        {%else%}
+			m.init("{%$widget_data.uid%}", "{%$widget_data.other_info.webview_style%}", "{%$smarty.now|date_format:"%Y-%m-%d"%}", "{%$widget_data.name%}", 0);
+        {%/if%}
     });
 {%/script%}
 {%/if%}

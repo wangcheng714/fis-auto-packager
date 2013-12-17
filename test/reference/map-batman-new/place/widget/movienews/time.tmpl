@@ -16,7 +16,12 @@
 		<ul class="compare-list">
 			<#for(var i = 0, leng = schedules[j].list.length; i < leng ; i++){#>
 			<li>
-				<span class="brand"><#=schedules[j].list[i].src_name#> <#if(i == 0 && leng > 1){#><i class="icon-sheap"></i><#}#></span>
+				<span class="brand">
+					<#=schedules[j].list[i].src_name#>
+					<#if(schedules[j].list[i].activity_message && schedules[j].activity){#>
+						<i class="icon-activity"></i>
+					<#}else if(i == 0 && leng > 1){#><i class="icon-cheap"></i><#}#>
+				</span>
 				<#if(schedules[j].list[i].price){#><span class="price"><i class="icon-price">&yen;</i><#=schedules[j].list[i].price#></span><#}#>
 				<span class="opt">
 					<a class="btn-book <#=schedules[j].style#>" data-day="<#=schedules[j].day#>" data-num="<#=schedules[j].list[i].seq_no#>" data-cinema="<#=schedules[j].list[i].cinema_id#>" data-theater="<#=schedules[j].theater#>" data-time="<#=schedules[j].time#>" data-price="<#=schedules[j].list[i].price#>" data-movie="<#=schedules[j].list[i].movie_id#>" data-info="<#=schedules[j].info#>" data-orign="<#=schedules[j].list[i].src#>">选座订票</a>

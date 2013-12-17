@@ -6,7 +6,7 @@
             </a>
             <a index="1" id="se_tab_bus" class="new-se-tab new-se-tab-r on" href="">路线</a>
         </div>
-         {%widget name="index:widget/seacrhnave/seacrhnave.tpl"%}
+         {%widget name="common:widget/seacrhnave/seacrhnave.tpl"%}
     </div>
     {%widget name="index:widget/navethumbnail/navethumbnail.tpl"%}
 </div>

@@ -1,8 +1,5 @@
 var util = require('common:static/js/util.js'),
     url = require('common:widget/url/url.js'),
-    BMap = require('common:widget/api/api.js'),
-    CustomMarker = require('common:widget/api/ext/custommarker.js'),
-    BaseControl = require('common:widget/api/ext/basecontrol.js'),
     mapView = require('common:widget/map/map.js'),
     locator = ﻿require('common:widget/geolocation/location.js'),
     popup = require('common:widget/popup/popup.js'),

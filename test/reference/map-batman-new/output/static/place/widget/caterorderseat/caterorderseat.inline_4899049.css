@@ -1,0 +1,28 @@
+#place-widget-caterorderseat {
+  background: -webkit-gradient(linear, 0 100%, 0 0, from(#eeeeee), to(#fdfdfd));
+  border: 1px solid #838991;
+  border-radius: .25em;
+  word-wrap: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.143em;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 0 10px 0;
+}
+#place-widget-caterorderseat a {
+  display: block;
+  padding: .4em 0;
+}
+#place-widget-caterorderseat span.caterorderseat-icon {
+  background: url(/static/place/images/list_book_4820ec4.png);
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+}
+#place-widget-caterorderseat span {
+  display: inline-block;
+}

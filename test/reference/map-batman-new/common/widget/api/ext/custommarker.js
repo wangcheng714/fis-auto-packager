@@ -4,8 +4,7 @@
  * @author jiazheng
  */
 
-var util = require('common:static/js/util.js'),
-    BMap = require('common:widget/api/api.js');
+var util = require('common:static/js/util.js');
 
 /**
  * 构造函数

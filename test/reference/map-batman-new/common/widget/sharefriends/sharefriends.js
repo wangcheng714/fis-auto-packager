@@ -29,14 +29,15 @@ ShareToFriends = {
         var me = this;
         var $share = $('#share-to-friends');
         var value = $share.attr('href');
+        var url;
         //链接已经包含短信，直接触发短信
         if(value && value.indexOf('body') > -1){
             return;
         }
         if(this.type == 'transit'){
-        	var url = me.getTransitSmsUrl();
+        	url = me.getTransitSmsUrl();
         }else{
-        	var url = me.getSmsUrl();
+        	url = me.getSmsUrl();
         }
         
         //成功回调
@@ -47,8 +48,7 @@ ShareToFriends = {
 
             var content = data.sms_content;
             $share.attr('href', 'sms:?body=' + content);
-            //模拟触发用户click事件
-            me.fireEvent($share[0],'click');
+            location.href = 'sms:?body=' + content;
         }
         //失败回调
         var errorCallback = function(data){}

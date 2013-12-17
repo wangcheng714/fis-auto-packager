@@ -55,8 +55,15 @@ var redirect = function () {
 
 
 	if(pageState.refer_query){
-		referQuery = util.urlToJSON(pageState.refer_query);
-		referPageState = util.urlToJSON(pageState.refer_pagestate);
+		try{
+			referQuery = JSON.parse(decodeURIComponent(pageState.refer_query));
+			referPageState = JSON.parse(decodeURIComponent(pageState.refer_pagestate));
+		} catch (e) {
+			url.toIndex({
+				cache : false
+			});
+		}
+
 		//若关键词包含 商圈+'     '+关键字，将商圈去掉，保留关键字
 		if(referQuery.wd && referQuery.wd.split(BUSINESS_SPLIT)[1]){
 			referQuery.wd = referQuery.wd.split(BUSINESS_SPLIT)[1];

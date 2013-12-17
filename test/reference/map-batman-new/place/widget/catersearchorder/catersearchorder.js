@@ -11,7 +11,7 @@ var DEFAULT_ERROR_MSG = '网络连接失败';
 var TELEPHONE_ERROR_MSG = '请输入正确的手机号码';
 var SMSCODE_EMPTY_MSG = '验证码不能为空';
 
-var ORDER_LIST_URL = '/mobile/webapp/place/cater/qt=orderlist{{kehuduan}}?mobile=';
+var ORDER_LIST_URL = '/mobile/webapp/place/cater/force=superman&qt=orderlist{{kehuduan}}?mobile=';
 
 var DATA_TYPE = 'json';
 var HOST = '';

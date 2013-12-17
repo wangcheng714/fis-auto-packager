@@ -6,8 +6,6 @@
     <i class="combtn-icon"></i>
     <span class="combtn-text">我要评论</span>
 </a>
-{%*抽奖按钮的统计码临时存储*%}
-<i id="bonus-stat" data-log="{code:{%$STAT_CODE.PLACE_COMMENT_BONUS_BTN_CLICK%}}"></i>
 {%script%}
     (require('commentbtn.js')).init();
 {%/script%}

@@ -1,0 +1,48 @@
+/*搜周边、去这儿、电话样式*/
+.hotel-goto {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  border: 1px solid;
+  border-color: #dadada #e4e4e4 #e4e4e4 #e4e4e4;
+  border-radius: 0 0 3px 3px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+.hotel-goto a {
+  -webkit-box-flex: 1;
+  display: block;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  padding: 12px 0;
+  width: 2px;
+}
+.hotel-goto a .btn-wrap {
+  border-right: 1px solid #dadada;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+}
+.hotel-goto a .btn-wrap span {
+  background: url("/static/place/widget/hotelgoto/images/gohere_logos_80ec91a.png") no-repeat;
+  display: block;
+  padding-left: 22px;
+  -webkit-background-size: 20px 60px;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+}
+.hotel-goto a .btn-wrap span.search-btn {
+  background-position: 0 0;
+}
+.hotel-goto a .btn-wrap span.goto-btn {
+  background-position: 0 -20px;
+}
+.hotel-goto a .btn-wrap span.shoptel-btn {
+  background-position: 0 -40px;
+}
+.hotel-goto a .btn-wrap span.shoptel-btn a {
+  color: #4d4d4d;
+}
+.hotel-goto a:last-child .btn-wrap {
+  border-right: none;
+}

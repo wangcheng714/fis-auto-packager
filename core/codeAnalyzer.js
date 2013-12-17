@@ -1,5 +1,6 @@
 var File = require("./file.js"),
     util = require("../lib/util.js"),
+    gzip = require('gzip-js'),
     fs = require("fs");
 
 var depsTable = {},
@@ -120,7 +121,17 @@ module.exports.getResource = function(dir, hashTable, defaultPackages){
                     filepath = dir + "/" + fileProperty["uri"];
                 }
 
-                var stat = fs.statSync(filepath),
+                var content = util.read(filepath),
+                    options = {
+                        level: 6,
+                        timestamp: parseInt(Date.now() / 1000, 10)
+                    },
+                    out = gzip.zip(content, options),
+                    bakFile = filepath + ".bak";
+
+                util.write(bakFile, new Buffer(out));
+
+                var stat = fs.statSync(bakFile),
                     filesize = stat["size"],
                     deps = [];
 

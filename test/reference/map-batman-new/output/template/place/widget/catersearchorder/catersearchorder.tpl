@@ -17,4 +17,6 @@
     require('place:widget/catersearchorder/catersearchorder.js').init({
         kehuduan: '{%$kehuduan|f_escape_js%}'
     });
+    var stat = require('common:widget/stat/stat.js');
+    stat.addStat(STAT_CODE.PLACE_CATER_ORDER_SEARCH_PV, {srcname: 'cater'});
 {%/script%}

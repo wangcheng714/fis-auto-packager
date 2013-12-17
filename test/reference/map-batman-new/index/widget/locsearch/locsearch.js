@@ -5,14 +5,14 @@
 var loc  = require('common:widget/geolocation/location.js'),
 	url = require("common:widget/url/url.js"),
 	DEFAULT_VALUE = "输入城市或者其他位置",
-	referQueryKey = "_refer_query",
-	referPageStateKey = "_refer_pagestate",
+	// referQueryKey = "_refer_query",
+	// referPageStateKey = "_refer_pagestate",
 	$inputBox;
 
 module.exports.init = function(){
 	$inputBox = $(".index-widget-locsearch");
 	bind();
-	processRefer();
+	// processRefer();
 }
 
 var bind = function () {
@@ -28,10 +28,10 @@ var bind = function () {
 }
 
 
-var processRefer = function () {
-	window.localStorage.removeItem(referQueryKey);
-	window.localStorage.removeItem(referPageStateKey);
-}
+// var processRefer = function () {
+// 	window.localStorage.removeItem(referQueryKey);
+// 	window.localStorage.removeItem(referPageStateKey);
+// }
 
 var _onClickInput = function (evt) {
 
@@ -74,15 +74,14 @@ var _onSubmit = function (evt) {
 	var query = _getSelectPoiQuery(wd);
 	var _state = url.get().pageState || {};
 
-
-	window.localStorage.setItem(referQueryKey, _state.refer_query);
-	window.localStorage.setItem(referPageStateKey, _state.refer_pagestate);
-
 	url.update({
 		module : "place",
 		action : "selectpoint",
 		query : query,
-		pageState : {}
+		pageState : {
+			refer_pagestate : _state.refer_pagestate,
+			refer_query : _state.refer_query
+		}
 	},{
 		queryReplace : true,
 		pageStateReplace : true

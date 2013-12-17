@@ -12,9 +12,15 @@ var loc     = require('common:widget/geolocation/location.js'),
     url     = require('common:widget/url/url.js');
 
 module.exports = {
-    init: function(){
+    init: function(options){
         this._resetCurrentCity();
-        this._initGeo();
+
+        this._initIpLocation();
+
+        // 有些页面不需要发起定位
+        if(options && options.isStartGeo !== false) {
+            this._initGeoLocation();
+        }
         this._changeCity();
     },
     /**
@@ -62,10 +68,11 @@ module.exports = {
             };
         }
     },
+
     /**
-    * 初始化定位
-    */
-    _initGeo: function(){
+     * 初始化ip定位
+     */
+    _initIpLocation : function () {
         try{
             if(!this._hasStorageLoc()){
                 this._initIpGeo();
@@ -74,11 +81,18 @@ module.exports = {
             //读取localStorage失败，初始化ip定位
             this._initIpGeo();
         }
-        //异步请求定位组件，初始化定位
-        require('common:widget/geolocation/geolocation.js', function(exports){
-            exports.init();
-        });
     },
+
+    /**
+     * 初始化系统定位
+     */
+    _initGeoLocation : function () {
+        //异步请求定位组件，初始化定位
+        require.async('common:widget/geolocation/geolocation.js', function(exports){
+                exports.init();
+            });
+    },
+
     /**
      * 从localStorage中获取定位结果
      * @param {string} name 获取的key

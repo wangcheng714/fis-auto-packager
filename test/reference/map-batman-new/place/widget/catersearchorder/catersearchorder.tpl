@@ -18,4 +18,6 @@
     require('catersearchorder.js').init({
         kehuduan: '{%$kehuduan%}'
     });
+    var stat = require('common:widget/stat/stat.js');
+    stat.addStat(STAT_CODE.PLACE_CATER_ORDER_SEARCH_PV, {srcname: 'cater'});
 {%/script%}

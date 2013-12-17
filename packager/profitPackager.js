@@ -20,9 +20,27 @@ module.exports.package = function(resources, defaultPackages){
         autoResult = {};
 
     newResources = sortByPv(newResources);
+    fixModjs(newResources);
 
     util.map(newResources, function(packageKey, partResource){
         var packageResult = [];
+        if(packageKey == "common_sync_js"){
+
+//            apphistory : 57  poisearch :  56  highlight : 53   quickdelete : 54  renderlist :  50  sendrequest :  51  suggestion :  52
+//            searchdata :  55    cover :   66   header :   59   setcity :  58
+//            partResource[50].mergeStatic(partResource[51]);
+//            partResource[50].mergeStatic(partResource[52]);
+//            partResource[50].mergeStatic(partResource[53]);
+//            partResource[50].mergeStatic(partResource[54]);
+//            partResource[50].mergeStatic(partResource[55]);
+//            partResource[50].mergeStatic(partResource[57]);
+//
+//            partResource[55].mergeStatic(partResource[56]);
+//            partResource[55].mergeStatic(partResource[58]);
+//            partResource[55].mergeStatic(partResource[59]);
+//
+//            var benefitOne = getBenefit(partResource[50], partResource[55]);
+        }
         if(partResource.length >= 2){
             autoResult[packageKey] = mergePackage(partResource.shift(), partResource, packageResult);
         }else{
@@ -31,6 +49,21 @@ module.exports.package = function(resources, defaultPackages){
     });
     util.merge(autoResult, manualResult);
     return autoResult;
+}
+
+function fixModjs(newResources){
+    util.map(newResources, function(key, resources){
+        for(var i=0; i<resources.length; i++){
+            var subpath = resources[i].get("subpath");
+            if(subpath.match(/mod\.js$/)){
+                resources[i].set("pv", resources[0].get("pv"));
+                resources[i].set("pages", resources[0].get("pages"));
+                var results = resources.splice(i, 1); //删除mod.js独享
+                resources.unshift(results[0]);
+                break;
+            }
+        }
+    });
 }
 
 function hit(resource, defaultPackages){
@@ -193,6 +226,10 @@ function getLargestBenefit(staticA, resources){
             }
         }
     });
+//todo : 记录打包的过程
+if(staticA.get("module") == "common" && staticA.get("type") == "js" && largestResource != null){
+    console.log(staticA.get("id") + " and " + largestResource.get("id") + " merged benefit is = " + largestBenefit);
+}
     return {
         "benefit" : largestBenefit,
         "resource" : largestResource,
@@ -228,6 +265,8 @@ function mergePackage(originStatic, resources, mergedStatics){
             newMergeBenefit = newMergeResult["benefit"],
             newStaticIndex = newMergeResult["index"];
 
+
+
         if(newMergeBenefit > oldMergeBenefit){
             //首先移除后面item,否则会导致误删除其他的item
             if(newStaticIndex > oldStaticIndex){
@@ -238,7 +277,7 @@ function mergePackage(originStatic, resources, mergedStatics){
                 resources = util.removeByIndex(resources, newStaticIndex);
             }
             oldMergeStatic.mergeStatic(newMergeStatic, newMergeBenefit);
-            resources.unshift(oldMergeStatic);
+            resources.push(oldMergeStatic);
             mergePackage(originStatic, resources, mergedStatics);
         }else{
             originStatic.mergeStatic(oldMergeStatic, oldMergeBenefit);

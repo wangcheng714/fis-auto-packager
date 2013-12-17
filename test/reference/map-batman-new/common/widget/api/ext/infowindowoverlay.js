@@ -3,8 +3,7 @@
  * shengxuanwei@baidu.com
  * 2013-11-04
  */
-var BMap = require('common:widget/api/api.js'),
-    pageMgr = require('common:widget/pagemgr/pagemgr.js');
+var pageMgr = require('common:widget/pagemgr/pagemgr.js');
 
 function InfoWindowOverlay() {
 

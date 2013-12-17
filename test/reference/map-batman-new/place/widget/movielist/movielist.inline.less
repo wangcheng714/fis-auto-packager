@@ -26,6 +26,7 @@
         background-color:#fff;
         position:relative;
         cursor: pointer;
+        overflow: hidden;
     }
     li.active{
         background-color: #f4f4f4;
@@ -63,6 +64,29 @@
     }
     li .price {
         margin-top:3px;
+    }
+    .list-wrapper .list-tip-gwj{
+        background-color: #ffbb39;
+        position: relative;
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        margin-top: 5px;
+        padding: 0 10px 0 5px;
+        font-size: 14px;
+        color: white;
+        overflow: visible;
+    }
+    li .list-tip-gwj:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-left: 10px solid #ffbb39;
+        border-bottom: 12px solid transparent;
     }
      
     li p,  li h4{

@@ -11,12 +11,17 @@
 	{%widget name="common:widget/nav/nav.tpl" title=$data.result.wd mapLink=$commonUrl.nav.map pageType="list"%}
 
 
-	{%if $data.listInfo.isGRequest eq true%}
+	{%if $data.listInfo.isGRequest eq true && !$data.isMovieId%}
 	    {%widget name="place:widget/listtool/listtool.tpl"  type=$data.place_info.d_data_type isMovie=$data.isMovie%}
 	{%/if%}
+    {%if $data.isMovie%}
+        {%widget name="place:widget/listtopbanner/listtopbanner.tpl"%}
+    {%/if%}
 
 	{%* 地点列表 *%}
-	{%if $data.isMovie%}
+    {%if $data.isMovieId%}
+        {%widget name="place:widget/cinemalist/cinemalist.tpl"%}
+	{%elseif $data.isMovie%}
     	{%widget name="place:widget/movielist/movielist.tpl"%}
     {%else%}
     	{%widget name="place:widget/placelist/placelist.tpl"%}

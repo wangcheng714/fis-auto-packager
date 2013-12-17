@@ -1,4 +1,11 @@
 {%extends file="common/page/layout.tpl"%}
+{%block name="geo_config"%}
+    {%$isStartGeo = "true"%}
+    {%if $kehuduan%}
+        {%$isStartGeo = "false"%}
+    {%/if%}
+    {%$geo_config="{isStartGeo:$isStartGeo}"%}
+{%/block%}
 {%block name="main"%}
     <link rel="stylesheet" type="text/css" href="/static/css/hoteldetail.inline.less?__inline">
     {%widget name="common:widget/nav/nav.tpl" title="酒店房型报价" mapLink=$data.result.type%}

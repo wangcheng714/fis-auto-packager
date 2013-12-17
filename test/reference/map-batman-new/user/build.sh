@@ -1,7 +1,40 @@
 #!/bin/bash
-# add path
-#export PATH=/home/fis/npm/bin: $PATH
-#show fis-pc version
-/home/fis/npm/bin/fisp --version --no-color
+set -e
+#add path
+export PATH=/home/fis/npm/bin:$PATH
 #use --unique option
-/home/fis/npm/bin/fisp release -Domupd output --no-color 
+fisp release -Domupld output --no-color
+set +e
+
+mkdir lighttpd
+mkdir lighttpd/htdocs
+mkdir lighttpd/htdocs/mobile
+mkdir lighttpd/htdocs/mobile/simple
+cp -r ./output/static ./lighttpd/htdocs/mobile/simple/
+
+mkdir phpui
+mkdir phpui/webapp
+mkdir phpui/webapp/smarty
+cp -r ./output/plugin ./phpui/webapp/smarty/
+cp -r ./output/config ./phpui/webapp/smarty/
+
+mkdir phpui/webapp/views/
+cp -r ./output/template ./phpui/webapp/views
+
+
+
+rm -r ./output/test
+rm -r ./output/server.conf
+rm -r ./output/plugin
+rm -r ./output/config
+rm -r ./output/static
+rm -r ./output/server-conf/
+rm -r ./output/template/*
+
+mkdir ./output/template/config
+cp ./xss.php ./output/template/config
+
+rm -r ./output/xss.php
+
+tar -czvf user.tar.gz ./phpui ./lighttpd > /dev/null
+mv user.tar.gz ./output

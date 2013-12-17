@@ -8,7 +8,7 @@
     {%$nbtab = 'on'%}
 {%/if%}
 <div class="index-widget-tabgroup">
-    <a class="tab tab-map {%$maptab%}" href="/mobile/webapp/index/index/foo=bar/vt=map" jsaction="toMapSearch">
+    <a class="tab tab-map {%$maptab%}" href="javascript:void(0);" jsaction="tomap">
         <span class="icon icon-l"></span>地图
     </a>
     <a class="tab tab-poi {%$nbtab%}" href="javascript:void(0);" jsaction="toNearBySearch">

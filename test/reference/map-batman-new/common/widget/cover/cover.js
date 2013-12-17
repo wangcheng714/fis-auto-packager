@@ -20,15 +20,7 @@ module.exports = {
      * 初始化，如果符合展示封面条件，则绑定监听事件，并显示封面
      */
     init: function() {
-        this.checkCover();
         this.initOpenDownload();
-    },
-
-    checkCover : function(){
-        var hdCover = cookie.get("hdCover");
-        if(hdCover === "1") {
-            this.closeCover();
-        }
     },
 
     sendStat : function() {

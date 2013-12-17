@@ -65,13 +65,17 @@ var completeSelete = function (areaCode) {
 		urlParam = url.get(),
 		query = urlParam.query || {},
 		pageState = urlParam.pageState || {},
-		referQuery = util.urlToJSON(pageState.refer_query) || {},
-		referPagestate = util.urlToJSON(pageState.refer_pagestate) || {},
+		referQuery = "",
+		referPagestate = "",
 		_state = {},
 		_qurey = {},
 		wd = referQuery.wd,
 		c;
 
+	try{
+		referQuery = util.urlToJSON(pageState.refer_query) || {};
+		referPagestate = util.urlToJSON(pageState.refer_pagestate) || {};
+	} catch(e){};
 
 	_state = $.extend({},_state,referPagestate,{
 		dist_name : areaItem.area_name,
@@ -190,8 +194,13 @@ var switchToList = function(data){
 		state;
 
 	pagestate = me.get('pagestate');
-	query = util.getReqParam(pagestate.refer_query) || {};
-	state = util.getReqParam(pagestate.refer_pagestate) || {};
+	query = {};
+	state = {};
+
+	try{
+		query = JSON.parse(pagestate.refer_query);
+		state = JSON.parse(pagestate.refer_pagestate);
+	}catch(e) {};
 
 
 	state = $.extend(state,{

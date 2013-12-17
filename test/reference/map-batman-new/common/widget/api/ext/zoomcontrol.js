@@ -2,7 +2,6 @@
  * @fileoverview 缩放控件
  */
 var util = require('common:static/js/util.js'),
-    BaseControl = require('common:widget/api/ext/basecontrol.js'),
     stat = require('common:widget/stat/stat.js');
 
 var ZoomControl = function(){
@@ -15,7 +14,7 @@ var ZoomControl = function(){
     this.defaultOffset = offset;
     this.isOn = false;  // 是否被点击
 }
-ZoomControl.prototype = new BaseControl();
+ZoomControl.prototype = new BMap.Control();
 $.extend(ZoomControl.prototype, {
     initialize: function(map){
         this._map = map;

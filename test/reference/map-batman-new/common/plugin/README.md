@@ -1,4 +1,2 @@
-fis-pc-plugin
-=============
-
-fis-pc-plugin
+fis-smarty-bigpipe-autopack-plugin
+==================================

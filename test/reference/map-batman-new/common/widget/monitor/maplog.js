@@ -35,6 +35,38 @@ var map,
     traffic_app = SDC.createApp(SDC.DICT.TRAFFIC_LAD);
 
 /**
+ * 记录页面和浏览器切换状态,只针对底图页
+ */
+var isAppBack = false,  // 重回APP
+    isAppOut = false,   // 离开APP
+    isPageOut = false;  // 切出页面
+
+function bindAppStateEvent() {
+    // 监听pageshow 记录切回浏览器的状态
+    $(window).on('pageshow', function(evt) {
+        //只有从back-forward cache才记录 by jican
+        if(evt && evt.persisted) {
+            isAppBack = true;
+        }
+    });
+    // 监听pagehide 记录切出浏览器的状态
+    $(window).on('pagehide', function(evt) {
+        isAppOut = true;
+    });
+    // 监听switchstart 记录用户切出底图页状态
+    listener.on('common.page', 'switchstart', function(evt){
+        isPageOut = true;
+    });
+}
+
+/**
+ * 是否允许发送统计数据
+ */
+function allowSendData () {
+    return !isAppBack && !isAppOut && !isPageOut;
+}
+
+/**
  * 根据HASH获取区分底图页面的性能统计APP
  */
 function getMapPageApp () {
@@ -50,7 +82,6 @@ function getMapPageApp () {
     }
 }
 
-
 /**
  * 矢量渲染开始回调函数
  */
@@ -60,31 +91,10 @@ function mapload() {
 }
 
 /**
- * 矢量路况开始回调函数
- */
-function trafficvectorbegin() {
-    traffic_start_time = Date.now();
-    map.removeEventListener("onTrafficvectorbegin", trafficvectorbegin);
-}
-
-/**
- * 矢量路况渲染结束回调函数
- */
-function trafficvectorloaded() {
-    if (traffic_start_time) {
-        traffic_app.start_event(traffic_start_time);
-        traffic_app.view_time();
-        traffic_app.ready(1);
-    }
-    map.removeEventListener("onTrafficvectorloaded",  trafficvectorloaded);
-}
-
-/**
  * 矢量渲染开始回调函数
  */
 function vectorbegin() {
     vct_start_time = Date.now();
-    map.removeEventListener("onvectorbegin", vectorbegin);
 }
 
 /**
@@ -92,101 +102,135 @@ function vectorbegin() {
  */
 function rasterbegin() {
     ras_start_time = Date.now();
-    map.removeEventListener("ontilesbegin", rasterbegin);
+}
+
+/**
+ * 矢量路况开始回调函数
+ */
+function trafficvectorbegin() {
+    traffic_start_time = Date.now();
 }
 
 /**
  * 矢量渲染结束回调函数
  */
 function vectorloaded() {
-
-    // 为了防止事件派发导致的错误记录需要在loaded事件里记录begin时间 by jican
-    if(vct_start_time){
+    
+    if(vct_start_time && allowSendData()){
+        // 为了防止事件派发导致的错误记录需要在loaded事件里记录begin时间 by jican
         map_avg_app.mark('c_vector_begin', vct_start_time);
         map_page_app.mark('c_vct_st', vct_start_time);
         vector_app.mark('c_vct_st', vct_start_time);
+
+        // 平均矢量出图时间
+        map_avg_app.mark('c_vector_load');
+        map_avg_app.view_time();
+        map_avg_app.ready(1);
+
+        // 分页面统计矢量出图时间
+        map_page_app.mark('c_vct_lt_' + landMarkName);
+        map_page_app.view_time();
+        map_page_app.ready(1);
+
+        // 单独统计矢量出图时间
+        vector_app.view_time();
+        vector_app.ready(1);
+
+        // 性能测试
+        window._perlog && window._perlog(map_avg_app);
     }
 
-    // 平均矢量出图时间
-    map_avg_app.mark('c_vector_load');
-    map_avg_app.view_time();
-    map_avg_app.ready(1);
-
-    // 分页面统计矢量出图时间
-    map_page_app.mark('c_vct_lt_' + landMarkName);
-    map_page_app.view_time();
-    map_page_app.ready(1);
-
-    // 单独统计矢量出图时间
-    vector_app.view_time();
-    vector_app.ready(1);
-
+    map.removeEventListener("onvectorbegin", vectorbegin);
+    map.removeEventListener("ontilesbegin", rasterbegin);
     map.removeEventListener("onvectorloaded", vectorloaded);
     map.removeEventListener("ontilesloaded", rasterloaded);
 }
+
 /**
  * 栅格渲染结束回调函数
  */
 function rasterloaded() {
 
-    // 为了防止事件派发导致的错误记录需要在loaded事件里记录begin时间 by jican
-    if(ras_start_time) {
+    if(ras_start_time && allowSendData()) {
+        // 为了防止事件派发导致的错误记录需要在loaded事件里记录begin时间 by jican
         map_avg_app.mark('c_tiles_begin', ras_start_time);
         map_page_app.mark('c_rst_st', ras_start_time);
         raster_app.mark('c_rst_st', ras_start_time);
+
+        // 平均栅格出图时间
+        map_avg_app.mark('c_tiles_load');
+        map_avg_app.view_time();
+        map_avg_app.ready(1);
+
+        // 分页面统计栅格出图时间
+        map_page_app.mark('c_rst_lt_' + landMarkName);
+        map_page_app.view_time();
+        map_page_app.ready(1);
+
+        // 单独统计栅格出图时间
+        raster_app.view_time();
+        raster_app.ready(1);
+
+        // 性能测试
+        window._perlog && window._perlog(map_avg_app);
     }
 
-    // 平均栅格出图时间
-    map_avg_app.mark('c_tiles_load');
-    map_avg_app.view_time();
-    map_avg_app.ready(1);
-
-    // 分页面统计栅格出图时间
-    map_page_app.mark('c_rst_lt_' + landMarkName);
-    map_page_app.view_time();
-    map_page_app.ready(1);
-
-    // 单独统计栅格出图时间
-    raster_app.view_time();
-    raster_app.ready(1);
-
+    map.removeEventListener("onvectorbegin", vectorbegin);
+    map.removeEventListener("ontilesbegin", rasterbegin);
     map.removeEventListener("onvectorloaded", vectorloaded);
     map.removeEventListener("ontilesloaded", rasterloaded);
 }
 
+/**
+ * 矢量路况渲染结束回调函数
+ */
+function trafficvectorloaded() {
+    if (traffic_start_time && allowSendData()) {
+        traffic_app.start_event(traffic_start_time);
+        traffic_app.view_time();
+        traffic_app.ready(1);
+    }
+    map.removeEventListener("onTrafficvectorbegin", trafficvectorbegin);
+    map.removeEventListener("onTrafficvectorloaded",  trafficvectorloaded);
+}
+
+// 记录性能统计起点时间
+function mapStart() {
+    map_page_app = getMapPageApp();
+    map_avg_app.start_event();
+    map_page_app.start_event();
+    vector_app.start_event();
+    raster_app.start_event();
+}
+
+// 记录JS加载完成时间
+function jsLoaded() {
+    map_avg_app.mark('c_js_load');
+    map_avg_app.mark('c_js_lt_' + landMarkName);
+}
+
+// 地图对象实例化后监听API派发事件
+function mapInit(event, mapObj) {
+    map = mapObj;
+    map.addEventListener("load", mapload);
+    map.addEventListener("onvectorbegin", vectorbegin);
+    map.addEventListener("ontilesbegin", rasterbegin);
+    map.addEventListener("onvectorloaded", vectorloaded);
+    map.addEventListener("ontilesloaded", rasterloaded);
+    map.addEventListener("onTrafficvectorbegin", trafficvectorbegin);
+    map.addEventListener("onTrafficvectorloaded", trafficvectorloaded);
+}
+
 module.exports = {
-    init : function () {
-
-        var _this = this;
-
-        // 记录性能统计起点时间
-        var _mapStart = function () {
-            map_page_app = getMapPageApp();
-            map_avg_app.start_event();
-            map_page_app.start_event();
-            vector_app.start_event();
-            raster_app.start_event();
-        }
-
-        // 记录JS加载完成时间
-        var _jsLoad = function () {
-            map_avg_app.mark('c_js_load');
-            map_avg_app.mark('c_js_lt_' + landMarkName);
-        }
-
-        var _mapInit = function (event, mapObj) {
-            map = mapObj;
-            map.addEventListener("load", mapload);
-            map.addEventListener("onvectorbegin", vectorbegin);
-            map.addEventListener("ontilesbegin", rasterbegin);
-            map.addEventListener("onvectorloaded", vectorloaded);
-            map.addEventListener("ontilesloaded", rasterloaded);
-            map.addEventListener("onTrafficvectorbegin", trafficvectorbegin);
-            map.addEventListener("onTrafficvectorloaded", trafficvectorloaded);
-        }
-
-        listener.once('common.map', 'start', _mapStart);
-        listener.once('common.map', 'jsloaded', _jsLoad);
-        listener.once('common.map', 'init', _mapInit);
+    /**
+     * 底图性能统计初始化
+     */
+    init: function () {
+        // 监听页面状态
+        bindAppStateEvent();
+        // 监听common.map事件
+        listener.once('common.map', 'start', mapStart);
+        listener.once('common.map', 'jsloaded', jsLoaded);
+        listener.once('common.map', 'init', mapInit);
     }
 };

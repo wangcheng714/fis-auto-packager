@@ -1,6 +1,6 @@
 <div class="hotel-goto">
     <a class="needsclick" href="{%$widget_data.nearby %}"
-       data-log="{code: {%$STAT_CODE.PLACE_DETAIL_NEAR_CLICK%}, name:'{%$data.content.name%}', srcname:'hotel'">
+       data-log="{code: {%$STAT_CODE.PLACE_DETAIL_NEAR_CLICK%}, name:'{%$data.content.name%}', srcname:'hotel'}">
         <span class="btn-wrap">
             <span class="search-btn">搜周边</span>
         </span>

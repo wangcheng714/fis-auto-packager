@@ -31,6 +31,8 @@ class FISResource {
 
     public static $framework = null;
 
+    private static $cdn = array();
+
     public static function reset() {
         self::$arrStaticCollection = array();
         self::$arrRequireAsyncCollection = array();
@@ -38,6 +40,17 @@ class FISResource {
         self::$arrAsyncDeleted = array();
         self::$arrScriptPool = array();
         self::$arrStylePool = array();
+    }
+
+    static public function setCdn($cdn) {
+        self::$cdn = $cdn;
+    }
+
+    static public function getCdn($type = 'sync') {
+        if ($type == 'async') {
+            return self::$cdn[1];
+        }
+        return self::$cdn[0];
     }
 
     public static function widgetStart() {
@@ -61,7 +74,7 @@ class FISResource {
                     unset(self::$arrAsyncDeleted[$id]);
                 }
             }
-            $ret['async'] = self::getResourceMap(self::$arrWidgetRequireAsync);
+            $ret['async'] = self::getResourceMap(self::$arrWidgetRequireAsync, self::getCdn('async'));
         }
 
         foreach (self::$arrWidgetStatic as $key => $val) {
@@ -157,14 +170,14 @@ class FISResource {
 
         //异步脚本
         if (self::$arrRequireAsyncCollection) {
-            self::$arrStaticCollection['async'] = self::getResourceMap(self::$arrRequireAsyncCollection);
+            self::$arrStaticCollection['async'] = self::getResourceMap(self::$arrRequireAsyncCollection, self::getCdn('async'));
         }
         unset(self::$arrStaticCollection['tpl']);
         return self::$arrStaticCollection;
     }
 
     //获取异步js资源集合，变为json格式的resourcemap
-    public static function getResourceMap($arr) {
+    public static function getResourceMap($arr, $cdn = '') {
         $ret = '';
         $arrResourceMap = array();
         if (isset($arr['res'])) {
@@ -179,13 +192,16 @@ class FISResource {
                 }
 
                 $arrResourceMap['res'][$id] = array(
-                    'url' => $arrRes['uri'],
+                    'url' => $cdn . $arrRes['uri'],
                 );
 
                 if (!empty($arrRes['pkg'])) {
                     $arrResourceMap['res'][$id]['pkg'] = $arrRes['pkg'];
                     //如果包含到了某一个包，则模块的url是多余的
-                    unset($arrResourceMap['res'][$id]['url']);
+                    if (!isset($_GET['fis_debug'])) {
+                        //@TODO
+                        unset($arrResourceMap['res'][$id]['url']);
+                    }
                 }
 
                 if (!empty($deps)) {
@@ -196,7 +212,8 @@ class FISResource {
         if (isset($arr['pkg'])) {
             foreach ($arr['pkg'] as $id => $arrRes) {
                 $arrResourceMap['pkg'][$id] = array(
-                    'url'=> $arrRes['uri']
+                    'url' => $cdn . $arrRes['uri'],
+                    'has' => $arrRes['has']
                 );
             }
         }

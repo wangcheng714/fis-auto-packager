@@ -1,7 +1,4 @@
 {
-	"STAT_BUS_SEARCH": "index_1",
-	"STAT_NAV_SEARCH": "index_2",
-	"STAT_WALK_SEARCH": "index_3",
 	"STAT_LINEINDEX_SUBWAY_DISPLAY": "index_4",
 	"STAT_LINEINDEX_SUBWAY_CLICK": "index_5",
 	"STAT_LINEINDEX_BUS_DISPLAY": "index_6",

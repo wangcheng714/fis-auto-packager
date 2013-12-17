@@ -10,8 +10,8 @@ var DATA_TYPE = 'json';
 var HOST = '';
 // var HOST = 'http://cq01-rdqa-pool211.cq01.baidu.com:8282';
 
-var ORDER_LIST_URL = '/mobile/webapp/place/cater/qt=orderlist{{kehuduan}}?mobile=';
-var ORDER_SEARCH_URL = '/mobile/webapp/place/cater/qt=searchorder{{kehuduan}}';
+var ORDER_LIST_URL = '/mobile/webapp/place/cater/force=superman&qt=orderlist{{kehuduan}}?mobile=';
+var ORDER_SEARCH_URL = '/mobile/webapp/place/cater/force=superman&qt=searchorder{{kehuduan}}';
 
 var CANCEL_AJAX_URL = HOST + '/detail?qt=cater_ordercancel';
 var DETAIL_AJAX_URL = HOST + '/detail?qt=cater_orderdetail';

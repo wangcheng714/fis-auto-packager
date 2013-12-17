@@ -8,9 +8,9 @@ var DISABLED = 'disabled';
 var DEF_HREF = 'javascript:;';
 
 var DEFAULT_ERROR_MSG = '网络连接失败';
-var DEF_SEARCH_URL = '/mobile/webapp/place/cater/qt=searchorder{{kehuduan}}';
-var DEF_ORDER_LIST_URL = '/mobile/webapp/place/cater/qt=orderlist{{kehuduan}}?';
-var DEF_ORDER_DELTAIL_URL = '/mobile/webapp/place/cater/qt=orderdetail{{kehuduan}}?';
+var DEF_SEARCH_URL = '/mobile/webapp/place/cater/force=superman&qt=searchorder{{kehuduan}}';
+var DEF_ORDER_LIST_URL = '/mobile/webapp/place/cater/force=superman&qt=orderlist{{kehuduan}}?';
+var DEF_ORDER_DELTAIL_URL = '/mobile/webapp/place/cater/force=superman&qt=orderdetail{{kehuduan}}?';
 
 var HOST = '';
 // var HOST = 'http://cq01-rdqa-pool211.cq01.baidu.com:8282';

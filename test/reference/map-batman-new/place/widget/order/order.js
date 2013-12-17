@@ -32,8 +32,9 @@ module.exports = {
         this.kehuduan = options.kehuduan || 0;
         this.wrapper = $('#hotelOrder');
         this.totalPrice = $('#priceTotal');
+        this.$gwjBonusNum = $('.gwj-bonusnum');
         if(data){
-            self.renderRoom(data); 
+            self.renderRoom(data);
         }
         self.bind();
         self.vcode = new Vcode({
@@ -48,6 +49,11 @@ module.exports = {
             self.changeSelect(e);
         });
         $('#submitButton').on('click',$.proxy(self.submitData, self));
+
+        // 双蛋kehuduan套壳页面特殊处理，location在套壳浏览器中可以前进后退
+        $('.gwj-kehuduan-bonus').on('click', function(){
+            location.href= $(this).attr('attr-href');
+        })
         
     },
     /**
@@ -95,13 +101,16 @@ module.exports = {
             $select = $(target),
             selectedOption = $($select[0][$select[0].selectedIndex]),
             value = selectedOption.val(),
-            singlePrice = this.totalPrice.attr('single');
+            singlePrice = this.totalPrice.attr('single'),
+            $gwjBonusNum = this.$gwjBonusNum;
 
-            $(target).parent().children("em").html(selectedOption.text());
-            this.totalPrice.html(singlePrice * value);
-            this.wrapper.find('input[name=room_num]').val(value);
-          //  selectedOption.attr("selected" ,"selected");
-            this.guestItemOperator(value);
+        $(target).parent().children("em").html(selectedOption.text());
+        this.totalPrice.html(singlePrice * value);
+        this.wrapper.find('input[name=room_num]').val(value);
+        // 购物节返团购券处理
+        $gwjBonusNum.length && $gwjBonusNum.html($gwjBonusNum.data('datenum') * value);
+      //  selectedOption.attr("selected" ,"selected");
+        this.guestItemOperator(value);
     },
     /**
      * 房间数量选择处理
@@ -311,7 +320,7 @@ module.exports = {
                     default:
 
                         var errNo = (result.errorNo).toString().substr(0,1),
-                            errMsg = result.errorMsg;
+                            errMsg = encodeURIComponent(result.errorMsg);
                         switch(errNo){
                             case '1':
                             case '3':

@@ -1,3 +1,4 @@
+
 var util = require("./../lib/util.js");
 
 /**
@@ -50,7 +51,12 @@ function fixStaticSize(size){
 }
 
 File.prototype.addPage = function(hash, pv){
-    this.pages[hash] = pv;
+    //会出现hash相同的情况，所以pv需要累加
+    if(this.pages[hash]){
+        this.pages[hash] += pv;
+    }else{
+        this.pages[hash] = pv;
+    }
 }
 
 File.prototype.addPv = function(value){

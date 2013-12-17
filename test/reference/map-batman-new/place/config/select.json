@@ -52,6 +52,7 @@
         },
         "sort_type" : {
             "default__0" : "排序",
+            "cater_book_wap__0": "可预订优先",
             "groupon__0" : "团购优先",
             "discount2__0" : "优惠优先",
             "distance__0" : "距离", 

@@ -10,7 +10,7 @@ function mInfo() {
 
     if (mData.duration && mData.duration != "undefined") {
 
-        $("#duration").html("片长：" + mData.duration + "分钟");
+        $("#duration").html("片长：" + mData.duration);
     } else {
 
         $("#duration").html("片长：暂无");

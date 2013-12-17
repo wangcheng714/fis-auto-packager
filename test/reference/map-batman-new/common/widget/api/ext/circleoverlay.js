@@ -2,7 +2,6 @@
  * 自定义圆形覆盖物
  * @fileoverview 自定义圆形覆盖物，用于显示定位误差范围
  */
-var BMap = require('common:widget/api/api.js');
 
 function CircleOverlay(center, radius){
     this.center = center;

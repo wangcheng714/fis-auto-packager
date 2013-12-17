@@ -27,7 +27,8 @@
                 </div>
                 <div class="guest-item guest-phone">
                     <em class="icon phone-icon"></em>
-                    <input class="guest" type="text" pattern="[0-9]*" name="phone" maxlength="11" value="" placeholder="用于接收确认信息" />
+                    <input class="guest" type="text" pattern="[0-9]*" name="phone" maxlength="11" value=""
+                           placeholder="{%if $data.is_gwj%}用于接收确认短信及返券短信{%else%}用于接收确认信息{%/if%}" />
                 </div>
                 
             </div>
@@ -47,7 +48,20 @@
         </div>
     {%/if%}
     <div class="pricetotal">
-        <strong>订单金额：&yen;<span id="priceTotal">{%$data.room.single_price%}</span></strong>(到店支付)
+        <p><strong>订单金额：&yen;<span id="priceTotal">{%$data.room.single_price%}</span></strong>(到店支付)</p>
+        {%if $data.is_gwj%}
+            {%if $kehuduan%}
+                <a attr-href="/mobile/webapp/place/guarantee/type=orderact{%if $kehuduan%}/kehuduan=1{%/if%}"
+                    class="gwj-kehuduan-bonus"
+                    data-log="{code: {%$STAT_CODE.PLACE_HOTEL_GWJ_ORDER_ACTDES_CLICK%}, srcname:'hotel'}">
+            {%else%}
+                <a href="/mobile/webapp/place/guarantee/type=orderact"
+                   class="gwj-bonus"
+                   data-log="{code: {%$STAT_CODE.PLACE_HOTEL_GWJ_ORDER_ACTDES_CLICK%}, srcname:'hotel'}">
+            {%/if%}
+                可返：&yen;30×<span class="gwj-bonusnum" data-datenum="{%count($data.room_price)%}">{%count($data.room_price)%}</span> 团购券 >
+        {%/if%}
+        </a>
     </div>
     <div class="verifycode">
         <div class="verifyinput"><input type="text" name="code" class="verifycode" placeholder="请填写验证码" value="" /></div>
@@ -62,7 +76,7 @@
     <input type="hidden" name="room_num" value="1" />
     <input type="hidden" name="src_need_identity" value="{%$data.hotel_info.src_need_identity%}" />
     <div class="submitbutton" id="submitButton">提交订单</div>
-    {%if $data.hotel_info.reg_hint%}<p class="register-info">{%$data.room_info.reg_hint%}</p>{%/if%}
+    {%if $data.hotel_info.reg_hint%}<p class="register-info">{%$data.hotel_info.reg_hint%}</p>{%/if%}
 </div>
 {%script%}
 	var data = {%json_encode($data.room_price)%} || {};

@@ -25,6 +25,15 @@
         {%*搜索周边、到这去三大金刚*%}
         {%widget name="place:widget/hotelgoto/hotelgoto.tpl" widget_data=$data.content.goto%}
 
+        {%*双旦购物节banner展示*%}
+        {%if $data.content.ext && $data.content.ext.detail_info && $data.content.ext.detail_info.is_gwj &&
+            $data.content.ext.detail_info.activity_gwj && count($data.content.ext.detail_info.activity_gwj.groupon)%}
+            <a class="hotel-actbanner" href="{%$data.content.ext.detail_info.activity_gwj.groupon[0].wap_url%}"
+               data-log="{code: {%$STAT_CODE.PLACE_HOTEL_GWJ_DETAIL_BANNER_CLICK%}, srcname:'hotel'}">
+                <img src="/static/images/act_banner.png" />
+            </a>
+        {%/if%}
+
         <div id="hotel-bookinfo">
             <ul class="hotelext-nav">
                 <li class="hotelbook-nav">预订</li>

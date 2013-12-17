@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
-{%html framework="common:static/js/mod.js"%}
+{%html framework="common:static/js/mod.js"  fid="map_batman" sampleRate="1"%}
+    {%cdn sync="/mobile/simple" async="/mobile/simple"%}
     {%head%}
-        <script type="text/javascript">var c_t0=+new Date;</script>
+        <script type="text/javascript">var c_t0=+new Date,c_srt0={%json_encode($c_srt0)%}||0;</script>
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -14,14 +15,25 @@
         <title>百度地图</title>
         <script type="text/javascript" src="/static/js/pdc/pdc.js?__inline"></script>
         <script type="text/javascript">
+            // 当前路由信息{object}
             window._APP_HASH = {
                 module : {%json_encode($module)%},
                 action : {%json_encode($action)%},
                 page : {%json_encode($page)%},
                 third_party : {%json_encode($third_party)%} || ''
             };
+            /**
+             * 速度适配返回网络信息{object}
+             * _WISE_INFO: {
+             *      netype: {string} 网络类型 1:wifi 2:2g 3:3g
+             *      netspeed: {string} 网速 
+             * }    
+             */
             window._WISE_INFO = {%json_encode($wise_info)%} || {};
+            // 服务端处理时间 {number}
             window._SERVER_TIME = {%json_encode($server_time)%} || 0;
+            // 地图bounds {string}
+            window._MAP_BOUNDS = {%json_encode($bounds)%} || '';
         </script>
         <link rel="stylesheet" type="text/css" href="/static/css/reset.inline.css?__inline">
         <link rel="stylesheet" type="text/css" href="/static/css/base.inline.css?__inline">
@@ -45,6 +57,10 @@
                 }
             {%/script%}
         {%/widget_block%}
+        {%* 子页面如果不需要发起系统定位，可以配置为 false *%}
+        {%block name="geo_config"%}
+            {%$geo_config="{isStartGeo:true}"%}
+        {%/block%}
         {%script%}
 
             COM_STAT_CODE = {%json_encode($COM_STAT_CODE)%} || {};
@@ -73,6 +89,7 @@
             //初始化app，包括发起定位，初始化屏幕高度，设置fastclick等
             require('common:widget/initapp/initapp.js').init();
 
+            require('common:widget/geolocation/initgeo.js').init({%$geo_config%});
             <!-- ios7不用scrollTo -->
             if(!(/OS 7_\d[_\d]* like Mac OS X/i).test(navigator.userAgent)) {
                 window.scrollTo(0, 0);
@@ -106,7 +123,8 @@
                     // 重设server_time 和 wise_info, 统计切页时性能
                     window._WISE_INFO = {%json_encode($wise_info)%} || {};
                     window._SERVER_TIME = {%json_encode($server_time)%} || 0;
-
+                    // 地图bounds {string}
+                    window._MAP_BOUNDS = {%json_encode($bounds)%} || '';
                 {%/script%}                
                 {%block name="js"%}{%/block%}
 
@@ -147,7 +165,7 @@
         <!-- 内嵌异步公共组件样式和性能监控脚本 by jican-->
         <script type="text/javascript" src="/static/js/pdc/vt.js?__inline"></script>
         <link rel="stylesheet" type="text/css" href="/widget/datepicker/datepicker.inline.css?__inline">
-        <link rel="stylesheet" type="text/css" href="/widget/map/apiext.inline.less?__inline">
+        <link rel="stylesheet" type="text/css" href="/widget/api/ext/apiext.inline.less?__inline">
         <link rel="stylesheet" type="text/css" href="/widget/popup/popup.inline.css?__inline">
         <link rel="stylesheet" type="text/css" href="/static/css/gmu.inline.css?__inline"> 
         <script type="text/javascript" src="/static/js/pdc/pda.js?__inline"></script>
@@ -156,9 +174,6 @@
         {%script%}
             var stat = require('common:widget/stat/stat.js');
             stat.initClickStat();
-            require.async('common:widget/geolocation/geolocation.js', function(exports){
-                exports.init();
-            });
             //统计组件
             (require('common:widget/statistics/statistics.js')).init();
         {%/script%}

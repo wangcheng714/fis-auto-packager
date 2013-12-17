@@ -6,6 +6,14 @@
         <div class="hotel-head">
             <img class="head-icon-thirdsrc" src="{%$thirdsrc.hotel_info.src_logo_mobile%}"/>
             <h3 class="head-name">{%$thirdsrc.hotel_info.src_name%}</h3>
+            {%*双旦购物节说明文案*%}
+            {%if $thirdsrc.hotel_info.award_tag%}
+                <a href="/mobile/webapp/place/guarantee/type=detailact{%if $kehuduan%}/kehuduan=1{%/if%}"
+                   class="head-act"
+                   data-log="{code: {%$STAT_CODE.PLACE_HOTEL_GWJ_DETAIL_ACTDES_CLICK%}, srcname:'hotel'}">
+                    {%$thirdsrc.hotel_info.award_tag%}
+                </a>
+            {%/if%}
         </div>
         <ul class="hotel-roomlist-thirdsrc" {%if $widget_data.soldout %}style="display: none"{%/if%}>
             {%foreach $thirdsrc.room_list as $i => $item%}
@@ -16,8 +24,9 @@
                         <div class="room-wrap"><span class="price-icon">¥</span>
                             <span class="price-num">{%$item.price%}</span>
                         </div>
-                        {%if ($item.bonus)%}
-                            <div class="room-discount">返¥{%$item.bonus%}</div>
+                        {%*双旦购物节说明文案*%}
+                        {%if $item.bonus%}
+                            <div class="room-discount">{%$item.bonus%}</div>
                         {%/if%}
                     </div>
                     {%if ($item.bookable === '1')%}

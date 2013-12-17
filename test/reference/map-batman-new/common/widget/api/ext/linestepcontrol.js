@@ -1,13 +1,13 @@
-var util        = require('common:static/js/util.js'),
-    stat        = require('common:widget/stat/stat.js'),
-    BaseControl = require('common:widget/api/ext/basecontrol.js'),
+var util = require('common:static/js/util.js'),
+    stat = require('common:widget/stat/stat.js'),
     stat = require('common:widget/stat/stat.js');
 
 function LineStepControl(){
+    this.defaultOffset = new BMap.Size(0, 0);
     this.defaultAnchor = BMAP_ANCHOR_BOTTOM_LEFT;
     this.isOn = false;
 }
-LineStepControl.prototype = new BaseControl();
+LineStepControl.prototype = new BMap.Control();
 $.extend(LineStepControl.prototype, {
     initialize: function(map){
         this._map = map;
@@ -15,7 +15,6 @@ $.extend(LineStepControl.prototype, {
         	arrowTpl = "<b></b>";
 
         box.className = "line_step";
-        // box.cssText = "margin:100px;";
 
         var preBtn = document.createElement("div");
         preBtn.className = "step_pre";
@@ -133,7 +132,7 @@ $.extend(LineStepControl.prototype, {
     ,hide : function(){
         this.isOn = false;
         //CtrMgr.cc["lineCtrl"].on = false;
-        BaseControl.prototype.hide.call(this);
+        BMap.Control.prototype.hide.call(this);
     }
     /**
      * 显示控件
@@ -141,7 +140,7 @@ $.extend(LineStepControl.prototype, {
     ,show : function(){
         this.isOn = true;
         //CtrMgr.cc["lineCtrl"].on = true;
-        BaseControl.prototype.show.call(this);
+        BMap.Control.prototype.show.call(this);
     }
 });
 

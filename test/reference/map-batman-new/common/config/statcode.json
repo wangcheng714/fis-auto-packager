@@ -96,6 +96,10 @@
     "STAT_USER_LOGIN_SUCCESS": "common_93", 
     "TOP_BANNER_APP_ERROR_OPEN":"common_94",
     "TOP_BANNER_APP_ERROR_DOWN":"common_95",
-    "TOP_BANNER_APP_ERROR_CANCEL":"common_96"
+    "TOP_BANNER_APP_ERROR_CANCEL":"common_96",
+
+    "STAT_BUS_SEARCH": "common_97",
+    "STAT_NAV_SEARCH": "common_98",
+    "STAT_WALK_SEARCH": "common_99"
 
 }

@@ -34,6 +34,9 @@
             {%widget name="place:widget/gotomovie/gotomovie.tpl" widget_data=$data.content.goto wd=$data.content.ext.src_name bname=$data.content.name phone=$data.content.phone%}
         {%else%}
             {%widget name="place:widget/goto/goto.tpl" widget_data=$data.content.goto wd=$wd srcname=$srcname entry=$entry bname=$bname%}
+            {%if $srcname == 'cater' && $data.content.ext && $data.content.ext.detail_info && $data.content.ext.detail_info.wap_bookable == 1%}
+                {%widget name="place:widget/caterorderseat/caterorderseat.tpl" uid=$data.content.uid thirdId=$data.content.ext.detail_info.ori_info.shop_id bname=$bname wd=$wd%}
+            {%/if%}
             {%if $data.content.pano == 1%}
                 {%widget name="place:widget/streetview/streetview.tpl" street_url=$data.content.streetUrl%}
             {%/if%}

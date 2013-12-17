@@ -208,7 +208,7 @@ module.exports = $.extend({}, {
             evt.gesture && evt.gesture.preventDefault();
 
             // 如果view的click事件触发，不再触发tap事件
-            if (evt.target && evt.target.handled) return;
+            if (evt.target && (evt.target.handled || $(evt.target).parents('#sw_pw').size() > 0)) return;
 
             if (evt.gesture && evt.gesture.touches.length === 1) {
                 var clientRect = container.getBoundingClientRect(), // 百度浏览器bug，检测svg标签的getBoundingClientRect时，返回left不是0... 故选择container计算相对位移
@@ -221,21 +221,23 @@ module.exports = $.extend({}, {
                 var point = renderer.getPointFromPixel(pixel);
                 var station = subway.findNearestStation(point, 'pixel', renderer.tolerance || 16);
 
-                // 地铁站点点击量
-                stat.addStat(STAT_CODE.SUBWAY_STATION_MARKER_CLICK);
+                if (station && station.uid) {
+                    // 地铁站点点击量
+                    stat.addStat(STAT_CODE.SUBWAY_STATION_MARKER_CLICK);
 
-                // 注意需要replace:true，否则不支持pushState会后退空白页
-                url.update({
-                    query: {station_uid: station.uid}
-                }, {
-                    replace: true,
-                    trigger: false
-                });
+                    // 注意需要replace:true，否则不支持pushState会后退空白页
+                    url.update({
+                        query: {station_uid: station.uid}
+                    }, {
+                        replace: true,
+                        trigger: false
+                    });
 
-                self.popupStationWindow(station, {
-                    zoomToNormal: false,
-                    isNotification: false
-                });
+                    self.popupStationWindow(station, {
+                        zoomToNormal: false,
+                        isNotification: false
+                    });
+                }
             }
         });
     },

@@ -4,5 +4,5 @@
 </div>
 {%script%}
     // 预加载
-    require('common:widget/map/preloader.js').init();
+    require('common:widget/map/preloader/preloader.js').init();
 {%/script%}

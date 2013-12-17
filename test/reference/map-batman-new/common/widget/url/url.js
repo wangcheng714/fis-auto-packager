@@ -37,6 +37,7 @@ module.exports = {
      * @return {void}
      */
     navigate : function(url, options) {
+
         if(typeof url !== "string") {
             return;
         }
@@ -59,10 +60,17 @@ module.exports = {
 
     /**
      * 获取当前路由信息
+     * @param {opts} {
+         path: 路径 可选
+         disableEncode: 不编码 可选
+       }
      * @return {Object} {module:string, action:string, query:Object, pageState:Object}
      */
-    get : function() {
-        var pathname = window.location.pathname.slice(1);
+    get : function(opts) {
+        opts = opts || {};
+        path = opts.path || window.location.pathname;
+        disableEncode = opts.disableEncode || false;
+        var pathname = path.slice(1);
         var pathArrs = pathname.split('/');
         var product = pathArrs[0];
         var style = pathArrs[1];
@@ -70,57 +78,49 @@ module.exports = {
         var action = pathArrs[3];
         var query = pathArrs[4];
         var pageState = pathArrs[5] || "";
-        /*
-        **  pagestate android 默认浏览器自动解码 hack case
-        */
-
-        //请针对自己的业务在android默认平台下编码
-        var checkPageStateDictionary ={
-            seachbox:function(key){
-                var ProcessDir ={
-                    place:function(pkey){
-                        var pageStateArr = pageState.split('from=place&'+pkey+'=');
-                        pageState ='from=place&'+pkey+'=' + encodeURIComponent(pageStateArr[1]);
-                    },
-                    loc:function(lkey){
-                        var pageStateArr = pageState.split(lkey+'=');
-                        pageState = lkey+'=' + encodeURIComponent(pageStateArr[1]);
+        
+        if(!disableEncode) {
+            // pagestate android 默认浏览器自动解码 hack case
+            // 请针对自己的业务在android默认平台下编码
+            var checkPageStateDictionary ={
+                seachbox:function(key){
+                    var ProcessDir ={
+                        place:function(pkey){
+                            var pageStateArr = pageState.split('from=place&'+pkey+'=');
+                            pageState ='from=place&'+pkey+'=' + encodeURIComponent(pageStateArr[1]);
+                        },
+                        loc:function(lkey){
+                            var pageStateArr = pageState.split(lkey+'=');
+                            pageState = lkey+'=' + encodeURIComponent(pageStateArr[1]);
+                        }
                     }
+                    key && ProcessDir[key[1]](key[0]);
                 }
-                key && ProcessDir[key[1]](key[0]);
-            }
-        };
-        //判断是否有和url重合的字段 如果有没被编码过的话
-        if(!(/%3d|%26/ig.test(pageState)) && pageState.indexOf("=") > -1 ){
-            var paramProcess = {
-                DictionaryName : "seachbox",
-                DictionaryData : ""
             };
-            /*
-            **路线搜索业务逻辑单独处理
-            **从定位跳过来单独处理
-            */
-            var placeFlag = !(/^(from=place&start=word%3d|from=place&end=word%3d)/ig.test(pageState)),
-                locationFlag = !(/^(start=word%3d|end=word%3d)/ig.test(pageState));
-            if (placeFlag || locationFlag) { 
-                if(pageState.indexOf("start")!==-1){
-                    var parseFlag = /^start=word=/ig.test(pageState);
-                    !parseFlag && placeFlag && (paramProcess.DictionaryData = ['start','place']);
-                    parseFlag && locationFlag &&(paramProcess.DictionaryData = ['start','loc']);
-                }else if(pageState.indexOf("end")!==-1){
-                    var EndparseFlag = /^end=word=/ig.test(pageState);
-                    !EndparseFlag && placeFlag &&(paramProcess.DictionaryData = ['end','place']);
-                    EndparseFlag && locationFlag &&(paramProcess.DictionaryData = ['end','loc']);
-                }
-                checkPageStateDictionary[paramProcess.DictionaryName](paramProcess.DictionaryData);
-            };
-
-            // 这绝对是个大坑，万不得已为之，ios 5.x下，url的path部分会被自动解码，有bug
-            if(pageState.indexOf("refer_query") > -1 && pageState.indexOf("refer_pagestate") > -1) {
-                pageState = "refer_query=" 
-                            + encodeURIComponent(pageState.match(/refer_query=(.*?)($|&refer_pagestate)/)[1])
-                            + "&refer_pagestate=" 
-                            + encodeURIComponent(pageState.match(/refer_pagestate=(.*?)($|&list_type)/)[1]);
+            //判断是否有和url重合的字段 如果有没被编码过的话
+            if(!(/%3d|%26/ig.test(pageState)) && pageState.indexOf("=") > -1 ){
+                var paramProcess = {
+                    DictionaryName : "seachbox",
+                    DictionaryData : ""
+                };
+                /*
+                **路线搜索业务逻辑单独处理
+                **从定位跳过来单独处理
+                */
+                var placeFlag = !(/^(from=place&start=word%3d|from=place&end=word%3d)/ig.test(pageState)),
+                    locationFlag = !(/^(start=word%3d|end=word%3d)/ig.test(pageState));
+                if (placeFlag || locationFlag) { 
+                    if(pageState.indexOf("start")!==-1){
+                        var parseFlag = /^start=word=/ig.test(pageState);
+                        !parseFlag && placeFlag && (paramProcess.DictionaryData = ['start','place']);
+                        parseFlag && locationFlag &&(paramProcess.DictionaryData = ['start','loc']);
+                    }else if(pageState.indexOf("end")!==-1){
+                        var EndparseFlag = /^end=word=/ig.test(pageState);
+                        !EndparseFlag && placeFlag &&(paramProcess.DictionaryData = ['end','place']);
+                        EndparseFlag && locationFlag &&(paramProcess.DictionaryData = ['end','loc']);
+                    }
+                    checkPageStateDictionary[paramProcess.DictionaryName](paramProcess.DictionaryData);
+                };
             }
         }
         return {

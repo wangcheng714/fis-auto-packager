@@ -1,6 +1,6 @@
 require('common:static/js/gmu/src/widget/suggestion/suggestion.js');
 require('common:static/js/gmu/src/widget/suggestion/renderlist.js');
-require('common:static/js/gmu/src/widget/suggestion/$quickdelete.js');
+require('common:static/js/gmu/src/widget/suggestion/quickdelete.js');
 require('common:static/js/gmu/src/widget/suggestion/sendrequest.js');
 /*
  * @fileoverview 搜索框View

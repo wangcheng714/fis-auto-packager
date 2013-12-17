@@ -9,7 +9,7 @@ var mapConst = require('common:static/js/mapconst.js'),
     util = require('common:static/js/util.js'),
     locator = require('common:widget/geolocation/location.js'),
     searchData = require('common:static/js/searchdata.js'),
-    GRControl = require('place:widget/genericrequest/genericrequest.js'),
+    GRControl = (require('place:widget/genericre/genericre.js')).init(),
     stat = require('common:widget/stat/stat.js');
 
 module.exports = {

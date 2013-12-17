@@ -3,19 +3,37 @@
  */
 
 var url = require("common:widget/url/url.js"),
+    preloader = require('common:widget/map/preloader/preloader.js'),
     pagemgr = require("common:widget/pagemgr/pagemgr.js");
 
 // 是否返回到上一个replace的url上
 var isBackReplaceAble = false;
 /**
- * 绑定返回按钮事件
+ * 绑定按钮事件
  * @return {void}
  */
 var bind = function () {
-    var backBtn = $(".common-widget-nav .back-btn");
-    backBtn.on("click", function () {
-        back();
-    });
+    $('.common-widget-nav [jsaction]').on('click', $.proxy(function (e) {
+        var target = $(e.currentTarget);
+        switch(target.attr('jsaction')) {
+            case 'jump': {
+                back();
+                break;
+            }
+            case 'tomap': {
+                // 并行加载底图数据 需要在url.update之前执行 by jican 
+                preloader.loadTiles('mapclick');
+
+                // 拿到后端返回的url通过url.update更新 by jican
+                var hash = url.get({
+                    path: target.attr('link'),
+                    disableEncode: true
+                });
+                url.update(hash);
+                break;
+            }
+        }   
+    }, this));
 }
 
 var storageKey = "_lastPageUrl";

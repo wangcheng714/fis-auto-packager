@@ -107,17 +107,25 @@ var util = require('common:static/js/util.js'),
             }
         },
         getPageConfig: function () {
-            var cmsConfig = window.webapp_cms_bottom_download_img,
-                opts = this.getCurrentHash(),
+            var opts = this.getCurrentHash(),
                 module = opts.module,
                 action = opts.action,
                 query = opts.query,
                 pageState = opts.pageState,
                 config = {},
                 cmsList, transiWds, driveWds;
-
             this.cmsDisplayRule = window.bottomBannerDisplayRule;
-
+            
+            var cmsConfig = window.webapp_cms_bottom_download_img;
+            if(_APP_HASH.third_party){
+                var cmsThirdPartyConfig = window['third_'+_APP_HASH.third_party+'_bottom_config'];
+                if(cmsThirdPartyConfig){
+                    $.each(cmsThirdPartyConfig, function (k, v) {
+                        cmsConfig[k] = v;
+                    });
+                }
+            }
+            //this.isHideBanner()是url中viewmode=no_ad控制，后端传递
             if (!cmsConfig || !this.checkDisplayBanner(opts) || this.isHideBanner()) {
                 return null;
             }
@@ -167,8 +175,8 @@ var util = require('common:static/js/util.js'),
             if (!cmsList) {
                 return null;
             }
-
-            config.bgUrl = this.hasInstalled ? cmsList.openUrl : cmsList.downloadImgUrl;
+            config.needOpen = cmsList.openUrl ? true : false;
+            config.bgUrl = cmsList.openUrl && this.hasInstalled ? cmsList.openUrl : cmsList.downloadImgUrl;
 
             if (util.isIPhone()) {
                 config.srcUrl = cmsList.iponeSrc;
@@ -182,12 +190,12 @@ var util = require('common:static/js/util.js'),
             return config;
         },
         renderAfterLoaded: function () {
-            var config = this.getPageConfig();
+            this.config = this.getPageConfig();
 
-            if (config) {
+            if (this.config && this.config.bgUrl) {
                 this.$el
-                    .css('background-image', 'url(' + config.bgUrl + ')')
-                    .attr('data-href', config.srcUrl)
+                    .css('background-image', 'url(' + this.config.bgUrl + ')')
+                    .attr('data-href', this.config.srcUrl)
                     .show();
 
                 listener.trigger('common', 'sizechange');
@@ -201,7 +209,7 @@ var util = require('common:static/js/util.js'),
                 var me = this;
                 this.$el = $('.common-widget-bottom-banner');
                 this.$el.on('click', function() {
-                    if(me.hasInstalled) {
+                    if(me.hasInstalled && me.config.needOpen) {
                         location.href = 'bdapp://map/';
                     } else {
                         open($(this).attr('data-href'), '_blank');

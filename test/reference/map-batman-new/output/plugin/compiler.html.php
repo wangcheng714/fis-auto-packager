@@ -3,7 +3,7 @@
 function smarty_compiler_html($arrParams,  $smarty){
     $strResourceApiPath = preg_replace('/[\\/\\\\]+/', '/', dirname(__FILE__) . '/lib/FISPagelet.class.php');
     $strFramework = $arrParams['framework'];
-    $strMode = $arrParams['mode'];
+    $strMode = isset($arrParams['mode']) ? $arrParams['mode'] : 'null';
 
     unset($arrParams['framework']);
     unset($arrParams['mode']);
@@ -38,7 +38,13 @@ function smarty_compiler_html($arrParams,  $smarty){
 }
 
 function smarty_compiler_htmlclose($arrParams,  $smarty){
+    $template_dir = $smarty->getTemplateDir();
+    $template_dir = str_replace('\\', '/', $template_dir[0]);
+    $strResourceApiPath = preg_replace('/[\\/\\\\]+/', '/', dirname(__FILE__) . '/lib/FISPagelet.class.php');
     $strCode = '<?php ';
+    $strCode .= '$tpl=str_replace("\\\\", "/", $_smarty_tpl->template_resource);';
+    $strCode .= 'if(!class_exists(\'FISPagelet\')){require_once(\'' . $strResourceApiPath . '\');}';
+    $strCode .= 'FISPagelet::setPageName(str_replace("' . $template_dir . '", "", $tpl));';
     $strCode .= '$_smarty_tpl->registerFilter(\'output\', array(\'FISPagelet\', \'renderResponse\'));';
     $strCode .= '?>';
     $strCode .= '</html>';

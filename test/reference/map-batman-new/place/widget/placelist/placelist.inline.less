@@ -54,9 +54,37 @@ h4,  p{
     .list-wrapper{
       padding: .9em 1.8em 0 2.5em;
       position: relative;
+      overflow: hidden;
+
+      .list-tip-gwj{
+        background-color: #ffbb39;
+        position: relative;
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        padding: 0 10px 0 5px;
+        font-size: 14px;
+        color: white;
+        overflow: visible;
+      }
+      .list-tip-gwj:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -10px;
+          width: 0;
+          height: 0;
+          border-top: 12px solid transparent;
+          border-left: 10px solid #ffbb39;
+          border-bottom: 12px solid transparent;
+      }
     }
     .icon-groupon{
       background:url('/static/images/tuan_icon.png') 0 0 no-repeat;
+    }
+    .icon-book{
+      background:url('/static/images/list_book.png') 0 0 no-repeat;
     }
     .icon-premium{
       background:url('/static/images/list_sale_icon.png') 0 0 no-repeat;
@@ -220,6 +248,21 @@ h4,  p{
       width: 7px;
       top: 50%;
       right: 1em;
+    }
+
+    .list-actbook, .list-acttuan{
+      background: #fdfdf2;
+      color: #d70909;
+      font-size: 12px;
+      margin: 8px 12px 0 12px;
+      padding: 3px 12px;
+      border: 1px solid #f3f0c6;
+      border-radius: 3px;
+      text-align: center;
+    }
+    .list-actbook{
+      text-align: center;
+      margin: 8px 34px 0 34px
     }
 
     .list-pagenav{

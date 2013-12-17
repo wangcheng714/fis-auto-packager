@@ -46,11 +46,6 @@ function showTelBox(e) {
     };
     stat.addStat(STAT_CODE.PLACE_DETAIL_TELEPHONE_CLICK, statOpts);
 
-    if(util.isAndroid()){
-        $target.attr('href','javascript:void(0)');
-        util.TelBox.showTb($target.attr('data-tel'));
-    }
-
     e.stopPropagation();
     e.stopImmediatePropagation();
 }

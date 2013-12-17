@@ -18,6 +18,9 @@
 </div>
 <!-- cover会很快展现，需要将js内敛执行，保证用户快速可操作 -->
 <script type="text/javascript">
+    window.scrollTo(0,0);
+
+
     // 为能够让用户早点看到，这里可耻的用了全局变量
     var __cover = {
         hasClosed : false,

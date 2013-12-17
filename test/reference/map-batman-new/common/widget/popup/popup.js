@@ -105,26 +105,26 @@ module.exports = {
             this._autoCloseTimeout = setTimeout($.proxy(this.close, this), options.autoCloseTime);
         }
         if(options.isTouchHide){
-            this._$el.on('touchend', function(e) {
+            this._$el.on('click', function(e) {
                 e.stopPropagation();
                 $("#bmap_pop_cover").hide();
                 self.close();
                 this._boxTouchHandle = arguments.callee;
-                this._$el.off("touchend", arguments.callee);
+                this._$el.off("click", arguments.callee);
             });
-            $(document.body).on('touchend', function(e) {
+            $(document.body).on('click', function(e) {
                 e.stopPropagation();
                 $("#bmap_pop_cover").hide();
                 self.close();
                 this._docTouchHandle = arguments.callee;
-                $(document.body).off("touchend", arguments.callee);
+                $(document.body).off("click", arguments.callee);
             });
         }else {
             if(this._boxTouchHandle) {
-                this._$el.off('touchend', this._boxTouchHandle);
+                this._$el.off('click', this._boxTouchHandle);
             }
             if(this._docTouchHandle) {
-                $(document.body).off('touchend', this._docTouchHandle);
+                $(document.body).off('click', this._docTouchHandle);
             }
         }
 

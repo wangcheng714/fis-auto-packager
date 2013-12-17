@@ -9,7 +9,9 @@
     {%/if%}
     {%$main = $data.main%}
     {%$fixrank = $main.fixrank1%}
-    {%if $pagename != 'index'%}
+    {%if $pagename == 'casuallook'%}
+        {%$fixrank = $main.fixrank4%}
+    {%elseif $pagename != 'index'%}
         {%$fixrank = $main.fixrank2%}
     {%/if%}
     {%* 按钮总数 *%}
@@ -27,7 +29,7 @@
                     <li class="item-{%$main.content[$key].className%}-{%$page%}">
                         <a href="javascript:void(0);" jsaction="jump" userdata="{wd:'{%$word%}', module:'{%$module%}', action:'{%$action%}', id:'{%$id%}'}">
                             {%if ($content.className === 'ui3-movie')%}
-                            <b class= "movie-tip"></b>
+                                {%widget name="index:widget/nearbytip/nearbytip.tpl"%}
                             {%/if%}
                             <b class="icon needsclick {%$main.content[$key].className%}"> </b>
                             <span class='ui3-font'>{%$word%}

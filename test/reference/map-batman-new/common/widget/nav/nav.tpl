@@ -29,9 +29,10 @@
         {%if isset($mapLink)%}
 
         <div class="base-btn menu-btn">
-            <a  id="nav_maplink" href="{%$mapLink%}" data-log="{code:{%$COM_STAT_CODE.NAV_VIEW_MAP%}, pagetype:'{%$pageType%}', wd: '{%$title%}', name: '{%$bname%}', srcname: '{%$srcname%}' }">
+            <div id="nav_maplink" class="maplink" link="{%$mapLink%}" jsaction="tomap" data-log="{code:{%$COM_STAT_CODE.NAV_VIEW_MAP%}, pagetype:'{%$pageType%}', wd: '{%$title%}', name: '{%$bname%}', srcname: '{%$srcname%}' }">
                 <span class="rl_icon" id="nav_go_txt">地图</span>
-                <em></em></a>
+                <em></em>
+            </div>
         </div>
         {%/if%}
 

@@ -7,9 +7,6 @@ var util = require('common:static/js/util.js'),
     popup = require('common:widget/popup/popup.js'),
     url = require('common:widget/url/url.js'),
     mapConst = require('common:static/js/mapconst.js'),
-    BMap = require('common:widget/api/api.js'),
-    CustomMarker = require('common:widget/api/ext/custommarker.js'),
-    BaseControl = require('common:widget/api/ext/basecontrol.js'),
     locator = ﻿require('common:widget/geolocation/location.js'),
     stat = require('common:widget/stat/stat.js');
 
@@ -27,8 +24,10 @@ var TrafficControl = function(){
     // 交通流量图层实例
     this.trafficLayer = null;
     this.PAGE_ID = "traffic_map";
+
+    this.trafficStorageKey = "_traffic_status"
 }
-TrafficControl.prototype = new BaseControl();
+TrafficControl.prototype = new BMap.Control();
 $.extend(TrafficControl.prototype, {
     initialize: function(map){
         var _this = this;
@@ -98,13 +97,32 @@ $.extend(TrafficControl.prototype, {
             pageState = hash.pageState,
             mapWidget = require('common:widget/map/map.js');
         listener.on('common.map', 'addlazycontrol', function (evt, args) {
-            if (pageState && pageState.traffic === 'on') {
+            if (me.isTurnOnPageState()) {
                 me.turnOnTraffic();
             }
         });
         
         return cc;
     },
+
+    isTurnOnPageState : function () {
+        var hash = url.get(),
+            pageState = hash.pageState;
+
+
+        if(pageState && pageState.traffic === 'on') {
+            return true;
+        }
+
+        try{
+            var isOn = localStorage.getItem(this.trafficStorageKey);
+            if(isOn === "1" ) {
+                return true;
+            }
+        } catch(e) {}
+
+    },
+
     /**
      * 切换交通流量状态
      */
@@ -149,6 +167,11 @@ $.extend(TrafficControl.prototype, {
         this.isOn = true;
         this.initTrafficEvents();
 
+        try{
+            // 在 loaclstroage 存储状态，路况只有按钮能够消除，单纯用URL记录状态很容易被替换掉
+            localStorage.setItem(this.trafficStorageKey,"1");
+        } catch(e){}
+
         // 注意需要replace:true，否则不支持pushState会后退空白页 by jican
         url.update({
             pageState: {traffic:'on'}
@@ -171,6 +194,11 @@ $.extend(TrafficControl.prototype, {
             // 新版路况关闭PV
             stat.addStat(COM_STAT_CODE.MAP_TRAFFIC_OFF_PV);
         }
+
+        // 关闭时需要将存在 localStorage 的状态删掉
+        try{
+            localStorage.removeItem(this.trafficStorageKey);
+        }catch(e){}
 
         // 注意需要replace:true，否则不支持pushState会后退空白页 by jican
         url.update({
@@ -337,9 +365,13 @@ $.extend(TrafficControl.prototype, {
      *@paras events {Array} 事件数据数组
      */
     addTrafficEvents: function(events){
+
+        var mapView = require('common:widget/map/map.js'),
+            CustomMarker = mapView.getCustomMarker();
+
         var me = this;
         me.eventMarkers = me.eventMarkers || [];
-        
+
         var clickHandler = function(data){
             me.dispatchEvent('click', {
                 data: data
@@ -347,7 +379,6 @@ $.extend(TrafficControl.prototype, {
         }
         
         events.forEach(function(item){
-              
             var geo = item.geo.split(',');
             var lat = geo[0].indexOf('|') ? geo[0].split('|')[1]: geo[0];
             var point = new BMap.Point(lat, geo[1]);
@@ -438,16 +469,12 @@ $.extend(TrafficControl.prototype, {
      * 隐藏控件
      */
     hide : function(){
-        //BaseControl.prototype.hide.call(this);
-        //由于上面的方法无法隐藏控件，所以直接隐藏节点
         $('.tf_btn').hide();
     },
     /**
      * 显示控件
      */
     show : function(){
-        //BaseControl.prototype.show.call(this);
-        //由于上面的方法无法显示控件，所以直接显示节点
         $('.tf_btn').show();
     },
 

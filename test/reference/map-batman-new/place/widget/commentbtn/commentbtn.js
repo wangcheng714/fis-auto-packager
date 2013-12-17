@@ -30,7 +30,6 @@ module.exports = {
             url.get().pageState.detail_part === 'comment'
         ){
             var btnTpl = $( '<a>点击抽奖</a>' )
-                .data('log', $("#bonus-stat").data('log'))
                 .attr('id', 'comment-bonus')
                 .attr( 'href', 'http://map.baidu.com/zt/zhuanpan/mobile/?from=app' )
                 .css( { 
@@ -42,7 +41,7 @@ module.exports = {
                     "font" : 'normal bold 14px/40px "微软雅黑"',
                     "-webkit-border-radius" : "5px",
                     "border-radius" : "5px",
-                    "text-align" : "center",
+                    "text-align" : "center"
                 } );
 
             me.$el.after( btnTpl );

@@ -1,0 +1,16 @@
+.hotel-sitetit {
+  font: bold 16px '微软雅黑', '宋体';
+  margin-bottom: 10px;
+}
+.hotel-sitelist .hotel-siteitem {
+  float: left;
+  margin-right: 9px;
+  margin-top: 5px;
+}
+.hotel-sitelist .hotel-siteitem a {
+  display: inline-block;
+}
+.hotel-sitelist .hotel-siteitem img {
+  width: 25px;
+  height: 25px;
+}

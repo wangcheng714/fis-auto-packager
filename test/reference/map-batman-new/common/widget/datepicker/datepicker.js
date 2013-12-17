@@ -72,6 +72,13 @@ var Zepto = $;
             var dateRE = /^(\d{4})\-(\d{1,2})\-(\d{1,2})$/;//yyyy-mm-dd
             return typeof obj === 'object' ? obj: dateRE.test(obj)? new Date(parseInt(RegExp.$1, 10), parseInt(RegExp.$2, 10)-1, parseInt(RegExp.$3, 10)):null;
         },
+        parseDateList: function (list) {
+            var rs = [];
+            for (var i = 0; i < list.length; i++) {
+                rs.push($.datepicker.parseDate(list[i]));
+            }
+            return rs;
+        },
         formatDate:function (date) {
             var formatNumber = $.datepicker.formatNumber;
             return date.getFullYear() + '-' + formatNumber(date.getMonth() + 1, 2) + '-' + formatNumber(date.getDate(), 2);
@@ -93,7 +100,8 @@ var Zepto = $;
             maxDate:null, //可以选择的日期范围
             minDate:null,
             container:null, //如果为非inline模式，且不想再input的下面直接生成结构那就指定container.
-            gap:true//是否显示间隙，星期列表与天数列表之间
+            gap:true,//是否显示间隙，星期列表与天数列表之间
+            dateList: [] //业务中可能存在非连续可选日期，一旦设置dateList,则不再进行minDate与maxDate判断
         }, options);
         record(el, this);
         this._init();
@@ -160,6 +168,7 @@ var Zepto = $;
             this.date(data.date || new Date())
                 .minDate(data.minDate)
                 .maxDate(data.maxDate)
+                .dateList(data.dateList)
                 .refresh();
             data._container.addClass('ui-datepicker').on('click', eventHandler).highlight();
             data._isShow = data._inited =true;
@@ -180,6 +189,24 @@ var Zepto = $;
                 setTimeout(function(){
                     me.goTo((match.is('.ui-datepicker-prev') ? '-' : '+') + '1M');
                 }, 0);
+            }
+        },
+        _checkUnSelectable: function (printDate) {
+            var minDate = this.minDate();
+            var maxDate = this.maxDate();
+            var dateList = this.dateList();
+            var unselectable = false;
+            var temp;
+            if (dateList.length) {
+                for (var i = 0; i < dateList.length; i++) {
+                    temp = printDate - dateList[i];
+                    if (!temp) {
+                        return false;
+                    }
+                }
+                return true;
+            } else {
+                return (minDate && printDate < minDate) || (maxDate && printDate > maxDate);
             }
         },
         _generateHTML:function () {
@@ -215,7 +242,8 @@ var Zepto = $;
                 tbody += '<tr>';
                 for (j = 0; j < 7; j++) {
                     otherMonth = (printDate.getMonth() !== drawMonth);
-                    unselectable = otherMonth || (minDate && printDate < minDate) || (maxDate && printDate > maxDate);
+                    // unselectable = otherMonth || (minDate && printDate < minDate) || (maxDate && printDate > maxDate);
+                    unselectable = otherMonth || this._checkUnSelectable(printDate);
                     tbody += "<td class='" +
                         ((j + firstDay + 6) % 7 >= 5 ? " ui-datepicker-week-end" : "") + // highlight weekends
                         (otherMonth ? " ui-datepicker-other-month" : "") + // highlight days from other months
@@ -273,6 +301,9 @@ var Zepto = $;
                         this.option('selectedDate', val);
                         //this._commit();
                         break;
+                    case 'dateList':
+                        data[key] = val ? $.datepicker.parseDateList(val) : [];
+                        break;
                     case 'gap':
                         data[key] = val;
                         break;
@@ -317,6 +348,10 @@ var Zepto = $;
          */
         selectedDate:function (val) {
             return this.option('selectedDate', val);
+        },
+
+        dateList: function (val) {
+            return this.option('dateList', val);
         },
 
         /**

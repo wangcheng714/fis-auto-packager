@@ -1,0 +1,633 @@
+.place-widget-movienews{
+    border-radius: .25em;  
+    overflow: hidden;     
+    background-color: #f2f2f2;      
+}
+    .hide{
+        display: none;
+    }
+    .place-widget-movienews em{
+        display: inline;
+        font-style: normal;
+        color: black;
+    }
+    .place-widget-movienews .movienews-loading{
+        background-color: #FFF;
+        padding: 30px 0;
+        text-align: center;
+    }
+    .place-widget-movienews .movienews-content{
+        margin: 0 1px;
+        border-top: none;
+    }
+    .movienews-content .tab{
+        overflow: hidden;
+        border: solid 1px #e4e4e4;
+        border-radius: 0.25em 0.25em 0 0;
+    }
+        .movienews-content .tab_wrapper{   
+            position: relative;     
+        }
+        .movienews-content .slide:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -3px;
+            width: 25px;
+            height: 40px;
+            background: -webkit-gradient(linear, right top, left top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+            z-index: 1;
+        }
+        .movienews-content .slide:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -3px;
+            width: 25px;
+            height: 40px;
+            background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+            z-index: 1;
+        }
+            .movienews-content .calendar_tab{
+                background-color: #ffffff;
+                height: 40px;
+                line-height: 40px;
+                display: -moz-box; 
+                display: -webkit-box; 
+                display: box;
+            }
+            .movienews-content .slide .calendar_tab{
+                display: block;
+            }
+                .movienews-content .calendar_tab li{
+                    text-align: center;                                   
+                    font-size: 14px;
+                    color: #333;
+                    -moz-box-flex: 1; 
+                    -webkit-box-flex: 1; 
+                    box-flex: 1; 
+                }
+                .movienews-content .slide .calendar_tab li{
+                    float: left;
+                    width: 75px;
+                }
+                .movienews-content .calendar_tab .disabled{
+                    background-color: #f9f9f9;
+                    color: #999;
+                }
+                .movienews-content .calendar_tab .current{                
+                    background-color: #45A3E6; 
+                    color: #fff;
+                }
+    .place-widget-movienews .cover{
+        position: relative;
+        height: 84px;
+        padding: 8px 0 20px;
+        overflow: hidden;
+    }
+        .place-widget-movienews .cover .cover-wrapper{
+            position:absolute;            
+            top:10px;    
+            bottom:15px;    
+            height: 84px;
+            z-index:1;
+        }
+            .place-widget-movienews .cover .cover-scroller{
+                height: 100%;
+            }
+                .place-widget-movienews .cover .cover-pic{
+                    float: left;
+                    width: 69px;
+                    height: 84px;
+                    margin-right: 6px;
+                    border: solid 3px #f9f9f9;
+                    -webkit-transform:translate3d(0,0,0);
+                }
+                .place-widget-movienews .cover .cover-pic.selected{
+                    border: 3px solid #4D89FF;
+                }
+                .place-widget-movienews .new_icon{
+                    background: url('/static/place/images/movie_photo_icons_b549531.png') -18px 0 no-repeat; 
+                    background-size: 32px 21px;
+                    position:absolute;
+                    width:15px;
+                    height:21px;
+                    z-index: 2;
+                    margin-left: -28px;
+                    margin-top: 3px;
+                }
+                .place-widget-movienews .activity_icon{
+                    background: url('/static/place/images/icon-active_5c89c7f.png') 0 0 no-repeat; 
+                    background-size: 20px 26px;
+                    position:absolute;
+                    width:20px;
+                    height:26px;
+                    z-index: 2;
+                    margin-left: -28px;
+                    margin-top: 3px;
+                }
+    .place-widget-movienews .info-tip{
+        background-color: #FFF;
+        display: none;
+        height: 110px;      
+        padding: 0 0 20px;
+        text-align: center;
+    }    
+    .place-widget-movienews .info{
+        background-color: #fff;
+        position: relative;
+        padding-top: 6px;  
+        border:solid 1px #dedede;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .place-widget-movienews .info:before{
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        left: 26%;
+        top: -3px;
+        margin-left: -110px;
+        width: 8px;
+        height: 8px;
+        border-left: solid 1px #dedede;
+        border-top: solid 1px #dedede;
+        -webkit-transform: translate(100px) rotate(45deg);
+        -webkit-transform-origin: 100% 100%;
+        z-index: 2;
+    }    
+        .place-widget-movienews .info dt,
+        .place-widget-movienews .info p{
+            width: 100%;     
+            border: solid transparent 10px;
+            border-top: 0 none;       
+            text-overflow: ellipsis;
+            overflow:hidden;
+            white-space: nowrap;
+            -webkit-box-sizing:border-box;
+            box-sizing:border-box; 
+        }
+        .place-widget-movienews .info p{
+            border-width: 8px;
+        }
+            .place-widget-movienews .info-actors{
+                float: left;
+                padding: 0;
+            }
+            .place-widget-movienews .info-name{
+                display: block;                
+                padding-left: 37px;                
+            }
+        .place-widget-movienews .info dt{
+            line-height: 32px;
+            padding: 0 10px;
+            border: none;
+            border-bottom: solid 1px #ccc;
+            font-size: 16px;
+        }
+            .place-widget-movienews .info em{
+                display: inline;
+                color: black;
+            }
+            .place-widget-movienews .info em.tit{
+                font-weight: 600;
+            }
+            .place-widget-movienews .info em.sco{
+                color:#FD4F02;
+                font-size:14px;
+            }
+            .place-widget-movienews .info em.des{
+                float:right;
+                color:#1D86FC;
+                font-size:12px;
+                height: 18px;
+            }
+        .place-widget-movienews .info .show-list{      
+            background-color: #fff;     
+            overflow: hidden;
+        }
+            .place-widget-movienews .show-list .show-item{
+                position: relative;
+                display: block;
+                -webkit-box-sizing:border-box;
+                box-sizing:border-box;
+                font-size: 12px;
+            }
+
+            .place-widget-movienews .show-list.part .show-item:nth-child(n+5){
+                display: none;
+            }
+                .place-widget-movienews .show-info{
+                    line-height: 40px;
+                    margin: 0 10px;
+                    border-bottom: solid 1px #dedede;
+                }
+                .place-widget-movienews .show-list .show-item.expand .show-info,
+                .place-widget-movienews .show-list .show-item:last-child .show-info{
+                    border: none;
+                }
+                    .place-widget-movienews .show-info .meta{
+                        float: left;
+                        max-width: 70%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    .place-widget-movienews .info-unbook .show-info .meta{
+                        max-width: none;
+                    }
+                        .place-widget-movienews .show-info .time{
+                            display: inline-block;
+                            vertical-align: middle;
+                            position: relative;
+                            top: -2px;
+                            min-width: 40px;
+                            margin-right: 15px;
+                            font-size: 16px;
+                            color: #FE9601;
+                        }
+                    .place-widget-movienews .show-info .meta-extend{
+                        display: block;
+                        text-align: right;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        font-family: arial;
+                        font-size: 16px;
+                        color:#FE9601;
+                    }
+                        .place-widget-movienews .show-item .icon-price{
+                            margin-right: 3px;
+                            font-size: 10px;
+                            font-style: normal;
+                        }
+                        .place-widget-movienews .show-info .icon-arrow{
+                            background: url(/static/place/images/icon_compare_close_6e2be08.png) no-repeat 0 0;
+                            background-size:20px 20px;
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            margin-left: 10px;
+                            vertical-align: middle;
+                        }
+                        .place-widget-movienews .show-item.expand .icon-arrow{
+                            background: url(/static/place/images/icon_compare_expand_0e37033.png) no-repeat 0 0;
+                            background-size:19px 20px;
+                        }
+                        /*.place-widget-movienews .info .btn-book{
+                            background: url('btn_movie_book.png') 0 0 no-repeat;
+                            background-size: 77px 33px;
+                            position: relative;
+                            display: inline-block;
+                            width: 77px;
+                            height: 33px;
+                            margin-left: 20px; 
+                            padding: 0;
+                            text-align: center;
+                            vertical-align: middle;
+                            border: 0;
+                            color: #000;
+                        }*/
+                    .place-widget-movienews .info .compare-list{
+                        display: none;
+                        position: relative;
+                        background-color: #eeeff3;
+                        padding: 0 10px;
+                        border-top: solid 1px #ccc; 
+                        border-bottom: solid 1px #ccc; 
+                    }
+                    .place-widget-movienews .expand .compare-list{
+                        display: block;
+                    }
+                    .place-widget-movienews .expand .compare-list:before{
+                        content: '';
+                        background-color: #ececec;
+                        position: absolute;
+                        top: -3px;
+                        left: -75px;
+                        width: 8px;
+                        height: 8px;
+                        border-left: solid 1px #ccc;
+                        border-top: solid 1px #ccc;
+                        -webkit-transform: translate(100px) rotate(45deg);
+                        -webkit-transform-origin: 100% 100%;
+                    }
+                        .place-widget-movienews .compare-list li{
+                            height: 27px;
+                            line-height: 27px;
+                            padding: 8px 0;
+                            border-top: solid 1px #ccc;
+                            text-align: right;
+                        }
+                        .place-widget-movienews .compare-list li:first-child{
+                            border: none;
+                        }
+                            .place-widget-movienews .compare-list .brand{
+                                float: left; 
+                            }
+                                .place-widget-movienews .compare-list .icon-cheap{
+                                    background: url(/static/place/images/icon_sheap_7b04af0.png) no-repeat 0 0;
+                                    background-size:15px 17px;
+                                    display: inline-block;
+                                    margin-left: 2px;
+                                    width: 15px;
+                                    height: 17px;
+                                }
+                                .place-widget-movienews .compare-list .icon-activity{
+                                    background: url(/static/place/images/icon-active-tag_c1ec575.png) no-repeat 0 0;
+                                    background-size:59px 17px;
+                                    display: inline-block;
+                                    margin-left: 2px;
+                                    width: 59px;
+                                    height: 17px;
+                                }
+                            .place-widget-movienews .compare-list .price{
+                                display: inline-block;
+                                margin-right: 10px;
+                                font-size: 16px;
+                                color:#FE9601;
+                            }
+                            .place-widget-movienews .compare-list .opt{
+                                display: inline-block;
+                            }
+                                .place-widget-movienews .compare-list .btn-book{
+                                    background: #fdb036;
+                                    position: relative;
+                                    display: inline-block;
+                                    width: 66px;
+                                    height: 27px;
+                                    padding: 0;
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    border: 0;
+                                    color: #fff;
+                                    border-radius: 3px;
+                                }
+                                .place-widget-movienews .compare-list .btn-book.unbook{
+                                    background: url('/static/place/widget/movienews/btn_movie_unbook_e285bb2.png');
+                                    background-size: 66px 27px;
+                                    text-indent: -999px; 
+                                }
+                    .place-widget-movienews .info .btn-exchange{
+                        background-color:#FD4A4D;
+                        border-radius: 3px;
+                        position: relative;
+                        display: inline-block;
+                        height: 33px;
+                        line-height: 33px;
+                        padding: 0 10px;
+                        margin-left: 10px;
+                        text-align: center;
+                        vertical-align: middle;
+                        border: 0;
+                        color: #fff;
+                    }
+                                        
+            .place-widget-movienews .info-unbook .show-item{
+                float: left;
+                width: 50%;
+                margin-top: -1px;
+                border-right: 1px solid #ccc;
+                border-bottom: solid 1px #ccc;
+                text-align: center;
+            }
+            .place-widget-movienews .info-unbook .show-item:nth-child(2n){
+                border-right: none;
+            }
+            .place-widget-movienews .info-unbook .show-item:nth-last-child(-n+1){
+                border-bottom: none;
+            }
+                .place-widget-movienews .info-unbook .meta-extend{
+                    display: none;
+                }
+    .place-widget-movienews.movienews-empty .info-tip{
+        display: block;        
+    }
+    .place-widget-movienews.movienews-empty .cover,
+    .place-widget-movienews.movienews-empty .info{
+        display: none;
+    }
+    .place-widget-movienews .info .list-opt{
+        display: none;
+        margin: -1px 10px 0;
+        -webkit-border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+    }
+        .place-widget-movienews .info .btn-more, 
+        .place-widget-movienews .info .btn-close{
+            background-color: #fff;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            text-align: center;
+            font-size: 14px;
+            color: #627189;
+            border: none;
+            border-top: solid 1px #dedede;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+            .place-widget-movienews .btn-more .icon-arrow,
+            .place-widget-movienews .btn-close .icon-arrow{
+                display: inline-block;
+                width: 13px;
+                height: 10px;
+                margin-left: 5px;
+                vertical-align: -2px;
+                background-repeat: no-repeat;
+            }
+            .place-widget-movienews .btn-more .icon-arrow{
+                background: url(/static/place/images/icon_more_close_4868b86.png) no-repeat 0 0;
+                background-size: 13px 8px;
+            }
+            .place-widget-movienews .btn-close .icon-arrow{
+                background: url(/static/place/images/icon_more_expand_a63236f.png) no-repeat 0 0;
+                background-size: 13px 8px;
+            }
+.moviebook-popup-wrapper{
+    display: none;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 11;
+}
+.moviebook-popup,
+.movietip-popup{
+    background: #F2F2F2;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -90px;
+    width: 300px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+    .moviebook-popup .header,
+    .movietip-popup .header{
+        background: #f1f1f1;
+        position: relative;
+        height: 36px;
+        line-height: 26px;
+        padding: 5px;
+        border-bottom: solid 1px #bfbfbf;
+        text-align: center;
+        color: #010101;
+        font-size: 16px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .moviebook-popup .btn-close,
+    .movietip-popup .btn-close{
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMzNjM2RjY3OEM3MTExRTJBQTA1REE3Qzk0OUZBREE0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMzNjM2RjY4OEM3MTExRTJBQTA1REE3Qzk0OUZBREE0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzM2MzZGNjU4QzcxMTFFMkFBMDVEQTdDOTQ5RkFEQTQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzM2MzZGNjY4QzcxMTFFMkFBMDVEQTdDOTQ5RkFEQTQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4uqJ+1AAAABlBMVEWMjIz///8fMh9uAAAAAnRSTlP/AOW3MEoAAAA8SURBVHjadI8xDgAwCAKP/3+6g9gQ0jIBBlQALTBK2jBdw+qSscmcRitaokr6zCtf/bW/73vcn/8dAQYAL9AAZV3WpaIAAAAASUVORK5CYII=) no-repeat center center;        
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;        
+        z-index: 1;
+    }
+    .moviebook-popup .content{        
+        padding: 14px 0 0 16px;
+    }    
+            .moviebook-popup .content p{
+                margin-bottom: 27px;
+            }
+            .moviebook-popup .content p:nth-child(2){
+                display: none;
+            }
+                .moviebook-popup .content label,
+                .moviebook-popup .content input,
+                .moviebook-popup .content button{
+                    font-size: 14px;
+                    color: #434343;
+                }
+                .moviebook-popup .content input{
+                    width: 200px;
+                    height: 26px;
+                    padding: 4px 8px;
+                    border: solid 1px #ccc;
+                    -webkit-border-radius: 5px;
+                            border-radius: 5px;
+                }
+                .moviebook-popup .content img{
+                    vertical-align: middle;
+                }
+                #valid-number{
+                    width: 90px;
+                    margin-right: 5px;
+                }
+                .moviebook-popup .content button{
+                    position: static;
+                    border: none;
+                    text-align: center;
+                    font-size: 16px;
+                    color: #fff;      
+                }
+                .moviebook-popup .content .tip{
+                    display: none;
+                    float: left;
+                    margin-left: 50px;
+                    margin-top: 5px;
+                    color: #e60012;
+                }
+                .moviebook-popup .content .submit-btn{
+                    background-color: #8cbddc;
+                    width: 155px;
+                    height: 37px;
+                    margin-left: 70px;                    
+                    -webkit-border-radius: 5px;
+                                 border-radius: 5px;
+                }
+
+    
+.moviedes_popup{
+    background-color: #fff;
+    width: 280px;
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    left:50%;
+    margin-left:-140px;
+}
+    .moviedes_popup .header{
+        text-align: center;
+        background:#f1f1f1;
+        border-bottom:1px solid #BFBFBF;
+        height: auto;
+        padding:5px 13px;
+    }
+        .moviedes_popup .header .btn_close{
+            background: none;
+            line-height: 1;
+            font-size: 16px;
+            text-decoration: none;
+            color: #000;
+            opacity: 0.7;
+            font-weight: 600;
+            right: 0px;
+            position: absolute;
+            width: 35px;
+            height: 30px;
+        }
+        .moviedes_popup .header .logo{
+            background: url(../../images/movie_popup_log.png) no-repeat 0 0;
+            background-size: 66px 32px;
+            position: absolute;
+            display: block;
+            width: 66px;
+            height: 32px;
+            top: 7px;
+            left: 10px;
+        }
+        .moviedes_popup.header .sco{
+            color: #FD4F02;
+            font-size: 14px;
+        }
+
+ 
+    .moviedes_popup .content{                    
+        padding:13px;
+        color:#373737;
+    }
+        .moviedes_popup .content table td{
+            padding:4px 0;
+        }
+        .moviedes_popup .content .name{
+            color:#5E5D5D;
+            font-weight: 600;
+        }
+        .moviedes_popup .content .title1{
+            font-size: 14px;
+            color: #399700;
+        }
+        .moviedes_popup .content .title2{
+            font-size: 20px;
+            color: #ff6600;
+        }
+    .moviedes_popup .footer{
+        background-color: #7659b1;
+        height: auto;
+        line-height: 1;
+        padding: 10px 0;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: block;
+    }
+        .moviedes_popup .footer a{
+            background-color: #fdb913;
+            display: inline-block;
+            width: 70px;
+            height: 20px;            
+            line-height: 20px;
+            font-size: 12px;
+            cursor:pointer;
+            color: #fff;
+        } 
+

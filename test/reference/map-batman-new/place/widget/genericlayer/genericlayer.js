@@ -3,8 +3,7 @@
  * shengxuanwei@baidu.com
  * 2013-10-31
  */
-var BMap = require('common:widget/api/api.js'),
-    loc = require('common:widget/geolocation/location.js');
+var loc = require('common:widget/geolocation/location.js');
 
 function MDLayer(opts) {
     BMap.TileLayer.call(this, opts);

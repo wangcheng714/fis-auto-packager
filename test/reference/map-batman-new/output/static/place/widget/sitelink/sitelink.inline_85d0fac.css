@@ -1,0 +1,35 @@
+.place-widget-sitelink {
+  position: relative;
+  border-bottom: 1px solid #e1e1e1;
+}
+.place-widget-sitelink .title {
+  margin: 0 5px 15px;
+  font-size: 16px;
+  color: #303235;
+  line-height: 1.2;
+}
+.place-widget-sitelink .sitelink-list {
+  margin: 0 22px 16px;
+  color: #6e6e6e;
+  overflow: hidden;
+}
+.place-widget-sitelink .sitelink-list .sitelink-item {
+  display: inline-block;
+  width: 49%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 11px;
+}
+.sitelink-list .sitelink-item .logo {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+.sitelink-list .sitelink-item a {
+  color: #3c6aa7;
+}

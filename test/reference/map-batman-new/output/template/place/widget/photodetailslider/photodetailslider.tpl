@@ -19,7 +19,7 @@
 </div>
 {%script%}
         require("common:static/js/gmu/src/widget/slider/slider.js");
-        require("common:static/js/gmu/src/widget/slider/$touch.js");
-        require("common:static/js/gmu/src/widget/slider/$lazyloadimg.js");
+        require("common:static/js/gmu/src/widget/slider/touch.js");
+        require("common:static/js/gmu/src/widget/slider/lazyloadimg.js");
         (require('place:widget/photodetailslider/photodetailslider.js')).init({%json_encode($widget_data)%});
 {%/script%}

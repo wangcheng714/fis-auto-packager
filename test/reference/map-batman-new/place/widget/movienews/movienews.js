@@ -10,6 +10,8 @@ var TIMETPL =  __inline("time.tmpl");
 var POPUPTPL =  __inline("popup.tmpl");
 var DESPOPUPTPL =  __inline("despopup.tmpl");
 
+var is_gwj_book;
+
 function getOrientation() {
     var ornttn = window.outerWidth > 0 ?
         (window.outerWidth > window.outerHeight ? 90 : 0) :
@@ -143,7 +145,9 @@ Schedules.prototype.renderMovieNews = function(obj, name){
                 while(i < _item.length){
                     if(item.movie_id == _item[i].movie_id){
                         data['day'] += ('d' + _index);
-                        data['newm'] = ((new Date().getTime() - new Date(item.movie_release_date).getTime())<3*24*3600*1000)
+                        //data['newm'] = ((new Date().getTime() - new Date(item.movie_release_date).getTime())<3*24*3600*1000);
+                        data['newm'] = item.is_new;
+                        data['activity'] = item.is_activity && is_gwj_book ? true : false;
                         break;
                     }
 
@@ -208,7 +212,8 @@ Schedules.prototype.renderMovieNews = function(obj, name){
                 movie: item.src_info[0].movie_id,
                 name: item.src_info[0].movie_name || data.name,
                 info: '{\'lan\':\'' + item.src_info[0].lan + '\',\'time\': \'' + item.time + '\',\'price\': \'' + item.src_info[0].price + '\',\'name\': \'' + data.name + '\'}',
-                list: item.src_info
+                list: item.src_info,
+                activity: is_gwj_book
             };
             if(item.src_info[0].aid){
                 subData.url = me.createCodeUrl(subData,data);
@@ -442,12 +447,12 @@ Schedules.prototype.switchTab = function(event){
             if(i == 0){
                 ele.addClass('selected');
             }
-            if(ele.next().hasClass("new_icon")){
+            if(ele.next().hasClass("new_icon") || ele.next().hasClass("activity_icon")){
                 ele.next().show();
             }
         }else{
             ele.attr('style', 'display:none');
-            if(ele.next().hasClass("new_icon")){
+            if(ele.next().hasClass("new_icon") || ele.next().hasClass("activity_icon")){
                 ele.next().hide();
             }
             isShow = false;
@@ -590,7 +595,8 @@ Schedules.prototype.bookMovie = function(event) {
 
     stat.addStat(STAT_CODE.PLACE_MOVIE_BOOK_CLICK, {
         from: ele.data('orign'),
-        uid: this.uid
+        uid: this.uid,
+        activity: ele.parents('li').eq(0).find('.icon-activity').length
     });
     window.setTimeout(function(){
         window.location.href = url;
@@ -726,7 +732,8 @@ Schedules.prototype.validPhone = function() {
 
             stat.addStat(STAT_CODE.PLACE_MOVIE_BOOK_CLICK, {
                 from: params['third_from'],
-                uid: params['uid']
+                uid: params['uid'],
+                activity: is_gwj_book && params['third_from'].match(/wangpiao|wanda/g) ? 1 : 0
             });
             window.setTimeout(function(){
                 window.location.href = url + '&user_mobile=' + number;
@@ -750,7 +757,8 @@ Schedules.prototype.validPhone = function() {
     
     stat.addStat(STAT_CODE.PLACE_MOVIE_BOOK_CLICK, {
         from: params['third_from'],
-        uid: params['uid']
+        uid: params['uid'],
+        activity: is_gwj_book && params['third_from'].match(/wangpiao|wanda/g) ? 1 : 0
     });
     window.setTimeout(function(){
         window.location.href = url + '&user_mobile=' + number;
@@ -802,8 +810,10 @@ Schedules.prototype.createCodeUrl = function(json,data){
     return url;
 }
 module.exports = {
-    init: function(uid, bookState, now, name){
-        stat.addStat(STAT_CODE.PLACE_MOVIE_PV, {'state': bookState, uid: uid});
+    init: function(uid, bookState, now, name, activity){
+        stat.addStat(STAT_CODE.PLACE_MOVIE_PV, {'state': bookState, uid: uid, activity: activity});
+
+        is_gwj_book = activity;
 
         var urlParam=util.urlToJSON(window.location.href),
             dataQ = {

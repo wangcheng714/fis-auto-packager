@@ -9,7 +9,11 @@ var exports = {
         var $currentTarget = $(e.currentTarget),
             back = $currentTarget.attr('data-back');
         if (back) {
-            LoadManager.loadPage(back);
+            if ((/http(s)?\:\/\//i).test(back)) {
+                location.href = back;
+            } else {
+                LoadManager.loadPage(back);
+            }
         } else {
             LoadManager.loadPage('home');
         }

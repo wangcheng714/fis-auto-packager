@@ -324,6 +324,8 @@ module.exports = {
                 }
                 break;
         }
+        //添加定位成功结束统计
+        metricStat.addStat('geo', 'geo_suc_end');
         metricStat.submit("geo");
     },
     /**

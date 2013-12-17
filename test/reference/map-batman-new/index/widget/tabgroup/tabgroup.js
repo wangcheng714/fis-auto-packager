@@ -5,10 +5,11 @@
  * @date 2013/01/22
  */
 
-var util        = require('common:static/js/util.js'),
-    url        = require('common:widget/url/url.js'),
-    geolocator  = require('common:widget/geolocation/geolocation.js'),
-    locator     = require('common:widget/geolocation/location.js');
+var util = require('common:static/js/util.js'),
+    url = require('common:widget/url/url.js'),
+    geolocator = require('common:widget/geolocation/geolocation.js'),
+    preloader = require('common:widget/map/preloader/preloader.js'),
+    locator = require('common:widget/geolocation/location.js');
 
 module.exports = {
 
@@ -57,7 +58,10 @@ module.exports = {
                 });
                 break;
             }
-            case 'toMapSearch' : {
+            case 'tomap' : {
+                //并行加载底图数据 需要在url.update之前执行 by jican 
+                preloader.loadTiles('mapclick');
+
                 url.update({
                     pageState: {vt: 'map'}
                 }, {

@@ -4,10 +4,8 @@
  */
 var util = require('common:static/js/util.js'),
     url = require('common:widget/url/url.js'),
-    BMap = require('common:widget/api/api.js'),
     cookie = require('common:widget/cookie/cookie.js'),
     login = require('common:widget/login/login.js'),
-    BaseControl = require('common:widget/api/ext/basecontrol.js'),
     pagemgr = require('common:widget/pagemgr/pagemgr.js'),
     stat = require('common:widget/stat/stat.js');
 
@@ -24,11 +22,10 @@ var MenuDrop = function(menuBtn){
     this.isOn = false;  // 是否被点击
 
 }
-MenuDrop.prototype = new BaseControl();
+MenuDrop.prototype = new BMap.Control();
 $.extend(MenuDrop.prototype, {
     initialize: function(map){
         this._map = map;
-        
         var menuDropContainer = this._container = document.createElement('div');
         menuDropContainer.id = 'menu-drop-container';
         menuDropContainer.style.position = 'absolute';
@@ -194,7 +191,7 @@ var MenuControl = function(){
     this.isOn = false;  // 是否被点击
 
 }
-MenuControl.prototype = new BaseControl();
+MenuControl.prototype = new BMap.Control();
 $.extend(MenuControl.prototype, {
     initialize: function(map){
         this._map = map;

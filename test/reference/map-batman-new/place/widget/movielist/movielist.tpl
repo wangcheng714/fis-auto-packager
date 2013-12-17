@@ -37,7 +37,12 @@
                     {%else%}
                         <p class="addr">{%htmlspecialchars_decode($list_item.addr)%}</p>
                     {%/if%}
-
+                    {%if $list_item.ext && $list_item.ext.detail_info && $list_item.ext.detail_info.is_gwj%}
+                        {%if $list_item.ext.detail_info.activity_gwj && $list_item.ext.detail_info.activity_gwj.is_book%}
+                            <p class="list-tip-gwj">观影减10元,万达5折优惠<p>
+                        {%/if%}
+                    {%/if%}
+                    
                     {%* 路线类的点 不显示路线搜索按钮*%}
                     {%if $list_item.poiType != 2 && $list_item.poiType != 4%}
                         <span class="mkr-icon marker-{%counter%}"></span>
@@ -73,6 +78,11 @@
     var listData = {
         isGenRequest : "{%$data.listInfo.isGRequest%}"
     }
+    {%if $list_item.ext && $list_item.ext.detail_info && $list_item.ext.detail_info.is_gwj%}
+        {%if $list_item.ext.detail_info.activity_gwj && $list_item.ext.detail_info.activity_gwj.is_book%}
+            listData['activity'] = 1;
+        {%/if%}
+    {%/if%}
     require("movielist.js").init(listData);
 
     //添加POI结果页的展现量

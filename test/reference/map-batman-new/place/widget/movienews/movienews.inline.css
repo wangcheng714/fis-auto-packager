@@ -116,6 +116,16 @@
                     margin-left: -28px;
                     margin-top: 3px;
                 }
+                .place-widget-movienews .activity_icon{
+                    background: url('/static/images/icon-active.png') 0 0 no-repeat; 
+                    background-size: 20px 26px;
+                    position:absolute;
+                    width:20px;
+                    height:26px;
+                    z-index: 2;
+                    margin-left: -28px;
+                    margin-top: 3px;
+                }
     .place-widget-movienews .info-tip{
         background-color: #FFF;
         display: none;
@@ -315,12 +325,20 @@
                             .place-widget-movienews .compare-list .brand{
                                 float: left; 
                             }
-                                .place-widget-movienews .compare-list .icon-sheap{
+                                .place-widget-movienews .compare-list .icon-cheap{
                                     background: url(../../static/images/icon_sheap.png) no-repeat 0 0;
                                     background-size:15px 17px;
                                     display: inline-block;
                                     margin-left: 2px;
                                     width: 15px;
+                                    height: 17px;
+                                }
+                                .place-widget-movienews .compare-list .icon-activity{
+                                    background: url(../../static/images/icon-active-tag.png) no-repeat 0 0;
+                                    background-size:59px 17px;
+                                    display: inline-block;
+                                    margin-left: 2px;
+                                    width: 59px;
                                     height: 17px;
                                 }
                             .place-widget-movienews .compare-list .price{
