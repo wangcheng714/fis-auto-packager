@@ -9,11 +9,11 @@ fis.config.merge({
     },
 
     pack : {
+        'pkg/a.js' : [
+            "**.js"
+        ],
         'pkg/base.js' : [
-            '/static/js/mod.js',
-            '/static/js/zepto.js',
-            /^\/(?!static\/js\/pdc\/).*\.js$/i
-            //建议改成widget/**.js
+            "**.js"
         ]
     },
 

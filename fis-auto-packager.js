@@ -23,7 +23,7 @@ var resources = {},
  *  数据结构 ：
  *      {"common_asnyc_js" : [pkg1,pkg2]}
  */
-function createPackConf(resources, outputDir, moduels, projectName){
+function createPackConf(resources, sourceDir, outputDir, moduels, projectName){
     var packResults = {};
 
     util.map(resources, function(packageKeyPrefix, packages){
@@ -37,20 +37,29 @@ function createPackConf(resources, outputDir, moduels, projectName){
                 packResults[module] = {};
             }
             util.map(packages, function(index, pkgFile){
-                var files = pkgFile.get("mergedStatic"),
-                    packageKey = "pkg/" + packageKeyPrefix + "_" + index + "." + type;
+                //对于自定义包 ： 使用用户原生配置不再自动生成，可以保证自定义包的顺序
+                if(pkgFile.get("packageType") != "manual"){
+                    var files = pkgFile.get("mergedStatic"),
+                        packageKey = "pkg/" + packageKeyPrefix + "_" + index + "." + type;
 
-                packResults[module][packageKey] = [];
+                    packResults[module][packageKey] = [];
 
-                util.map(files, function(index, file){
-                    packResults[module][packageKey].push(file.replace(/\w+:/, "/"));
-                });
-
+                    util.map(files, function(index, file){
+                        packResults[module][packageKey].push(file.replace(/\w+:/, "/"));
+                    });
+                }
             });
         }
     });
 
     util.map(packResults, function(module, packResult){
+        var autopackJson = sourceDir + "/auto-pack/" + module + "-autopack.json";
+        if(util.exists(autopackJson)){
+            //因为自动打包里面已经排除了所有的manual文件，所以它的先后顺序不影响打包结果
+            var conf = util.readJSON(autopackJson),
+                packConf = conf["pack"];
+            packResult = util.merge(packConf, packResult);
+        }
         var packStr = JsonUtil.convertToString(packResult),
             fileName = module + "/fis-pack.json";
         zip.addFile(fileName, new Buffer(packStr));
@@ -62,7 +71,7 @@ function createPackConf(resources, outputDir, moduels, projectName){
 
 //todo : 选择网络例如2G\3G\WIFI\PC等
 /**
- * @param dir : 编译后的项目目录
+ * @param sourceDir : 编译后的项目目录
  * @param outputDir : 打包结果产出目录
  * @param projectName : 项目名称
  * @param modules : 所有需要计算打包的模块名
@@ -70,8 +79,8 @@ function createPackConf(resources, outputDir, moduels, projectName){
  * @param logUrl : 获取log日志的url
  * @param callback :  callback(error, result)
  */
-module.exports.package = function(dir, outputDir, projectName, modules, staticType, logUrl, callback){
-    resources = codeAnalyzer.getResource(dir, hashTable, defaultPackages);
+module.exports.package = function(sourceDir, outputDir, projectName, modules, staticType, logUrl, callback){
+    resources = codeAnalyzer.getResource(sourceDir, hashTable, defaultPackages);
     logAnalyzer.analyzeLog(function(error, records){
         if(error){
             callback(error, null);
@@ -104,7 +113,7 @@ module.exports.package = function(dir, outputDir, projectName, modules, staticTy
                 //资源过滤需要在打包阶段来做，getResource阶段需要拿到完整的列表分析文件间的依赖关系
                 var packageResults = packager.package(resources, staticType, defaultPackages);
                 var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
-                var resultFile = createPackConf(packageResults, outputDir, modules, projectName);
+                var resultFile = createPackConf(packageResults, sourceDir, outputDir, modules, projectName);
                 resultFiles = {
                     "urlPv" : urlPvFile,
                     "staticUrlMap" : staticUrlMapFile,

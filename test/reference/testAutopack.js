@@ -7,7 +7,7 @@ var autopack = require("../../fis-auto-packager.js"),
     outputDir = __dirname + "/pack/";
 
 var modules = ["addr","common","place","index","taxi","drive","user","walk"],
-    staticType = ["js"];
+    staticType = ["js","css"];
 
 autopack.package(dir, outputDir, "batman", modules, staticType, logUrl, function(error, result){
     console.log(result);

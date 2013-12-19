@@ -1,0 +1,19 @@
+{
+	"pack" : {
+        "pkg/manual.js" : [
+            "/widget/api/ext/userheading.js",
+            "/widget/api/api.js",
+            "/widget/api/ext/circleoverlay.js",
+            "/widget/api/ext/custommarker.js",
+            "/widget/api/ext/geocontrol.js",
+            "/widget/api/ext/linestepcontrol.js",
+            "/widget/api/ext/menucontrol.js",
+            "/widget/api/ext/poiinfowindow.js",
+            "/widget/api/ext/tfcinfowindow.js",
+            "/static/js/gmu/src/extend/fix.js",
+            "/widget/api/ext/trafficcontrol.js",
+            "/widget/api/ext/trsinfowindow.js",
+            "/widget/api/ext/zoomcontrol.js"
+        ]
+    }
+}
