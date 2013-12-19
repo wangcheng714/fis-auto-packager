@@ -6,6 +6,5 @@
 {%widget name="common:widget/header/header.tpl" hideRight=true%}
 {%/block%}
 {%block name="main"%}
-{%widget name="index:widget/tabgroup/tabgroup.tpl" tab="nav"%}
-{%widget name="common:widget/navebox/navebox.tpl"%}
+{%widget name="index:widget/navebox/navebox.tpl"%}
 {%require name='third:page/navline.tpl'%}{%/block%}

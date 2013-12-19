@@ -6,7 +6,7 @@
 {%foreach $data.content.ext.detail_info.link as $obj%}
 {%if $obj.url_mobilephone || $obj.url %}
 <li class="hotel-siteitem">
-<a href="{%if empty($obj.url_mobilephone)%}{%urldecode($obj.url)%}{%else%}{%urldecode($obj.url_mobilephone)%}{%/if%}" target="_blank"
+<a href="{%if empty($obj.url_mobilephone)%}{%($obj.url)%}{%else%}{%($obj.url_mobilephone)%}{%/if%}" target="_blank"
                             data-log="{code:{%$STAT_CODE.PLACE_DETAIL_SITELINK_CLICK|f_escape_xml%}, wd:'{%$wd|f_escape_xml%}', name:'{%$widget_data.name|f_escape_xml%}', ota:'{%$obj.cn_name|f_escape_xml%}'}">
 <img src="http://map.baidu.com/fwmap/upload/place/icon/{%$obj.name|f_escape_path%}/50.png" alt="{%$obj.cn_name|f_escape_xml%}" />
 </a>

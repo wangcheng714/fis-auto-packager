@@ -1,7 +1,7 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="main"%}
 {%* 头部导航 *%}
-{%$title = $data.trainstationData.name%}
+{%$title = $data.trainstationData.name|f_escape_data%}
 {%widget name="common:widget/nav/nav.tpl" title="$title"%}
 {%* 跨城公交的列表 *%}
 {%widget name="transit:widget/trainstation/trainstation.tpl"%}

@@ -66,10 +66,11 @@ function createPackConf(resources, outputDir, moduels, projectName){
  * @param outputDir : 打包结果产出目录
  * @param projectName : 项目名称
  * @param modules : 所有需要计算打包的模块名
+ * @param staticType : staticTypes  需要打包的静态资源 数组 如js、css
  * @param logUrl : 获取log日志的url
  * @param callback :  callback(error, result)
  */
-module.exports.package = function(dir, outputDir, projectName, modules, logUrl, callback){
+module.exports.package = function(dir, outputDir, projectName, modules, staticType, logUrl, callback){
     resources = codeAnalyzer.getResource(dir, hashTable, defaultPackages);
     logAnalyzer.analyzeLog(function(error, records){
         if(error){
@@ -100,7 +101,8 @@ module.exports.package = function(dir, outputDir, projectName, modules, logUrl, 
                     }
                 }
                 var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
-                var packageResults = packager.package(resources, defaultPackages);
+                //资源过滤需要在打包阶段来做，getResource阶段需要拿到完整的列表分析文件间的依赖关系
+                var packageResults = packager.package(resources, staticType, defaultPackages);
                 var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
                 var resultFile = createPackConf(packageResults, outputDir, modules, projectName);
                 resultFiles = {

@@ -6,6 +6,11 @@
 {%block name="main"%}
 {%* 头部导航 *%}
 {%widget name="common:widget/nav/nav.tpl" title=$data.result.wd %}
+{%if $data.result.type eq 7%}
+{%*城市列表*%}
+{%widget name="place:widget/citylist/citylist.tpl"%}
+{%else%}
 {%* 地点列表 *%}
 {%widget name="place:widget/selectlist/selectlist.tpl"%}
+{%/if%}
 {%require name='place:page/selectpoint.tpl'%}{%/block%}

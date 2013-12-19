@@ -1,5 +1,5 @@
-{%style id="/widget/bizarea/bizarea.inline.less"%}.third-bizarea{padding:25px 14px;color:#575757;border-top:1px solid #e1e1e1;background-color:#f9f9f9}.third-bizarea a{color:#444d62}.third-bizarea h2{font-size:16px;font-weight:400}.third-bizarea .biz-list{font-size:13px;margin-left:-11px}.third-bizarea .biz-list li{float:left;margin-left:24px;margin-top:15px}{%/style%}
-<div class="index-widget-bizarea third-bizarea">
+{%style id="/widget/bizarea/bizarea.inline.less"%}.index-widget-bizarea{padding:25px 14px;color:#575757;border-top:1px solid #e1e1e1;background-color:#f9f9f9}.index-widget-bizarea a{color:#444d62}.index-widget-bizarea h2{font-size:16px;font-weight:400}.index-widget-bizarea .biz-list{font-size:13px;margin-left:-11px}.index-widget-bizarea .biz-list li{float:left;margin-left:24px;margin-top:15px}{%/style%}
+<div class="index-widget-bizarea">
 {%if isset($data.bizinfo)%}
 <h2>热门商区</h2>
 <ul class="clearfix biz-list">

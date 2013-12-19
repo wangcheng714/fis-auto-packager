@@ -5,22 +5,27 @@
 {%/block%}
 {%block name="main"%}
 {%* 导航widget *%}
-{%widget name="common:widget/nav/nav.tpl" title=$data.result.wd mapLink=$commonUrl.nav.map pageType="detail"%}
+{%if !empty($data.result.wd)%}
+{%$title = $data.result.wd|f_escape_xml%}
+{%else%}
+{%$title = $data.content._name|f_escape_xml%}
+{%/if%}
+{%widget name="common:widget/nav/nav.tpl" title=$title mapLink=$commonUrl.nav.map pageType="detail"%}
 {%if ereg("searchFlag=([A-Za-z]+)", $smarty.server.REQUEST_URI, $regs)%}
-{%$entry = $regs[1]%}
+{%$entry = $regs[1]|f_escape_xml%}
 {%/if%}
 {%if ereg("wd=([A-Z0-9%]+)", $smarty.server.REQUEST_URI, $regs)%}
-{%$wd = urldecode($regs[1])%}
+{%$wd = urldecode($regs[1])|f_escape_xml%}
 {%/if%}
 {%if !empty($data.content.ext.src_name)%}
-{%$srcname = $data.content.ext.src_name%}
+{%$srcname = $data.content.ext.src_name|f_escape_xml%}
 {%else%}
-{%$srcname = ""%}
+{%$srcname = ""|f_escape_xml%}
 {%/if%}
 {%if !empty($data.content.name)%}
-{%$bname = $data.content.name%}
+{%$bname = $data.content.name|f_escape_xml%}
 {%else%}
-{%$bname = ""%}
+{%$bname = ""|f_escape_xml%}
 {%/if%}
 <div class="place-page-detail {%if $data.isMovieth%}movie{%/if%}">
 {%widget name="place:widget/captain/captain.tpl" widget_data=$data.content ism=$data.isMovieth%}

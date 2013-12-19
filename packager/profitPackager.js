@@ -13,10 +13,17 @@ var RTT = 2,  //round trip time 不能包含建立tcp链接的时间，因为htt
     SPEED = 20,
     benefitMap = {};
 
-module.exports.package = function(resources, defaultPackages){
+/**
+ *
+ * @param resources
+ * @param staticTypes  需要打包的静态资源 数组 如js、css
+ * @param defaultPackages
+ * @returns {{}}
+ */
+module.exports.package = function(resources, staticTypes, defaultPackages){
     log.debug(" start [package]");
     var manualResult = mergeDefaultPackage(resources, defaultPackages);
-    var newResources = partResources(resources),
+    var newResources = partAndFilterResources(resources, staticTypes),
         autoResult = {};
 
     newResources = sortByPv(newResources);
@@ -115,12 +122,18 @@ function mergeDefaultPackage(resources, defaultPackages){
     return manualResult;
 }
 
-function partResources(resources){
+/**
+ * 对静态资源进行分类，过滤不需要打包的数据
+ * @param resources
+ * @param staticTypes  需要打包的静态资源 数组 如js、css
+ * @returns {{}}
+ */
+function partAndFilterResources(resources, staticTypes){
     var newResources = {};
     for(var id in resources){
         var resource = resources[id];
         //排除掉非 js和css的文件
-        if(resources.hasOwnProperty(id) && resource.get("module") && (resource.get("type") == "js" || resource.get("type") == "css")){
+        if(resources.hasOwnProperty(id) && resource.get("module") && util.in_array(resource.get("type"), staticTypes)){
             if(resource.get("loadType") == ""){
                 resource.setLoadType("sync");
             }

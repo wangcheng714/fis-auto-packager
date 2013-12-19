@@ -1,1 +1,0 @@
-define("subway:static/js/base/station.js",function(s,t,i){function h(s,t,i,h,n,o,r,x,c,y,d,e,u,a,b,l,f,p,j,_,w){this.sid=s,this.lb=t,this.uid=i,this.px=h,this.py=n,this.x=o,this.y=r,this.rx=x,this.ry=c,this.st=y,this.ex=d,this.iu=e,this.rc=u,this.slb=a,this.ln=b,this.color=l,this.icon=f,this.dx=p,this.dy=j,this.trs_x=_,this.trs_y=w}i.exports=h});

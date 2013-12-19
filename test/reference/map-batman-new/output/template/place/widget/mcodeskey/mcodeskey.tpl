@@ -1,6 +1,6 @@
 <div class="place-widget-mcodeskey">
 {%if $data.errorNo == 0%}
-{%$list = $data.list%}
+{%$list = $data.list|f_escape_xml%}
 <div class="page_header">
 <p class="title">百度地图电影兑换码</p>
 </div>
@@ -41,7 +41,7 @@
 </div><div class="text_msg layoutbox">
 <p>百度地图温馨提示您，兑换码的使用方式为：</p>
 {%foreach $data.rule as $item key=index%}
-<p>{%$index+1%}.{%$item|f_escape_xml%}</p>
+<p>{%$index+1|f_escape_xml%}.{%$item|f_escape_xml%}</p>
 {%/foreach%}
 </div>
 <p class="mbg"></p>

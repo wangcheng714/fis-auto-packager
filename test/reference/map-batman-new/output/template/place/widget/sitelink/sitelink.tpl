@@ -8,7 +8,7 @@
 {%if $obj.url_mobilephone || $obj.url %}
 <li class="sitelink-item">
 <span class="logo" style="background-image:url(http://map.baidu.com/fwmap/upload/place/icon/{%$obj.name|f_escape_xml%}/50.png)"></span>
-<a href="{%if empty($obj.url_mobilephone)%}{%urldecode($obj.url)%}{%else%}{%urldecode($obj.url_mobilephone)%}{%/if%}" target="_blank" data-log="{code:{%$STAT_CODE.PLACE_DETAIL_SITELINK_CLICK|f_escape_xml%}, wd:'{%$wd|f_escape_xml%}', srcname:'{%$widget_data.src_name|f_escape_xml%}', name:'{%$widget_data.name|f_escape_xml%}', ota:'{%$obj.cn_name|f_escape_xml%}'}">{%$obj.cn_name|f_escape_xml%}</a>
+<a href="{%if empty($obj.url_mobilephone)%}{%($obj.url)%}{%else%}{%($obj.url_mobilephone)%}{%/if%}" target="_blank" data-log="{code:{%$STAT_CODE.PLACE_DETAIL_SITELINK_CLICK|f_escape_xml%}, wd:'{%$wd|f_escape_xml%}', srcname:'{%$widget_data.src_name|f_escape_xml%}', name:'{%$widget_data.name|f_escape_xml%}', ota:'{%$obj.cn_name|f_escape_xml%}'}">{%$obj.cn_name|f_escape_xml%}</a>
 </li>
 {%/if%}
 {%/foreach%}

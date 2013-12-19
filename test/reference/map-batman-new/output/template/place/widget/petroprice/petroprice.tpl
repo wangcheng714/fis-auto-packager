@@ -5,7 +5,7 @@
 <ul class="petroprice-list">
 {%foreach from=$widget_data item=petro_obj%}
 <li class="petroprice-item">
-<span class="name">{%$petro_obj.oril_type|replace:"gasoline_":""|replace:"derv_negative":""|replace:"derv_":"-"%}#油</span>
+<span class="name">{%$petro_obj.oril_type|replace:"gasoline_":""|replace:"derv_negative":""|replace:"derv_":"-"|f_escape_xml%}#油</span>
 <span class="price">&yen;{%$petro_obj.oril_price|f_escape_xml%}</span>
 </li>
 {%/foreach%}

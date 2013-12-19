@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 {%html framework="common:static/js/mod.js"  fid="map_batman" sampleRate="1"%}
-{%cdn sync="/mobile/simple" async="/mobile/simple"%}
+{%cdn sync="http://s1.map.bdimg.com/mobile/simple" async="/mobile/simple"%}
 {%head%}
 <script type="text/javascript">var c_t0=+new Date,c_srt0={%json_encode($c_srt0)%}||0;</script>
 <meta charset="utf-8" />
@@ -54,10 +54,14 @@
 {%/widget_block%}
 {%* 子页面如果不需要发起系统定位，可以配置为 false *%}
 {%block name="geo_config"%}
-{%$geo_config="{isStartGeo:true}"%}
+{%$geo_config="{isStartGeo:true}"|f_escape_xml%}
 {%/block%}
 {%script%}
-
+            
+            //监控JS文件加载时间, script执行会在JS加载之后
+            if (PDC) {
+                PDC.mark("c_jsld");
+            }
             COM_STAT_CODE = {%json_encode($COM_STAT_CODE)%} || {};
             if(!COM_STAT_CODE) {
                 throw "COM_STAT_CODE parse error";

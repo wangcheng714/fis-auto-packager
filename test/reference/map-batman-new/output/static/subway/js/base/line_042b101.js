@@ -1,1 +1,0 @@
-define("subway:static/js/base/line.js",function(s,i,t){function h(s,i,t,h,l,n,b,o,e,a){this.lid=s,this.lb=i,this.slb=t,this.uid=h,this.n=l,this.loop=n,this.lbx=b,this.lby=o,this.lbr=e,this.lc=a,this.stations=[]}t.exports=h});

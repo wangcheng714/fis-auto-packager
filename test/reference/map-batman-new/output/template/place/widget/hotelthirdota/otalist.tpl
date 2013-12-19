@@ -1,6 +1,6 @@
 {%* 酒店预订房型列表页子页面--ota报价列表 *%}
 {%if $widget_data.errorNoOta=="0" %}
-{%$baseinfo = $widget_data.room_price.base_info%}
+{%$baseinfo = $widget_data.room_price.base_info|f_escape_xml%}
 <div class="ota-result">
 {%if !empty($baseinfo.room_type_area) || !empty($baseinfo.bed_type) 
          || !empty($baseinfo.room_type_floor) || !empty($baseinfo.adsl)%}
@@ -21,11 +21,11 @@
 {%/if%}
 <div class="ota-list">
 {%section name=otaprice loop=$widget_data.room_price.price_info%}
-{%$book_type = $widget_data.room_price.price_info[otaprice].bd_booktype%}
+{%$book_type = $widget_data.room_price.price_info[otaprice].bd_booktype|f_escape_xml%}
 {%if $book_type == 1%}
-{%$price = $widget_data.room_price.price_info[otaprice].ota_price%}
-{%$bonus = $widget_data.room_price.price_info[otaprice].ota_coupon_price || 0%}
-{%$book_price = $price - $bonus%}
+{%$price = $widget_data.room_price.price_info[otaprice].ota_price|f_escape_xml%}
+{%$bonus = $widget_data.room_price.price_info[otaprice].ota_coupon_price || 0|f_escape_xml%}
+{%$book_price = $price - $bonus|f_escape_xml%}
 <a class="ota-item ota-normal{%if $smarty.section.otaprice.index>=3%} hide{%/if%}" target="_blank"
                    data-price="{%$widget_data.room_price.price_info[otaprice].ota_price|f_escape_xml%}"
                    data-bonus="{%$widget_data.room_price.price_info[otaprice].ota_coupon_price|f_escape_xml%}"

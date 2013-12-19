@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-{%html framework="common:static/js/mod.js" fid="map_batman" sampleRate="1"%}
-{%cdn sync="http://s1.map.bdimg.com/mobile/simple" async="/mobile/simple"%}
+{%html framework="common:static/js/mod.js"%}
 {%head%}
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
