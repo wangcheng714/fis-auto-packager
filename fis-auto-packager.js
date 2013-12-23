@@ -22,6 +22,7 @@ var resources = {},
  * @param resources
  *  数据结构 ：
  *      {"common_asnyc_js" : [pkg1,pkg2]}
+ *      todo : 添加 **.js
  */
 function createPackConf(resources, sourceDir, outputDir, moduels, projectName){
     var packResults = {};
@@ -101,7 +102,7 @@ module.exports.package = function(sourceDir, outputDir, projectName, modules, st
                             resource.setLoadType("sync");
                         }
                     }
-                    for(var k=0; j<asyncStatics.length; k++){
+                    for(var k=0; k<asyncStatics.length; k++){
                         var resource = resources[asyncStatics[k]];
                         if(resource){
                             resource.addPv(record.get("pv"));
@@ -109,6 +110,8 @@ module.exports.package = function(sourceDir, outputDir, projectName, modules, st
                         }
                     }
                 }
+                //统计静态资源的pv
+                packageReport.printStaticPv(resources, outputDir, projectName);
                 var staticUrlMapFile = packageReport.createStaticUrlMap(resources, records, outputDir, projectName);
                 //资源过滤需要在打包阶段来做，getResource阶段需要拿到完整的列表分析文件间的依赖关系
                 var packageResults = packager.package(resources, staticType, defaultPackages);

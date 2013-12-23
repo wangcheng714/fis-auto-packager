@@ -1,9 +1,0 @@
-{
-    "pack" : {
-        "pkg/manual.js" : [
-            "/widget/navi/navi.js",
-            "/widget/navi/navibox.js",
-            "/widget/helper/maphelper.js"
-        ]
-    }
-}
