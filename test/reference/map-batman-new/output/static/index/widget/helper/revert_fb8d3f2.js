@@ -1,1 +1,0 @@
-define("index:widget/helper/revert.js",function(e,n,r){r.exports={init:function(){window.eventRecorder&&(eventRecorder.stop(),eventRecorder.play(),window.eventRecorder=null,delete window.eventRecorder)}}});

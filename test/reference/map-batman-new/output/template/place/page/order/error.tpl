@@ -1,10 +1,10 @@
 {%extends file="common/page/layout.tpl"%} 
 {%block name="geo_config"%}
-{%$isStartGeo = "true"|f_escape_data%}
+{%$isStartGeo = "true"%}
 {%if $kehuduan%}
-{%$isStartGeo = "false"|f_escape_data%}
+{%$isStartGeo = "false"%}
 {%/if%}
-{%$geo_config="{isStartGeo:$isStartGeo}"|f_escape_data%}
+{%$geo_config="{isStartGeo:$isStartGeo}"%}
 {%/block%}
 {%block name="main"%}
 {%* 头部导航 *%}

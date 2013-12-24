@@ -125,8 +125,8 @@ class FISPagelet {
     static public $arrEmbeded = array();
 
     static public $cdn;
-	//auto package
-	static private $sampleRate = 1;
+    //auto package
+    static private $sampleRate = 1;
     static private $fid;
     static private $pageName = "";
     static private $usedStatics = array();
@@ -373,12 +373,15 @@ class FISPagelet {
         return FISResource::getCdn($type);
     }
 
-	static private function isSample($sample){
+    static private function isSample($sample){
         $tmp_sample = rand(1, 10000) / 10000;
         return $sample >= $tmp_sample;
     }
 
-    static private function getCountUrl(){
+    static private function getCountUrl($res){
+    	$js_num = count($res['js']);
+        $css_num = count($res['css']);
+        $req_num = $js_num + $css_num;
     	$code = "";
     	$sampleRate = self::getSampleRate();
     	if(self::isSample($sampleRate)){
@@ -390,7 +393,7 @@ class FISPagelet {
 	            self::$usedStatics= array_filter(array_unique(self::$usedStatics));
 	            $tmpStr = implode(',', self::$usedStatics);
 				$hashStr .= $tmpStr;
-				$code .= '(new Image()).src="http://nsclick.baidu.com/u.gif?pid=242&v=1&data=' . $tmpStr . "&page=" . $pageName . '&sid=' . $timeStamp . '&hash=<STATIC_HASH>' . '&fid=' . $fid . '";';
+				$code .= '(new Image()).src="http://nsclick.baidu.com/u.gif?pid=242&v=1&data=' . $tmpStr . "&page=" . $pageName . '&reqnum=' . $req_num . '&sid=' . $timeStamp . '&hash=<STATIC_HASH>' . '&fid=' . $fid . '";';
 	            $code = str_replace("<STATIC_HASH>", substr(md5($hashStr), 0, 10), $code);
 	        }
     	}
@@ -398,23 +401,23 @@ class FISPagelet {
     }
 
     static public function setFid($fid){
-    	self::$fid = $fid;
+        self::$fid = $fid;
     }
 
     static public function setSampleRate($rate){
-    	self::$sampleRate = $rate;
+        self::$sampleRate = $rate;
     }
 
     static public function getFid(){
-    	return self::$fid;
+        return self::$fid;
     }
 
     static public function getSampleRate(){
-    	return self::$sampleRate;
+        return self::$sampleRate;
     }
 
     static public function getPageName(){
-     	return self::$pageName;
+        return self::$pageName;
     }
 
     static public function setPageName($page){
@@ -432,36 +435,35 @@ class FISPagelet {
     static public function renderStatic($html, $arr, $clean_hook = false) {
         if (!empty($arr)) {
             $code = '';
+            if (!empty($arr['script'])) {
+                $code = implode(';', $arr['script']);
+            }
+
             $resource_map = $arr['async'];
             $loadModJs = (FISResource::getFramework() && ($arr['js'] || $resource_map));
             if ($loadModJs) {
+                $rm = '';
+                $jsArr = array();
                 foreach ($arr['js'] as $js) {
-                    $code .= '<script type="text/javascript" src="' . self::getCdn() . $js . '"></script>';
+                    $jsArr[] = self::getCdn() . $js;
                     if ($js == FISResource::getFramework()) {
                         if ($resource_map) {
-                            $code .= '<script type="text/javascript">';
-                            $code .= 'require.resourceMap('.json_encode($resource_map).');';
-                            $code .= '</script>';
+                            $rm .= 'require.resourceMap('.json_encode($resource_map).');';
                         }
                     }
                 }
-            }
-
-            if (!empty($arr['script'])) {
-                $code .= '<script type="text/javascript">'. PHP_EOL;
-                foreach ($arr['script'] as $inner_script) {
-                    $code .= '!function(){'.$inner_script.'}();'. PHP_EOL;
+                if ($jsArr) {
+                    $code = '<script>document.addEventListener("DOMContentLoaded",function(){LazyLoad.js(["' . implode('","', $jsArr) . '"], function() {' . $rm . $code . '})})</script>';
+                    //$code = '<script>LazyLoad.js(["' . implode('","', $jsArr) . '"], function() {' . $rm . $code . '})</script>';
                 }
-                $code .= '</script>';
             }
 
-			//
+            //
             // auto pack
             //
-
-            $jsCode = self::getCountUrl();
+            $jsCode = self::getCountUrl($arr);
             if($jsCode != ""){
-            	$code .=  '<script type="text/javascript">' . $jsCode . '</script>';
+                $code .=  '<script type="text/javascript">' . $jsCode . '</script>';
             }
 
             $html = str_replace(self::JS_SCRIPT_HOOK, $code . self::JS_SCRIPT_HOOK, $html);
@@ -580,9 +582,9 @@ class FISPagelet {
                 }
                 unset($pagelet);
 				//auto pack
-				$jsCode = self::getCountUrl();
+				$jsCode = self::getCountUrl($res);
                 if($jsCode != "" && !$_GET['fis_widget']){
-                	$res['script'] = $res['script'] ? $res['script'] . $jsCode : $jsCode;
+                    $res['script'] = $res['script'] ? $res['script'] . $jsCode : $jsCode;
                 }
                 $title = convertToUtf8(self::$_title);
                 $html = json_encode(array(

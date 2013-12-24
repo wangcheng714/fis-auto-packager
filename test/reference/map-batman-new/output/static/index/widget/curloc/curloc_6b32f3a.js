@@ -1,1 +1,0 @@
-define("index:widget/curloc/curloc.js",function(o,t,c){var i=o("common:widget/geolocation/location.js");c.exports.init=function(){var o=i.getLocation();o&&"ip"!==o.type?n(o):listener.on("common.geolocation","success",n,this)};var n=function(){var o=$(".widget-index-curloc .current-city"),t=i.getAddress();o.html(t)}});

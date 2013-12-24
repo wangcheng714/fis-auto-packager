@@ -1,5 +1,10 @@
 {
 	"STAT_APP_START": "third_1",
 	"STAT_APP_LOADDOWN": "third_2",
-	"STAT_APPBANNER_SHOW": "third_3"
+	"STAT_APPBANNER_SHOW": "third_3",
+	"STAT_TRANSIT_PLAN_CLICK": "third_4",
+	"STAT_TRANSIT_SITE_CLICK": "third_5",
+	"STAT_MORE_ICONS_CLICK": "third_6",
+	"STAT_FOOT_INDEX_CLICK": "third_7",
+	"STAT_FEEDBACK_CLICK" : "third_8"
 }

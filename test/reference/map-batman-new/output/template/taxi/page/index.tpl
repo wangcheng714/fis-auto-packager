@@ -8,4 +8,5 @@
 {%widget name="taxi:widget/verify/verify.tpl" mode="quickling" pagelet_id="taxi-pagelet-verify"%}
 {%widget name="taxi:widget/about/about.tpl" mode="quickling" pagelet_id="taxi-pagelet-about"%}
 {%widget name="taxi:widget/channel/channel.tpl" mode="quickling" pagelet_id="taxi-pagelet-channel"%}
+{%widget name="taxi:widget/shuangdan/shuangdan.tpl" mode="quickling" pagelet_id="taxi-pagelet-shuangdan"%}
 {%require name='taxi:page/index.tpl'%}{%/block%}

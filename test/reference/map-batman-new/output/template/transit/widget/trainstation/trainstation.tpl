@@ -4,7 +4,7 @@
 <span class="station-date">日期</span>
 <span class="arrivetime">到达时间</span>
 </div>
-{%$stations = $data.trainstationData.stations|f_escape_xml%}
+{%$stations = $data.trainstationData.stations%}
 <ul>
 {%foreach $stations as $i => $item%}
 {%if ($item.isOverStation && ($item.isOverStation == 1))%}

@@ -23,11 +23,10 @@ Record.prototype.set = function(key, value){
     this[key] = value;
 }
 
-
 function remove_intersect(array1, array2){
     for(var i=0; i<array1.length; i++){
-        var index = util.array_search(array1[i], array2)
-        if(index){
+        var index = util.array_search(array1[i], array2);
+        if(index !== false){
             array2.splice(index, 1);
         }
     }

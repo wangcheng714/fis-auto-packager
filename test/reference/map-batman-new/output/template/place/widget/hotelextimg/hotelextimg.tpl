@@ -1,6 +1,6 @@
 {%style id="/widget/hotelextimg/hotelextimg.inline.less"%}.hotel-content{-webkit-box-sizing:border-box;display:-webkit-box}.hotel-content .hotel-img{width:7.15em;height:5.36em;border:1px solid #A3A3A3;position:relative}.hotel-content .hotel-img img{width:7.15em;height:5.36em}.hotel-content .hotel-noimg{background:url(/static/place/widget/hotelextimg/images/no_img_039c24b.png) no-repeat 0 0;-webkit-background-size:7.15em 5.36em;position:relative}.hotel-content .hotel-noimg img{display:none}.hotel-content .photodetail-count{position:absolute;right:0;bottom:0}.hotel-content .photodetail-count-num{width:18px;height:18px;line-height:18px;text-align:center;background:#757575;color:#fefefe;display:block}.hotel-content .hotel-des{margin-left:8px;-webkit-box-flex:1}.hotel-content .hotel-des .hotel-price{margin-bottom:8px}.hotel-content .hotel-des .hotel-price .price-normal{color:#474747;font-size:13px}.hotel-content .hotel-des .hotel-price .price-del{text-decoration:line-through;color:#a6a6a6}.hotel-content .hotel-des .hotel-no-price{padding-top:13px}.hotel-content .hotel-des .hotel-rank{color:#7d7d7d;font-size:13px}.hotel-content .hotel-des .hotel-rank .rank-percent{color:#565656;font-size:14px;font-weight:700}.hotel-content .hotel-des .hotel-facilities{display:-webkit-box;-webkit-box-align:center;margin-bottom:5px}.hotel-content .hotel-des .hotel-facilities .hotel-level{font-weight:700}.hotel-content .hotel-des .hotel-facilities .hotel-service{display:-webkit-box;-webkit-box-flex:1;-webkit-box-pack:end}.hotel-content .hotel-des .hotel-facilities .hotel-service div{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:center;margin-left:5px}.hotel-content .hotel-des .hotel-facilities .hotel-service div .ser-icon{background:url(/static/place/widget/hotelextimg/images/place_hotel_service_0cfbaa4.png) no-repeat 0 0;display:block;width:16px;height:16px;-webkit-background-size:16px 128px}.hotel-content .hotel-des .hotel-facilities .hotel-service div .ser-text{display:block;color:#888;font-size:12px}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-wifi .ser-icon{background-position:0 0}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-broad .ser-icon{background-position:0 -16px}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-stop .ser-icon{background-position:0 -32px}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-dining .ser-icon{background-position:0 -48px}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-gym .ser-icon{background-position:0 -64px}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-pool .ser-icon{background-position:0 -80px}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-room .ser-icon{background-position:0 -96px}.hotel-content .hotel-des .hotel-facilities .hotel-service div.service-business .ser-icon{background-position:0 -112px}{%/style%}{%* 酒店详情图片扩展详情卡片 *%}
-{%$detail_info = $widget_data.detail_info|f_escape_xml%}
-{%$rich_info = $widget_data.rich_info|f_escape_xml%}
+{%$detail_info = $widget_data.detail_info%}
+{%$rich_info = $widget_data.rich_info%}
 <div class="hotel-content">
 <div class="hotel-img"
         {%if isset($widget_data.phototile_href)%}
@@ -42,7 +42,7 @@
 {%if $rich_info.level %}
 <span class="hotel-level detail-tit">{%$rich_info.level|f_escape_xml%}</span>
 {%/if%}
-{%$service_arr = explode(" ", $detail_info.special_service)|f_escape_xml%}
+{%$service_arr = explode(" ", $detail_info.special_service)%}
 {%if count($service_arr)%}
 {%$service_config = array(
                         array('WIFI', 'service-wifi'),
@@ -58,9 +58,9 @@
 {%foreach $service_arr as $i => $service_no%}
 {%if $i < 3%}
 {%if is_array($service_config[$service_no - 1]) %}
-<div class="{%$service_config[$service_no - 1][1]|f_escape_xml%}">
+<div class="{%$service_config[$service_no - 1][1]%}">
 <em class="ser-icon"></em>
-<span class="ser-text">{%$service_config[$service_no - 1][0]|f_escape_xml%}</span>
+<span class="ser-text">{%$service_config[$service_no - 1][0]%}</span>
 </div>
 {%/if%}
 {%/if%}

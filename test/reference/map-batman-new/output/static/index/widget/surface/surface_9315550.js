@@ -1,1 +1,0 @@
-define("index:widget/surface/surface.js",function(n,i,t){t.exports={init:function(){this.bind()},bind:function(){$(".close").on("click",function(){$(".return-wap").hide(),$(".common-widget-back-top").css("bottom","0")})}}});

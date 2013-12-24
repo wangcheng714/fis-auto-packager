@@ -1,1 +1,0 @@
-define("common:widget/backtop/backtop.js",function(o,n,i){var c=$(".common-widget-back-top");$(window).on("scroll",function(){window.scrollY<window.innerHeight/2?c.hide():c.show()}),i.exports={init:function(){c=$(".common-widget-back-top"),c.on("click",function(){window.scrollTo(0,1)})}}});

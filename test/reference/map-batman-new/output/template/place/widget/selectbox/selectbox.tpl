@@ -1,20 +1,20 @@
 {%style id="/widget/selectbox/selectbox.inline.less"%}.place-widget-selectbox{width:100%;height:30px;text-align:center;background-color:#f0f0f0;display:block}.place-widget-selectbox .select-box{display:inline-block;height:28px;width:28.7%;line-height:28px;padding:0 0 0 .357em;-webkit-border-radius:3px;background:#fff;position:relative;border:1px solid #c9c9c9;text-align:left;-webkit-tap-highlight-color:rgba(0,0,0,0)}.place-widget-selectbox .select-box:first-child{float:left}.place-widget-selectbox .select-box:last-child{float:right}.place-widget-selectbox .select-box .select_title{font-size:.857em;color:#333;vertical-align:top;font-style:normal}.place-widget-selectbox .select-box select{opacity:0;position:absolute;height:100%;width:100%;left:0}.place-widget-selectbox .select-box .select_icon{position:absolute;height:28px;width:9px;right:4px;top:11px}.place-widget-selectbox .select-disable select{display:none}.place-widget-selectbox .select-disable .select_title{color:#aaa}.place-widget-selectbox .select-box .select_icon{background:url(/static/place/images/select_area_060d02b.png) 0 0 no-repeat;background-size:9px 5px}.place-widget-selectbox #slct_d_dist .select_title{margin-left:4px}.place-widget-selectbox #slct_d_sort_type .select_title{margin-left:8px}.place-widget-selectbox #slct_d_sub_type .select_title{margin-left:12px}.place-widget-selectbox .city-select select{display:none}{%/style%}{%* 筛选框样式 *%}
 {%json file="place/select.json" assign="select_conf"%}
 {%if $isMovie %}
-{%$select_type="movie"|f_escape_xml%}
+{%$select_type="movie"%}
 {%elseif $select_type %}
 {%elseif $select_type == "" && $data.listInfo.isBank%}
-{%$select_type="_bank"|f_escape_xml%}
+{%$select_type="_bank"%}
 {%else%}
-{%$select_type="genRequest"|f_escape_xml%}
+{%$select_type="genRequest"%}
 {%/if%}
-{%$place_info=$data.place_param[0]|f_escape_xml%}
-{%$select_data = $select_conf[$select_type]|f_escape_xml%}
-{%$select_dist = $place_info.dist|f_escape_xml%}
-{%$select_sort_type = $place_info.sort_type|default:'defalut'|f_escape_xml%}
-{%$select_sub_type = $data.result.what|f_escape_xml%}
-{%$select_sort_rule = $place_info.sort_rule|default:0|f_escape_xml%}
-{%$select_sort_type_rule = $select_sort_type|cat:'__'|cat:$select_sort_rule|f_escape_xml%}
+{%$place_info=$data.place_param[0]%}
+{%$select_data = $select_conf[$select_type]%}
+{%$select_dist = $place_info.dist%}
+{%$select_sort_type = $place_info.sort_type|default:'defalut'%}
+{%$select_sub_type = $data.result.what%}
+{%$select_sort_rule = $place_info.sort_rule|default:0%}
+{%$select_sort_type_rule = $select_sort_type|cat:'__'|cat:$select_sort_rule%}
 <div class="place-widget-selectbox">
 <form>
 <span class ="select-box  {%if $data.listInfo.isShowBussinessArea && !$isMovie %}city-select{%/if%} {%if !$select_data.dist || $disableSelect == true%}select-disable{%/if%}">

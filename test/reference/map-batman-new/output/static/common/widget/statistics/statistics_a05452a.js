@@ -1,1 +1,0 @@
-define("common:widget/statistics/statistics.js",function(t,i,o){var s=t("common:widget/stat/stat.js");o.exports={init:function(){var t=this;t.addestop()},addestop:function(){window.navigator.standalone&&s.addCookieStat(COM_STAT_CODE.STAT_FROMDESKTOP_OPEN)}}});

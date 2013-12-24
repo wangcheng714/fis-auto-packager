@@ -1,1 +1,0 @@
-define("index:widget/hotcity/hotcity.js",function(t,i,e){var c=t("common:widget/setcity/setcity.js");e.exports.init=function(){n()};var n=function(){var t=$(".index-widget-hotcity");t.on("click",".city-item",d)},d=function(t){var i=$(t.target),e=i.text(),n=i.data("cityid"),d=i.data("cityeng");c.setAndRedirect(e,n,d)}});
