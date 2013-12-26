@@ -1,6 +1,6 @@
 {
   "name": "fis-auto-packager",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "fis-auto-packager",
   "main": "fis-auto-packager.js",
   "dependencies": {

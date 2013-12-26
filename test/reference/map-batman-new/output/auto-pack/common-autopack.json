@@ -1,0 +1,16 @@
+{
+    "pack": {
+        "pkg/api.js": [
+            "/widget/api/api.js"
+        ],
+        "pkg/api-ext.js": [
+            "/widget/api/ext/**.js"
+        ],
+        "pkg/inline-js.js": [
+		    "/static/js/pdc/pda.js",
+		    "/static/js/pdc/pdc.js",
+		    "/static/js/pdc/vt.js",
+		    "/static/js/libs/lazyload.js"
+        ]
+    }
+}

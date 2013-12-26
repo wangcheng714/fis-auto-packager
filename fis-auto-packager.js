@@ -24,7 +24,7 @@ var resources = {},
  *      {"common_asnyc_js" : [pkg1,pkg2]}
  *      todo : 添加 **.js
  */
-function createPackConf(resources, sourceDir, outputDir, moduels, projectName){
+function createPackConf(resources, sourceDir, outputDir, moduels, projectName, staticType){
     var packResults = {};
 
     util.map(resources, function(packageKeyPrefix, packages){
@@ -60,6 +60,20 @@ function createPackConf(resources, sourceDir, outputDir, moduels, projectName){
             var conf = util.readJSON(autopackJson),
                 packConf = conf["pack"];
             packResult = util.merge(packConf, packResult);
+        }
+        if(util.in_array("js", staticType)){
+            var packKey = "pkg/" + module + "_other_js.js";
+            packResult[packKey] = [
+                "/static/**.js",
+                "/widget/**.js"
+            ];
+        }
+        if(util.in_array("css", staticType)){
+            var packKey = "pkg/" + module + "_other_css.css";
+            packResult[packKey] = [
+                "/static/**.css",
+                "/widget/**.css"
+            ];
         }
         var packStr = JsonUtil.convertToString(packResult),
             fileName = module + "/fis-pack.json";
@@ -116,7 +130,7 @@ module.exports.package = function(sourceDir, outputDir, projectName, modules, st
                 //资源过滤需要在打包阶段来做，getResource阶段需要拿到完整的列表分析文件间的依赖关系
                 var packageResults = packager.package(resources, staticType, defaultPackages);
                 var predictPackageResultFile = packageReport.predictPackageResult(records, packageResults, outputDir, projectName);
-                var resultFile = createPackConf(packageResults, sourceDir, outputDir, modules, projectName);
+                var resultFile = createPackConf(packageResults, sourceDir, outputDir, modules, projectName, staticType);
                 resultFiles = {
                     "urlPv" : urlPvFile,
                     "staticUrlMap" : staticUrlMapFile,

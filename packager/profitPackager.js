@@ -9,8 +9,8 @@ var benefitMap = {},
     util = require("../lib/util.js"),
     log = require("../lib/log.js");
 
-var RTT = 2,  //round trip time 不能包含建立tcp链接的时间，因为http 1.1都是用了 keep-alive 没有tcp建立的开销
-    SPEED = 20,
+var RTT = 1,  //round trip time 不能包含建立tcp链接的时间，因为http 1.1都是用了 keep-alive 没有tcp建立的开销
+    SPEED = 10,
     benefitMap = {};
 
 /**
