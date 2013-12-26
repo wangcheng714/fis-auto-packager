@@ -1,5 +1,3 @@
-//todo ： 添加脚本定期从log平台抓取数据、按照fisid切分开发，存贮到app目录中
-
 var Record = require("./record.js"),
     util = require("../lib/util.js"),
     log = require("../lib/log.js"),

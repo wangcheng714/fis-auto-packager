@@ -22,7 +22,6 @@ var resources = {},
  * @param resources
  *  数据结构 ：
  *      {"common_asnyc_js" : [pkg1,pkg2]}
- *      todo : 添加 **.js
  */
 function createPackConf(resources, sourceDir, outputDir, moduels, projectName, staticType){
     var packResults = {};
@@ -61,6 +60,9 @@ function createPackConf(resources, sourceDir, outputDir, moduels, projectName, s
                 packConf = conf["pack"];
             packResult = util.merge(packConf, packResult);
         }
+        /**
+         * 对于新添加的目前是生成 **.js
+         */
         if(util.in_array("js", staticType)){
             var packKey = "pkg/" + module + "_other_js.js";
             packResult[packKey] = [
@@ -84,7 +86,6 @@ function createPackConf(resources, sourceDir, outputDir, moduels, projectName, s
     return zipFile;
 }
 
-//todo : 选择网络例如2G\3G\WIFI\PC等
 /**
  * @param sourceDir : 编译后的项目目录
  * @param outputDir : 打包结果产出目录

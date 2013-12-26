@@ -1,0 +1,10 @@
+auto-pack需要注意事项 :
+
+    3. trunk目录需要有auto-pack.sh脚本
+        a) : 编译所有的模块 ：
+            不能添加domain参数
+        b) : 产出所有模块module-autopack.json文件到auto-pack文件夹
+    4. svn目录要求 ：
+        a)  倒数第二个单词认为模块名
+        b)  主干和分支的关系
+
