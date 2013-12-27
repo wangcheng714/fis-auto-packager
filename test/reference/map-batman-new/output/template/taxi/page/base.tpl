@@ -76,6 +76,12 @@
         //统计组件
         (require('common:widget/statistics/statistics.js')).init();
     {%/script%}
+<div style="display:none;">
+<script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F05c75760f07e526163ee8a91dcaad0df' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+</div>
 <script type="text/javascript">LazyLoad=function(e){function t(t,n){var s,r=e.createElement(t);for(s in n)n.hasOwnProperty(s)&&r.setAttribute(s,n[s]);return r}function n(e){var t,n,s=l[e];s&&(t=s.callback,n=s.urls,n.shift(),u=0,n.length||(t&&t.call(s.context,s.obj),l[e]=null,f[e].length&&r(e)))}function s(){var t=navigator.userAgent;o={async:e.createElement("script").async===!0},(o.webkit=/AppleWebKit\//.test(t))||(o.ie=/MSIE|Trident/.test(t))||(o.opera=/Opera/.test(t))||(o.gecko=/Gecko\//.test(t))||(o.unknown=!0)}function r(r,u,h,g,d){var p,y,b,k,v,m,j=function(){n(r)},w="css"===r,T=[];if(o||s(),u)if(u="string"==typeof u?[u]:u.concat(),w||o.async||o.gecko||o.opera)f[r].push({urls:u,callback:h,obj:g,context:d});else for(p=0,y=u.length;y>p;++p)f[r].push({urls:[u[p]],callback:p===y-1?h:null,obj:g,context:d});if(!l[r]&&(k=l[r]=f[r].shift())){for(i||(i=e.head||e.getElementsByTagName("head")[0]),v=k.urls,p=0,y=v.length;y>p;++p){if(m=v[p],w?b=o.gecko?t("style"):t("link",{href:m,rel:"stylesheet"}):(b=t("script",{src:m,type:"text/javascript",defer:!0}),b.async=!1),b.className="lazyload",b.setAttribute("charset","utf-8"),o.ie&&!w&&"onreadystatechange"in b&&!("draggable"in b))b.onreadystatechange=function(){/loaded|complete/.test(b.readyState)&&(b.onreadystatechange=null,j())};else if(w&&(o.gecko||o.webkit))if(o.webkit){var x;if(k.urls[p]=b.href,x=c()){p--,y=v.length;continue}}else b.innerHTML='@import "'+m+'";',a(b);else b.onload=b.onerror=j;T.push(b)}for(p=0,y=T.length;y>p;++p)i.appendChild(T[p])}}function a(e){var t;try{t=!!e.sheet.cssRules}catch(s){return u+=1,200>u?setTimeout(function(){a(e)},50):t&&n("css"),void 0}n("css")}function c(){var e,t=l.css,s=!1;if(t){for(e=h.length;--e>=0;)if(h[e].href===t.urls[0]){s=!0,n("css");break}u+=1,t&&(200>u?setTimeout(c,50):n("css"))}return s}var o,i,l={},u=0,f={css:[],js:[]},h=e.styleSheets;return{css:function(e,t,n,s){r("css",e,t,n,s)},js:function(e,t,n,s){r("js",e,t,n,s)}}}(this.document);</script>
 {%require name='taxi:page/base.tpl'%}{%/body%}
 {%/html%}

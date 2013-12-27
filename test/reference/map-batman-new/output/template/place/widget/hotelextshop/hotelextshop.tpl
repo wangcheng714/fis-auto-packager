@@ -1,4 +1,4 @@
-{%style id="/widget/hotelextshop/hotelextshop.inline.less"%}.detail-shoplist{padding:15px 10px}.shop-cont{background-color:#fff}#detail-shop .detail-shoplist{padding:15px 10px;background-color:#fff;font-size:14px}.detail-shoplist li{padding:5px}.detail-shoplist li .shop-tit{color:#c46221;font-weight:700}.detail-shoplist li .shop-des{color:#6e6e6e}{%/style%}{%* 商户概况 *%}
+{%style id="/widget/hotelextshop/hotelextshop.inline.less"%}#detail-shop .detail-shoplist{padding:15px 10px;background-color:#fff;font-size:14px}.detail-shoplist li{padding:5px}.detail-shoplist li .shop-tit{color:#c46221;font-weight:700}.detail-shoplist li .shop-des{color:#6e6e6e}{%/style%}{%* 商户概况 *%}
 {%if ($data.widget.overview)%}
 <ul class="detail-shoplist">
 {%foreach $widget_data.overview as $item%}

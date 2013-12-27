@@ -22,12 +22,12 @@
              BigPipe.asyncLoad({id: "index-topbanner-widget"});
         {%/script%}
 {%/if%}
-{%widget name="index:widget/nearby/nearby.tpl" pagename="index" %}
-{%widget name="index:widget/thumbnail/thumbnail.tpl" pagename="index" pagelet_id="index-thumbnail-widget" mode="quickling"%}
-{%widget name="index:widget/addestop/addestop.tpl" pagename="index"  pagelet_id="index-addestop-widget" mode="quickling"%}
+{%widget name="index:widget/nearby/nearby.tpl" pagename="index"%}
 <script type="text/javascript">
         PDC && PDC.first_screen && PDC.first_screen();
     </script>
+{%widget name="index:widget/thumbnail/thumbnail.tpl" pagename="index" pagelet_id="index-thumbnail-widget" mode="quickling"%}
+{%widget name="index:widget/addestop/addestop.tpl" pagename="index"  pagelet_id="index-addestop-widget" mode="quickling"%}
 {%widget name="index:widget/surface/surface.tpl" pagename="index" pagelet_id="index-surface-widget" mode="quickling"%}
 {%script%}
         BigPipe.asyncLoad([{

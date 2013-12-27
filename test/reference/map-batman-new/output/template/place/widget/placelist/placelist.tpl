@@ -65,7 +65,7 @@
 <em class="list-arrow"></em>
 </li>
 {%else%}
-<li jsaction="jump" data-href="{%$list_item._detailUrl|f_escape_xml%}" {%if !$data.listInfo.isShowAll && $list_item.acc_flag == 0%}class="acc-item"{%/if%}>
+<li jsaction="jump" data-href="{%$list_item._detailUrl|f_escape_xml%}&detail_from=list" {%if !$data.listInfo.isShowAll && $list_item.acc_flag == 0%}class="acc-item"{%/if%}>
 <div class="list-wrapper">
 <h4 class="text-ellipsis">
 {%$count = 0%}
@@ -237,16 +237,7 @@
 {%/if%}
 </div>
 {%script%}
-    var listData = {
-    isGenRequest : "{%$data.listInfo.isGRequest|f_escape_js%}"
-    }
-    require("place:widget/placelist/placelist.js").init(listData);
-
-    var stat = require('common:widget/stat/stat.js');
-    var loc = require('common:widget/geolocation/location.js');
-    if(loc.hasExactPoi()){
-    stat.addStat(STAT_CODE.PLACE_LIST_GEO_SUC);
-    }else{
-    stat.addStat(STAT_CODE.PLACE_LIST_GEO_FAIL);
-    }
+    require("place:widget/placelist/placelist.js").init({
+        isGenRequest : "{%$data.listInfo.isGRequest|f_escape_js%}"
+    });
 {%/script%}

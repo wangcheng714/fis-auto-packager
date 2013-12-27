@@ -52,10 +52,9 @@
 {%require name="common:static/js/libs/listener.js"%}
 {%require name="common:static/js/libs/BigPipe.js"%}
 {%require name="common:static/js/libs/page.js"%}
+{%require name="common:static/js/libs/template.js"%}
 {%script%}
-	
-		require("common:static/js/libs/template.js");
-            
+
             //监控JS文件加载时间, script执行会在JS加载之后
             if (PDC) {
                 PDC.mark("c_jsld");
@@ -91,8 +90,6 @@
 
             var stat = require('common:widget/stat/stat.js');
             stat.initClickStat();
-            //统计组件
-            (require('common:widget/statistics/statistics.js')).init();
         {%/script%}
 {%widget_block pagelet_id="page_data"%}
 {%* page数据，这里的数据每次都会被加载（单页和多页） *%}
@@ -163,6 +160,10 @@
                     window._MAP_BOUNDS = {%json_encode($bounds)%} || '';
                 {%/script%}{%/widget_block%}
 </div>
+{%script%}
+            //统计组件
+            (require('common:widget/statistics/statistics.js')).init();
+        {%/script%}
 {%widget name="common:widget/map/map.tpl"%}
 <img id="statImg" style="display:none"/>
 <script type="text/javascript">!function(){PDC&&PDC.mark("drt");try{var t=_APP_HASH.module,e=_APP_HASH.action,m=_APP_HASH.page;document.getElementById("statImg").src="/mobile/img/t.gif?newmap=1&t="+Date.now()+"&code=common_43&module="+t+"&action="+e+"&page="+m}catch(o){}}();</script>

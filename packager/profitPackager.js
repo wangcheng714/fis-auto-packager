@@ -226,7 +226,9 @@ function getLargestBenefit(staticA, resources){
         }
     });
     if(largestResource != null){
-        log.debug(" [largestBenefit] " + staticA.get("id") + " and " + largestResource.get("id") + " merged benefit is = " + largestBenefit, 2);
+        log.debug(" [calculate largestBenefit] " + staticA.get("id") + " and " + largestResource.get("id") + " merged benefit is = " + largestBenefit, 2);
+    }else{
+        log.debug(" [calculate largestBenefit] " + staticA.get("id") + " do not have largestBenefit benefit");
     }
     return {
         "benefit" : largestBenefit,
@@ -267,6 +269,8 @@ function mergePackage(originStatic, resources, mergedStatics){
 
         if(newMergeBenefit > oldMergeBenefit){
             //首先移除后面item,否则会导致误删除其他的item
+            newStaticIndex = parseInt(newStaticIndex);
+            oldStaticIndex = parseInt(oldStaticIndex);
             if(newStaticIndex > oldStaticIndex){
                 resources = util.removeByIndex(resources, newStaticIndex);
                 resources = util.removeByIndex(resources, oldStaticIndex);
