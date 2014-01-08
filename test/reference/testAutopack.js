@@ -13,6 +13,3 @@ autopack.package(dir, outputDir, "batman", modules, staticType, logUrl, function
     console.log(result);
 });
 
-
-
-
