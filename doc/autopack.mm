@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1388471632250" ID="ID_93139943" MODIFIED="1389152782384" TEXT="&#x81ea;&#x52a8;&#x6253;&#x5305;&#x9879;&#x76ee;">
+<node CREATED="1388471632250" ID="ID_93139943" MODIFIED="1389188019252" TEXT="&#x81ea;&#x52a8;&#x6253;&#x5305;&#x9879;&#x76ee;">
 <node CREATED="1388471646835" ID="ID_1295640241" MODIFIED="1389165749141" POSITION="right" TEXT="&#x6570;&#x636e;&#x7edf;&#x8ba1;">
 <node CREATED="1389165706466" ID="ID_1664589771" MODIFIED="1389165965729" TEXT="&#x9488;&#x5bf9;&#x8d34;&#x5427;&#x7edf;&#x8ba1;&#x65b9;&#x6848;">
 <icon BUILTIN="full-1"/>
@@ -61,13 +61,14 @@
 </node>
 </node>
 <node CREATED="1388471649747" ID="ID_1667376328" MODIFIED="1388473004758" POSITION="right" TEXT="&#x4ea7;&#x54c1;&#x7ebf;">
-<node CREATED="1388472541133" ID="ID_684258909" MODIFIED="1388474287173" TEXT="&#x5730;&#x56fe;&#x4ea7;&#x54c1;&#x7ebf; &#xff1a; &#x8ddf;&#x8fdb;&#x6574;&#x7406;&#x5730;&#x56fe;&#x4e0a;&#x7ebf;&#x6570;&#x636e;&#x60c5;&#x51b5;">
+<node CREATED="1388472541133" ID="ID_684258909" MODIFIED="1389186424777" TEXT="&#x5730;&#x56fe;&#x4ea7;&#x54c1;&#x7ebf; &#xff1a; &#x8ddf;&#x8fdb;&#x6574;&#x7406;&#x5730;&#x56fe;&#x4e0a;&#x7ebf;&#x6570;&#x636e;&#x60c5;&#x51b5;">
 <icon BUILTIN="full-1"/>
+<icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1388474264571" ID="ID_1798249898" MODIFIED="1388474293862" TEXT="&#x77e5;&#x9053;&#x4ea7;&#x54c1;&#x7ebf; &#xff1a; &#x6c9f;&#x901a;&#x786e;&#x8ba4;&#x81ea;&#x52a8;&#x6253;&#x5305;&#x4f7f;&#x7528;&#x8ba1;&#x5212;">
 <icon BUILTIN="full-1"/>
 </node>
-<node CREATED="1389166018921" ID="ID_337335560" MODIFIED="1389166036017" TEXT="&#x8d34;&#x5427;&#x4ea7;&#x54c1;&#x7ebf; &#xff1a; &#x8ddf;&#x8fdb;&#x9700;&#x6c42;&#x6574;&#x7406;&#x548c;&#x5f00;&#x53d1;">
+<node CREATED="1389166018921" ID="ID_337335560" MODIFIED="1389187375609" TEXT="&#x8d34;&#x5427;&#x4ea7;&#x54c1;&#x7ebf; &#xff1a; &#x8ddf;&#x8fdb;&#x9700;&#x6c42;&#x6574;&#x7406;&#x548c;&#x5f00;&#x53d1;">
 <icon BUILTIN="full-1"/>
 </node>
 </node>
